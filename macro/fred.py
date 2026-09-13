@@ -39,18 +39,35 @@ def parse_csv(text: str) -> list[tuple[str, float]]:
     return out
 
 
+def _shift_month(day: str, months: int) -> str:
+    y, m = int(day[:4]), int(day[5:7]) + months
+    y, m = y + (m - 1) // 12, (m - 1) % 12 + 1
+    return f"{y}-{m:02d}{day[7:]}"
+
+
 def yoy(obs, lag=12):
-    """월간 시리즈 전제: 인덱스 lag칸 앞이 12개월 전이다."""
-    return [(obs[i][0], round((obs[i][1] / obs[i - lag][1] - 1) * 100, 1)) for i in range(lag, len(obs))]
+    """같은 달 1년 전 관측치와 비교한다. 결측 달(예: 2025년 10월 셧다운)이 있어도 날짜로 맞춘다."""
+    values = dict(obs)
+    out = []
+    for day, value in obs:
+        base = values.get(_shift_month(day, -lag))
+        if base:
+            out.append((day, round((value / base - 1) * 100, 1)))
+    return out
 
 
 def pct_change(obs):
-    return [(obs[i][0], round((obs[i][1] / obs[i - 1][1] - 1) * 100, 1)) for i in range(1, len(obs))]
+    """직전 달 관측치가 있을 때만 전월 대비 %를 계산한다."""
+    values = dict(obs)
+    return [(day, round((value / values[prev] - 1) * 100, 1))
+            for day, value in obs if (prev := _shift_month(day, -1)) in values]
 
 
 def diff_thousands(obs):
-    """PAYEMS(천 명 단위)의 전월 대비 증감을 명 단위로 돌려준다."""
-    return [(obs[i][0], round((obs[i][1] - obs[i - 1][1]) * 1000)) for i in range(1, len(obs))]
+    """PAYEMS(천 명 단위)의 전월 대비 증감을 명 단위로 돌려준다. 직전 달이 없으면 건너뛴다."""
+    values = dict(obs)
+    return [(day, round((value - values[prev]) * 1000))
+            for day, value in obs if (prev := _shift_month(day, -1)) in values]
 
 
 def level(obs):

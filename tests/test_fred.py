@@ -30,6 +30,21 @@ class ParseAndTransformTest(unittest.TestCase):
         obs = [("2026-07-01", 159000.0), ("2026-08-01", 159098.0)]
         self.assertEqual(diff_thousands(obs), [("2026-08-01", 98000)])
 
+    def test_yoy_matches_same_month_across_gap(self):
+        # 2025년 10월이 결측(셧다운)이어도 같은 달끼리 비교해야 한다
+        obs = [(f"2025-{m:02d}-01", 100.0 + m) for m in range(1, 10)] + [("2025-11-01", 111.0), ("2025-12-01", 112.0)]
+        obs += [(f"2026-{m:02d}-01", 110.0 + m) for m in range(1, 12)]
+        result = dict(yoy(obs))
+        self.assertEqual(result["2026-09-01"], round((119 / 109 - 1) * 100, 1))
+        self.assertEqual(result["2026-11-01"], round((121 / 111 - 1) * 100, 1))
+        self.assertNotIn("2026-10-01", result)
+
+    def test_month_changes_skip_missing_previous_month(self):
+        obs = [("2025-09-01", 100.0), ("2025-11-01", 102.0), ("2025-12-01", 103.02)]
+        self.assertEqual(pct_change(obs), [("2025-12-01", 1.0)])
+        payrolls = [("2025-09-01", 159000.0), ("2025-11-01", 159100.0), ("2025-12-01", 159150.0)]
+        self.assertEqual(diff_thousands(payrolls), [("2025-12-01", 50000)])
+
 
 class BuildIndicatorsTest(unittest.TestCase):
     NOW = "2026-09-12T06:00:00+09:00"

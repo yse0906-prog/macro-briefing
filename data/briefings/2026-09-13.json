@@ -1,0 +1,149 @@
+{
+  "date": "2026-09-13",
+  "type": "weekly",
+  "period": {"from": "2026-09-07", "to": "2026-09-11"},
+  "published_at": "2026-09-13T23:30:00+09:00",
+  "headline": "근원 CPI 예상 상회에 9월 인상 확률 87%, 美 10년물 5% 코앞",
+  "summary": [
+    "8월 CPI는 전년 대비 3.4%로 예상과 같았지만, 근원 CPI가 한 달 새 0.3% 올라 예상(0.2%)을 넘었습니다.",
+    "CME FedWatch 기준 16일 FOMC의 25bp 인상 확률은 1주 전 50%에서 87%로 뛰었고, 미 10년물 금리는 한 주 동안 19bp 올라 4.97%가 됐습니다.",
+    "브렌트유가 100달러를 다시 넘으며 에너지주만 강했고(섹터 +1.7%), S&P 500은 주간 0.8% 하락했습니다."
+  ],
+  "releases": [
+    {
+      "series": "PAYEMS", "name": "비농업 고용 (8월)", "release_date": "2026-09-04", "period": "2026-08-01",
+      "consensus": 53000, "consensus_source": 3, "impact": "negative",
+      "interpretation": "예상(5.3만 명)의 세 배에 가까운 증가로 연준이 금리를 올릴 명분이 커졌고, 발표 당일 국채금리가 올랐습니다."
+    },
+    {
+      "series": "UNRATE", "name": "실업률 (8월)", "release_date": "2026-09-04", "period": "2026-08-01",
+      "consensus": 4.1, "consensus_source": 3, "impact": "neutral",
+      "interpretation": "예상과 같은 4.1%로 노동시장이 급격히 식지 않았음을 확인했습니다."
+    },
+    {
+      "series": "ICSA", "name": "신규 실업수당 청구", "release_date": "2026-09-10", "period": "2026-09-05",
+      "consensus": 205000, "consensus_source": 4, "impact": "neutral",
+      "interpretation": "20만 건대 초반의 낮은 수준이 이어져 해고가 늘고 있다는 신호는 없었습니다."
+    },
+    {
+      "series": "PPIFIS", "name": "PPI 전월비 (8월)", "release_date": "2026-09-10", "period": "2026-08-01",
+      "consensus": 0.4, "consensus_source": 5, "impact": "neutral",
+      "interpretation": "예상 수준이었지만 상승분의 4분의 3 이상이 에너지(+4.2%)에서 나와 유가발 물가 압력을 보여줬습니다."
+    },
+    {
+      "series": "CPIAUCSL", "name": "CPI 전년비 (8월)", "release_date": "2026-09-11", "period": "2026-08-01",
+      "consensus": 3.4, "consensus_source": 1, "impact": "neutral",
+      "interpretation": "휘발유가 한 달 새 3.9% 올라 월간 상승분의 3분의 1 이상을 차지했지만, 전년비는 예상과 같았습니다."
+    },
+    {
+      "series": "CPILFESL", "name": "근원 CPI 전년비 (8월)", "release_date": "2026-09-11", "period": "2026-08-01",
+      "impact": "negative",
+      "interpretation": "전년비는 2.4%로 낮아졌지만 월간 0.3%로 예상(0.2%)을 웃돌아, 발표 뒤 9월 인상 확률이 87%로 올랐습니다."
+    },
+    {
+      "series": "ISM_MFG", "name": "ISM 제조업 PMI (8월)", "release_date": "2026-09-01", "period": "2026-08-01",
+      "actual": 54.6, "previous": 55.6, "actual_source": 6, "impact": "neutral",
+      "interpretation": "8개월째 확장 국면을 유지했지만 신규주문이 53.7로 3.0포인트 내려 수요 둔화가 보였습니다."
+    },
+    {
+      "series": "ISM_SVC", "name": "ISM 서비스업 PMI (8월)", "release_date": "2026-09-03", "period": "2026-08-01",
+      "actual": 55.4, "previous": 54.1, "actual_source": 7, "impact": "neutral",
+      "interpretation": "26개월 연속 확장이며 전월보다 1.3포인트 올라 서비스 경기는 견조했습니다."
+    }
+  ],
+  "fomc": {
+    "next_meeting": {
+      "date": "2026-09-16",
+      "announce_kst": "2026-09-17T03:00:00+09:00",
+      "probabilities": [{"outcome": "hike25", "pct": 87}, {"outcome": "hold", "pct": 13}],
+      "probabilities_week_ago": [{"outcome": "hike25", "pct": 50}, {"outcome": "hold", "pct": 50}],
+      "view": "hike25",
+      "confidence": "medium",
+      "rationale": [
+        "8월 근원 CPI가 월간 0.3%로 예상(0.2%)을 웃돌았습니다.",
+        "8월 고용이 16.2만 명 늘어 예상(5.3만 명)을 크게 넘었습니다.",
+        "7월 회의에서 이미 위원 3명이 25bp 인상을 주장하며 반대표를 던졌습니다.",
+        "다만 유가 급등이 성장을 누르는 공급 충격이라 동결 가능성도 남아 있습니다."
+      ],
+      "watch_points": [
+        "인상한다면 성명서가 추가 인상을 시사하는지",
+        "9월 회의에서 함께 나오는 점도표의 연말 금리 수준"
+      ]
+    },
+    "last_meeting": {
+      "date": "2026-07-29",
+      "decision": "hold",
+      "range": [3.5, 3.75],
+      "vote": {"for": 9, "against": 3},
+      "tone": 0.68,
+      "statement_points": [
+        "연방기금금리 목표 범위를 3.50~3.75%로 동결했습니다.",
+        "해맥(클리블랜드)·카시카리(미니애폴리스)·로건(댈러스) 총재가 25bp 인상을 주장하며 반대했습니다.",
+        "세 명이 같은 방향으로 반대한 것은 2016년 9월 이후 처음입니다.",
+        "반대 배경은 물가가 5년 넘게 2% 목표를 웃돌고 있다는 점이었습니다."
+      ],
+      "press_conference": "워시 의장은 위원회 내 이견을 '건전한 가족 싸움'이라고 표현하면서도, 물가 안정에 대한 의지는 모두 같다고 강조했습니다."
+    }
+  },
+  "sectors": [
+    {
+      "name": "금융", "gics": "Financials", "impact": "mixed",
+      "title": "인상 기대에 이자마진 기대는 커졌지만 금리 급등 속 주간 약세",
+      "analysis": "고용과 근원 물가가 예상을 넘으면서 9월 인상 확률이 87%까지 올라 은행의 순이자마진 개선 기대가 커졌습니다. 그러나 10년물 금리가 5% 가까이 치솟고 경기 둔화 우려가 겹치면서 금융 섹터는 이번 주 하락한 업종에 포함됐습니다. 금리가 빠르게 오르면 대출 수요와 보유 채권 평가에 부담이 될 수 있다는 점이 함께 반영됐습니다.",
+      "tickers": [],
+      "news": [
+        {"headline": "미 국채금리, 고용보고서로 금리 전망 바뀌며 상승", "outlet": "CNBC", "url": "https://www.cnbc.com/2026/09/04/treasurys-bonds-nonfarm-payrolls-unemployment-data.html", "date": "2026-09-04"}
+      ]
+    },
+    {
+      "name": "에너지", "gics": "Energy", "impact": "positive",
+      "title": "브렌트유 100달러 재돌파에 섹터 수익률 1위(+1.7%)",
+      "analysis": "미군이 이란 유조선을 공격한 뒤 브렌트유가 다시 100달러를 넘어 한때 109달러에 다가섰습니다. 엑슨모빌·셰브런·코노코필립스가 함께 오르며 에너지는 이번 주 S&P 500 11개 섹터 중 가장 강했습니다. 다만 유가 급등은 물가를 자극해 연준의 인상 압력을 키우는 요인이기도 합니다.",
+      "tickers": [{"symbol": "XOM", "change_pct": 2.3}, {"symbol": "CVX", "change_pct": 1.3}, {"symbol": "COP", "change_pct": 1.2}],
+      "news": [
+        {"headline": "유가 배럴당 100달러 돌파, 영향권에 든 에너지주 5곳", "outlet": "24/7 Wall St.", "url": "https://247wallst.com/investing/2026/09/10/oil-just-blew-past-100-a-barrel-and-these-5-energy-stocks-are-in-the-line-of-fire/", "date": "2026-09-10"}
+      ]
+    },
+    {
+      "name": "반도체·AI", "gics": "Information Technology", "impact": "mixed",
+      "title": "AMD·인텔 급등, 엔비디아·MS 약세로 기술 섹터 +0.2% 혼조",
+      "analysis": "기술 섹터는 주간 0.2% 오르는 데 그쳤지만 종목별 차이가 컸습니다. AMD와 인텔이 두 자릿수로 오른 반면 엔비디아와 마이크로소프트는 금리 급등 속에 떨어졌습니다. 한국에서는 AI 투자 기대에 삼성전자·SK하이닉스가 강세를 보이며 코스피가 주간 3.3% 올랐습니다.",
+      "tickers": [{"symbol": "AMD", "change_pct": 13.2}, {"symbol": "INTC", "change_pct": 12.3}, {"symbol": "NVDA", "change_pct": -4.5}, {"symbol": "MSFT", "change_pct": -2.8}],
+      "news": [
+        {"headline": "뉴욕증시, 금리 인상 베팅 급증 속 주간 하락 마감", "outlet": "Yahoo Finance", "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-september-11-dow-sp-500-nasdaq-cpi-inflation-082201751.html", "date": "2026-09-11"},
+        {"headline": "금리 인상 확률 상승에도 반도체주 강세, 인텔 4% 상승", "outlet": "24/7 Wall St.", "url": "https://247wallst.com/investing/2026/09/04/intel-climbs-4-as-chip-stocks-shrug-off-rising-rate-hike-odds-nvidia-and-amd-move-higher/", "date": "2026-09-04"}
+      ]
+    }
+  ],
+  "market_impact": [
+    {"asset": "us_equities", "direction": "down", "text": "S&P 500 주간 −0.8%(7,656.98), 나스닥 −0.7%, 다우 −1.6%. 4거래일 연속 하락 뒤 금요일에 반등했고, 동일가중 S&P 500은 −1.9%로 대형 기술주 밖 종목이 더 약했습니다."},
+    {"asset": "us_rates", "direction": "up", "text": "10년물이 주간 19bp 올라 4.97%로 5%를 코앞에 뒀고 1년물도 21bp 올랐습니다. 근원 물가 상회와 유가 급등으로 9월 인상과 연내 추가 인상 가능성이 가격에 반영됐습니다."},
+    {"asset": "krw", "direction": "up", "text": "원/달러 환율은 11일 서울 외환시장에서 1,345.9원으로 전일보다 6.7원 올랐습니다. 유가와 미 금리 상승에 외국인이 코스피를 2조 원 넘게 순매도했습니다."},
+    {"asset": "korea_banks", "direction": null, "text": "미국이 금리를 올리면 한·미 금리차가 벌어져 외화 조달비용과 환율 변동성 관리가 중요해집니다. 반면 고유가·고금리 환경에서 기업의 운전자금·환헤지 수요가 늘 수 있어 기업금융과 외환 수수료 쪽 기회도 함께 봐야 합니다."}
+  ],
+  "scenarios": [
+    {"name": "기본 · 25bp 인상, 추가 인상은 데이터 의존", "probability": 60, "text": "시장이 이미 87%를 반영해 충격은 제한적입니다. 10년물은 5% 안팎에서 등락하고, 에너지·금융이 상대적으로 버티는 흐름이 예상됩니다."},
+    {"name": "매파 충격 · 인상과 연내 추가 인상 강하게 시사", "probability": 25, "text": "점도표가 연말 추가 인상을 가리키면 10년물이 5%를 넘고 성장주가 추가 조정을 받을 수 있습니다. 원/달러 상승 압력도 커집니다."},
+    {"name": "예상 밖 동결 · 유가발 성장 둔화 우려 반영", "probability": 15, "text": "공급 충격에 따른 경기 둔화를 더 무겁게 본다면 동결할 수 있습니다. 단기 금리가 급락하고 기술주가 반등하겠지만, 물가 대응이 늦다는 우려가 남습니다."}
+  ],
+  "interview_insights": [
+    {"question": "연준이 금리를 올리면 한국 은행의 외화 유동성과 수익성에는 어떤 영향이 있나요?", "answer_points": "한·미 금리차 확대가 원화 약세 압력과 외화 조달비용 상승으로 이어지는 경로를 먼저 설명하세요. 이어서 기업의 환헤지·외환 수수료 수요 증가라는 기회를 짝지어, 순이자마진과 비이자이익으로 나눠 답하면 구조가 선명해집니다."},
+    {"question": "헤드라인 CPI는 예상과 같았는데 왜 시장은 금리 인상 쪽으로 움직였나요?", "answer_points": "연준은 변동성이 큰 에너지·식품을 뺀 근원 물가를 더 중시합니다. 이번에는 근원 CPI 월간 상승률(0.3%)이 예상(0.2%)을 넘어 기조적 물가 압력 신호로 읽혔고, 그 결과 인상 확률이 72%에서 87%로 뛰었다는 점을 짚으면 됩니다."},
+    {"question": "유가 급등 같은 공급 충격이 오면 중앙은행은 금리를 올려야 하나요?", "answer_points": "공급 충격은 물가를 올리면서 성장은 낮추는 딜레마입니다. 판단 기준은 기대인플레이션이 흔들리는지(근원 물가·임금·기대 지표)이며, 7월 회의에서 나온 3명의 인상 소수의견이 바로 이 우려를 반영한 사례라고 연결하세요."}
+  ],
+  "sources": [
+    {"id": 1, "title": "CNBC: CPI inflation report August 2026", "url": "https://www.cnbc.com/2026/09/11/cpi-inflation-report-august-2026.html", "accessed": "2026-09-13"},
+    {"id": 2, "title": "BLS: Consumer Price Index Summary - 2026 M08", "url": "https://www.bls.gov/news.release/cpi.nr0.htm", "accessed": "2026-09-13"},
+    {"id": 3, "title": "CNBC: U.S. payrolls rose 162,000 in August", "url": "https://www.cnbc.com/2026/09/04/jobs-report-august-2026.html", "accessed": "2026-09-13"},
+    {"id": 4, "title": "FXStreet: US Initial Jobless Claims dropped to 206K", "url": "https://www.fxstreet.com/news/us-initial-jobless-claims-dropped-to-206k-last-week-202609101233", "accessed": "2026-09-13"},
+    {"id": 5, "title": "Babypips: U.S. PPI Rose 0.4% in August 2026", "url": "https://www.babypips.com/news/headline-ppi-august-2026-results-energy-inflation-fed", "accessed": "2026-09-13"},
+    {"id": 6, "title": "ISM: August 2026 Manufacturing PMI Report (PR Newswire)", "url": "https://www.prnewswire.com/news-releases/manufacturing-pmi-at-54-6-august-2026-ism-manufacturing-pmi-report-302865127.html", "accessed": "2026-09-13"},
+    {"id": 7, "title": "ISM: August 2026 Services PMI Report (PR Newswire)", "url": "https://www.prnewswire.com/news-releases/services-pmi-at-55-4-august-2026-ism-services-pmi-report-302868046.html", "accessed": "2026-09-13"},
+    {"id": 8, "title": "Yahoo Finance: Stock market today, Sept. 11 (CME FedWatch 87%)", "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-september-11-dow-sp-500-nasdaq-cpi-inflation-082201751.html", "accessed": "2026-09-13"},
+    {"id": 9, "title": "CNBC: Divided Fed holds interest rates steady (July 2026)", "url": "https://www.cnbc.com/2026/07/29/fed-rate-decision-july-2026.html", "accessed": "2026-09-13"},
+    {"id": 10, "title": "Atrani Capital: Week #37 Market Update (Sept 7-11, 2026)", "url": "https://atranicapital.substack.com/p/week-37-market-update-for-september-9f2", "accessed": "2026-09-13"},
+    {"id": 11, "title": "Seoul Economic Daily: Oil Near $100, U.S. Yields at 5% Put KOSPI's 7,000 Line to the Test", "url": "https://en.sedaily.com/finance/2026/09/13/oil-near-100-us-yields-at-5-percent-put-kospis-7000-line-to", "accessed": "2026-09-13"},
+    {"id": 12, "title": "Yahoo Finance: Oil pushes past $100 as wave of US-Iran attacks", "url": "https://finance.yahoo.com/energy/articles/brent-oil-tops-100-middle-133121562.html", "accessed": "2026-09-13"},
+    {"id": 13, "title": "Seoul Economic Daily: KOSPI Falls 1.76% to Close at 6,909.91", "url": "https://en.sedaily.com/finance/2026/09/11/kospi-falls-176-percent-to-close-at-690991", "accessed": "2026-09-13"}
+  ]
+}
