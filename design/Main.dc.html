@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&amp;family=Noto+Serif+KR:wght@600;700&amp;display=swap">
+  <style>
+    body { margin: 0; background: #F4F6F9; color: #0F1B2D; font-family: 'IBM Plex Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #1D3A66; text-decoration: none; }
+    a:hover { color: #0B1A30; text-decoration: underline; }
+    .serif { font-family: 'Noto Serif KR', 'Batang', 'AppleMyungjo', serif; }
+    .num { font-variant-numeric: tabular-nums; }
+    .wrap { width: 1200px; margin: 0 auto; }
+    .card { background: #FFFFFF; border: 1px solid #DDE2EA; border-radius: 6px; }
+    .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: #5B6B80; }
+    .h2 { font-size: 20px; font-weight: 700; color: #0F1B2D; margin: 0; }
+    .muted { color: #6B7A90; }
+    .chip { display: inline-flex; align-items: center; gap: 5px; height: 24px; padding: 0 8px; border-radius: 4px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+    .nav { display: flex; align-items: center; color: #B7C3D6; font-weight: 500; border-bottom: 3px solid transparent; padding-top: 3px; }
+    .nav:hover { color: #FFFFFF; text-decoration: none; }
+    .nav.on { color: #FFFFFF; border-bottom-color: #FFFFFF; }
+  </style>
+</helmet>
+
+<header style="background: #0B1A30; color: #FFFFFF">
+  <div class="wrap" style="display: flex; align-items: stretch; justify-content: space-between; height: 64px">
+    <div style="display: flex; align-items: center; gap: 12px">
+      <svg width="22" height="22" viewBox="0 0 22 22"><rect x="1" y="12" width="4" height="9" fill="#FFFFFF"></rect><rect x="9" y="6" width="4" height="15" fill="#FFFFFF"></rect><rect x="17" y="1" width="4" height="20" fill="#8FA9D6"></rect></svg>
+      <span class="serif" style="font-size: 20px; font-weight: 700">Macro Briefing</span>
+      <span style="font-size: 12px; color: #8FA0BA; padding-left: 12px; border-left: 1px solid #2A3E5E">미국 거시경제 · FOMC · 섹터 주간 브리핑</span>
+    </div>
+    <nav style="display: flex; gap: 28px; font-size: 14px">
+      <a class="nav on" href="#">홈</a>
+      <a class="nav" href="#">주간 브리핑</a>
+      <a class="nav" href="#">FOMC</a>
+      <a class="nav" href="#">거시지표</a>
+      <a class="nav" href="#">아카이브</a>
+      <a class="nav" href="#">취업 이슈</a>
+    </nav>
+  </div>
+</header>
+
+<div style="background: #13284A; border-top: 1px solid #1F3558">
+  <div class="wrap num" style="display: flex; align-items: center; justify-content: space-between; height: 44px; font-size: 13px">
+    <div style="display: flex; align-items: center; gap: 24px">
+      <span style="width: 28px; font-size: 12px; font-weight: 600; color: #6F82A0">미국</span>
+      <div style="display: flex; align-items: center; gap: 8px"><span style="color: #8FA0BA">S&amp;P 500</span><span style="color: #FFFFFF; font-weight: 600">6,412.3</span><span style="display: flex; align-items: center; gap: 4px; color: #D5DDEA"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 8.5L1 1.5h8z" fill="{{d.down}}"></path></svg>0.8%</span></div>
+      <div style="display: flex; align-items: center; gap: 8px"><span style="color: #8FA0BA">나스닥</span><span style="color: #FFFFFF; font-weight: 600">21,230.5</span><span style="display: flex; align-items: center; gap: 4px; color: #D5DDEA"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 8.5L1 1.5h8z" fill="{{d.down}}"></path></svg>1.2%</span></div>
+      <div style="display: flex; align-items: center; gap: 8px"><span style="color: #8FA0BA">미 10년물</span><span style="color: #FFFFFF; font-weight: 600">4.38%</span><span style="display: flex; align-items: center; gap: 4px; color: #D5DDEA"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1.5L9 8.5H1z" fill="{{d.up}}"></path></svg>6bp</span></div>
+      <div style="display: flex; align-items: center; gap: 8px"><span style="color: #8FA0BA">달러인덱스</span><span style="color: #FFFFFF; font-weight: 600">121.4</span><span style="display: flex; align-items: center; gap: 4px; color: #D5DDEA"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1.5L9 8.5H1z" fill="{{d.up}}"></path></svg>0.3%</span></div>
+      <div style="display: flex; align-items: center; gap: 8px"><span style="color: #8FA0BA">VIX</span><span style="color: #FFFFFF; font-weight: 600">17.8</span><span style="display: flex; align-items: center; gap: 4px; color: #D5DDEA"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1.5L9 8.5H1z" fill="{{d.up}}"></path></svg>1.2</span></div>
+    </div>
+    <span style="color: #8FA0BA">9.11 종가 · 09.13 07:00 업데이트</span>
+  </div>
+  <div style="border-top: 1px solid #1F3558">
+    <div class="wrap num" style="display: flex; align-items: center; gap: 24px; height: 44px; font-size: 13px">
+      <span style="width: 28px; font-size: 12px; font-weight: 600; color: #6F82A0">한국</span>
+      <div style="display: flex; align-items: center; gap: 8px"><span style="color: #8FA0BA">코스피</span><span style="color: #FFFFFF; font-weight: 600">4,118.6</span><span style="display: flex; align-items: center; gap: 4px; color: #D5DDEA"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 8.5L1 1.5h8z" fill="{{d.down}}"></path></svg>0.5%</span></div>
+      <div style="display: flex; align-items: center; gap: 8px"><span style="color: #8FA0BA">코스닥</span><span style="color: #FFFFFF; font-weight: 600">912.4</span><span style="display: flex; align-items: center; gap: 4px; color: #D5DDEA"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 8.5L1 1.5h8z" fill="{{d.down}}"></path></svg>0.9%</span></div>
+      <div style="display: flex; align-items: center; gap: 8px"><span style="color: #8FA0BA">VKOSPI</span><span style="color: #FFFFFF; font-weight: 600">24.7</span><span style="display: flex; align-items: center; gap: 4px; color: #D5DDEA"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1.5L9 8.5H1z" fill="{{d.up}}"></path></svg>1.6</span></div>
+      <div style="display: flex; align-items: center; gap: 8px"><span style="color: #8FA0BA">원/달러</span><span style="color: #FFFFFF; font-weight: 600">1,478.0</span><span style="display: flex; align-items: center; gap: 4px; color: #D5DDEA"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1.5L9 8.5H1z" fill="{{d.up}}"></path></svg>0.6%</span></div>
+    </div>
+  </div>
+</div>
+
+<main style="display: flex; flex-direction: column; gap: 56px; padding-top: 48px">
+
+  <section class="wrap" style="display: flex; gap: 48px; align-items: stretch">
+    <div style="flex: 1; display: flex; flex-direction: column; gap: 22px; padding-top: 8px">
+      <div class="eyebrow">주간 브리핑 · 2026년 9월 2주차 (9.7–9.11)</div>
+      <h1 class="serif" style="margin: 0; font-size: 40px; line-height: 1.32; font-weight: 700; letter-spacing: -0.01em; color: #0B1A30; text-wrap: pretty">물가 재가속에 9월 동결 무게,<br>금리 민감 섹터 약세·금융주 선방</h1>
+      <ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+        <li style="display: flex; gap: 14px; font-size: 16px; line-height: 1.65; color: #2B3A50"><span class="num" style="font-weight: 700; color: #1D3A66; width: 24px; flex-shrink: 0">01</span><span>8월 CPI가 전년 대비 3.1%로 예상(3.0%)을 웃돌며 3개월 만에 다시 올랐습니다.</span></li>
+        <li style="display: flex; gap: 14px; font-size: 16px; line-height: 1.65; color: #2B3A50"><span class="num" style="font-weight: 700; color: #1D3A66; width: 24px; flex-shrink: 0">02</span><span>고용 둔화에도 물가 부담이 커, 16일 FOMC 동결 확률이 78%까지 올라갔습니다.</span></li>
+        <li style="display: flex; gap: 14px; font-size: 16px; line-height: 1.65; color: #2B3A50"><span class="num" style="font-weight: 700; color: #1D3A66; width: 24px; flex-shrink: 0">03</span><span>장기금리 상승으로 부동산이 약세였고, 순이자마진 기대가 커진 대형 은행주는 상대적으로 강했습니다.</span></li>
+      </ol>
+      <div style="display: flex; gap: 12px; margin-top: 6px">
+        <a href="#" style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 20px; background: #0B1A30; color: #FFFFFF; border-radius: 4px; font-size: 14px; font-weight: 600">전체 브리핑 읽기<svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="#FFFFFF" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+        <a href="#" style="display: inline-flex; align-items: center; height: 44px; padding: 0 20px; background: #FFFFFF; border: 1px solid #C5CEDB; color: #1D3A66; border-radius: 4px; font-size: 14px; font-weight: 600">지난 브리핑</a>
+      </div>
+    </div>
+
+    <div style="width: 384px; flex-shrink: 0; background: #0B1A30; color: #FFFFFF; border-radius: 6px; padding: 28px; display: flex; flex-direction: column; gap: 20px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline">
+        <span style="font-size: 13px; font-weight: 600; color: #8FA0BA; letter-spacing: 0.04em">다음 FOMC</span>
+        <span style="font-size: 13px; color: #B7C3D6">9월 15–16일</span>
+      </div>
+      <div style="display: flex; align-items: flex-end; justify-content: space-between">
+        <div class="num" style="font-size: 64px; font-weight: 700; line-height: 1; letter-spacing: -0.02em">D-3</div>
+        <div style="text-align: right; font-size: 13px; line-height: 1.55; color: #B7C3D6">결과 발표<br><span style="color: #FFFFFF; font-weight: 600">9월 17일(목) 03:00 KST</span></div>
+      </div>
+      <div style="border-top: 1px solid #22375A; padding-top: 18px; display: flex; flex-direction: column; gap: 10px">
+        <div style="display: flex; justify-content: space-between; font-size: 13px"><span style="color: #B7C3D6">시장 반영 확률</span><span style="color: #8FA0BA">CME FedWatch 기준</span></div>
+        <div style="display: flex; gap: 2px; height: 12px"><div style="width: 78%; background: #E8EEF7; border-radius: 3px 0 0 3px"></div><div style="flex: 1; background: #5C7AA8; border-radius: 0 3px 3px 0"></div></div>
+        <div class="num" style="display: flex; justify-content: space-between; font-size: 14px; color: #D5DDEA">
+          <span style="display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #E8EEF7"></span>동결<b style="color: #FFFFFF">78%</b></span>
+          <span style="display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #5C7AA8"></span>25bp 인하<b style="color: #FFFFFF">22%</b></span>
+        </div>
+      </div>
+      <div style="background: #13284A; border-radius: 4px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px">
+        <div style="font-size: 12px; color: #8FA0BA">브리핑 전망</div>
+        <div style="font-size: 15px; font-weight: 600">동결 · 3.50–3.75% 유지</div>
+        <div style="font-size: 13px; line-height: 1.6; color: #B7C3D6">점도표의 연내 인하 횟수가 1회에서 0~1회로 줄어드는지가 핵심입니다.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" style="display: flex; flex-direction: column; gap: 16px">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end">
+      <div style="display: flex; flex-direction: column; gap: 4px">
+        <h2 class="h2">이번 주 발표 지표</h2>
+        <span class="muted" style="font-size: 13px">실제치와 시장 예상치 비교 · 9월 7일–11일 발표분</span>
+      </div>
+      <div style="display: flex; gap: 16px; font-size: 12px; color: #44536A; align-items: center">
+        <span>칩 색상 = 미국 증시에 준 영향</span>
+        <span style="display: flex; align-items: center; gap: 6px"><span style="width: 8px; height: 8px; border-radius: 2px; background: {{c.up}}"></span>호재</span>
+        <span style="display: flex; align-items: center; gap: 6px"><span style="width: 8px; height: 8px; border-radius: 2px; background: {{c.down}}"></span>악재</span>
+        <span style="display: flex; align-items: center; gap: 6px"><span style="width: 8px; height: 8px; border-radius: 2px; background: #8A97AB"></span>중립</span>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+
+      <div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-size: 14px; font-weight: 600">CPI (전년 대비)</span><span class="num muted" style="font-size: 12px">9.10 발표</span></div>
+        <div style="display: flex; align-items: center; gap: 10px"><span class="num" style="font-size: 36px; font-weight: 700; letter-spacing: -0.02em; line-height: 1">3.1%</span><span class="chip" style="background: #EEF1F5; color: #2B3A50">예상 상회 +0.1%p</span></div>
+        <div class="num" style="display: flex; gap: 16px; font-size: 13px; color: #5B6B80"><span>예상 <b style="color: #0F1B2D">3.0%</b></span><span>이전 <b style="color: #0F1B2D">2.9%</b></span></div>
+        <div style="border-top: 1px solid #EDF0F4; padding-top: 12px; display: flex; flex-direction: column; gap: 8px">
+          <span class="chip" style="align-self: flex-start; background: {{c.downBg}}; color: {{c.downText}}"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 8.5L1 1.5h8z" fill="{{c.down}}"></path></svg>증시 악재</span>
+          <span style="font-size: 13px; line-height: 1.6; color: #44536A">3개월 만의 재가속으로 연내 인하 기대가 줄었습니다.</span>
+        </div>
+      </div>
+
+      <div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-size: 14px; font-weight: 600">근원 CPI (전년 대비)</span><span class="num muted" style="font-size: 12px">9.10 발표</span></div>
+        <div style="display: flex; align-items: center; gap: 10px"><span class="num" style="font-size: 36px; font-weight: 700; letter-spacing: -0.02em; line-height: 1">3.2%</span><span class="chip" style="background: #EEF1F5; color: #2B3A50">예상 상회 +0.1%p</span></div>
+        <div class="num" style="display: flex; gap: 16px; font-size: 13px; color: #5B6B80"><span>예상 <b style="color: #0F1B2D">3.1%</b></span><span>이전 <b style="color: #0F1B2D">3.1%</b></span></div>
+        <div style="border-top: 1px solid #EDF0F4; padding-top: 12px; display: flex; flex-direction: column; gap: 8px">
+          <span class="chip" style="align-self: flex-start; background: {{c.downBg}}; color: {{c.downText}}"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 8.5L1 1.5h8z" fill="{{c.down}}"></path></svg>증시 악재</span>
+          <span style="font-size: 13px; line-height: 1.6; color: #44536A">주거비와 서비스 물가가 좀처럼 내려오지 않고 있습니다.</span>
+        </div>
+      </div>
+
+      <div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-size: 14px; font-weight: 600">PPI (전월 대비)</span><span class="num muted" style="font-size: 12px">9.11 발표</span></div>
+        <div style="display: flex; align-items: center; gap: 10px"><span class="num" style="font-size: 36px; font-weight: 700; letter-spacing: -0.02em; line-height: 1">0.3%</span><span class="chip" style="background: #EEF1F5; color: #2B3A50">예상 상회 +0.1%p</span></div>
+        <div class="num" style="display: flex; gap: 16px; font-size: 13px; color: #5B6B80"><span>예상 <b style="color: #0F1B2D">0.2%</b></span><span>이전 <b style="color: #0F1B2D">0.1%</b></span></div>
+        <div style="border-top: 1px solid #EDF0F4; padding-top: 12px; display: flex; flex-direction: column; gap: 8px">
+          <span class="chip" style="align-self: flex-start; background: #EEF1F5; color: #44536A"><svg width="10" height="10" viewBox="0 0 10 10"><rect x="1" y="4" width="8" height="2" rx="1" fill="#6B7A90"></rect></svg>중립</span>
+          <span style="font-size: 13px; line-height: 1.6; color: #44536A">에너지를 빼면 예상 수준이라 영향은 제한적이었습니다.</span>
+        </div>
+      </div>
+
+      <div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-size: 14px; font-weight: 600">신규 실업수당 청구</span><span class="num muted" style="font-size: 12px">9.11 발표</span></div>
+        <div style="display: flex; align-items: center; gap: 10px"><span class="num" style="font-size: 36px; font-weight: 700; letter-spacing: -0.02em; line-height: 1">23.1만</span><span class="chip" style="background: #EEF1F5; color: #2B3A50">예상 하회 −0.4만</span></div>
+        <div class="num" style="display: flex; gap: 16px; font-size: 13px; color: #5B6B80"><span>예상 <b style="color: #0F1B2D">23.5만</b></span><span>이전 <b style="color: #0F1B2D">24.0만</b></span></div>
+        <div style="border-top: 1px solid #EDF0F4; padding-top: 12px; display: flex; flex-direction: column; gap: 8px">
+          <span class="chip" style="align-self: flex-start; background: {{c.upBg}}; color: {{c.upText}}"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1.5L9 8.5H1z" fill="{{c.up}}"></path></svg>증시 호재</span>
+          <span style="font-size: 13px; line-height: 1.6; color: #44536A">고용이 급격히 식는다는 우려를 덜었습니다.</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="wrap" style="display: flex; gap: 24px; align-items: flex-start">
+    <div class="card" style="flex: 1; padding: 24px 28px 8px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 12px">
+        <h2 class="h2">이슈 섹터</h2>
+        <a href="#" style="font-size: 13px; font-weight: 600">섹터 분석 전체 보기</a>
+      </div>
+      <div style="display: flex; gap: 20px; padding: 16px 0; border-top: 1px solid #EDF0F4; align-items: flex-start">
+        <div style="width: 112px; flex-shrink: 0; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 15px; font-weight: 700">금융</span><span class="chip" style="align-self: flex-start; background: {{c.upBg}}; color: {{c.upText}}"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1.5L9 8.5H1z" fill="{{c.up}}"></path></svg>호재</span></div>
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 15px; font-weight: 600; line-height: 1.5">고금리 장기화 전망에 대형 은행 순이자마진 개선 기대</span><span class="num" style="font-size: 13px; color: #6B7A90">JPM · BAC · WFC</span></div>
+      </div>
+      <div style="display: flex; gap: 20px; padding: 16px 0; border-top: 1px solid #EDF0F4; align-items: flex-start">
+        <div style="width: 112px; flex-shrink: 0; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 15px; font-weight: 700">반도체·AI</span><span class="chip" style="align-self: flex-start; background: #EEF1F5; color: #44536A"><svg width="10" height="10" viewBox="0 0 10 10"><rect x="1" y="4" width="8" height="2" rx="1" fill="#6B7A90"></rect></svg>혼조</span></div>
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 15px; font-weight: 600; line-height: 1.5">AI 서버 수요는 견조, 금리 상승에 고평가 종목 차익실현</span><span class="num" style="font-size: 13px; color: #6B7A90">NVDA · AVGO · MU</span></div>
+      </div>
+      <div style="display: flex; gap: 20px; padding: 16px 0; border-top: 1px solid #EDF0F4; align-items: flex-start">
+        <div style="width: 112px; flex-shrink: 0; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 15px; font-weight: 700">부동산</span><span class="chip" style="align-self: flex-start; background: {{c.downBg}}; color: {{c.downText}}"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 8.5L1 1.5h8z" fill="{{c.down}}"></path></svg>악재</span></div>
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 15px; font-weight: 600; line-height: 1.5">장기금리 상승으로 리츠 조달비용 부담 확대</span><span class="num" style="font-size: 13px; color: #6B7A90">PLD · O · EQIX</span></div>
+      </div>
+      <div style="display: flex; gap: 20px; padding: 16px 0; border-top: 1px solid #EDF0F4; align-items: flex-start">
+        <div style="width: 112px; flex-shrink: 0; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 15px; font-weight: 700">에너지</span><span class="chip" style="align-self: flex-start; background: {{c.upBg}}; color: {{c.upText}}"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1.5L9 8.5H1z" fill="{{c.up}}"></path></svg>호재</span></div>
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 15px; font-weight: 600; line-height: 1.5">원유 재고 감소에 WTI 주간 4% 상승</span><span class="num" style="font-size: 13px; color: #6B7A90">XOM · CVX · COP</span></div>
+      </div>
+    </div>
+
+    <div class="card" style="width: 440px; flex-shrink: 0; padding: 24px 28px 8px">
+      <div style="padding-bottom: 12px"><h2 class="h2">시장 영향</h2></div>
+      <div style="display: flex; gap: 16px; padding: 14px 0; border-top: 1px solid #EDF0F4"><span style="width: 88px; flex-shrink: 0; font-size: 14px; font-weight: 600">미국 주식</span><span style="font-size: 14px; line-height: 1.6; color: #2B3A50">금리에 민감한 성장주 중심 조정, FOMC 앞두고 관망</span></div>
+      <div style="display: flex; gap: 16px; padding: 14px 0; border-top: 1px solid #EDF0F4"><span style="width: 88px; flex-shrink: 0; font-size: 14px; font-weight: 600">미 국채금리</span><span style="font-size: 14px; line-height: 1.6; color: #2B3A50">10년물 4.38%(+6bp), 인하 기대 후퇴 반영</span></div>
+      <div style="display: flex; gap: 16px; padding: 14px 0; border-top: 1px solid #EDF0F4"><span style="width: 88px; flex-shrink: 0; font-size: 14px; font-weight: 600">달러</span><span style="font-size: 14px; line-height: 1.6; color: #2B3A50">달러인덱스 121.4, 금리차 기대로 강세 유지</span></div>
+      <div style="display: flex; gap: 16px; padding: 14px 0; border-top: 1px solid #EDF0F4"><span style="width: 88px; flex-shrink: 0; font-size: 14px; font-weight: 600">원/달러</span><span style="font-size: 14px; line-height: 1.6; color: #2B3A50">1,478원, 1,500원선 재접근 경계</span></div>
+      <div style="display: flex; gap: 16px; padding: 14px 0; border-top: 1px solid #EDF0F4"><span style="width: 88px; flex-shrink: 0; font-size: 14px; font-weight: 600">한국 은행권</span><span style="font-size: 14px; line-height: 1.6; color: #2B3A50">한·미 금리차 장기화로 외화 조달비용 부담, 환헤지 수요는 증가</span></div>
+    </div>
+  </section>
+
+  <section class="wrap" style="display: flex; flex-direction: column; gap: 16px">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end">
+      <h2 class="h2">다음 주 주요 일정</h2>
+      <span class="muted" style="font-size: 13px">시간은 한국 기준(KST)</span>
+    </div>
+    <div class="num" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px">
+      <div class="card" style="padding: 18px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 13px; color: #5B6B80">9.15 (화) 21:30</span><span style="font-size: 15px; font-weight: 600">소매판매 (8월)</span><span style="display: flex; gap: 3px"><span style="width: 14px; height: 4px; border-radius: 2px; background: #1D3A66"></span><span style="width: 14px; height: 4px; border-radius: 2px; background: #1D3A66"></span><span style="width: 14px; height: 4px; border-radius: 2px; background: #DDE2EA"></span></span></div>
+      <div class="card" style="padding: 18px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 13px; color: #5B6B80">9.16 (수) 22:15</span><span style="font-size: 15px; font-weight: 600">산업생산 (8월)</span><span style="display: flex; gap: 3px"><span style="width: 14px; height: 4px; border-radius: 2px; background: #1D3A66"></span><span style="width: 14px; height: 4px; border-radius: 2px; background: #DDE2EA"></span><span style="width: 14px; height: 4px; border-radius: 2px; background: #DDE2EA"></span></span></div>
+      <div style="padding: 18px; display: flex; flex-direction: column; gap: 8px; background: #0B1A30; color: #FFFFFF; border-radius: 6px"><span style="font-size: 13px; color: #8FA0BA">9.17 (목) 03:00</span><span style="font-size: 15px; font-weight: 600">FOMC 금리 결정·기자회견</span><span style="display: flex; gap: 3px"><span style="width: 14px; height: 4px; border-radius: 2px; background: #FFFFFF"></span><span style="width: 14px; height: 4px; border-radius: 2px; background: #FFFFFF"></span><span style="width: 14px; height: 4px; border-radius: 2px; background: #FFFFFF"></span></span></div>
+      <div class="card" style="padding: 18px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 13px; color: #5B6B80">9.17 (목) 21:30</span><span style="font-size: 15px; font-weight: 600">신규 실업수당 청구</span><span style="display: flex; gap: 3px"><span style="width: 14px; height: 4px; border-radius: 2px; background: #1D3A66"></span><span style="width: 14px; height: 4px; border-radius: 2px; background: #DDE2EA"></span><span style="width: 14px; height: 4px; border-radius: 2px; background: #DDE2EA"></span></span></div>
+      <div class="card" style="padding: 18px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 13px; color: #5B6B80">9.18 (금) 23:00</span><span style="font-size: 15px; font-weight: 600">미시간대 소비자심리</span><span style="display: flex; gap: 3px"><span style="width: 14px; height: 4px; border-radius: 2px; background: #1D3A66"></span><span style="width: 14px; height: 4px; border-radius: 2px; background: #1D3A66"></span><span style="width: 14px; height: 4px; border-radius: 2px; background: #DDE2EA"></span></span></div>
+    </div>
+  </section>
+
+  <footer style="background: #0B1A30; color: #8FA0BA; margin-top: 8px">
+    <div class="wrap" style="padding: 32px 0 36px; display: flex; justify-content: space-between; gap: 48px; font-size: 13px; line-height: 1.7">
+      <div style="max-width: 720px; display: flex; flex-direction: column; gap: 6px">
+        <span style="color: #FFFFFF; font-weight: 600">투자 권유가 아닙니다</span>
+        <span>이 사이트는 거시경제 학습과 금융권 취업 준비를 위한 참고 자료입니다. 분석과 전망은 AI가 공개 자료를 바탕으로 작성해 오류가 있을 수 있으며, 투자 판단의 근거로 쓸 수 없습니다.</span>
+        <span>지표 수치: FRED(세인트루이스 연방준비은행) · 예상치·뉴스: 각 항목에 출처 표기</span>
+      </div>
+      <div style="text-align: right; display: flex; flex-direction: column; gap: 6px">
+        <span class="serif" style="color: #FFFFFF; font-size: 16px; font-weight: 700">Macro Briefing</span>
+        <span>주 1회 + 주요 발표 시 갱신</span>
+        <span>© 2026 SangEunLAB</span>
+      </div>
+    </div>
+  </footer>
+</main>
+</x-dc>
+<script data-dc-script data-props='{"convention":{"editor":"enum","options":["미국식","한국식"],"default":"미국식","section":"상승·하락 색상"},"$preview":{"width":1440,"height":2080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const kr = String(this.props.convention ?? '미국식').indexOf('한국식') === 0;
+    const c = kr
+      ? { up: '#C9362E', upText: '#A8281F', upBg: '#FBE9E7', down: '#2463C4', downText: '#1B4F9E', downBg: '#E6EEF9' }
+      : { up: '#1B8F52', upText: '#146C3E', upBg: '#E4F2EA', down: '#C9362E', downText: '#A8281F', downBg: '#FBE9E7' };
+    const d = kr ? { up: '#FF8A80', down: '#8DB8FF' } : { up: '#5BD49A', down: '#FF8A80' };
+    return { c: c, d: d };
+  }
+}
+</script>
+</body>
+</html>
