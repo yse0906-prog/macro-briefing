@@ -174,3 +174,36 @@ def section_head(title: str, sub: str = "", right: str = "") -> str:
 
 def empty_state(message: str) -> str:
     return f'<div class="card empty">{esc(message)}</div>'
+
+
+CONFIDENCE_LABEL = {"high": "확신도 높음", "medium": "확신도 보통", "low": "확신도 낮음"}
+
+TONE_CSS = """
+.tone{position:relative;height:10px;background:#E4E8EE;border-radius:5px;margin:8px 0}
+.tone::after{content:"";position:absolute;left:50%;top:-3px;width:1px;height:16px;background:#B4BECC}
+.tone i{position:absolute;top:-5px;width:20px;height:20px;margin-left:-10px;border-radius:10px;background:#0B1A30;border:3px solid #FFFFFF;box-shadow:0 0 0 1px #0B1A30;z-index:1}
+.tone-l{display:flex;justify-content:space-between;font-size:12px;color:#6B7A90}
+.tone-t{display:block;margin-top:8px;font-size:14px;color:#0B1A30}
+"""
+
+
+def range_text(lower: float, upper: float) -> str:
+    return f"{num(lower, 2)}–{num(upper, 2)}%"
+
+
+def tone_label(tone: float) -> str:
+    if tone < 0.35:
+        return "비둘기파"
+    if tone < 0.47:
+        return "중립~비둘기"
+    if tone <= 0.53:
+        return "중립"
+    if tone <= 0.66:
+        return "중립~매파"
+    return "매파"
+
+
+def tone_meter(tone: float) -> str:
+    return (f'<div><div class="tone"><i style="left:{round(tone * 100)}%"></i></div>'
+            '<div class="tone-l"><span>비둘기파 (완화)</span><span>중립</span><span>매파 (긴축)</span></div>'
+            f'<b class="tone-t">{tone_label(tone)}</b></div>')

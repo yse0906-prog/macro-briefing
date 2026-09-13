@@ -77,5 +77,33 @@ class HomeArchiveTest(SiteBuildCase):
         self.assertIn(EMPTY_MESSAGE, self.read("archive.html"))
 
 
+class BriefingPageTest(SiteBuildCase):
+    def test_weekly_page_sections(self):
+        self.build_full()
+        html = self.read("briefings/2026-09-13.html")
+        for text in (make_briefing()["headline"], "9.8만", "11.0만", "13.2만", "−1.2만", "49.9", "혼조", "JPM",
+                     'href="https://example.com/news"', "기본 · 매파적 동결", "CPI 상회가 은행 수익성에 주는 영향은?",
+                     "1주 전: 동결 61%", "시장 예상치", 'href="../index.html"', DISCLAIMER):
+            self.assertIn(text, html)
+        self.assertIn('class="nav on" href="../briefings/latest.html"', html)
+
+    def test_event_page_only_present_sections(self):
+        self.build_full()
+        html = self.read("briefings/2026-09-17.html")
+        self.assertIn("최근 FOMC 결정", html)
+        self.assertIn("3.50–3.75%", html)
+        self.assertIn("매파", html)
+        self.assertNotIn("이슈 섹터", html)
+        self.assertNotIn("면접 인사이트", html)
+
+    def test_latest_points_to_newest(self):
+        self.build_full()
+        self.assertIn(make_event_briefing()["headline"], self.read("briefings/latest.html"))
+
+    def test_latest_empty_state(self):
+        build_site(self.data, self.out, ISSUES, today=TODAY)
+        self.assertIn(EMPTY_MESSAGE, self.read("briefings/latest.html"))
+
+
 if __name__ == "__main__":
     unittest.main()
