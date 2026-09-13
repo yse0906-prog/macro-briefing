@@ -5,7 +5,9 @@ from pathlib import Path
 from macro.data import load_site_data
 from macro.pages.archive import render_archive
 from macro.pages.briefing import render_briefing, render_briefing_empty
+from macro.pages.fomc import render_fomc
 from macro.pages.home import render_home
+from macro.pages.indicators import render_indicators
 from macro.pages.issues import render_issues
 
 KST = timezone(timedelta(hours=9))
@@ -23,6 +25,8 @@ def build_site(data_dir: Path, out_dir: Path, issues: list, today=None) -> list[
     written = [
         write(out_dir / "index.html", render_home(site, today)),
         write(out_dir / "archive.html", render_archive(site)),
+        write(out_dir / "fomc.html", render_fomc(site, today)),
+        write(out_dir / "indicators.html", render_indicators(site)),
         write(out_dir / "issues.html", render_issues(issues)),
     ]
     for b in site.briefings:

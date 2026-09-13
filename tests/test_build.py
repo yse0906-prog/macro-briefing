@@ -105,5 +105,33 @@ class BriefingPageTest(SiteBuildCase):
         self.assertIn(EMPTY_MESSAGE, self.read("briefings/latest.html"))
 
 
+class FomcPageTest(SiteBuildCase):
+    def test_fomc_page_with_data(self):
+        self.build_full()
+        html = self.read("fomc.html")
+        for text in ("3.50–3.75%", "2회 연속 동결", "D-3", "동결 <b>78%</b>", "매파", "연방기금금리 목표 상단 추이",
+                     "<path ", "2026.07.29", "2026.09.16", "10–2", 'class="nav on" href="fomc.html"'):
+            self.assertIn(text, html)
+
+    def test_fomc_page_empty(self):
+        build_site(self.data, self.out, ISSUES, today=TODAY)
+        self.assertIn("결정 이력은 브리핑이 쌓이면 표시됩니다.", self.read("fomc.html"))
+
+
+class IndicatorsPageTest(SiteBuildCase):
+    def test_indicators_page_with_data(self):
+        self.build_full()
+        html = self.read("indicators.html")
+        for text in ("CPI · 근원 CPI 전년 대비 상승률", "연준 목표 2%", "3.2%", "3.0%", "8월 · 9.10", "9.8만",
+                     "9.05 주", "2분기", "49.9", "4.38%", "6bp", "1,478", 'id="prices"',
+                     'class="nav on" href="indicators.html"'):
+            self.assertIn(text, html)
+
+    def test_indicators_page_empty(self):
+        from macro.pages.indicators import NO_DATA
+        build_site(self.data, self.out, ISSUES, today=TODAY)
+        self.assertIn(NO_DATA, self.read("indicators.html"))
+
+
 if __name__ == "__main__":
     unittest.main()
