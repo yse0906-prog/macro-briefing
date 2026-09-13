@@ -132,6 +132,7 @@ macro-briefing/
     "series": "CPIAUCSL",                  // FRED 시리즈 ID 또는 "ISM_MFG" 같은 웹 수집 ID
     "name": "CPI 전년비 (8월)",
     "release_date": "2026-09-10",
+    "period": "2026-08-01",                // FRED 관측일 (실제치를 찾는 키)
     "consensus": 3.0,                      // 못 찾으면 null → 화면에 "—"
     "consensus_source": 1,                 // sources 배열 번호
     "impact": "negative",                  // "positive" | "negative" | "neutral" (미국 증시 기준)
@@ -170,7 +171,7 @@ macro-briefing/
 }
 ```
 
-`releases`에는 **실제치·이전치를 넣지 않는다.** FRED 지표는 빌드 때 `indicators.json`에서 `series`와 `release_date`로 찾아 붙인다. 웹 수집 지표(ISM 등)만 `actual`, `previous`, `actual_source`를 직접 적는다.
+`releases`에는 **실제치·이전치를 넣지 않는다.** FRED 지표는 빌드 때 `indicators.json`에서 `series`와 `period`로 실제치를, 그 직전 관측치로 이전치를 찾아 붙인다. 웹 수집 지표(ISM 등)만 `actual`, `previous`, `actual_source`를 직접 적는다.
 
 검사 규칙(`validate.py`):
 
