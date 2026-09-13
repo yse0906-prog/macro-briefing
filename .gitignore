@@ -3,3 +3,5 @@ __pycache__/
 .env
 .netlify/
 .vscode/
+.claude/settings.local.json
+site/
