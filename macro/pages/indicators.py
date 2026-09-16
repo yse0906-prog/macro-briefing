@@ -31,7 +31,8 @@ CSS = """
 
 GROUPS = [
     ("prices", "물가", "연준 목표 2%와의 거리가 금리 방향을 정합니다.", ["CPIAUCSL", "CPILFESL", "PPIFIS", "PCEPILFE"]),
-    ("jobs", "고용", "연준의 또 다른 목표인 최대 고용의 상태를 봅니다.", ["PAYEMS", "UNRATE", "ICSA"]),
+    ("jobs", "고용", "연준의 또 다른 목표인 최대 고용의 상태를 봅니다.",
+     ["PAYEMS", "UNRATE", "CIVPART", "CES0500000003", "ICSA"]),
     ("growth", "성장·경기", "경기 확장과 둔화의 흐름을 봅니다.", ["A191RL1Q225SBEA", "ISM_MFG", "ISM_SVC", "RSAFS"]),
 ]
 WEB_SERIES = {"ISM_MFG": "ISM 제조업 PMI", "ISM_SVC": "ISM 서비스업 PMI"}
@@ -168,10 +169,12 @@ def render_indicators(site) -> str:
         web_note = '<p class="muted">ISM 지수는 FRED에서 제공하지 않아 브리핑의 웹 수집값과 출처를 사용합니다.</p>'
         sections = [
             _section(*prices[:3], _prices_chart(site) + _table(site, prices[3])),
-            _section(*jobs[:3], _jobs_chart(site) + _table(site, jobs[3])),
+            _section(*jobs[:3], _jobs_chart(site)
+                     + c.employment_chain(site.indicators, next((b for b in site.briefings if b.get("releases")), None))
+                     + _table(site, jobs[3])),
             _section(*growth[:3], web_note + _table(site, growth[3])),
             _section("markets", "시장", "지표 발표에 시장이 어떻게 반응했는지 봅니다. 전주 대비 · 최근 12주.",
                      f'<div class="grid-4">{tiles}</div>'),
         ]
         main = f'<main class="i-main">{"".join(sections)}</main>'
-    return page(title="거시지표", active="indicators", body=head + main, css=c.CSS + CSS)
+    return page(title="거시지표", active="indicators", body=head + main, css=c.CSS + c.CHAIN_CSS + CSS)

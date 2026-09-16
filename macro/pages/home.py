@@ -83,9 +83,9 @@ def _hero(site, today) -> str:
 </div>{c.fomc_card(d.next_meeting(site, today), today)}</section>"""
 
 
-def _release_card(v: dict) -> str:
+def _release_card(v: dict, series_id: str) -> str:
     surprise = f'<span class="chip chip-neu">{esc(v["surprise"])}</span>' if v["surprise"] else ""
-    return f"""<div class="card ind-card"><div class="ind-top">{esc(v["name"])}<span>{v["date"]} 발표</span></div>
+    return f"""<div class="card ind-card"><div class="ind-top">{c.tip(v["name"], series_id)}<span>{v["date"]} 발표</span></div>
 <div class="ind-val"><span class="big">{v["actual"]}</span>{surprise}</div>
 <div class="ind-sub num"><span>예상 <b>{v["consensus"]}</b></span><span>이전 <b>{v["previous"]}</b></span></div>
 <div class="ind-foot">{c.impact_chip(v["impact"], "증시 ")}<p>{esc(v["interpretation"])}</p></div></div>"""
@@ -96,7 +96,7 @@ def _releases(site) -> str:
     if not b:
         return ""
     recent = sorted(b["releases"], key=lambda r: r["release_date"], reverse=True)[:4]
-    cards = "".join(_release_card(c.release_view(site.indicators, r)) for r in recent)
+    cards = "".join(_release_card(c.release_view(site.indicators, r), r["series"]) for r in recent)
     head = c.section_head("이번 발표 지표", f"실제치와 시장 예상치 비교 · {c.briefing_label(b)}", LEGEND)
     return f'<section class="wrap stack">{head}<div class="grid-4">{cards}</div></section>'
 
@@ -146,4 +146,4 @@ def render_home(site, today: date) -> str:
     else:
         sections = [_hero(site, today), _releases(site), _sectors_and_impact(site), _events(site, today)]
         main = f'<main class="home">{"".join(sections)}</main>'
-    return page(title="홈", active="home", body=_ticker(site) + main, css=c.CSS + CSS)
+    return page(title="홈", active="home", body=_ticker(site) + main, css=c.CSS + c.CHAIN_CSS + CSS)

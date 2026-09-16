@@ -4,6 +4,7 @@ from datetime import date
 from macro import data as d
 from macro.fmt import esc, kst_time, man, md, num, signed, ymd_ko
 from macro.fred import SERIES
+from macro.help import tip as help_text
 
 EMPTY_MESSAGE = "첫 브리핑을 준비하고 있습니다. 매주 토요일 오전 7시에 발행됩니다."
 OUTCOME_LABEL = {"hold": "동결", "cut25": "25bp 인하", "cut50": "50bp 인하", "hike25": "25bp 인상", "hike50": "50bp 인상"}
@@ -201,6 +202,113 @@ def tone_label(tone: float) -> str:
     if tone <= 0.66:
         return "중립~매파"
     return "매파"
+
+
+CHAIN_CSS = """
+.tip{border-bottom:1px dotted #9AA8BC;cursor:help}
+.chain{display:flex;flex-direction:column}
+.chain-row{display:flex;gap:16px;padding:14px 0;border-top:1px solid #EDF0F4;align-items:baseline;flex-wrap:wrap}
+.chain-row:first-child{border-top:0}
+.chain-k{width:132px;flex-shrink:0;font-size:14px;font-weight:700;color:#0B1A30}
+.chain-v{width:132px;flex-shrink:0;font-size:18px;font-weight:700;font-variant-numeric:tabular-nums}
+.chain-n{flex:1;min-width:220px;font-size:14px;line-height:1.6;color:#2B3A50}
+.chain-sub{display:flex;gap:8px;flex-wrap:wrap;font-size:13px;font-variant-numeric:tabular-nums}
+.chain-sub span{background:#F1F4F8;border-radius:4px;padding:4px 10px}
+@media (max-width:640px){.chain-k,.chain-v{width:auto}}
+"""
+
+INDUSTRIES = ["USLAH", "USEHS", "USCONS", "MANEMP", "USPBS", "USTRADE"]
+
+
+def tip(label: str, series_id: str) -> str:
+    """지표 이름에 설명 툴팁을 붙인다. 설명이 없으면 이름만 돌려준다."""
+    text = help_text(series_id)
+    if not text:
+        return esc(label)
+    return f'<span class="tip" title="{esc(text)}">{esc(label)}</span>'
+
+
+def _chain_row(label: str, series_id: str, value: str, note: str) -> str:
+    return (f'<div class="chain-row"><span class="chain-k">{tip(label, series_id)}</span>'
+            f'<span class="chain-v">{value}</span><span class="chain-n">{note}</span></div>')
+
+
+def employment_chain(indicators: dict, briefing: dict | None = None) -> str:
+    """NFP → 실업률 → 참가율 → 임금 → 업종별 → 이전치 수정 순서로 고용을 읽는 블록."""
+    def last(series_id):
+        points = d.obs(indicators, series_id)
+        return points[-1] if points else None
+
+    def prev(series_id):
+        points = d.obs(indicators, series_id)
+        return points[-2] if len(points) > 1 else None
+
+    payrolls = last("PAYEMS")
+    if not payrolls:
+        return ""
+
+    consensus = None
+    for release in (briefing or {}).get("releases", []):
+        if release.get("series") == "PAYEMS":
+            consensus = release.get("consensus")
+
+    rows = []
+    note = "예상치를 찾지 못했습니다." if consensus is None else (
+        f"시장 예상 {man(consensus)}과 비교해 {'많이 ' if payrolls[1] > consensus else ''}"
+        f"{'늘었습니다' if payrolls[1] > consensus else '적게 늘었습니다'}.")
+    rows.append(_chain_row("비농업 고용", "PAYEMS", man(payrolls[1]), note))
+
+    unemployment, before = last("UNRATE"), prev("UNRATE")
+    if unemployment:
+        moved = "같은 수준" if not before or before[1] == unemployment[1] else (
+            "상승" if unemployment[1] > before[1] else "하락")
+        rows.append(_chain_row("실업률", "UNRATE", f"{num(unemployment[1], 1)}%",
+                               f"직전 달 {num(before[1], 1) if before else '—'}% 대비 {moved}입니다."))
+
+    participation, before = last("CIVPART"), prev("CIVPART")
+    if participation:
+        gap = None if not before else round(participation[1] - before[1], 2)
+        note = "직전 달과 같습니다." if not gap else (
+            f"직전 달보다 {signed(gap, 1, '%p')} 움직였습니다. "
+            + ("참가율이 오르며 실업률이 유지되면 실제로 사람이 노동시장에 들어온 것입니다."
+               if gap > 0 else "참가율이 내리면 실업률이 낮아져도 구직 포기일 수 있습니다."))
+        rows.append(_chain_row("경제활동참가율", "CIVPART", f"{num(participation[1], 1)}%", note))
+
+    wage, before = last("CES0500000003"), prev("CES0500000003")
+    year_ago = None
+    points = d.obs(indicators, "CES0500000003")
+    if len(points) >= 13:
+        year_ago = points[-13][1]
+    if wage:
+        parts = []
+        if before:
+            parts.append(f"전월 대비 {signed(round((wage[1] / before[1] - 1) * 100, 1), 1, '%')}")
+        if year_ago:
+            parts.append(f"전년 대비 {signed(round((wage[1] / year_ago - 1) * 100, 1), 1, '%')}")
+        rows.append(_chain_row("시간당 평균임금", "CES0500000003", f"${num(wage[1], 2)}",
+                               " · ".join(parts) + " 입니다." if parts else "비교할 직전 값이 없습니다."))
+
+    chips = []
+    for series_id in INDUSTRIES:
+        point = last(series_id)
+        if point:
+            name = SERIES[series_id]["name"]
+            chips.append(f'<span>{tip(name, series_id)} {signed(point[1] / 10000, 1, "만")}</span>')
+    if chips:
+        rows.append(_chain_row("업종별 고용", "PAYEMS", "",
+                               f'<div class="chain-sub">{"".join(chips)}</div>'))
+
+    changes = indicators.get("series", {}).get("PAYEMS", {}).get("revisions", [])
+    if changes:
+        text = " · ".join(
+            f"{int(c['period'][5:7])}월 {man(c['from'])} → {signed(c['to'] / 10000, 1, '만')}" for c in changes)
+        note = "지난달 숫자가 바뀌었습니다. 헤드라인이 좋아도 앞선 달이 깎였다면 흐름은 약해집니다."
+    else:
+        text = "없음"
+        note = "이번 발표에서 지난달 수치가 바뀌지 않았습니다."
+    rows.append(_chain_row("이전치 수정", "PAYEMS", "", f'<b>{text}</b><br>{note}'))
+
+    return f'<div class="card pad"><div class="chain">{"".join(rows)}</div></div>'
 
 
 def tone_meter(tone: float) -> str:

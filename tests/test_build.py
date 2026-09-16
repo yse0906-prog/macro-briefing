@@ -133,5 +133,51 @@ class IndicatorsPageTest(SiteBuildCase):
         self.assertIn(NO_DATA, self.read("indicators.html"))
 
 
+class EmploymentChainTest(SiteBuildCase):
+    def test_briefing_shows_chain_in_order(self):
+        self.build_full()
+        html = self.read("briefings/2026-09-13.html")
+        self.assertIn("고용 상세", html)
+        # 툴팁 문구에도 같은 단어가 들어가므로, 고용 체인 블록 안에서만 순서를 본다
+        chain = html[html.index('id="employment"'):]
+        chain = chain[:chain.index("</section>")]
+        order = ["비농업 고용", "실업률", "경제활동참가율", "시간당 평균임금", "업종별 고용", "이전치 수정"]
+        positions = [chain.index(f">{label}<") for label in order]
+        self.assertEqual(positions, sorted(positions), order)
+
+    def test_chain_shows_participation_wage_and_industries(self):
+        self.build_full()
+        html = self.read("briefings/2026-09-13.html")
+        for text in ("61.6%", "37.75", "레저·숙박", "교육·보건", "6.2만"):
+            self.assertIn(text, html)
+
+    def test_revisions_render_when_present(self):
+        briefing = make_briefing()
+        indicators = make_indicators()
+        indicators["series"]["PAYEMS"]["revisions"] = [
+            {"period": "2026-07-01", "from": -23000, "to": 21000}
+        ]
+        write_data(self.data, briefings=[briefing], indicators=indicators,
+                   market=make_market(), calendar=make_calendar())
+        build_site(self.data, self.out, ISSUES, today=TODAY)
+        html = self.read("briefings/2026-09-13.html")
+        self.assertIn("7월", html)
+        self.assertIn("−2.3만", html)
+        self.assertIn("+2.1만", html)
+
+
+class TooltipTest(SiteBuildCase):
+    def test_indicator_names_carry_help_text(self):
+        self.build_full()
+        html = self.read("indicators.html")
+        self.assertIn("월 10만 명 안팎", html)
+        self.assertIn("62~63%", html)
+        self.assertIn('class="tip"', html)
+
+    def test_home_cards_carry_help_text(self):
+        self.build_full()
+        self.assertIn("연준 목표는 2%입니다", self.read("index.html"))
+
+
 if __name__ == "__main__":
     unittest.main()

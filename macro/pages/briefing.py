@@ -94,7 +94,7 @@ def _releases(site, b: dict) -> str:
     for r in b["releases"]:
         v = c.release_view(site.indicators, r)
         rows.append(
-            f'<tr><td><b>{esc(v["name"])}</b></td><td class="muted">{v["date"]}</td><td class="r"><b>{v["actual"]}</b></td>'
+            f'<tr><td><b>{c.tip(v["name"], r["series"])}</b></td><td class="muted">{v["date"]}</td><td class="r"><b>{v["actual"]}</b></td>'
             f'<td class="r">{v["consensus"]}</td><td class="r muted">{v["previous"]}</td><td class="r">{v["diff"]}</td>'
             f'<td>{c.impact_chip(v["impact"])}</td></tr>'
         )
@@ -207,6 +207,9 @@ def _sections(site, b: dict) -> list[tuple[str, str, str]]:
     sections = []
     if b.get("releases"):
         sections.append(("releases", "지표 발표 결과", _releases(site, b)))
+    chain = c.employment_chain(site.indicators, b)
+    if chain:
+        sections.append(("employment", "고용 상세", chain))
     if fomc.get("last_meeting"):
         sections.append(("last-fomc", "최근 FOMC 결정", _last_meeting(fomc["last_meeting"])))
     if fomc.get("next_meeting"):
@@ -234,7 +237,8 @@ def render_briefing(site, b: dict, today: date) -> str:
             f'<b data-dday="{meeting["date"]}">{d.dday(meeting["date"], today)}</b></div>') if meeting else ""
     body = (f'{_header(b)}<div class="wrap b-body"><article class="b-main">{body_sections}</article>'
             f'<aside class="toc"><nav class="card">{toc}</nav>{mini}</aside></div>')
-    return page(title=b["headline"], active="briefing", body=body, root="../", css=c.CSS + c.TONE_CSS + CSS)
+    return page(title=b["headline"], active="briefing", body=body, root="../",
+                css=c.CSS + c.TONE_CSS + c.CHAIN_CSS + CSS)
 
 
 def render_briefing_empty() -> str:

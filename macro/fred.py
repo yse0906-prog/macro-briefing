@@ -14,6 +14,14 @@ SERIES = {
     "PCEPILFE": {"name": "근원 PCE 전년비", "transform": "yoy", "unit": "%", "keep": 36},
     "PAYEMS": {"name": "비농업 고용 증감", "transform": "diff_k", "unit": "명", "keep": 36},
     "UNRATE": {"name": "실업률", "transform": "level", "unit": "%", "keep": 36},
+    "CIVPART": {"name": "경제활동참가율", "transform": "level", "unit": "%", "keep": 36},
+    "CES0500000003": {"name": "시간당 평균임금", "transform": "level", "unit": "달러", "keep": 36},
+    "USCONS": {"name": "건설", "transform": "diff_k", "unit": "명", "keep": 36},
+    "MANEMP": {"name": "제조", "transform": "diff_k", "unit": "명", "keep": 36},
+    "USTRADE": {"name": "소매", "transform": "diff_k", "unit": "명", "keep": 36},
+    "USPBS": {"name": "전문·사업서비스", "transform": "diff_k", "unit": "명", "keep": 36},
+    "USEHS": {"name": "교육·보건", "transform": "diff_k", "unit": "명", "keep": 36},
+    "USLAH": {"name": "레저·숙박", "transform": "diff_k", "unit": "명", "keep": 36},
     "ICSA": {"name": "신규 실업수당 청구", "transform": "level", "unit": "건", "keep": 52},
     "A191RL1Q225SBEA": {"name": "실질 GDP (연율)", "transform": "level", "unit": "%", "keep": 12},
     "RSAFS": {"name": "소매판매 전월비", "transform": "pct", "unit": "%", "keep": 36},
@@ -122,6 +130,21 @@ def fetch_csv(series_id: str, retries: int = 3, wait: float = 2.0, timeout: floa
     raise error if isinstance(error, OSError) else OSError(str(error))
 
 
+def revisions(old_obs, new_obs, months: int = 3) -> list[dict]:
+    """이전 수집본과 새 수집본을 비교해 값이 바뀐 달을 찾는다.
+
+    고용보고서는 발표마다 지난 두 달 수치를 고쳐서 내므로, 그 변화를 여기서 잡는다.
+    새로 추가된 달은 수정이 아니므로 제외한다.
+    """
+    old = {day: value for day, value in old_obs}
+    changed = []
+    for day, value in new_obs[-months:]:
+        before = old.get(day)
+        if before is not None and before != value:
+            changed.append({"period": day, "from": before, "to": value})
+    return changed
+
+
 def build_indicators(fetch, previous, now_iso: str) -> dict:
     old_series = (previous or {}).get("series", {})
     result = {"fetched_at": now_iso, "series": {}}
@@ -132,7 +155,8 @@ def build_indicators(fetch, previous, now_iso: str) -> dict:
             if not obs:
                 raise ValueError("관측치 없음")
             result["series"][sid] = {**info, "obs": [list(o) for o in obs[-meta["keep"]:]],
-                                     "stale": False, "last_success": now_iso}
+                                     "stale": False, "last_success": now_iso,
+                                     "revisions": revisions(old_series.get(sid, {}).get("obs", []), obs)}
         except (OSError, ValueError, ZeroDivisionError) as exc:
             old = old_series.get(sid)
             base = old if old else {**info, "obs": [], "last_success": None}
