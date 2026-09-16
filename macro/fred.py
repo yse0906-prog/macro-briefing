@@ -1,6 +1,7 @@
 """FRED 시리즈 수집·변환. 네트워크 호출은 fetch 인자로 주입한다."""
 import csv
 import io
+import subprocess
 import time
 import urllib.request
 
@@ -77,17 +78,48 @@ def level(obs):
 TRANSFORMS = {"yoy": yoy, "pct": pct_change, "diff_k": diff_thousands, "level": level}
 
 
-def fetch_csv(series_id: str, retries: int = 3, wait: float = 2.0) -> str:
-    request = urllib.request.Request(CSV_URL.format(series=series_id), headers={"User-Agent": "macro-briefing/1.0"})
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (compatible; macro-briefing/1.0)",
+    "Accept": "text/csv,text/plain,*/*",
+    "Accept-Encoding": "identity",
+    "Connection": "close",
+}
+
+
+def _direct_get(url: str, timeout: float) -> str:
+    """파이썬 표준 라이브러리로 내려받는다."""
+    request = urllib.request.Request(url, headers=HEADERS)
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+        return response.read().decode("utf-8")
+
+
+def _curl_get(url: str, timeout: float) -> str:
+    """curl로 내려받는다. 클라우드 프록시 환경에서 파이썬 경로가 멈출 때 쓰는 대체 경로."""
+    result = subprocess.run(
+        ["curl", "-sS", "--fail", "--max-time", str(int(timeout)), url],
+        capture_output=True, text=True, timeout=timeout + 10,
+    )
+    if result.returncode != 0:
+        raise OSError(f"curl 실패(코드 {result.returncode}): {result.stderr.strip()[:200]}")
+    return result.stdout
+
+
+def fetch_csv(series_id: str, retries: int = 3, wait: float = 2.0, timeout: float = 20,
+              direct=_direct_get, fallback=_curl_get) -> str:
+    """FRED CSV를 내려받는다. 파이썬 경로가 실패하면 curl로 한 번 더 시도한다."""
+    url = CSV_URL.format(series=series_id)
     error = None
     for attempt in range(retries):
-        try:
-            with urllib.request.urlopen(request, timeout=30) as response:
-                return response.read().decode("utf-8")
-        except OSError as exc:
-            error = exc
-            time.sleep(wait * (attempt + 1))
-    raise error
+        for get in (direct, fallback):
+            try:
+                text = get(url, timeout)
+                if text and text.strip():
+                    return text
+                error = OSError("빈 응답")
+            except (OSError, ValueError, subprocess.SubprocessError) as exc:
+                error = exc
+        time.sleep(wait * (attempt + 1))
+    raise error if isinstance(error, OSError) else OSError(str(error))
 
 
 def build_indicators(fetch, previous, now_iso: str) -> dict:
