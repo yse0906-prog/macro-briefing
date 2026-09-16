@@ -1,0 +1,181 @@
+{
+  "date": "2026-09-17",
+  "updated_at": "2026-09-17T07:30:00+09:00",
+  "sectors": [
+    {
+      "key": "finance",
+      "name": "금융",
+      "status": "negative",
+      "days": 3,
+      "headline": "3년 만의 첫 인상이 현실이 되자, 은행주는 2월 이후 최악의 하루를 맞았다",
+      "trigger": "어제(9/16, 미국시각) 연준이 기준금리를 25bp 올려 3.75~4.00%로 확정했습니다. 2023년 7월 이후 첫 인상입니다. 발표 직후 잠깐 안도 랠리가 나왔지만, 워시 의장이 기자회견에서 물가 경계를 강하게 재확인하자 은행주를 포함한 지수 전체가 되돌림에 들어갔습니다.",
+      "numbers": [
+        {"text": "SPDR S&P 은행 ETF(KBE) -2.6%, 올해 2월 이후 최악의 하루", "source": 3},
+        {"text": "골드만삭스 -1.0%, JP모건 -0.7%", "source": 3},
+        {"text": "10년물 금리, 발표 직후 다시 5% 위로 재상승", "source": 1}
+      ],
+      "chain": "정책금리 인상 확정 → 조달금리↑ → 예대마진 개선 기대 / 동시에 보유채권 평가손 확대·경기둔화 경계 → 은행 ETF 급락 → '마진 개선'보다 '평가손·경기 우려'가 먼저 가격에 반영",
+      "korea": "한미 금리차가 다시 벌어지는 구도라 원/달러에 상방 압력이 이어집니다. 오늘(9/17) 코스닥은 개장 직후 0.58% 내린 1002.01로 출발하며 매파적 결과를 뒤늦게 반영했습니다. 국내 은행·증권주도 미국 은행주 급락의 심리적 영향권에 있습니다.",
+      "watch_next": [
+        "코스피·코스닥 오늘(9/17) 정규장 마감 결과",
+        "10년물-2년물 스프레드가 인상 이후 며칠간 어떻게 움직이는지",
+        "다음 FOMC(10월)까지 남은 점도표상 추가 인상 1회 반영 속도"
+      ],
+      "interview": "\"금리가 오르면 은행에 무조건 좋은가\"라는 질문에 이번처럼 은행주가 급락한 사례로 반박할 수 있어야 합니다. 예대마진 개선은 시차를 두고 나타나지만, 평가손과 경기둔화 우려는 즉시 가격에 반영된다는 점이 핵심입니다.",
+      "tickers": [
+        {"symbol": "GS", "change_pct": -1.0},
+        {"symbol": "JPM", "change_pct": -0.7}
+      ]
+    },
+    {
+      "key": "energy",
+      "name": "에너지",
+      "status": "mixed",
+      "days": 6,
+      "headline": "사우디 파이프라인 복구 기대에 유가는 꺾였지만, 호르무즈는 여전히 막혀 있다",
+      "trigger": "미국 에너지장관이 \"손상된 사우디 동서 파이프라인이 며칠 내 재가동될 것\"이라고 밝히면서 어제(9/16) 유가가 최근 4개월래 고점에서 밀려났습니다. 다만 호르무즈 해협 자체는 여전히 정상 통항과 거리가 먼 상태로, 공급 차질의 근본 원인은 해소되지 않았습니다.",
+      "numbers": [
+        {"text": "브렌트유 -2.7% 배럴당 105.83달러, WTI -3.2% 배럴당 102.43달러로 하락", "source": 4},
+        {"text": "이달 들어 유가는 호르무즈 갈등 격화로 16% 이상 급등한 뒤 이번에 반락", "source": 4}
+      ],
+      "chain": "사우디 파이프라인 조기 복구 기대 → 공급 차질 완화 전망 → 유가↓ / 다만 호르무즈 자체는 여전히 제한적 통항 → 완전한 정상화는 아직 → 유가 되돌림의 지속성은 불확실",
+      "korea": "유가가 꺾이면 정유사 정제마진 개선 속도는 둔화될 수 있지만, 항공·화학의 원가 부담은 그만큼 완화됩니다. 파이프라인 복구가 실제로 며칠 내 이뤄지는지가 다음 국면을 정하는 변수이며, 복구가 지연되면 유가는 다시 반등할 여지가 있습니다.",
+      "watch_next": [
+        "사우디 동서 파이프라인의 실제 재가동 시점",
+        "호르무즈 해협 통항량 회복 여부",
+        "10월 국제선 유류할증료 고시 (9월 중순 발표)"
+      ],
+      "interview": "\"유가가 왜 하루 만에 3%씩 움직이나요\"라는 질문에는 공급 차질의 '완화 기대'와 '완전 해소'를 구분해서 답해야 합니다. 파이프라인 복구 발표는 기대일 뿐, 호르무즈 통항 정상화라는 근본 변수는 그대로라는 점이 요지입니다.",
+      "tickers": []
+    },
+    {
+      "key": "bio",
+      "name": "바이오",
+      "status": "positive",
+      "headline": "베라 테라퓨틱스의 3상 신약이 모든 목표치를 충족하며 IgA 신병증 치료에 한 걸음 다가섰다",
+      "trigger": "베라 테라퓨틱스가 어제(9/15) 자사의 아타시셉트(트루타크나) 3상 ORIGIN 3 시험의 최종 유효성 분석에서 사전 설정된 모든 평가지표를 충족했다고 발표했습니다. 원발성 IgA 신병증 환자를 대상으로 한 시험으로, 신장 기능 저하를 위약군보다 뚜렷하게 늦췄습니다.",
+      "numbers": [
+        {"text": "52주 시점 eGFR 감소폭, 치료군 0.1 대 위약군 5.7(mL/min/1.73㎡)", "source": 11},
+        {"text": "104주 연간 eGFR 감소 기울기, 치료군 0.6 대 위약군 5.6", "source": 11},
+        {"text": "출시 후 10주간 처방 개시 서류(patient start form) 350건 이상 접수", "source": 11}
+      ],
+      "chain": "3상 최종 결과 전 지표 충족 → 완전승인 전망 강화 → 상업화 기대↑ / 동시에 FDA는 4분기 추가승인 신청(sBLA) 접수 예정 → 승인 시 매출 확대 경로 구체화",
+      "korea": "국내 바이오는 신약 개발보다 위탁생산(CDMO)·바이오시밀러 비중이 커서 이번 뉴스가 직접 실적에 연결되지는 않습니다. 다만 IgA 신병증처럼 새로운 치료 기전이 자리잡으면, 국내 기업의 관련 파이프라인이나 바이오시밀러 진출 여지를 점검해볼 만합니다.",
+      "watch_next": [
+        "베라 테라퓨틱스의 4분기 sBLA(추가승인) 신청 여부",
+        "9월 30일 스칼러록 아피테그루맙 FDA 결정",
+        "FOMC 이후 금리 방향 — 임상단계 바이오 밸류에이션의 직접 변수"
+      ],
+      "interview": "\"3상 결과가 좋다고 바로 주가가 오르는 이유는?\"에 '완전승인 가능성 상승 → 매출 가시성 확보 → 밸류에이션 재평가'라는 경로로 답할 수 있어야 합니다. 임상 단계별로 회사가 감당하는 리스크가 줄어드는 지점이라는 점이 핵심입니다.",
+      "tickers": [
+        {"symbol": "VERA", "change_pct": null}
+      ]
+    },
+    {
+      "key": "semiconductor",
+      "name": "반도체",
+      "status": "mixed",
+      "days": 4,
+      "headline": "FOMC 전날 저가 매수에 삼성전자·SK하이닉스가 뛰었지만, AI 안전 경고가 새 변수로 등장했다",
+      "trigger": "FOMC 결과를 기다리던 어제(9/16) 코스피에서 저가 매수세가 반도체주로 몰리며 삼성전자와 SK하이닉스가 크게 올랐습니다. 반면 미국에서는 이틀 전(9/14) OpenAI·Anthropic 등 AI 업계 리더들의 '개발 속도를 늦추자'는 공동 경고가 나오면서 AI 데이터센터 투자 지속 가능성에 대한 재평가 우려로 엔비디아·마이크론·브로드컴이 흔들린 바 있습니다. HBM 가격·수율을 둘러싼 삼성·SK의 경쟁 구도는 그대로 이어지고 있습니다.",
+      "numbers": [
+        {"text": "9월 16일 코스피 마감, 삼성전자 +2.01%·SK하이닉스 +4.08%", "source": 13},
+        {"text": "9월 14일(미국시각) AI 안전 경고 이후 엔비디아 -3.36%·마이크론 -5%대·브로드컴 -4%대", "source": 10},
+        {"text": "iShares 반도체 ETF(SOXX), 최근 3개월 -17%", "source": 1}
+      ],
+      "chain": "AI 데이터센터 capex↑ → HBM 수요↑ → 공급 부족·가격 인상 / 다만 AI 개발 속도 조절론·안전 경고 → 'capex가 계속 늘 수 있는가' 재평가 → 단기 밸류에이션 변동성↑ → HBM 공급망(삼성·SK) 실적 기대에도 주가는 며칠 단위로 출렁임",
+      "korea": "반도체는 HBM 공급망을 통해 미국 AI 투자 사이클과 직결되지만, 이번처럼 미국에서 AI 안전 논쟁이 커지면 코스피 반도체주도 함께 흔들릴 수 있습니다. 어제 저가 매수로 반등했다는 것은 그만큼 최근 며칠 조정이 있었다는 뜻이기도 합니다. HBM 업황 자체(가격 인상, HBM4 경쟁)와 AI capex 지속성 논쟁을 분리해서 봐야 합니다.",
+      "watch_next": [
+        "AI 안전 경고가 실제 빅테크 capex 계획 변경으로 이어지는지",
+        "엔비디아 HBM4 품질 테스트 결과와 업체별 배분",
+        "삼성전자 3분기 실적 발표와 HBM4 매출 비중"
+      ],
+      "interview": "\"AI 안전 논쟁이 왜 반도체 주가에 영향을 주나요?\"를 'AI 개발이 늦춰지면 데이터센터 투자도 늦춰지고, 이는 HBM 수요로 직결된다'는 경로로 설명할 수 있어야 합니다. 기술적 논쟁이 곧바로 수요 전망 문제로 번지는 사례입니다.",
+      "tickers": [
+        {"symbol": "005930.KS", "change_pct": 2.01},
+        {"symbol": "000660.KS", "change_pct": 4.08},
+        {"symbol": "NVDA", "change_pct": null}
+      ]
+    },
+    {
+      "key": "ai",
+      "name": "AI",
+      "status": "mixed",
+      "headline": "OpenAI는 챗GPT에 광고를 실험하고, Anthropic 진영에서는 존립 위험 경고와 사임이 나왔다",
+      "trigger": "AI 업계에서 상업화와 안전 경고가 같은 주에 동시에 불거졌습니다. OpenAI는 챗GPT 안에 광고를 붙이는 실험을 시작했고, 거의 같은 시점에 Anthropic 최고경영자는 AI 개발 속도를 늦추자고 공개 제안했습니다. 이 제안에 오픈AI·xAI·구글 딥마인드 수장까지 동의를 표하는 보기 드문 경쟁사 간 합의가 나왔습니다.",
+      "numbers": [
+        {"text": "OpenAI, 9월 16일 챗GPT 내 스폰서 에이전트 시범 도입 — 웨이페어·앤지 등이 첫 광고주", "source": 9},
+        {"text": "Anthropic 연구원 제이콥 콕슨, 공개 사임 — \"AI가 10년 내 인류를 위협할 수 있다고 진심으로 믿는다\"는 발언에 동료 연구원도 동의 표명", "source": 8}
+      ],
+      "chain": "빅테크·스타트업의 AI 상업화(광고·기업용 제품)↑ → 매출 다각화 → 밸류에이션 방어 논리 강화 / 동시에 업계 리더들의 안전 경고↑ → 개발 속도 조절 압력 → capex·서비스 확장 속도에 대한 시장의 재평가 → 두 흐름이 동시에 진행되며 섹터 심리가 방향을 정하지 못함",
+      "korea": "AI 상업화가 계속되면 국내 HBM·서버용 D램 수요는 유지되지만, 개발 속도 조절론이 실제 정책이나 빅테크 capex 축소로 이어지면 국내 반도체·전력기기 수요 전망에도 영향이 옵니다. 금융권 입장에서는 AI 기업 여신·투자 심사에서 '안전 리스크로 인한 규제 강화 가능성'을 새 변수로 넣어야 하는 국면입니다.",
+      "watch_next": [
+        "OpenAI 챗GPT 광고 모델의 확대 여부와 이용자 반응",
+        "Anthropic발 개발 속도 조절 제안에 대한 각국 정부·의회 반응",
+        "빅테크 3분기 실적에서 capex 가이던스 변화 여부"
+      ],
+      "interview": "\"AI 기업들이 왜 갑자기 안전을 이야기하나요?\"라는 질문에는 수익 모델(광고·기업 계약)과 리스크 관리(안전 경고)가 동시에 필요해진 성장 단계에 들어섰다는 답이 설득력 있습니다. 성장과 위험관리가 같은 시점에 요구되는 산업의 특성입니다.",
+      "watch": [
+        {"company": "OpenAI", "text": "9월 16일 챗GPT 안에 스폰서 에이전트를 시범 도입했습니다. 웨이페어·앤지 등 홈퍼니싱·홈서비스 업체가 첫 광고주로 참여했습니다. 소비자 구독료 외에 광고 수익을 더하려는 시도로, 기업용 제품 확장과 함께 수익 다각화 축이 하나 더 늘었습니다.", "source": 9},
+        {"company": "Anthropic", "text": "최고경영자 다리오 아모데이가 AI 개발 속도를 늦추고 각국 정부의 감독을 강화하자는 공개 제안을 내놨습니다. 같은 시기 연구원 제이콥 콕슨이 \"AI가 인류를 위협할 수 있다고 회사가 진심으로 믿고 있다\"며 사임했고, 정렬(alignment) 연구 책임자도 이에 동의하는 입장을 밝혔습니다. 회사는 별도로 Claude 모델의 생물학 분야 오용 사례를 담은 위협 보고서도 냈습니다.", "source": 8}
+      ],
+      "tickers": []
+    },
+    {
+      "key": "robotics",
+      "name": "로봇",
+      "status": "mixed",
+      "days": 2,
+      "headline": "매출은 68% 늘었는데 순이익은 반토막, 유니트리가 보여주는 로봇 산업의 성장통",
+      "trigger": "유니트리의 올해 1분기 실적이 로봇 산업의 현재 상태를 잘 보여줍니다. 매출은 전년 대비 크게 늘었지만, 순이익(비반복 항목 제외)은 오히려 절반 넘게 줄었습니다. 8월 상하이 상장 첫날 460% 급등했던 주가도 9월 초 고점 대비 절반 수준으로 내려온 상태가 이어지고 있습니다.",
+      "numbers": [
+        {"text": "유니트리 1분기 매출 전년 대비 +68.49%, 순이익(비반복 제외)은 -52.55%", "source": 12},
+        {"text": "유니트리, 8월 19일 상하이 상장 첫날 종가 기준 +460%", "source": 12}
+      ],
+      "chain": "휴머노이드 수요 기대↑ → 생산 확대·매출 증가 / 동시에 부품·연구개발 투자↑ → 원가·비용 부담↑ → 매출 증가에도 이익률은 오히려 악화 → '성장은 맞는데 아직 돈은 못 버는' 구간이라는 점이 주가 변동성의 배경",
+      "korea": "완성 로봇 업체의 수익성이 아직 불안정하다는 점은 국내 부품 업체에도 시사점이 있습니다. 감속기·모터·센서 업체들은 완성 로봇의 매출 성장에는 올라타지만, 완성 업체가 이익을 못 내는 구간이 길어지면 단가 인하 압력을 받을 수 있습니다. 실적 발표 시 매출과 이익률을 함께 확인하는 편이 안전합니다.",
+      "watch_next": [
+        "유니트리 2분기 실적에서 이익률 개선 여부",
+        "테슬라 프리몬트 공장의 옵티머스 생산 전환 진행 상황"
+      ],
+      "interview": "\"매출은 늘었는데 왜 주가가 안 좋나요\"라는 질문에 매출 성장과 이익률을 분리해서 보라는 답을 할 수 있어야 합니다. 초기 성장 산업에서 흔히 나타나는 패턴이라는 점까지 짚으면 완성도가 높아집니다.",
+      "tickers": []
+    },
+    {
+      "key": "realestate",
+      "name": "부동산",
+      "status": "negative",
+      "days": 3,
+      "headline": "10년물이 다시 5%를 넘어서며, 상업용 부동산 현장에서는 '지분 전액 소멸' 거래까지 나온다",
+      "trigger": "연준의 금리 인상 확정 이후 10년물이 다시 5% 위로 올라서면서, 상업용 부동산(CRE) 현업에서는 차환 부담이 구체적인 거래 형태로 나타나고 있습니다. 대출 원금 상환이 어려워진 자산에서 기존 지분투자자의 지분이 통째로 사라지는 거래가 늘고 있다는 현장 목소리가 나왔습니다.",
+      "numbers": [
+        {"text": "10년물 금리, FOMC 발표 직후 다시 5%선 위로 재상승", "source": 1},
+        {"text": "싱가포르 리츠(S-REIT) 지수, 연초 대비 -8.2%", "source": 6}
+      ],
+      "chain": "장기금리↑ → 차환 시 대출한도(LTV) 축소 → 신규 대출로 기존 대출을 갈아타지 못함 → 지분투자자 자본 잠식·지분 전액 소멸 사례 증가 → 대주(貸主) 주도 매각·재구조화 거래 비중↑",
+      "korea": "국내 금융권에는 해외 부동산 대체투자 익스포저로 들어옵니다. 보험사·연기금이 담은 해외 오피스·리테일 자산 중 지분이 전액 소멸되는 구조가 나오면, 이는 평가손이 아니라 투자금 자체의 손실로 확정된다는 뜻입니다. 증권사는 이런 자산의 셀다운 물량이 시장에 더 나올 가능성을 점검해야 합니다.",
+      "watch_next": [
+        "10년물이 이번 인상 이후 5%를 얼마나 오래 유지하는지",
+        "미국 지역은행 3분기 실적의 CRE 대손충당금",
+        "국내 금융사 해외 부동산 지분투자 손상 공시"
+      ],
+      "interview": "\"지분이 전액 소멸된다는 게 무슨 뜻인가요\"라는 질문에는 평가손(장부상 손실)과 지분 소멸(투자금 실현 손실)의 차이를 설명할 수 있어야 합니다. 차환 실패가 후자로 이어지는 경로를 순서대로 말하면 충분합니다.",
+      "tickers": []
+    }
+  ],
+  "sources": [
+    {"id": 1, "title": "Yahoo Finance: Stock market today — Dow sinks, S&P 500 and Nasdaq fall as Fed hikes rates, bond yields rise", "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-september-16-dow-sp-500-nasdaq-fed-meeting-decision-080356525.html", "accessed": "2026-09-17"},
+    {"id": 2, "title": "Federal Reserve: FOMC statement, September 16, 2026", "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm", "accessed": "2026-09-17"},
+    {"id": 3, "title": "Investing.com: Big U.S. bank stocks fall after Fed raises interest rates", "url": "https://ng.investing.com/news/stock-market-news/big-us-bank-stocks-fall-after-fed-raises-interest-rates-93CH-2698815", "accessed": "2026-09-17"},
+    {"id": 4, "title": "CNBC: Oil prices today — Brent, WTI, Hormuz, Iran war", "url": "https://www.cnbc.com/2026/09/16/oil-prices-today-brent-wti-hormuz-iran-war.html", "accessed": "2026-09-17"},
+    {"id": 5, "title": "Commercial Observer: As Fed Hikes Rates for First Time Since 2023, Commercial Real Estate Comes to Terms", "url": "https://commercialobserver.com/2026/09/fed-interest-rate-hike-kevin-warsh/", "accessed": "2026-09-17"},
+    {"id": 6, "title": "The Kopi Notes: S-REITs Down 8.2% in 2026 — Buy the Dip?", "url": "https://thekopinotes.com/articles/news/s-reit-down-2026-buy-dip-september/", "accessed": "2026-09-17"},
+    {"id": 7, "title": "이데일리: 코스닥, 뒤늦은 FOMC 반영에 하락 출발…'1000선' 턱걸이", "url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=01492406629279504", "accessed": "2026-09-17"},
+    {"id": 8, "title": "Foreign Policy: Anthropic and OpenAI Warn of Existential AI Risk", "url": "https://foreignpolicy.com/2026/09/16/ai-risk-jacob-coxon-openai-anthropic-dario-amodei-sam-altman-trump-doomsday/", "accessed": "2026-09-17"},
+    {"id": 9, "title": "AI Weekly: OpenAI News Today — Tests Sponsored Agents Inside ChatGPT With Wayfair and Angi", "url": "https://aiweekly.co/ai-news-today/openai-news", "accessed": "2026-09-17"},
+    {"id": 10, "title": "TradingKey: AI Chip Stocks Plunge as Nvidia, Micron, Broadcom Tumble", "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262167442-ai-chip-stocks-plummet-nvda-mu-avgo-fall-gold-prices-drop-4300-tradingkey", "accessed": "2026-09-17"},
+    {"id": 11, "title": "BioSpace: Vera Therapeutics Announces TRUTAKNA Stabilized eGFR — ORIGIN 3 Final Efficacy Analysis", "url": "https://www.biospace.com/press-releases/vera-therapeutics-announces-trutakna-atacicept-vymj-stabilized-egfr-and-prevented-kidney-disease-progression-through-two-years-in-origin-3-final-efficacy-analysis-in-iga-nephropathy", "accessed": "2026-09-17"},
+    {"id": 12, "title": "Gasgoo: Unitree Wins IPO Approval as Robot Makers Face Tougher Profit Challenges", "url": "https://autonews.gasgoo.com/articles/news/unitree-wins-ipo-approval-as-robot-makers-face-tougher-profit-challenges-2061816669448765440", "accessed": "2026-09-17"},
+    {"id": 13, "title": "서울신문: 美 FOMC만 보는 박스권 코스피", "url": "https://www.seoul.co.kr/news/economy/securities/2026/09/17/20260917031006", "accessed": "2026-09-17"}
+  ]
+}

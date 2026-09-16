@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-17",
+  "type": "event",
+  "published_at": "2026-09-17T07:10:00+09:00",
+  "headline": "FOMC 3년 만에 첫 인상, 3.75~4.00%로 상단 이동",
+  "summary": [
+    "연준이 9월 FOMC에서 기준금리를 25bp 인상해 3.75~4.00%로 올렸으며, 이는 2023년 7월 이후 3년여 만의 첫 인상 결정이다.",
+    "위원회는 표결 12대 0 만장일치로 결정했고 성명에서 인플레이션이 여전히 높은 수준이라고 명시했다.",
+    "결정 발표 후 S&P500과 다우지수는 하락하고 10년물 금리는 5%를 넘었다가 되돌렸으며, 워시 의장은 노동시장 훼손 없이 물가를 잡겠다는 기조를 밝혔다."
+  ],
+  "fomc": {
+    "last_meeting": {
+      "date": "2026-09-16",
+      "decision": "hike25",
+      "range": [3.75, 4.00],
+      "vote": {"for": 12, "against": 0},
+      "tone": 0.75,
+      "statement_points": [
+        "경제활동은 견고한 속도로 확장 중이며 내수 지출도 회복력을 유지하고 있다",
+        "생산성이 강하게 늘고 기업의 자본투자도 견조하며 고용 증가는 노동력 증가 속도에 부합한다",
+        "인플레이션은 여전히 높은 수준이며, 오늘의 정책 조치는 2% 목표로의 더 빠른 복귀를 지지한다"
+      ],
+      "press_conference": "워시 의장은 \"물가가 너무 높고 그 상태가 너무 오래 지속되고 있다는 것이 분명한 사실\"이라고 말했고, 동시에 \"목표 달성을 위해 노동시장을 훼손할 필요는 없다고 본다\"며 고용 훼손 없이 물가를 낮추겠다는 균형을 강조했다. 연준의 정치적 독립성에 대해서는 \"우리는 우리 영역을 지킨다\"고 답했다. 점도표상 18명 위원 중 12명이 올해 말까지 추가 25bp 인상 1회를 전망했고, 4명은 추가 50bp를, 2명은 추가 인상이 없을 것으로 봤다."
+    }
+  },
+  "market_impact": [
+    {"asset": "us_equities", "direction": "down", "text": "발표 직후 안도 랠리가 나왔지만 워시 의장의 기자회견 도중 되돌림이 나오며 S&P500 -0.45%(7,551.81), 다우 -1.21%(51,461.90)로 마감했고 나스닥은 -0.01%로 거의 보합이었다."},
+    {"asset": "us_rates", "direction": null, "text": "10년물 금리는 발표 직후 5%를 넘어섰다가 이후 약 4bp 낮아지며 되돌렸고, 2년물은 약 1bp 하락해 단기·장기물 반응이 엇갈렸다."},
+    {"asset": "usd", "direction": "up", "text": "달러인덱스는 결정 이후 강세를 보였다."},
+    {"asset": "krw", "direction": null, "text": "발표가 한국시간 새벽 3시여서 국내 외환시장 개장 전이라 결정 직후 원/달러 반응은 아직 확인되지 않았다. 결정 이틀 전인 9월 14일 오후 3시30분 종가는 전 거래일 대비 1.4원 오른 1,347.3원이었다."}
+  ],
+  "institution_impact": [
+    {"institution": "securities", "text": "10년물이 5%를 순간적으로 넘었다가 되돌린 만큼 보유 채권 평가손익이 발표 전후로 크게 흔들렸을 것으로 보이며, 인상기 신규 회사채·여전채 발행 비용이 높아져 IB·발행 시장에는 부담 요인이다. 브로커리지 거래대금은 FOMC 전후 변동성 확대로 단기적으로 늘어날 수 있다."},
+    {"institution": "lp", "text": "보험사·연기금은 할인율 상승이 부채 듀레이션 매칭에 유리하게 작용할 수 있으나, 3년 만의 인상 전환이라는 정책 불확실성 자체가 해외자산 환헤지 비용과 자산배분 재조정 부담을 키운다."},
+    {"institution": "gp", "text": "정책금리가 오르는 국면에서는 금리형·단기 유동성 상품으로 자금이 몰리는 경향이 있어, 자산운용사는 펀드 자금 유출입 구성이 금리형 상품 쪽으로 기울 가능성을 점검할 필요가 있다."}
+  ],
+  "sources": [
+    {"id": 1, "title": "Federal Reserve: FOMC statement, September 16, 2026", "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm", "accessed": "2026-09-17"},
+    {"id": 2, "title": "CNBC: Fed rate decision September 2026 — rates rise to 3.75%-4%", "url": "https://www.cnbc.com/2026/09/16/fed-rate-decision-september-2026.html", "accessed": "2026-09-17"},
+    {"id": 3, "title": "Yahoo Finance: Federal Reserve meeting live updates — Chairman Kevin Warsh", "url": "https://finance.yahoo.com/economy/policy/live/federal-reserve-meeting-live-updates-chairman-kevin-warsh-143452661.html", "accessed": "2026-09-17"},
+    {"id": 4, "title": "데일리매거진: 원/달러 환율, FOMC 경계감 속 1,340원대 등락", "url": "https://dailymagazine.co.kr/news/newsview.php?ncode=1065545799331926", "accessed": "2026-09-17"}
+  ]
+}
