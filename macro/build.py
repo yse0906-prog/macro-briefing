@@ -9,6 +9,7 @@ from macro.pages.fomc import render_fomc
 from macro.pages.home import render_home
 from macro.pages.indicators import render_indicators
 from macro.pages.issues import render_issues
+from macro.pages.sectors import render_sectors, render_sectors_day
 
 KST = timezone(timedelta(hours=9))
 
@@ -28,7 +29,10 @@ def build_site(data_dir: Path, out_dir: Path, issues: list, today=None) -> list[
         write(out_dir / "fomc.html", render_fomc(site, today)),
         write(out_dir / "indicators.html", render_indicators(site)),
         write(out_dir / "issues.html", render_issues(issues)),
+        write(out_dir / "sectors.html", render_sectors(site)),
     ]
+    for day in site.sectors:
+        written.append(write(out_dir / "sectors" / f"{day['date']}.html", render_sectors_day(site, day)))
     for b in site.briefings:
         written.append(write(out_dir / "briefings" / f"{b['date']}.html", render_briefing(site, b, today)))
     latest = render_briefing(site, site.latest, today) if site.latest else render_briefing_empty()

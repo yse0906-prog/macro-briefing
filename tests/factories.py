@@ -130,7 +130,11 @@ def make_briefing(**overrides) -> dict:
             {"asset": "us_rates", "direction": "up", "text": "10년물 상승"},
             {"asset": "usd", "direction": "up", "text": "달러 강세"},
             {"asset": "krw", "direction": "up", "text": "원/달러 상승"},
-            {"asset": "korea_banks", "direction": None, "text": "외화 조달비용 부담"},
+        ],
+        "institution_impact": [
+            {"institution": "securities", "text": "거래대금과 트레이딩 손익에 미치는 영향"},
+            {"institution": "lp", "text": "보험사·연기금의 듀레이션과 환헤지 비용"},
+            {"institution": "gp", "text": "자산운용사의 펀드 자금 흐름과 수수료"},
         ],
         "scenarios": [
             {"name": "기본 · 매파적 동결", "probability": 60, "text": "기본 시나리오 설명"},
@@ -158,10 +162,57 @@ def make_event_briefing(**overrides) -> dict:
         "summary": ["첫째 요약 문장.", "둘째 요약 문장.", "셋째 요약 문장."],
         "fomc": {"last_meeting": {**copy.deepcopy(LAST_MEETING), "date": "2026-09-16", "tone": 0.72}},
         "market_impact": [{"asset": "us_rates", "direction": "up", "text": "단기물 상승"}],
+        "institution_impact": [
+            {"institution": "securities", "text": "거래대금 증가와 채권 평가손이 엇갈립니다."},
+            {"institution": "lp", "text": "할인율 상승과 환헤지 비용을 함께 봐야 합니다."},
+            {"institution": "gp", "text": "금리형 상품으로 자금이 쏠릴 수 있습니다."},
+        ],
         "sources": [{"id": 1, "title": "연준 성명서", "url": "https://www.federalreserve.gov/", "accessed": "2026-09-17"}],
     }
     b.update(copy.deepcopy(overrides))
     return b
+
+
+SECTOR_NAMES = {
+    "finance": "금융", "energy": "에너지", "bio": "바이오", "semiconductor": "반도체",
+    "ai": "AI", "robotics": "로봇", "realestate": "부동산",
+}
+
+
+def make_sectors(**overrides) -> dict:
+    def sector(key, status, changed=True):
+        entry = {
+            "key": key, "name": SECTOR_NAMES[key], "status": status, "changed": changed,
+            "headline": f"{SECTOR_NAMES[key]} 섹터 오늘의 한 줄 요약",
+            "points": [{"text": f"{SECTOR_NAMES[key]} 근거 문장입니다.", "source": 1}] if changed else [],
+            "tickers": [{"symbol": "AAA", "change_pct": 1.1}],
+        }
+        if key == "ai":
+            entry["watch"] = [
+                {"company": "OpenAI", "text": "기업용 제품 출시 소식", "source": 1},
+                {"company": "Anthropic", "text": "새 모델 공개 소식", "source": 2},
+            ]
+        return entry
+
+    data = {
+        "date": "2026-09-16",
+        "updated_at": "2026-09-16T07:05:00+09:00",
+        "sectors": [
+            sector("finance", "mixed"),
+            sector("energy", "positive"),
+            sector("bio", "neutral"),
+            sector("semiconductor", "positive"),
+            sector("ai", "positive"),
+            sector("robotics", "mixed"),
+            sector("realestate", "negative"),
+        ],
+        "sources": [
+            {"id": 1, "title": "예시 기사", "url": "https://example.com/a", "accessed": "2026-09-16"},
+            {"id": 2, "title": "예시 기사 2", "url": "https://example.com/b", "accessed": "2026-09-16"},
+        ],
+    }
+    data.update(copy.deepcopy(overrides))
+    return data
 
 
 def make_market() -> dict:

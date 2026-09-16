@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-16",
+  "updated_at": "2026-09-16T14:30:00+09:00",
+  "sectors": [
+    {
+      "key": "finance", "name": "금융", "status": "mixed", "changed": true,
+      "headline": "FOMC 결정을 하루 앞두고 관망, 10년물 5.04%로 2007년 이후 최고",
+      "points": [
+        {"text": "15일 10년물 금리가 5.041%까지 올라 2007년 이후 가장 높았습니다. 예대마진에는 유리하지만 보유 채권 평가손은 커집니다.", "source": 1},
+        {"text": "CME FedWatch 기준 이번 회의 인상 확률이 93%까지 올라, 3년여 만의 첫 인상이 사실상 가격에 반영됐습니다.", "source": 1}
+      ],
+      "tickers": []
+    },
+    {
+      "key": "energy", "name": "에너지", "status": "positive", "changed": true,
+      "headline": "유가 강세로 시장이 빠지는 날에도 홀로 상승한 유일한 섹터",
+      "points": [
+        {"text": "15일 지수가 일제히 내리는 가운데 에너지만 올랐습니다. 정유·탐사 기업이 시장 흐름과 따로 움직였습니다.", "source": 2},
+        {"text": "호르무즈 해협 통항이 대부분 막히며 하루 약 2,000만 배럴의 공급이 사라진 상태가 이어지고 있습니다.", "source": 3}
+      ],
+      "tickers": []
+    },
+    {
+      "key": "bio", "name": "바이오", "status": "neutral", "changed": true,
+      "headline": "9월 30일 아피테그루맙 FDA 결정 대기, 8월에는 신약 2건 승인",
+      "points": [
+        {"text": "스칼러록의 아피테그루맙(척수성 근위축증)이 9월 30일 FDA 결정을 앞두고 있습니다.", "source": 4},
+        {"text": "8월에는 다케다의 기면증 치료제와 울트라제닉스의 당원병 치료제가 승인돼 업종 투자심리를 지지했습니다.", "source": 5}
+      ],
+      "tickers": []
+    },
+    {
+      "key": "semiconductor", "name": "반도체", "status": "positive", "changed": true,
+      "headline": "지수는 내렸지만 AI 관련 반도체가 낙폭을 줄였다",
+      "points": [
+        {"text": "15일 S&P 500과 나스닥이 내리는 가운데 퀄컴이 4% 넘게, AMD가 2%, 코히어런트가 2% 가까이 오르며 지수 하락을 막았습니다.", "source": 2}
+      ],
+      "tickers": [{"symbol": "QCOM", "change_pct": 4.0}, {"symbol": "AMD", "change_pct": 2.0}]
+    },
+    {
+      "key": "ai", "name": "AI", "status": "positive", "changed": true,
+      "headline": "OpenAI가 금융권 전용 제품을 내놓고, Anthropic은 새 모델로 기업 시장을 공략",
+      "points": [
+        {"text": "AI 관련 종목이 전날 조정 뒤 반등하며 지수 낙폭을 줄였습니다.", "source": 2},
+        {"text": "알파벳·아마존·마이크로소프트·메타의 2026년 설비투자는 합계 7,250억 달러로 전년 대비 77% 늘어날 전망입니다.", "source": 9}
+      ],
+      "watch": [
+        {"company": "OpenAI", "text": "1,220억 달러를 조달해 기업가치 8,520억 달러가 됐고, 9월 10일에는 투자은행 주니어 업무를 겨냥한 'ChatGPT for Financial Services'를 공개했습니다. 기업 매출 비중은 이미 40%를 넘었습니다.", "source": 6},
+        {"company": "Anthropic", "text": "9월 1일 Claude Fable 5.1을 공개했습니다. 100만 토큰 문맥과 장시간 자율 작업을 내세워 문서 중심 전문 업무를 겨냥했고, 기업용 사용량·비용 리포트 기능도 베타로 열었습니다.", "source": 7}
+      ],
+      "tickers": []
+    },
+    {
+      "key": "robotics", "name": "로봇", "status": "mixed", "changed": true,
+      "headline": "휴머노이드 기대는 크지만 상용화 시점은 뒤로 밀리는 중",
+      "points": [
+        {"text": "JP모건은 테슬라 옵티머스의 상용화 시점을 2027년 하반기로 봤습니다. 테슬라는 프리몬트 공장을 옵티머스 생산용으로 전환하고 있습니다.", "source": 8},
+        {"text": "유니트리는 8월 상하이 상장 첫날 460% 올랐다가 9월 초 고점 대비 절반 수준으로 내려, 기대와 변동성이 함께 큽니다.", "source": 10}
+      ],
+      "tickers": []
+    },
+    {
+      "key": "realestate", "name": "부동산", "status": "negative", "changed": true,
+      "headline": "10년물 5% 근접으로 상업용 부동산 금융 부담 확대",
+      "points": [
+        {"text": "10년물이 5%에 다가서며 상업용 부동산의 차환 위험이 커졌다는 지적이 나옵니다.", "source": 11},
+        {"text": "다만 리츠는 올해 상반기 시장 수익률을 웃돌아, 금리만으로 설명되지 않는다는 분석도 함께 나옵니다.", "source": 12}
+      ],
+      "tickers": []
+    }
+  ],
+  "sources": [
+    {"id": 1, "title": "Yahoo Finance: 10-year Treasury yield touches 2007 high ahead of Fed decision day", "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-september-15-dow-sp-500-nasdaq-081307838.html", "accessed": "2026-09-16"},
+    {"id": 2, "title": "TheStreet: Stock Market Today (Sept. 15, 2026)", "url": "https://www.thestreet.com/stock-market-today/stock-market-today-sept-15-2026-dow-futures-slide-as-oil-prices-surge-and-treasury-yields-hit-2007-highs", "accessed": "2026-09-16"},
+    {"id": 3, "title": "Seeking Alpha: Iran expands energy attacks as Strait of Hormuz disruption deepens", "url": "https://seekingalpha.com/news/4564583-iran-expands-energy-attacks-as-strait-of-hormuz-disruption-deepens-global-oil-risks", "accessed": "2026-09-16"},
+    {"id": 4, "title": "RTTNews: Biotech Stocks Facing FDA Decision In September 2026", "url": "https://www.rttnews.com/3684900/biotech-stocks-facing-fda-decision-in-september-2026.aspx", "accessed": "2026-09-16"},
+    {"id": 5, "title": "BiopharmaWatch: FDA Calendar September 2026", "url": "https://www.biopharmawatch.com/blog/fda-calendar-september-2026", "accessed": "2026-09-16"},
+    {"id": 6, "title": "CNBC: OpenAI targets work of Wall Street junior bankers with ChatGPT for Financial Services", "url": "https://www.cnbc.com/2026/09/10/openai-chatgpt-for-financial-services-targets-work-of-junior-bankers.html", "accessed": "2026-09-16"},
+    {"id": 7, "title": "Releasebot: Claude Updates by Anthropic - September 2026", "url": "https://releasebot.io/updates/anthropic/claude", "accessed": "2026-09-16"},
+    {"id": 8, "title": "The Motley Fool: 3 AI Robotics Stocks Worth Owning Over Tesla Right Now", "url": "https://www.fool.com/investing/2026/09/15/3-ai-robotics-stocks-worth-owning-over-tesla-right/", "accessed": "2026-09-16"},
+    {"id": 9, "title": "Yahoo Finance: Hyperscaler capex set to reach $725 billion in 2026", "url": "https://finance.yahoo.com/markets/article/magnificent-7-earnings-rush-reveals-ai-spending-surge-with-hyperscaler-capex-set-to-reach-725-billion-in-2026-224901707.html", "accessed": "2026-09-16"},
+    {"id": 10, "title": "EVS International: Publicly Traded Humanoid Robot Companies 2026 Guide", "url": "https://www.evsint.com/publicly-traded-humanoid-robot-companies-2026-investor-guide/", "accessed": "2026-09-16"},
+    {"id": 11, "title": "Yahoo Finance: 10-Year Treasury Nears 5%, Raising CRE Financing Risk", "url": "https://finance.yahoo.com/real-estate/articles/10-treasury-nears-5-raising-213714187.html", "accessed": "2026-09-16"},
+    {"id": 12, "title": "Nareit: 2026 Mid-Year Update - REITs Rebound", "url": "https://www.reit.com/news/blog/market-commentary/2026-mid-year-update-reits-rebound-poised-future-gains-and-growth", "accessed": "2026-09-16"}
+  ]
+}

@@ -179,6 +179,27 @@ def _impact(b: dict) -> str:
     return f'<div class="card lines">{rows}</div>'
 
 
+INSTITUTION_LABEL = {
+    "securities": "증권사",
+    "lp": "LP (보험사·연기금)",
+    "gp": "GP (자산운용사)",
+}
+INSTITUTION_NOTE = {
+    "securities": "브로커리지 거래대금 · 트레이딩 손익 · IB · WM",
+    "lp": "듀레이션 매칭 · 자산배분 · 환헤지 비용",
+    "gp": "펀드 자금 유출입 · 수수료 수익 · 상품 출시",
+}
+
+
+def _institutions(b: dict) -> str:
+    rows = "".join(
+        f'<div class="line"><span class="line-k">{esc(INSTITUTION_LABEL.get(i["institution"], i["institution"]))}</span>'
+        f'<p>{esc(i["text"])}<br><small class="muted">{esc(INSTITUTION_NOTE.get(i["institution"], ""))}</small></p></div>'
+        for i in b["institution_impact"]
+    )
+    return f'<div class="card lines">{rows}</div>'
+
+
 def _scenarios(b: dict) -> str:
     rows = "".join(
         f'<div class="line"><div class="sc-k"><div class="bar-l num"><b>{esc(s["name"])}</b><b>{s["probability"]}%</b></div>'
@@ -217,6 +238,8 @@ def _sections(site, b: dict) -> list[tuple[str, str, str]]:
     if b.get("sectors"):
         sections.append(("sectors", "이슈 섹터", _sectors(b)))
     sections.append(("impact", "시장 영향", _impact(b)))
+    if b.get("institution_impact"):
+        sections.append(("institutions", "업권별 시사점", _institutions(b)))
     if b.get("scenarios"):
         sections.append(("scenarios", "FOMC 이후 1개월 시나리오", _scenarios(b)))
     if b.get("interview_insights"):

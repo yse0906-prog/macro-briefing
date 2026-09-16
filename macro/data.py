@@ -23,10 +23,15 @@ class SiteData:
     market: dict | None = None
     calendar: dict | None = None
     briefings: list = field(default_factory=list)
+    sectors: list = field(default_factory=list)
 
     @property
     def latest(self) -> dict | None:
         return self.briefings[0] if self.briefings else None
+
+    @property
+    def latest_sectors(self) -> dict | None:
+        return self.sectors[0] if self.sectors else None
 
 
 def _read(path: Path):
@@ -36,11 +41,14 @@ def _read(path: Path):
 def load_site_data(data_dir: Path) -> SiteData:
     briefings = [_read(p) for p in (data_dir / "briefings").glob("*.json")]
     briefings.sort(key=lambda b: (b["date"], b.get("published_at", "")), reverse=True)
+    sectors = [_read(p) for p in (data_dir / "sectors").glob("*.json")]
+    sectors.sort(key=lambda s: s["date"], reverse=True)
     return SiteData(
         indicators=_read(data_dir / "indicators.json") or {"series": {}},
         market=_read(data_dir / "market.json"),
         calendar=_read(data_dir / "calendar.json"),
         briefings=briefings,
+        sectors=sectors,
     )
 
 

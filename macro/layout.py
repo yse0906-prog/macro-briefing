@@ -6,6 +6,7 @@ DISCLAIMER = "투자 권유가 아닙니다"
 NAV = [
     ("home", "홈", "index.html"),
     ("briefing", "주간 브리핑", "briefings/latest.html"),
+    ("sectors", "섹터 이슈", "sectors.html"),
     ("fomc", "FOMC", "fomc.html"),
     ("indicators", "거시지표", "indicators.html"),
     ("archive", "아카이브", "archive.html"),

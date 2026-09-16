@@ -8,7 +8,8 @@ from macro.fred import SERIES
 IMPACTS = {"positive", "negative", "neutral"}
 SECTOR_IMPACTS = IMPACTS | {"mixed"}
 DIRECTIONS = {"up", "down", None}
-ASSETS = {"us_equities", "us_rates", "usd", "krw", "korea_banks"}
+ASSETS = {"us_equities", "us_rates", "usd", "krw"}
+INSTITUTIONS = ["securities", "lp", "gp"]
 OUTCOMES = {"hold", "cut25", "cut50", "hike25", "hike50"}
 MARKET_IDS = {"kospi", "kosdaq", "vkospi", "usdkrw"}
 MARKET_UNITS = {"%", "pt"}
@@ -137,6 +138,13 @@ def validate_briefing(b: dict, filename: str) -> list[str]:
     for i, m in enumerate(b["market_impact"]):
         if m.get("asset") not in ASSETS or m.get("direction") not in DIRECTIONS or not m.get("text"):
             err(f"market_impact[{i}]: asset/direction/text 오류")
+    institutions = [i.get("institution") for i in b.get("institution_impact", [])]
+    for name in INSTITUTIONS:
+        if name not in institutions:
+            err(f"institution_impact에 {name}(증권사·LP·GP) 항목이 필요함")
+    for i, item in enumerate(b.get("institution_impact", [])):
+        if not item.get("text"):
+            err(f"institution_impact[{i}]: text 없음")
     _check_releases(b.get("releases", []), source_ids, err)
     if "fomc" in b:
         _check_fomc(b["fomc"], err)
@@ -144,6 +152,61 @@ def validate_briefing(b: dict, filename: str) -> list[str]:
         _check_weekly(b, err)
     elif not b.get("releases") and not b.get("fomc", {}).get("last_meeting"):
         err("event 브리핑에는 releases 또는 fomc.last_meeting이 필요함")
+    return errors
+
+
+SECTOR_KEYS = ["finance", "energy", "bio", "semiconductor", "ai", "robotics", "realestate"]
+SECTOR_STATUS = {"positive", "negative", "neutral", "mixed"}
+AI_WATCH = {"OpenAI", "Anthropic"}
+
+
+def validate_sectors(data: dict, filename: str) -> list[str]:
+    """평일마다 쌓이는 섹터 이슈 파일을 검사한다."""
+    errors = []
+    err = lambda msg: errors.append(f"{filename}: {msg}")
+    if not _is_date(data.get("date")):
+        err("date 형식 오류")
+        return errors
+    if filename != f"{data['date']}.json":
+        err("파일 이름과 date가 다름")
+    if not _is_kst(data.get("updated_at")):
+        err("updated_at은 KST ISO 시각이어야 함")
+    source_ids = {s.get("id") for s in data.get("sources", [])}
+    for s in data.get("sources", []):
+        if not _https(s.get("url")):
+            err(f"sources[{s.get('id')}]: url은 https://로 시작해야 함")
+
+    sectors = data.get("sectors", [])
+    keys = [s.get("key") for s in sectors]
+    for key in SECTOR_KEYS:
+        if key not in keys:
+            err(f"섹터 누락: {key}")
+    if keys != SECTOR_KEYS:
+        err(f"섹터는 {SECTOR_KEYS} 순서로 7개가 있어야 함")
+
+    for i, sector in enumerate(sectors):
+        where = f"sectors[{i}] {sector.get('key')}"
+        if sector.get("status") not in SECTOR_STATUS:
+            err(f"{where}: status는 {sorted(SECTOR_STATUS)} 중 하나")
+        if not sector.get("headline"):
+            err(f"{where}: headline 없음")
+        points = sector.get("points", [])
+        if sector.get("changed") and not points:
+            err(f"{where}: 변화가 있으면 근거를 1개 이상 적어야 함")
+        for point in points:
+            if not point.get("text"):
+                err(f"{where}: 근거 text 없음")
+            if point.get("source") not in source_ids:
+                err(f"{where}: 출처 번호 {point.get('source')} 없음")
+        if sector.get("key") == "ai":
+            companies = {w.get("company") for w in sector.get("watch", [])}
+            for company in sorted(AI_WATCH - companies):
+                err(f"{where}: {company} 동향 칸이 필요함")
+            for watch in sector.get("watch", []):
+                if watch.get("source") not in source_ids:
+                    err(f"{where}: {watch.get('company')} 출처 번호 {watch.get('source')} 없음")
+                if not watch.get("text"):
+                    err(f"{where}: {watch.get('company')} 내용 없음")
     return errors
 
 
@@ -193,6 +256,10 @@ def validate_data_dir(data_dir: Path) -> list[str]:
         b = _load(path, errors)
         if b is not None:
             errors += validate_briefing(b, path.name)
+    for path in sorted((data_dir / "sectors").glob("*.json")):
+        s = _load(path, errors)
+        if s is not None:
+            errors += validate_sectors(s, path.name)
     for name, check in (("market.json", validate_market), ("calendar.json", validate_calendar)):
         path = data_dir / name
         if path.exists():

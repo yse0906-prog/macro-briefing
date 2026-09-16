@@ -1,3 +1,4 @@
+import json
 import tempfile
 import unittest
 from datetime import date
@@ -7,7 +8,8 @@ from config import ISSUES
 from macro.build import build_site
 from macro.components import EMPTY_MESSAGE
 from macro.layout import DISCLAIMER
-from tests.factories import make_briefing, make_calendar, make_event_briefing, make_indicators, make_market, write_data
+from tests.factories import (make_briefing, make_calendar, make_event_briefing, make_indicators, make_market,
+                             make_sectors, write_data)
 
 
 class BuildIssuesTest(unittest.TestCase):
@@ -164,6 +166,46 @@ class EmploymentChainTest(SiteBuildCase):
         self.assertIn("7월", html)
         self.assertIn("−2.3만", html)
         self.assertIn("+2.1만", html)
+
+
+class SectorPageTest(SiteBuildCase):
+    def build_with_sectors(self):
+        write_data(self.data, briefings=[make_briefing()], indicators=make_indicators(),
+                   market=make_market(), calendar=make_calendar())
+        (self.data / "sectors").mkdir(parents=True, exist_ok=True)
+        (self.data / "sectors" / "2026-09-16.json").write_text(
+            json.dumps(make_sectors(), ensure_ascii=False), encoding="utf-8")
+        build_site(self.data, self.out, ISSUES, today=date(2026, 9, 16))
+
+    def test_sector_page_lists_seven_sectors(self):
+        self.build_with_sectors()
+        html = self.read("sectors.html")
+        for name in ("금융", "에너지", "바이오", "반도체", "AI", "로봇", "부동산"):
+            self.assertIn(name, html)
+        self.assertIn('class="nav on" href="sectors.html"', html)
+
+    def test_ai_sector_shows_openai_and_anthropic(self):
+        self.build_with_sectors()
+        html = self.read("sectors.html")
+        self.assertIn("OpenAI", html)
+        self.assertIn("Anthropic", html)
+
+    def test_daily_copy_is_kept_for_archive(self):
+        self.build_with_sectors()
+        self.assertIn("금융", self.read("sectors/2026-09-16.html"))
+
+    def test_page_builds_without_sector_data(self):
+        build_site(self.data, self.out, ISSUES, today=TODAY)
+        self.assertIn(EMPTY_MESSAGE, self.read("sectors.html"))
+
+
+class InstitutionImpactTest(SiteBuildCase):
+    def test_briefing_shows_three_institutions(self):
+        self.build_full()
+        html = self.read("briefings/2026-09-13.html")
+        for label in ("증권사", "LP (보험사·연기금)", "GP (자산운용사)"):
+            self.assertIn(label, html)
+        self.assertNotIn("한국 은행권", html)
 
 
 class TooltipTest(SiteBuildCase):
