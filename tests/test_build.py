@@ -184,6 +184,25 @@ class SectorPageTest(SiteBuildCase):
             self.assertIn(name, html)
         self.assertIn('class="nav on" href="sectors.html"', html)
 
+    def test_quick_menu_jumps_to_each_sector(self):
+        self.build_with_sectors()
+        html = self.read("sectors.html")
+        for key in ("finance", "energy", "bio", "semiconductor", "ai", "robotics", "realestate"):
+            self.assertIn(f'href="#{key}"', html)
+            self.assertIn(f'id="{key}"', html)
+
+    def test_every_sector_shows_all_six_parts(self):
+        self.build_with_sectors()
+        html = self.read("sectors.html")
+        for label in ("촉발 요인", "숫자", "파급 경로", "한국 연결", "관전 포인트", "면접 각도"):
+            self.assertEqual(html.count(f'<span class="part-k">{label}</span>'), 7, label)
+
+    def test_semiconductor_shows_korean_chipmakers(self):
+        self.build_with_sectors()
+        html = self.read("sectors.html")
+        self.assertIn("005930.KS", html)
+        self.assertIn("000660.KS", html)
+
     def test_ai_sector_shows_openai_and_anthropic(self):
         self.build_with_sectors()
         html = self.read("sectors.html")

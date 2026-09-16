@@ -180,17 +180,33 @@ SECTOR_NAMES = {
 
 
 def make_sectors(**overrides) -> dict:
-    def sector(key, status, changed=True):
+    def sector(key, status, days=None):
+        name = SECTOR_NAMES[key]
         entry = {
-            "key": key, "name": SECTOR_NAMES[key], "status": status, "changed": changed,
-            "headline": f"{SECTOR_NAMES[key]} 섹터 오늘의 한 줄 요약",
-            "points": [{"text": f"{SECTOR_NAMES[key]} 근거 문장입니다.", "source": 1}] if changed else [],
+            "key": key, "name": name, "status": status,
+            "headline": f"{name} 섹터 오늘의 한 줄 요약",
+            "trigger": f"{name} 섹터를 움직인 촉발 요인입니다.",
+            "numbers": [
+                {"text": f"{name} 숫자 근거 하나", "source": 1},
+                {"text": f"{name} 숫자 근거 둘", "source": 2},
+            ],
+            "chain": "원인↑ → 중간 경로↑ → 결과↑",
+            "korea": f"{name} 관련 국내 업종에 미치는 영향입니다.",
+            "watch_next": [f"{name} 다음 관전 포인트"],
+            "interview": f"{name} 관련 면접 질문 각도입니다.",
             "tickers": [{"symbol": "AAA", "change_pct": 1.1}],
         }
+        if days:
+            entry["days"] = days
         if key == "ai":
             entry["watch"] = [
                 {"company": "OpenAI", "text": "기업용 제품 출시 소식", "source": 1},
                 {"company": "Anthropic", "text": "새 모델 공개 소식", "source": 2},
+            ]
+        if key == "semiconductor":
+            entry["tickers"] = [
+                {"symbol": "005930.KS", "change_pct": 1.5},
+                {"symbol": "000660.KS", "change_pct": 2.4},
             ]
         return entry
 

@@ -188,16 +188,24 @@ def validate_sectors(data: dict, filename: str) -> list[str]:
         where = f"sectors[{i}] {sector.get('key')}"
         if sector.get("status") not in SECTOR_STATUS:
             err(f"{where}: status는 {sorted(SECTOR_STATUS)} 중 하나")
-        if not sector.get("headline"):
-            err(f"{where}: headline 없음")
-        points = sector.get("points", [])
-        if sector.get("changed") and not points:
-            err(f"{where}: 변화가 있으면 근거를 1개 이상 적어야 함")
-        for point in points:
-            if not point.get("text"):
-                err(f"{where}: 근거 text 없음")
-            if point.get("source") not in source_ids:
-                err(f"{where}: 출처 번호 {point.get('source')} 없음")
+        for field, label in (("headline", "headline"), ("trigger", "trigger(촉발 요인)"),
+                             ("chain", "chain(파급 경로)"), ("korea", "korea(한국 연결)"),
+                             ("interview", "interview(면접 각도)")):
+            if not sector.get(field):
+                err(f"{where}: {label} 없음")
+        numbers = sector.get("numbers", [])
+        if len(numbers) < 2:
+            err(f"{where}: 숫자 근거를 2개 이상 적어야 함")
+        for number in numbers:
+            if not number.get("text"):
+                err(f"{where}: 숫자 근거 text 없음")
+            if number.get("source") not in source_ids:
+                err(f"{where}: 출처 번호 {number.get('source')} 없음")
+        if not sector.get("watch_next"):
+            err(f"{where}: 다음 관전 포인트를 1개 이상 적어야 함")
+        days = sector.get("days")
+        if days is not None and (not isinstance(days, int) or days < 1):
+            err(f"{where}: days는 1 이상의 정수")
         if sector.get("key") == "ai":
             companies = {w.get("company") for w in sector.get("watch", [])}
             for company in sorted(AI_WATCH - companies):
