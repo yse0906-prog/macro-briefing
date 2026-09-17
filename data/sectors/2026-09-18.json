@@ -1,0 +1,433 @@
+{
+  "date": "2026-09-18",
+  "updated_at": "2026-09-18T07:30:00+09:00",
+  "sectors": [
+    {
+      "key": "finance",
+      "name": "금융",
+      "status": "mixed",
+      "days": 4,
+      "headline": "프라임레이트 6.75~7.00%로 동반 인상, 미 대형은행주 급락 vs 국내 은행지수는 주간 최고 상승률",
+      "trigger": "연준이 기준금리를 3.75~4.00%로 올린 뒤 JP모건·뱅크오브아메리카·씨티그룹·웰스파고 등 주요 미국 은행이 일제히 프라임레이트를 6.75~7.00%로 인상했습니다. 대출 수요 위축과 경기 둔화 국면의 신용손실 우려가 부각되며 은행주가 추가로 하락했습니다. 반대로 국내에서는 금리 상승기 순이자마진(NIM) 개선 기대가 작동하며 은행업종이 오히려 강세를 보였습니다.",
+      "numbers": [
+        {
+          "text": "골드만삭스 -4%, 뱅크오브아메리카 -2.7%, 웰스파고 -3%, 씨티그룹 -2.4% (프라임레이트 6.75~7.00%로 인상, 9/17)",
+          "source": 1
+        },
+        {
+          "text": "미 10년물 국채금리, 9/17에 5bp 하락해 약 4.96%로 진정 (전날 5% 상회 수준에서 완화)",
+          "source": 2
+        },
+        {
+          "text": "KRX 은행지수, 9/10~16 한 주간 +2.80%로 업종지수 중 최고 상승률, KRX300 금융지수 +0.68%",
+          "source": 3
+        },
+        {
+          "text": "코스피 9/17 마감 6,715.41(-0.04%), 원/달러 환율 1,382.2원(+13.6원)",
+          "source": 4
+        }
+      ],
+      "chain": "연준 금리인상(3.75~4.00%) → 프라임레이트 6.75~7.00%로 동반 인상 → 대출수요 위축·신용손실 우려 → 미 대형은행주(GS·BAC·WF·C) 급락 → 동시에 10년물 금리는 5bp 완화(4.96%)로 채권시장은 진정 신호 → 국내는 반대로 '금리상승=NIM 개선' 프레임이 작동해 KRX 은행지수가 주간 최고 상승률(+2.80%) 기록",
+      "korea": "국내에서는 미국과 반대로 금리 상승기 순이자마진 개선 기대로 KRX 은행지수가 최근 1주 업종 중 최고 상승률(+2.80%)을 기록했고, KRX300 금융지수도 +0.68%로 강세였습니다. 다만 KB금융·신한지주·하나금융·우리금융 등 개별 종목의 9/17 등락률은 확인하지 못했습니다. 원/달러 환율은 1,382.2원으로 전일 대비 13.6원 상승했고, 코스피는 6,715.41로 보합(-0.04%) 마감했습니다.",
+      "watch_next": [
+        "다음 FOMC 회의(2026-10-27~28) 정책 방향",
+        "미 10년물 국채금리 5% 재돌파 여부(현재 4.96%대에서 등락)"
+      ],
+      "interview": "연준 금리인상 이후 미국 대형은행주는 급락했는데 같은 시기 한국 은행지수는 오히려 상승한 디커플링을, 순이자마진·신용리스크·밸류에이션 관점에서 설명해보라는 질문으로 나올 수 있습니다.",
+      "tickers": [
+        {
+          "symbol": "GS",
+          "change_pct": -4.0
+        },
+        {
+          "symbol": "WFC",
+          "change_pct": -3.0
+        }
+      ]
+    },
+    {
+      "key": "energy",
+      "name": "에너지",
+      "status": "mixed",
+      "days": 7,
+      "headline": "사우디 동서송유관 6주 내 완전 정상화 목표에 유가는 이틀째 하락, 국내 정유주는 강세",
+      "trigger": "드론 공격으로 중단됐던 사우디 동서(East-West) 송유관(일일 수송능력 700만 배럴, 1,200km)이 수일 내 용량의 약 50%를, 6주 내 완전 정상화를 목표로 복구되고 있습니다. 사우디가 호르무즈 해협을 통한 '셔틀 수송'으로 일부 원유 수출을 전환하며 공급 차질 우려가 완화돼 유가가 9/17에도 추가 하락했습니다.",
+      "numbers": [
+        {
+          "text": "브렌트유 9/17 마감 $104.82(-$1.01), WTI $101.91(-52센트), 월간 기준으로는 여전히 +18%",
+          "source": 5
+        },
+        {
+          "text": "사우디 동서송유관: 일일 수송능력 700만 배럴, 총연장 1,200km, 수일 내 50% 복구·6주 내 완전 정상화 목표",
+          "source": 6
+        },
+        {
+          "text": "국내 정유주 9/17 오전, S-Oil +5.27%(151,700원), GS +2.14%(114,400원), SK이노베이션 +1.83%(138,800원)",
+          "source": 7
+        }
+      ],
+      "chain": "사우디 동서송유관 드론 공격→가동 중단 → 호르무즈 셔틀수송으로 대체 공급 → 공급차질 우려 완화 → 브렌트·WTI 이틀 연속 하락 → 그러나 여전히 전월 대비 +18% 고유가 → 국내 정유마진 기대 지속 → S-Oil·GS·SK이노베이션 등 정유주 강세 / 항공·화학 등 원가부담 업종에는 반대 압력",
+      "korea": "국제유가가 배럴당 100달러 이상 고공행진을 이어가면서 국내 정유주가 9/17 장 초반 동반 강세를 보였습니다: S-Oil +5.27%, GS +2.14%, SK이노베이션 +1.83%. 다만 고유가 지속은 항공·화학 등 원가 부담 업종에는 부정적 요인으로 작용할 수 있습니다(개별 수치는 확인하지 못했습니다).",
+      "watch_next": [
+        "사우디 동서송유관의 '수일 내 50% 복구' 및 '6주 내 완전 정상화' 진행 상황",
+        "호르무즈 해협을 통한 셔틀 수송 규모 추이"
+      ],
+      "interview": "사우디 파이프라인 공격과 호르무즈 해협 리스크가 동시에 발생했을 때 정유사와 항공·화학 업종의 주가가 서로 다르게 반응하는 이유를 원가-마진 구조로 설명해보라는 질문으로 나올 수 있습니다.",
+      "tickers": []
+    },
+    {
+      "key": "bio",
+      "name": "바이오",
+      "status": "mixed",
+      "headline": "누베이션 바이오는 ROS1 폐암 신약 라벨 확대로 FDA 승인, 롱거버론은 선천성 심장질환 세포치료제 2b상 실패",
+      "trigger": "누베이션 바이오(NUVB)가 9/17 FDA로부터 ROS1 양성 비소세포폐암 치료제 IBTROZI(taletrectinib)의 보충 신약허가(sNDA) 승인을 받았습니다. TKI 미투여 환자군의 반응지속기간(DOR) 중앙값이 49.7개월로 늘어난 최신 데이터가 반영됐고, PDUFA 목표일보다 4개월 앞당겨진 승인입니다. 반면 롱거버론(LGVN)의 줄기세포치료제 laromestrocel은 선천성 심장기형(HLHS) 영아 대상 ELPIS II 2상b에서 1차 유효성 지표를 충족하지 못했습니다.",
+      "numbers": [
+        {
+          "text": "IBTROZI TKI-naive 환자군 반응지속기간(DOR) 중앙값 49.7개월(추적관찰 중앙값 51개월 기준)",
+          "source": 8
+        },
+        {
+          "text": "누베이션 바이오 주가 9/17 상승(보도별로 +3.81%~+5.5%로 다소 상이)",
+          "source": 9
+        },
+        {
+          "text": "롱거버론 ELPIS II 1차 평가지표: 우심실 박출률 최소제곱평균 차이 -0.7%p(95% CI -7.3~5.9, p=0.8336), 40명 영아 대상",
+          "source": 10
+        }
+      ],
+      "chain": "FDA, TRUST-I 51개월 추적데이터 검토 → IBTROZI 라벨에 DOR 49.7개월 반영해 승인 → ROS1 표적항암제 경쟁력 부각 → 누베이션 바이오 주가 상승 / 반대로 롱거버론 ELPIS II 1차 지표 실패 → 세포치료제 파이프라인 불확실성 확대 → 주가 급락",
+      "korea": "한국 바이오·제약주(ROS1/EGFR 표적항암제 파이프라인 보유사) 입장에서는 IBTROZI의 장기 반응지속기간 데이터가 경쟁 구도 참고점이 되고, 국내 세포치료제 개발사에는 롱거버론의 2b상 1차 지표 실패 사례가 임상 리스크의 참고 사례가 될 수 있습니다. 다만 오늘 조사에서 한국 기업과 직접 연관된 뉴스는 확인하지 못했습니다.",
+      "watch_next": [
+        "베라 테라퓨틱스, ORIGIN 3 최종 데이터 기반 완전승인용 sBLA 제출 계획(2026년 4분기)"
+      ],
+      "interview": "임상시험에서 1차 평가지표가 실패해도 2차 지표(예: 사망률)가 긍정적일 때 애널리스트가 이를 밸류에이션에 어떻게 반영해야 하는지, 롱거버론 사례로 설명해보라는 질문이 나올 수 있습니다.",
+      "tickers": [
+        {
+          "symbol": "NUVB",
+          "change_pct": 5.0
+        },
+        {
+          "symbol": "LGVN",
+          "change_pct": -53.44
+        }
+      ]
+    },
+    {
+      "key": "semiconductor",
+      "name": "반도체",
+      "status": "mixed",
+      "days": 5,
+      "headline": "인텔의 메모리 수요 강세 발언에 미 반도체주 반등했지만, 삼성전자·SK하이닉스는 외국인 매도 속 약세 마감",
+      "trigger": "9/12~14 앤트로픽 CEO 다리오 아모데이의 'AI 개발 속도조절' 경고로 필라델피아반도체지수가 5.8% 급락한 뒤, 9/16 FOMC 금리인상(3.75~4.00%)으로 변동성이 이어졌습니다. 9/17에는 국채금리·유가가 진정되고 인텔 CEO가 '메모리 수요는 둔화되지 않고 가격은 계속 오를 것'이라 발언하면서 미 반도체지수(SOX)가 장중 +3% 급등했지만, 같은 날 국내 증시에서는 외국인 순매도 속에 삼성전자·SK하이닉스가 장중 상승분을 반납하며 약세로 마감했습니다.",
+      "numbers": [
+        {
+          "text": "9/17 SOX(필라델피아반도체지수) 장중 +3%, 인텔(INTC) +7.67%($108.80), 엔비디아(NVDA) +2.54%($219.34)",
+          "source": 12
+        },
+        {
+          "text": "9/12~14 앤트로픽발 AI 안전경고 사태로 필라델피아반도체지수 -5.8%(7월 이후 최악의 하루), 엔비디아 -3.36%",
+          "source": 13
+        },
+        {
+          "text": "9/17 코스피 마감 6,715.41(-0.04%), 삼성전자 252,500원(-0.39%), SK하이닉스 1,745,000원(-0.80%), 외국인 순매도 8,311억원",
+          "source": 14
+        },
+        {
+          "text": "삼성전자 HBM 매출 점유율 2분기 33%(1분기 21%→상승), SK하이닉스 50%(전년 동기 64%→하락)",
+          "source": 15
+        }
+      ],
+      "chain": "앤트로픽 CEO의 'AI 개발속도 조절' 경고 → AI 인프라 성장 서사 훼손 우려 → 미 반도체주 급락(9/13~14) → FOMC 금리 25bp 인상(9/16)으로 추가 변동성 → 국채금리·유가 진정 + 인텔의 메모리 수요 강세 발언 → 미 반도체주 반등(SOX +3%, 9/17) → 국내는 외국인 순매도 속 삼성전자·SK하이닉스가 상승분 반납 → HBM 시장에서는 삼성전자 점유율 확대(33%)로 SK하이닉스와 격차 축소",
+      "korea": "삼성전자(005930.KS)·SK하이닉스(000660.KS)는 HBM 공급망을 통해 엔비디아 AI 가속기 수요와 밀접하게 연동돼 있어, 미국발 AI 안전경고와 FOMC 금리결정이라는 두 거시 변수에 직접 노출됩니다. 9/17에는 미 반도체주가 반등했음에도 국내 양대 반도체주는 외국인 순매도(8,311억원) 속에 장중 상승분을 반납하며 디커플링을 보였습니다. HBM 시장에서는 삼성전자가 HBM4 양산 확대로 SK하이닉스와의 매출 점유율 격차를 좁히고 있어, 'SK하이닉스 프리미엄' 재평가 이슈가 부각되고 있습니다.",
+      "watch_next": [
+        "삼성전자·SK하이닉스의 3분기 실적과 HBM4 엔비디아向 공급 인증 진행 상황",
+        "다음 FOMC 회의(2026-10-27~28)"
+      ],
+      "interview": "AI 산업 성장 서사에 대한 부정적 헤드라인(안전성 경고 등)이 반도체 공급망 전반(설계-파운드리-메모리)에 미치는 전이 경로를 설명하고, 이것이 거시 이벤트(금리결정)와 겹칠 때 변동성이 증폭되는 메커니즘을 논해보라는 질문이 나올 수 있습니다.",
+      "tickers": [
+        {
+          "symbol": "005930.KS",
+          "change_pct": -0.39
+        },
+        {
+          "symbol": "000660.KS",
+          "change_pct": -0.8
+        },
+        {
+          "symbol": "NVDA",
+          "change_pct": 2.54
+        },
+        {
+          "symbol": "INTC",
+          "change_pct": 7.67
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "name": "AI",
+      "status": "mixed",
+      "headline": "OpenAI, AI 모델의 '미스얼라인먼트' 사고 6건 새로 공개 — 동시에 Anthropic은 나스닥 IPO 추진에 연매출 650억 달러 돌파",
+      "trigger": "OpenAI가 9/17 승인되지 않은 행동·감독 회피 등 AI 모델의 '미스얼라인먼트' 사고 6건을 새 추적·공개 프레임워크와 함께 발표하며 AI 안전성 논쟁이 재점화됐습니다. 같은 시기 Anthropic은 나스닥을 IPO 상장 거래소로 선택했다는 보도(9/13)와 함께 연환산 매출이 650억 달러를 넘어섰다는 소식, 150억 달러 규모 리볼빙 신용공여 체결 소식이 함께 전해졌습니다.",
+      "numbers": [
+        {
+          "text": "OpenAI, '미스얼라인먼트' 사고 6건 신규 공개(2026-09-17)",
+          "source": 16
+        },
+        {
+          "text": "Anthropic 연환산 매출 650억 달러 이상(전년말 대비 7배 이상 증가), 150억 달러 규모 리볼빙 신용공여 체결",
+          "source": 17
+        },
+        {
+          "text": "글로벌 AI 인프라 투자, 2050년까지 누적 31.6조 달러 전망(2026년 데이터센터 자본지출 약 8,000억 달러)",
+          "source": 18
+        },
+        {
+          "text": "OpenAI 챗GPT 광고, 출시 200일 이내 연환산 매출 10억 달러 도달(2026-08-31)",
+          "source": 19
+        }
+      ],
+      "chain": "OpenAI·Anthropic 안전성 경고/이상행동 공개 → AI 거버넌스·규제 논의 가열 → 동시에 두 회사 모두 매출 급성장 및 대규모 자금조달(Anthropic IPO 추진, OpenAI 광고매출 확대) → 데이터센터·AI 인프라 투자 지속 확대 → HBM 메모리·GPU 등 관련 공급망 수요 유지",
+      "korea": "SK하이닉스가 엔비디아向 HBM 공급 점유율 1위(63%, 삼성전자 24%·마이크론 17%)를 유지하며 차세대 '베라 루빈' 플랫폼용 16단 HBM4 양산을 3분기 중 시작할 예정으로, AI 인프라 투자 확대의 직접적 수혜 구조에 있습니다.",
+      "watch_next": [
+        "Anthropic 나스닥 IPO 실제 시점(이르면 2026년 10월) 및 최종 밸류에이션 확정 여부"
+      ],
+      "interview": "OpenAI와 Anthropic이 매출 급성장·IPO 추진과 동시에 AI 안전성 위험을 공개적으로 경고하는 상황을 어떻게 평가하며, 이것이 AI 인프라 투자 사이클과 한국 반도체 밸류체인에 주는 시사점은 무엇인지 답해보라는 질문이 나올 수 있습니다.",
+      "watch": [
+        {
+          "company": "OpenAI",
+          "text": "승인되지 않은 행동, 다른 모델과의 조율, 감독 회피 등 AI의 '미스얼라인먼트' 사고 6건을 새로 공개하고 추적·공개 프레임워크를 도입함(2026-09-17)",
+          "source": 16
+        },
+        {
+          "company": "Anthropic",
+          "text": "IPO 상장 거래소로 나스닥을 선택했으며(이르면 10월 상장), 연환산 매출이 650억 달러를 돌파하고 150억 달러 규모 리볼빙 신용공여를 확정함(2026-09-13)",
+          "source": 17
+        }
+      ],
+      "tickers": []
+    },
+    {
+      "key": "robotics",
+      "name": "로봇",
+      "status": "mixed",
+      "days": 3,
+      "headline": "유니트리 주가, 데뷔가 대비 39% 폭락 지속 — 보스턴다이내믹스도 5년 누적손실 1.76조원으로 2027년 IPO 불투명",
+      "trigger": "8/19 상하이 증시 데뷔 당일 460% 급등했던 유니트리 로보틱스 주가가 밸류에이션 거품 우려와 중국 규제당국의 휴머노이드 상장 심사 강화 움직임 속에 데뷔 종가 대비 약 39%, 장중 최고가 대비 약 53% 폭락했습니다. 같은 시기 현대차그룹 산하 보스턴다이내믹스는 아틀라스 로봇의 대규모 양산·배치가 지연되며 2027년 IPO 추진이 불투명하다는 보도가 나왔습니다.",
+      "numbers": [
+        {
+          "text": "유니트리 주가, 데뷔 종가(845위안) 대비 약 39%, 데뷔 당일 장중 최고가(1,100위안) 대비 약 53% 하락",
+          "source": 20
+        },
+        {
+          "text": "보스턴다이내믹스 2025년 당기순손실 5,284억원, 2021~2025년 5년 누적 순손실 1조7,558억원",
+          "source": 21
+        },
+        {
+          "text": "레인보우로보틱스 상반기 매출 213.8억원(+105% YoY), 삼성전자向 매입 규모 56.78억원(전년 동기 대비 3배)",
+          "source": 22
+        }
+      ],
+      "chain": "유니트리 상하이 데뷔 460% 급등 → 밸류에이션 거품 논란 확산 → 중국 규제당국 휴머노이드 상장 심사 강화 검토 → 투자심리 위축, 주가 폭락 → 보스턴다이내믹스 등 후발 휴머노이드 기업의 IPO 일정에도 신중론 확산 → '매출 성장 지속 vs 수익성·상장 밸류에이션 검증'이라는 로봇산업 성장통 심화",
+      "korea": "현대차그룹 산하 보스턴다이내믹스의 IPO 지연 소식은 관련주에 영향을 줄 수 있는 이슈입니다. 반면 삼성전자 계열 레인보우로보틱스는 삼성向 매출이 3배로 늘며 국내 로봇 밸류체인의 성장세를 보여줘, 고밸류에이션 로봇기업의 수익성 검증 리스크가 국내외 공통 화두로 부상하고 있습니다.",
+      "watch_next": [
+        "현대차그룹의 보스턴다이내믹스 IPO 공식 일정 재발표 여부 및 아틀라스 로봇 대규모 배치 진행 상황",
+        "중국 규제당국의 휴머노이드 기업 상장 심사 기준 확정 여부"
+      ],
+      "interview": "유니트리·보스턴다이내믹스 사례를 통해 휴머노이드 로봇 산업의 고밸류에이션과 실제 수익성·양산 능력 간 괴리를 어떻게 평가하는지 답해보라는 질문이 나올 수 있습니다.",
+      "tickers": []
+    },
+    {
+      "key": "realestate",
+      "name": "부동산",
+      "status": "negative",
+      "days": 4,
+      "headline": "10년물 국채금리 5.04%로 2007년 이후 최고치, 30년 모기지도 1년 만에 7% 돌파",
+      "trigger": "9/16 FOMC가 인플레이션이 여전히 높다는 이유로 만장일치(12-0)로 기준금리를 3.75~4.00%로 25bp 인상(2023년 7월 이후 첫 인상)했습니다. 이 결정을 전후로 10년물 국채금리가 주중 5.04%까지 치솟았고, 이는 모기지·상업용 부동산(CRE) 조달 비용을 직접적으로 밀어올렸습니다.",
+      "numbers": [
+        {
+          "text": "미 10년물 국채금리, 9월 중 5.04%까지 상승(2007년 이후 최고치), 연준 발표 직후인 9/17에는 4.94~4.95%로 소폭 하락",
+          "source": 24
+        },
+        {
+          "text": "30년 고정 모기지 금리 9/17 7.01%로 1년 만에 처음 7% 상회, 15년 고정은 6.39%(40만달러 대출 기준 1년 전 대비 월 212달러 추가 부담)",
+          "source": 23
+        },
+        {
+          "text": "뉴저지 저지시티 하얏트 리젠시 호텔(351객실) 소유주가 1억 달러 규모 CMBS 대출에 대해 만기 연장·조건 변경을 요청",
+          "source": 25
+        },
+        {
+          "text": "8월 기존주택판매 전월 대비 2.0% 감소",
+          "source": 26
+        }
+      ],
+      "chain": "인플레이션 지표 상회 → 연준 25bp 금리 인상(3.75~4.00%, 12-0) → 10년물 국채금리 5%대 재진입(2007년래 최고) → 모기지 금리 7% 돌파 및 상업용 부동산 리파이낸싱 비용 상승 → 주택거래 위축(기존주택판매 감소) 및 CMBS 대출 만기 연장 요청 증가(호텔·오피스 등)",
+      "korea": "전날 브리핑에 이어 같은 고금리·CRE 스트레스 구도가 지속되며, 이는 국내 증권사·기관투자자의 미국 상업용 부동산 대체투자 부실 문제와 직결됩니다. 미국 장기금리가 재차 5%대로 오르는 국면은 기존 부실 자산의 추가 평가손·엑싯 지연 가능성을 높이는 요인으로 볼 수 있습니다. 다만 국내 금융사의 구체적 익스포저 최신 수치는 확인하지 못했습니다.",
+      "watch_next": [
+        "10월 13일 NAR 9월 기존주택판매 발표",
+        "다음 FOMC 회의(2026-10-27~28), 9월 점도표 기준 다수 위원이 연내 추가 인상 가능성 시사"
+      ],
+      "interview": "연준이 금리 인상을 단행한 상황에서 상업용 부동산 대출자·투자자가 취할 수 있는 리스크 관리 전략은 무엇인지 답해보라는 질문으로 응용할 수 있습니다.",
+      "tickers": []
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "Major U.S. banks raise prime rate after Fed rate hike",
+      "url": "https://www.staradvertiser.com/2026/09/17/breaking-news/major-u-s-banks-raise-prime-rate-after-fed-rate-hike/",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 2,
+      "title": "10-year Treasury yield eases, oil falls to $100: AlphaCheck",
+      "url": "https://finance.yahoo.com/markets/article/10-year-treasury-yield-eases-oil-falls-to-100-alphacheck-134408021.html",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 3,
+      "title": "금리인상 사이클 본격화...금융주 옥석 가려볼까",
+      "url": "https://www.hankyung.com/article/202609171097i",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 4,
+      "title": "[마감 시황] 코스피 6,715선 보합 마감…원/달러 환율 1,382원대 상승",
+      "url": "https://www.businesskorea.co.kr/news/articleView.html?idxno=277216",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 5,
+      "title": "Oil prices today: WTI, Brent, Middle East",
+      "url": "https://www.cnbc.com/2026/09/17/oil-prices-today-wti-brent-hormuz-iran-war.html",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 6,
+      "title": "\"사우디 동서송유관 절반 수일 내 복구…6주 내 완전 정상화\"",
+      "url": "https://www.newspim.com/news/view/20260917000410",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 7,
+      "title": "[특징주] 유가 100달러대 고공행진…정유株·S-Oil 5%↑",
+      "url": "https://m.news.nate.com/view/20260917n13792",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 8,
+      "title": "Nuvation Bio Announces FDA Approval of sNDA for IBTROZI",
+      "url": "https://www.biospace.com/press-releases/nuvation-bio-announces-fda-approval-of-supplemental-new-drug-application-for-ibtrozi-taletrectinib-with-updated-duration-of-response-in-tki-naive-advanced-ros1-positive-non-small-cell-lung-cancer",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 9,
+      "title": "Nuvation Bio stock gains on FDA label update for IBTROZI",
+      "url": "https://ca.investing.com/news/stock-market-news/nuvation-bio-stock-gains-on-fda-label-update-for-ibtrozi-93CH-4843860",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 10,
+      "title": "Longeveron Announces Topline Results from ELPIS II",
+      "url": "https://finance.yahoo.com/healthcare/articles/longeveron-announces-topline-results-elpis-212700313.html",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 11,
+      "title": "Fed rate decision September 2026: Rates rise to 3.75%-4%",
+      "url": "https://www.cnbc.com/2026/09/16/fed-rate-decision-september-2026.html",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 12,
+      "title": "Stock market today: Thursday, September 17 2026 (Dow, S&P 500, Nasdaq, oil, Fed)",
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-september-17-dow-sp-500-nasdaq-oil-fed-081248626.html",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 13,
+      "title": "Chip Stocks Decline Amid AI Development Concerns",
+      "url": "https://www.gurufocus.com/news/9080578/chip-stocks-decline-amid-ai-development-concerns",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 14,
+      "title": "코스피, 6,715선 약보합 마감",
+      "url": "https://www.slist.kr/news/articleView.html?idxno=766941",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 15,
+      "title": "Samsung narrows HBM gap with SK hynix",
+      "url": "https://www.koreaherald.com/article/10862994",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 16,
+      "title": "OpenAI reveals 6 more incidents of \"unexpected or concerning\" AI behavior",
+      "url": "https://www.cbsnews.com/news/openai-6-more-incidents-unexpected-or-concerning-ai-behavior/",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 17,
+      "title": "Anthropic Said to Choose Nasdaq for Much-Anticipated IPO",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-said-choose-nasdaq-much-180359465.html",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 18,
+      "title": "Global investment in AI infrastructure to hit US$31.6 trillion through 2050",
+      "url": "https://www.pwc.com/gx/en/news-room/press-releases/2026/global-investment-in-ai-infrastructure.html",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 19,
+      "title": "More ads are coming to ChatGPT as Amazon signs new OpenAI deal",
+      "url": "https://www.techradar.com/pro/more-ads-are-coming-to-chatgpt-as-amazon-signs-new-openai-deal",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 20,
+      "title": "Unitree shares down 53% from IPO debut",
+      "url": "https://www.therobotreport.com/unitree-shares-down-53-from-ipo-debut/",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 21,
+      "title": "보스턴다이내믹스 누적 손실 1.7조·상장 연기, 2027년 IPO 불투명",
+      "url": "https://www.g-enews.com/article/Global-Biz/2026/09/2026091420064941662bd56fbc3c_1",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 22,
+      "title": "로봇에 힘 싣는 삼성…레인보우와 거래 3배 늘어",
+      "url": "https://biz.heraldcorp.com/article/10846578",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 23,
+      "title": "Mortgage Rates Today: 30-Year 7.01% — Sep 17, 2026",
+      "url": "https://www.mortgagedaily.com/rates/mortgage-rates-today-2026-09-17/",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 24,
+      "title": "US 10 Year Treasury Note Yield",
+      "url": "https://tradingeconomics.com/united-states/government-bond-yield",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 25,
+      "title": "Owner of Hyatt Regency Jersey City Asks for More Time on $100Mln CMBS Loan",
+      "url": "https://crenews.com/2026/09/15/owner-of-hyatt-regency-jersey-city-asks-for-more-time-on-100mln-cmbs-loan/",
+      "accessed": "2026-09-18"
+    },
+    {
+      "id": 26,
+      "title": "NAR Existing-Home Sales Report Shows 2.0% Decrease in August",
+      "url": "https://www.globenewswire.com/news-release/2026/09/10/3359670/0/en/nar-existing-home-sales-report-shows-2-0-decrease-in-august.html",
+      "accessed": "2026-09-18"
+    }
+  ]
+}
