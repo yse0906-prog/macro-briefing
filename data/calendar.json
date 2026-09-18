@@ -1,10 +1,16 @@
 {
-  "updated_at": "2026-09-13T23:30:00+09:00",
-  "events": [
-    {"kst": "2026-09-16T21:30:00+09:00", "name": "소매판매 (8월)", "importance": 2, "kind": "release"},
-    {"kst": "2026-09-17T03:00:00+09:00", "name": "FOMC 금리 결정·점도표·기자회견", "importance": 3, "kind": "fomc"},
-    {"kst": "2026-09-17T21:30:00+09:00", "name": "신규 실업수당 청구", "importance": 1, "kind": "release"},
-    {"kst": "2026-10-01T23:00:00+09:00", "name": "ISM 제조업 PMI (9월)", "importance": 2, "kind": "release"},
-    {"kst": "2026-10-05T23:00:00+09:00", "name": "ISM 서비스업 PMI (9월)", "importance": 2, "kind": "release"}
-  ]
+ "updated_at": "2026-09-19T07:07:00+09:00",
+ "events": [
+  {"kst": "2026-09-23T22:45:00+09:00", "name": "S&P 글로벌 제조업·서비스업 PMI 예비치 (9월)", "importance": 2, "kind": "release"},
+  {"kst": "2026-09-24T21:30:00+09:00", "name": "신규 실업수당 청구", "importance": 1, "kind": "release"},
+  {"kst": "2026-09-24T23:00:00+09:00", "name": "신규 주택판매 (8월)", "importance": 2, "kind": "release"},
+  {"kst": "2026-09-25T21:30:00+09:00", "name": "내구재 주문 전월비 (8월)", "importance": 2, "kind": "release"},
+  {"kst": "2026-09-25T23:00:00+09:00", "name": "미시간대 소비자심리지수 확정치 (9월)", "importance": 1, "kind": "release"},
+  {"kst": "2026-09-29T23:00:00+09:00", "name": "JOLTS 구인이직보고서 (8월)", "importance": 2, "kind": "release"},
+  {"kst": "2026-09-29T23:00:00+09:00", "name": "컨퍼런스보드 소비자신뢰지수 (9월)", "importance": 2, "kind": "release"},
+  {"kst": "2026-09-30T21:30:00+09:00", "name": "근원 PCE 물가지수 (8월)", "importance": 3, "kind": "release"},
+  {"kst": "2026-09-30T21:30:00+09:00", "name": "실질 GDP 확정치 (2분기)", "importance": 2, "kind": "release"},
+  {"kst": "2026-10-01T23:00:00+09:00", "name": "ISM 제조업 PMI (9월)", "importance": 2, "kind": "release"},
+  {"kst": "2026-10-02T21:30:00+09:00", "name": "9월 고용보고서 (비농업 고용·실업률·평균시급)", "importance": 3, "kind": "release"}
+ ]
 }

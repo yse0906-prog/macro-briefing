@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-09-11",
-  "items": [
-    {"id": "kospi", "label": "코스피", "value": 6909.91, "change": 3.3, "unit": "%", "source": "https://en.sedaily.com/finance/2026/09/13/oil-near-100-us-yields-at-5-percent-put-kospis-7000-line-to"},
-    {"id": "kosdaq", "label": "코스닥", "value": 820.64, "change": null, "unit": "%", "source": "https://en.sedaily.com/finance/2026/09/11/kosdaq-falls-195-percent-to-close-at-82064"},
-    {"id": "vkospi", "label": "VKOSPI", "value": 46.28, "change": null, "unit": "pt", "source": "https://en.sedaily.com/news/2026/09/11/korean-stocks-steady-as-september-passes-without-a-single"},
-    {"id": "usdkrw", "label": "원/달러", "value": 1345.9, "change": null, "unit": "%", "source": "https://en.sedaily.com/finance/2026/09/11/kospi-falls-176-percent-to-close-at-690991"}
-  ]
+ "as_of": "2026-09-18",
+ "items": [
+  {"id": "kospi", "label": "코스피", "value": 6894.23, "change": -0.2, "unit": "%", "source": "https://view.asiae.co.kr/article/2026091815340598248"},
+  {"id": "kosdaq", "label": "코스닥", "value": 827.12, "change": 0.8, "unit": "%", "source": "https://view.asiae.co.kr/article/2026091815343814649"},
+  {"id": "vkospi", "label": "VKOSPI", "value": 43.56, "change": -2.72, "unit": "pt", "source": "https://kr.investing.com/indices/kospi-volatility-historical-data"},
+  {"id": "usdkrw", "label": "원/달러", "value": 1383.3, "change": 2.8, "unit": "%", "source": "https://view.asiae.co.kr/article/2026091815323360319"}
+ ]
 }
