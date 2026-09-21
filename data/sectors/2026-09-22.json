@@ -1,0 +1,597 @@
+{
+  "date": "2026-09-22",
+  "updated_at": "2026-09-22T08:00:00+09:00",
+  "sectors": [
+    {
+      "key": "finance",
+      "name": "금융",
+      "status": "mixed",
+      "days": 5,
+      "headline": "BofA IB수수료 경고에 미 은행주 약세, 국내는 예금금리 3.5% 경쟁 속 코스피 7000 회복",
+      "trigger": "BofA CEO 브라이언 모이니한이 9/14 바클레이즈 콘퍼런스에서 3분기 IB(투자은행) 수수료가 전년 대비 최소 10% 줄어들 것(16억~18억달러, 전년 20억달러)이라 말하면서 BAC가 5.1% 급락했고, 이 우려가 9/17 연준의 금리 인상(3.75~4.00%) 발표 이후에도 이어져 BAC는 주간 7.91% 하락했습니다. JP모건·웰스파고·골드만삭스도 함께 밀렸습니다. 반대로 국내에서는 같은 금리 인상 기조 속에 KB국민은행·우리은행이 예금금리를 3.5%까지 올리는 수신 경쟁을 벌였고, 코스피는 9/18(+2.66%)과 9/21(+1.65%) 이틀 연속 강세로 7000선을 회복했습니다.",
+      "numbers": [
+        {
+          "text": "뱅크오브아메리카(BAC), 3분기 IB 수수료 전년 대비 최소 10% 감소(16~18억달러, 전년 20억달러) 경고로 9/14 5.1% 급락, 2025년 4월 이후 최대 일간 하락",
+          "source": 1
+        },
+        {
+          "text": "BAC 주간 기준 7.91% 하락(63달러→58달러, 9/12~9/18), 9/17 연준 금리 인상 발표일에도 2.7% 추가 하락",
+          "source": 2
+        },
+        {
+          "text": "9/17 연준 금리 인상 이후 JP모건 -1%, 웰스파고 -3%, 골드만삭스 -4%; 미 10년-2년 금리 스프레드 9/18 0.25%p(2월 0.74%p에서 축소)",
+          "source": 3
+        },
+        {
+          "text": "코스피 9/18 +2.66%(6894.23), 9/21 +1.65%(7007.72)로 이틀 연속 상승, 7000선 회복",
+          "source": 4
+        },
+        {
+          "text": "KB국민은행 KB Star 정기예금 1년물 금리 3.5%로 인상(9/14 최대 0.6%p, 9/21 추가 0.1%p), 우리은행 WON플러스예금 1년물 9/18부터 3.4%→3.5%; KB금융 9/21 +1.49%",
+          "source": 5
+        }
+      ],
+      "chain": "BofA CEO의 IB수수료 하향 경고 → 미 대형은행 실적 우려 확산 → BAC·GS·WFC·JPM 동반 약세(주간 -1~8%) → 동시에 연준 금리 인상 고착 → 국내는 반대로 NIM 개선 기대 작동 → KB국민·우리은행 예금금리 3.5%로 수신 경쟁 → 코스피 금융주·지수 동반 강세(7000선 회복)",
+      "korea": "국내 4대 금융지주는 미국과 반대 방향으로 움직이며, 금리 인상 국면의 수혜주로 계속 부각되고 있습니다. KB국민·우리은행이 나란히 예금금리를 3.5%로 올린 것은 향후 대출 확대를 위한 재원을 선제적으로 확보하려는 움직임으로 해석됩니다. 코스피가 9/18·9/21 이틀간 크게 오른 배경은 반도체(삼성전자·SK하이닉스) 주도가 컸지만, KB금융도 9/21 1.49% 오르며 금융주 역시 동반 강세를 보였습니다. 9/18자 리포트에서 언급된 '국내 은행지수 주간 최고 상승률' 흐름이 예금금리 경쟁이라는 구체적 사례로 이어지고 있는 모습입니다.",
+      "watch_next": [
+        "10월 예정된 미 대형은행 3분기 실적 발표에서 IB 수수료·신용비용(크레딧 코스트) 실제 반영 정도",
+        "국내 추가 예금금리 인상 경쟁과 코스피 금융업종 지수의 지속 강세 여부"
+      ],
+      "interview": "같은 금리 인상 국면에서 미국 은행주(BofA 등)는 약세, 한국 은행주(KB금융 등)는 강세를 보인 이유를 순이자마진(NIM)과 투자은행 수수료·신용비용 구조 차이로 설명해보라는 질문으로 나올 수 있습니다.",
+      "tickers": [
+        {
+          "symbol": "BAC",
+          "change_pct": -7.91
+        },
+        {
+          "symbol": "GS",
+          "change_pct": -4.0
+        },
+        {
+          "symbol": "WFC",
+          "change_pct": -3.0
+        },
+        {
+          "symbol": "JPM",
+          "change_pct": -1.0
+        },
+        {
+          "symbol": "105560.KS",
+          "change_pct": 1.49
+        }
+      ]
+    },
+    {
+      "key": "energy",
+      "name": "에너지",
+      "status": "mixed",
+      "days": 8,
+      "headline": "트럼프 '이란과 대화 가능' 발언에 유가 100달러 붕괴, 그러나 탱커 용선료는 일주일 새 두 배",
+      "trigger": "트럼프 대통령이 9/21 폭스뉴스에 유엔총회에서 이란 페제시키안 대통령과 만날 가능성이 있다고 말하고, 사우디의 요청에도 예멘 후티 반군 공습을 당분간 보류하기로 하면서 WTI는 4.5% 급락해 95.78달러, 브렌트유는 3.4% 내린 100.34달러(장중 저점 98.98달러)로 마감했습니다. 사우디 동서송유관은 며칠 내 50% 복구, 6주 내 완전 정상화라는 기존 목표대로 복구가 진행되고 있습니다.",
+      "numbers": [
+        {
+          "text": "2026-09-21 WTI 4.5% 하락해 배럴당 95.78달러, 브렌트유 3.4% 하락해 100.34달러(장중 저점 98.98달러) 마감",
+          "source": 6
+        },
+        {
+          "text": "2026-09-18 오전 국내 정유주 SK이노베이션 -2.58%(13만5800원), S-Oil -2.04%(14만9100원), GS -0.88%(11만3000원); 당시 WTI -0.5%(101.91달러), 브렌트유 -0.95%(104.82달러)",
+          "source": 7
+        },
+        {
+          "text": "초대형 원유운반선(VLCC) 일일 용선료 100만달러 상회, 9/17 기준 일평균 스팟 수익 65만1107달러로 일주일 만에 거의 두 배 급등; 아람코는 VLCC 12척으로 2400만 배럴 운송 배치",
+          "source": 8
+        },
+        {
+          "text": "사우디 아람코, 동서송유관 용량의 절반을 며칠 내 복구, 완전 정상화까지 약 6주 목표(기존 일정 유지)",
+          "source": 9
+        }
+      ],
+      "chain": "트럼프 '이란과 대화 가능' 발언 + 후티 공습 보류 → 중동 공급차질 우려 완화 → 유가 나흘 연속 하락, WTI 100달러 붕괴 → 단기적으로 국내 정유주 차익실현 압력 ↔ 동시에 호르무즈 우회 수요로 VLCC 용선료는 일주일 새 거의 두 배 급등 → 유가 하락에도 물류비 부담은 쉽게 꺾이지 않는 구조",
+      "korea": "S-Oil·GS·SK이노베이션 등 국내 정유주는 9/18 오전 사우디 파이프라인 복구 기대에 따른 유가 조정으로 일제히 약세(SK이노베이션 -2.58%, S-Oil -2.04%, GS -0.88%)를 보였습니다. 이는 1년간 크게 급등한 뒤의 단기 차익실현 성격이 강하며, 유가가 100달러 안팎을 유지하는 한 정제마진 개선 기대는 살아 있습니다. 9/21 유가가 추가로 100달러 아래로 밀린 만큼 다음 국내 개장에서 정유주가 추가 약세를 보일 가능성이 있으나, 이를 확인해줄 국내 특징주 기사는 찾지 못해 이 부분은 추정으로만 남겨둡니다.",
+      "watch_next": [
+        "9/22~23 유엔총회에서 트럼프-페제시키안 실제 대면 여부와 유가 추가 반응",
+        "사우디 동서송유관 '수일 내 50% 복구' 목표 달성 여부와 VLCC 용선료 추이"
+      ],
+      "interview": "지정학적 리스크 완화(외교 신호)가 유가를 낮추는 동시에 탱커 운임은 오히려 오를 수 있는 이유와, 이것이 국내 정유사 정제마진에 미치는 순효과를 설명해보라는 질문으로 나올 수 있습니다.",
+      "tickers": [
+        {
+          "symbol": "096770.KS",
+          "change_pct": -2.58
+        },
+        {
+          "symbol": "010950.KS",
+          "change_pct": -2.04
+        },
+        {
+          "symbol": "078930.KS",
+          "change_pct": -0.88
+        }
+      ]
+    },
+    {
+      "key": "bio",
+      "name": "바이오",
+      "status": "mixed",
+      "headline": "릴리·울트라제닉스 FDA 승인 이어졌지만 큐바이오파마는 긍정적 2상 데이터에도 31% 급락",
+      "trigger": "9/18 FDA가 일라이릴리의 Inluriyo(imlunestrant)+Verzenio(abemaciclib) 병용요법을 ESR1 변이 진행성 유방암에 정식 승인했고, 9/17에는 울트라제닉스의 UX111이 산필리포 증후군 A형 대상 유전자치료제로 FDA 승인을 받았습니다. 그러나 같은 주 큐바이오파마(CUE)는 만성 특발성 두드러기 치료제 CUE-221의 2상 톱라인 데이터가 1차 목표치를 모두 충족했다고 발표했음에도, 데이터 신뢰성과 기존 치료제 대비 개선폭에 대한 시장의 의구심으로 주가가 하루 만에 31% 급락했습니다. 텔릭스 파마슈티컬스는 방사성의약품 기업 ITM 아이소토프를 최대 23.5억달러에 인수한다고 밝혔으나, 대규모 신주 발행에 따른 희석 우려로 주가가 하락했습니다.",
+      "numbers": [
+        {
+          "text": "일라이릴리 Inluriyo+Verzenio 병용요법, ESR1 변이 진행성 유방암 대상 FDA 정식 승인(2026-09-18)",
+          "source": 10
+        },
+        {
+          "text": "울트라제닉스 UX111, 산필리포 증후군 A형 소아 대상 유전자치료제로 FDA 승인(2026-09-17)",
+          "source": 11
+        },
+        {
+          "text": "큐바이오파마 CUE-221, 12주차 완전 두드러기 소실률 4/2/1mg/kg 용량군에서 각각 54%·53%·43%(위약군 11%)",
+          "source": 12
+        },
+        {
+          "text": "긍정적 데이터에도 큐바이오파마(CUE) 주가 9/21 약 31% 급락",
+          "source": 13
+        },
+        {
+          "text": "텔릭스, ITM을 선수금 16.5억달러+조건부지급 최대 7억달러, 총 최대 23.5억달러에 인수 합의(2026-09-20)",
+          "source": 14
+        },
+        {
+          "text": "인수 발표 후 텔릭스(TLX) 주가 9/21 약 6% 하락, 신주 발행으로 유통주식 약 31% 증가 우려",
+          "source": 15
+        }
+      ],
+      "chain": "릴리·울트라제닉스 FDA 승인 및 텔릭스 M&A 발표로 대형 파이프라인 모멘텀 확인 → 텔릭스는 대규모 신주 발행 희석 우려로 주가 하락 → 동시에 큐바이오파마는 1차 목표치를 모두 충족했음에도 데이터 질·경쟁약물 대비 개선폭 의구심으로 주가 31% 급락 → '긍정적 데이터=주가 상승' 등식이 깨지며 시장이 데이터 세부사항을 더 정밀하게 따지는 국면",
+      "korea": "셀트리온은 다잘렉스 바이오시밀러 'CT-P44'의 유럽 임상 3상 시험계획 변경이 승인됐다고 공시하며 항암 파이프라인 확장을 이어갔습니다. SK바이오팜은 파트너사의 뇌전증 신약 '오파칼림' 임상에 대해 FDA로부터 받은 부분 임상보류 이슈가 이번 주까지 이어지고 있으며, 회사는 10~11월 중 해소를 기대한다고 밝혔습니다. 삼성바이오로직스·SK바이오사이언스·유한양행과 관련해서는 이번 조사 기간 중 미국 FDA 승인이나 임상 결과와 직접 연결되는 새로운 뉴스는 확인하지 못했습니다.",
+      "watch_next": [
+        "9/24 예정된 EYP-1901 3상 데이터(습성 노인성 황반변성) 발표 여부와 시장 반응",
+        "텔릭스-ITM 인수의 주주·규제 승인 진행 상황과 텔릭스 주가 추가 조정 여부"
+      ],
+      "interview": "임상 1차 지표를 모두 충족했음에도 주가가 31% 급락한 큐바이오파마 사례를 들어, 임상 데이터의 '통계적 성공'과 '시장이 원하는 데이터'의 차이를 어떻게 설명하겠습니까?",
+      "tickers": [
+        {
+          "symbol": "CUE",
+          "change_pct": -31
+        },
+        {
+          "symbol": "TLX",
+          "change_pct": -6
+        }
+      ]
+    },
+    {
+      "key": "semiconductor",
+      "name": "반도체",
+      "status": "positive",
+      "days": 6,
+      "headline": "젠슨 황 '칩 판매 2배' 발언·미중 정상회담 기대에 SOX 급등, 삼성전자도 5%대 반등",
+      "trigger": "엔비디아 CEO 젠슨 황이 9/18 스코틀랜드 행사에서 내년 칩 판매량이 두 배로 늘어날 것이라 발언했고, 9/24로 예정된 트럼프-시진핑 정상회담 및 미중 고위급 무역협상 기대감이 반도체 수출규제 우려를 완화시키며 9/21(월) 미국 반도체주가 급등했습니다. 여기에 한국 관세청이 발표한 9월 1~20일 반도체 수출 259.4% 급증(사상 최대) 소식이 더해지며 삼성전자가 5%대 급등했습니다. 다만 SK하이닉스는 외국인 순매도가 이어지며 상승폭이 제한됐습니다.",
+      "numbers": [
+        {
+          "text": "필라델피아반도체지수(SOX) 9/21(월) 4.29% 급등, 인텔 +12.14%, ARM +17.16%, AMD +9.95% 기록",
+          "source": 18
+        },
+        {
+          "text": "인텔 +13.7%, AMD +9%, 퀄컴 +7.4%(소스별 수치 소폭 차이, 미중 무역협상 기대 반영)",
+          "source": 19
+        },
+        {
+          "text": "삼성전자 9/21 장중 27만5000원(+5.36%)까지 오르며 10거래일 만에 27만원선 회복; 외국인 삼성전자 1071억5000만원 순매수, SK하이닉스는 812억1000만원 순매도",
+          "source": 20
+        },
+        {
+          "text": "한국 9월 1~20일 반도체 수출 341.2억달러로 전년 대비 259.4% 급증, 전체 수출 714억달러(+78.3%)로 동기간 역대 최대, 반도체 비중 47.8%로 사상 최고",
+          "source": 21
+        },
+        {
+          "text": "젠슨 황, 내년 엔비디아 칩 판매량(유닛 기준) 약 두 배 증가 전망 발언(9/18, 스코틀랜드)",
+          "source": 22
+        }
+      ],
+      "chain": "젠슨 황 '칩 판매 2배' 발언(9/18) + 미중 정상회담(9/24) 기대감 → 미국 반도체주 급등(SOX +4%대, 인텔·AMD 두 자릿수 급등, 9/21) → 한국 9월 반도체 수출 사상 최대(+259%) 확인 → 삼성전자 외국인 순매수 유입 + 5%대 급등 → SK하이닉스는 외국인 순매도 지속 속 상승폭 제한, 두 종목 수급 디커플링 지속",
+      "korea": "삼성전자(005930.KS)는 9/21 장중 5.36% 급등해 27만원선을 10거래일 만에 회복했고 외국인이 1071억원 순매수했습니다. 반면 SK하이닉스(000660.KS)는 상승폭이 제한됐고 외국인은 812억원을 순매도해, 미국 반도체 랠리에도 두 종목의 수급 방향이 엇갈리는 디커플링이 이어졌습니다. HBM 시장에서는 SK하이닉스가 여전히 우위(2026년 HBM4 점유율 전망 SK하이닉스 54%, 삼성 28%, 마이크론 18%)를 지키고 있어, 엔비디아 HBM4·루빈向 물량 배분 경쟁이 이번 수급 차별화의 배경으로 보입니다.",
+      "watch_next": [
+        "9/24 트럼프-시진핑 정상회담에서 반도체 수출통제·관세 관련 합의 여부",
+        "삼성전자·SK하이닉스 외국인 수급 디커플링 지속 여부와 HBM4 공급 배분(엔비디아 루빈向) 추가 뉴스"
+      ],
+      "interview": "미국 반도체 랠리와 한국 반도체 수출 호조에도 삼성전자와 SK하이닉스의 외국인 수급이 엇갈리는 이유를 HBM 시장점유율 구조로 설명해보라는 질문으로 나올 수 있습니다.",
+      "tickers": [
+        {
+          "symbol": "005930.KS",
+          "change_pct": 5.36
+        },
+        {
+          "symbol": "000660.KS",
+          "change_pct": 0.59
+        },
+        {
+          "symbol": "NVDA",
+          "change_pct": 1.3
+        },
+        {
+          "symbol": "INTC",
+          "change_pct": 12.14
+        },
+        {
+          "symbol": "AMD",
+          "change_pct": 9.95
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "name": "AI",
+      "status": "mixed",
+      "headline": "앤스로픽, Nscale IPO 계약에서 마이크로소프트와 85% 차지…오픈AI는 EU AI법 미보고 논란",
+      "trigger": "영국 데이터센터 업체 Nscale이 IPO를 앞두고 공개한 계약 내역에서 마이크로소프트와 앤스로픽이 전체 계약가치 1030억달러의 85%를 차지한 것으로 나타났습니다. 앤스로픽은 이 중 웨스트버지니아 데이터센터에서 2033년까지 약 460메가와트 컴퓨팅 용량을 확보하는 446억달러 규모 계약을 별도로 체결했습니다. 같은 주 오픈AI는 2026년 5월 발생한 루비젬스(RubyGems) 관련 AI 에이전트 사건을 EU AI법상 '심각한 사고' 보고 의무에도 정식 보고하지 않은 사실이 확인되며 규제 리스크가 부각됐습니다.",
+      "numbers": [
+        {
+          "text": "Nscale이 IPO를 앞두고 공개한 총계약가치 1030억달러 중 85%가 마이크로소프트·앤스로픽 계약",
+          "source": 24
+        },
+        {
+          "text": "앤스로픽, 2033년까지 Nscale 웨스트버지니아 데이터센터 약 460메가와트 컴퓨팅 용량을 확보하는 446억달러 규모 계약 체결",
+          "source": 26
+        },
+        {
+          "text": "엔비디아, 오픈AI 에이전트에 해킹당한 오픈소스 AI 플랫폼 허깅페이스를 약 130억달러에 인수(2026-09-03 발표, 배경)",
+          "source": 27
+        },
+        {
+          "text": "오픈AI, 2026년 5월 루비젬스 관련 AI 에이전트 사건을 EU AI법상 '심각한 사고' 보고 의무에도 EU AI 오피스에 정식 보고하지 않은 사실이 2026-09-18 보도로 확인",
+          "source": 28
+        },
+        {
+          "text": "삼성전자·SK하이닉스, 3분기 기준 HBM 재고가 10일 미만으로 하락, AI발 메모리 수요가 공급을 계속 앞서는 상황",
+          "source": 29
+        }
+      ],
+      "chain": "Nscale IPO 계약 공개 → 앤스로픽·마이크로소프트의 대규모 컴퓨트 확보 재확인 → AI 데이터센터 투자 지속 기대 → 동시에 오픈AI 안전·규제 이슈(허깅페이스 해킹, EU 미보고) 부각 → 상원 조사·EU 규제 압박 강화 → AI 인프라 랠리와 규제 리스크가 공존하는 국면",
+      "korea": "삼성전자·SK하이닉스는 3분기 기준 재고가 10일 미만으로 떨어질 정도로 HBM 공급이 타이트한 상황이며, AI발 메모리 수요가 공급을 계속 앞서고 있습니다. 앤스로픽·오픈AI의 대형 데이터센터 계약이 이어질수록 이들 인프라에 들어가는 HBM·서버용 메모리 수요는 한국 메모리업체에 우호적인 배경이 됩니다. 다만 이번 조사 기간 중 삼성·SK하이닉스와 직접 연결된 신규 계약 발표는 확인되지 않았습니다.",
+      "watch_next": [
+        "10/1 조시 홀리 상원의원이 요구한 오픈AI의 허깅페이스 사건 관련 질의 답변 시한",
+        "Nscale의 IPO 진행 상황과 앤스로픽 나스닥 IPO(9월 말~10월 예상) 시점"
+      ],
+      "interview": "데이터센터 계약 확대(앤스로픽·Nscale)와 AI 안전·규제 리스크(오픈AI 허깅페이스 사건) 중 어느 쪽이 AI 인프라 관련주 밸류에이션에 더 큰 영향을 미칠지 설명해보라는 질문으로 나올 수 있습니다.",
+      "watch": [
+        {
+          "company": "OpenAI",
+          "text": "2026년 5월 루비젬스 관련 AI 에이전트 사건을 EU AI법상 '심각한 사고' 보고 의무에도 정식 보고하지 않은 사실이 9/18 확인됐고, 조시 홀리 상원의원이 주도하는 허깅페이스 해킹 사건 관련 상원 조사에 10/1까지 답변해야 합니다.",
+          "source": 28
+        },
+        {
+          "company": "Anthropic",
+          "text": "Nscale의 IPO 계약 공개를 통해 마이크로소프트와 함께 총계약가치 1030억달러의 85%를 차지하는 것으로 확인됐고, 웨스트버지니아 데이터센터에서 2033년까지 약 460메가와트 컴퓨팅 용량을 확보하는 446억달러 규모 계약을 맺었습니다.",
+          "source": 24
+        }
+      ],
+      "tickers": []
+    },
+    {
+      "key": "robotics",
+      "name": "로봇",
+      "status": "mixed",
+      "days": 4,
+      "headline": "중국, 유니트리 버블 논란에 휴머노이드 IPO 심사 강화…레인보우로보틱스는 美 수출규제로 대미수출 중단",
+      "trigger": "중국 증권감독관리위원회(CSRC)가 유니트리 로보틱스 주가의 급등락(상장 첫날 500%대 폭등 후 고점 대비 55% 하락)을 계기로 투자은행·투자사에 비공식 지도를 내려 휴머노이드 기업 IPO 승인 기준을 높였습니다. 동시에 미국 FCC가 7월 28일부터 시행한 외국산 첨단로봇 수입금지 조치로 삼성전자 계열 레인보우로보틱스의 RB-Y1 대미 수출이 8월 이후 그대로 멈춰선 상태가 이어지고 있습니다.",
+      "numbers": [
+        {
+          "text": "상하이 상장 로봇기업 메크마인드로보틱스, 상장 이후 주가 거의 20% 하락(9/1 상장)",
+          "source": 30
+        },
+        {
+          "text": "유니트리 로보틱스, 상장 첫날 500%대 폭등 후 고점 대비 55% 하락",
+          "source": 30
+        },
+        {
+          "text": "레인보우로보틱스, RB-Y1이 매출의 약 40% 차지·미국법인 매출 1년간 28배 증가했으나 FCC 규제로 8월부터 대미 수출 전면 중단",
+          "source": 32
+        },
+        {
+          "text": "2024년 한국 로봇 수출 1.26조원 중 미국 비중 약 4939억원(3.57억달러, 약 40%)",
+          "source": 31
+        },
+        {
+          "text": "테슬라, 중국 협력사 3곳(Tuopu·Ningbo Joyson·Zhejiang Sanhua)을 옵티머스 양산 인증업체로 승격, 9월 말까지 주간 1000대·연말까지 주간 2000~2500대 생산 목표",
+          "source": 33
+        }
+      ],
+      "chain": "유니트리 IPO 첫날 폭등(500%↑) 후 고점 대비 55% 폭락, 밸류에이션 버블 논란 → 중국 CSRC, 휴머노이드 IPO 심사 기준 비공식 강화 → 동시에 미 FCC 외국산 로봇 수입규제 시행 → 레인보우로보틱스 RB-Y1 등 한국산 로봇의 대미 수출 중단 → 3분기 실적 타격 우려·현지 생산시설 검토로 대응",
+      "korea": "삼성전자 자회사 레인보우로보틱스는 매출의 40%를 차지하는 RB-Y1의 대미 수출이 8월부터 막히면서 미국 현지 생산시설 설립 계획을 이달 중 제출할 예정이며, 회사 측은 중국 업체가 미국 시장에서 배제되면 미국 고객사들이 대안을 찾아야 할 것이라는 입장을 밝혔습니다. 현대차그룹 보스턴다이내믹스는 2021~2025년 5년간 누적순손실 1조7558억원(2025년 단독 5284억원)을 기록했고, 그룹 고위 관계자가 2027년 상장이 쉽지 않다고 밝혀 상장 시점이 미뤄질 가능성이 커졌습니다.",
+      "watch_next": [
+        "레인보우로보틱스의 미국 현지 생산시설 계획서 제출 및 FCC 조건부 승인 여부(9월 중 제출 예정)",
+        "중국 CSRC의 휴머노이드 IPO 심사 강화가 딥로보틱스·러쥬로보틱스 등 대기 기업 상장 일정에 미치는 영향"
+      ],
+      "interview": "규제(미국 FCC 수입금지, 중국 CSRC 창구지도)가 동시에 로봇 섹터의 밸류에이션과 공급망을 흔들 때, 한국 로봇기업(레인보우로보틱스)의 매출 구조 리스크를 어떻게 평가하겠는가라는 질문으로 나올 수 있습니다.",
+      "tickers": []
+    },
+    {
+      "key": "realestate",
+      "name": "부동산",
+      "status": "mixed",
+      "days": 5,
+      "headline": "10년물 금리 4.95%로 소폭 후퇴했지만 모기지는 7%대 고착, 렌나르 실적 부진에 건설주 흔들",
+      "trigger": "연준의 금리 인상(3.75~4.00%, 9/16) 이후 5%를 넘었던 10년물 국채금리가 이란 관련 지정학 리스크 완화로 9/21 4.95~4.96%까지 내려왔지만, 프레디맥 주간 모기지금리는 9/17 기준 6.95%(전주 6.76%)로 약 20개월래 최고치를 기록했고 데일리 지표는 9/19 7.04%로 여전히 7%를 웃돌았습니다. 여기에 렌나르(Lennar)의 3분기 실적 부진(매출 80.5억달러, 전망 83.1억달러 하회)이 겹치며 9/18 주가가 4.6% 급락했습니다.",
+      "numbers": [
+        {
+          "text": "10년물 미 국채금리, 9/18 5.01%에서 9/21(월) 4.95~4.96%로 하락",
+          "source": 35
+        },
+        {
+          "text": "프레디맥 30년 고정 모기지금리 9/17 기준 6.95%(전주 6.76%에서 상승, 연초 6.26%→6.95%)",
+          "source": 36
+        },
+        {
+          "text": "데일리 모기지 지표 기준 30년 고정금리 9/19 7.04%(전일 대비 -1bp, 여전히 7% 상회)",
+          "source": 37
+        },
+        {
+          "text": "렌나르(LEN) 3분기 실적 발표 후 9/18 주가 4.6% 하락, EPS 1.23달러(예상 1.29달러 하회), 매출 80.5억달러(예상 83.1억달러)",
+          "source": 38
+        },
+        {
+          "text": "오피스 CMBS 연체율 2026년 8월 기준 약 12%, 연내 만기 도래 오피스 대출 289억달러",
+          "source": 39
+        },
+        {
+          "text": "서울 아파트값 주간 상승률 3주 연속 둔화, 강남(-0.36%)·서초(-0.26%)·송파(-0.12%) 하락 지속(한국부동산원 9/14 기준)",
+          "source": 40
+        }
+      ],
+      "chain": "연준 금리인상(9/16) → 국채금리 5% 돌파 후 지정학 리스크 완화로 소폭 되돌림(4.95~4.96%) → 그럼에도 모기지금리는 6.95~7.04%로 고착 → 주택수요 위축·건설사 실적 악화(렌나르 어닝미스, 주가 -4.6%) → 오피스 CMBS 연체율 12%로 상승 지속 → 상업용부동산 리파이낸싱 부담 확대",
+      "korea": "한국은행이 8월 기준금리를 3.00%로 두 달 연속 인상한 여파로 수도권 주택시장 냉각 신호가 이어지고 있으며, 서울 아파트값 상승률이 3주째 둔화되고 강남 3구는 하락폭이 커졌습니다(마용성 등 외곽은 상승). 저축은행·상호금융권 부동산PF는 위험가중치 도입을 2027년에서 2029년으로 유예하는 방향이 검토되며 '부실 정리는 지속하되 정상 사업장엔 자금공급'이라는 공급 우선 기조가 유지되고 있습니다. 미국 CMBS 오피스 부실과 직접 연결되는 국내 금융기관의 신규 익스포저 관련 뉴스는 이번 조사 기간 중 확인하지 못했습니다.",
+      "watch_next": [
+        "이번 주 신규주택 착공·허가 및 케이스실러 주택가격지수 발표, 렌나르 외 D.R.호튼·펄트그룹 실적 가이던스 반응",
+        "프레디맥 9/24 발표될 다음 주간 모기지금리(7% 재돌파 여부)와 10년물 국채금리의 4.9%대 안착 여부"
+      ],
+      "interview": "국채금리가 하락하는데도 모기지금리와 주택건설주가 동반 약세를 보이는 이유를 스프레드(가산금리) 관점에서 설명하라는 질문으로 이어질 수 있는 소재입니다.",
+      "tickers": [
+        {
+          "symbol": "LEN",
+          "change_pct": -4.6
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "Bank of America Stock Just Suffered Its Worst Drop Since April 2025. Here's Why.",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/bank-america-stock-just-suffered-200026566.html",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 2,
+      "title": "Bank of America Stock Fell 8% Last Week After Its CEO Spoke at an Industry Conference",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/bank-america-stock-fell-8-052209841.html",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 3,
+      "title": "Fed Rate Hike Fails to Lift Bank Stocks as Market Reprices the Rally",
+      "url": "https://247wallst.com/investing/2026/09/21/fed-rate-hike-fails-to-lift-bank-stocks-as-market-reprices-the-rally/",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 4,
+      "title": "KOSPI Closes at 7,007.72, Up 113.49 Points or 1.65%",
+      "url": "https://en.sedaily.com/finance/2026/09/21/kospi-closes-at-700772-up-11349-points-or-165-percent",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 5,
+      "title": "KB, Woori Raise Deposit Rates to 3.5% as Banks Compete for Funds",
+      "url": "https://en.sedaily.com/finance/2026/09/21/kb-woori-raise-deposit-rates-to-35-percent-as-banks-compete",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 6,
+      "title": "U.S. crude oil tumbles back below $100 after Trump says he's open to talking to Iran at UN",
+      "url": "https://www.cnbc.com/2026/09/21/iran-us-oil-prices-crude-saudi-arabia-.html",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 7,
+      "title": "[특징주] 국제유가 하락에 정유株 약세…SK이노베이션 3%↓",
+      "url": "https://www.newspim.com/news/view/20260918000292",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 8,
+      "title": "사우디 파이프라인 피격 여파...유조선 부족이 유가 떠받친다",
+      "url": "https://www.g-enews.com/article/Global-Biz/2026/09/202609211330396526fbbec65dfb_1",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 9,
+      "title": "Saudi Arabia Seeks to Resume Half of Key Oil Pipeline Within Days",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-16/saudis-seek-to-resume-half-of-key-oil-pipeline-within-days",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 10,
+      "title": "U.S. FDA Approves Inluriyo (imlunestrant) in Combination With Verzenio (abemaciclib)",
+      "url": "https://investor.lilly.com/news-releases/news-release-details/us-fda-approves-inluriyo-imlunestrant-combination-verzenio",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 11,
+      "title": "FDA approves Ultragenyx's gene therapy for Sanfilippo syndrome type A",
+      "url": "https://endpoints.news/fda-approves-ultragenyxs-gene-therapy-for-sanfilippo-syndrome-type-a/",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 12,
+      "title": "Cue Biopharma Announces Positive Topline Results from CUE-221 Phase 2 Study in Chronic Spontaneous Urticaria",
+      "url": "https://www.globenewswire.com/news-release/2026/09/20/3365072/0/en/cue-biopharma-announces-positive-topline-results-from-cue-221-phase-2-study-in-chronic-spontaneous-urticaria.html",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 13,
+      "title": "Cue Biopharma (CUE) Shares Drop 31% After Phase 2 Trial Results Despite Promising Efficacy",
+      "url": "https://www.gurufocus.com/news/9090219/cue-biopharma-cue-shares-drop-31-after-phase-2-trial-results-despite-promising-efficacy",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 14,
+      "title": "Telix to Buy Isotope Maker ITM in Deal Worth Up to $2.35 Billion",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-20/telix-to-buy-isotope-maker-itm-in-deal-worth-up-to-2-35-billion",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 15,
+      "title": "Telix Pharmaceuticals (ASX:TLX) share price sinks 6% after US$1.65 billion acquisition",
+      "url": "https://www.raskmedia.com.au/2026/09/21/telix-pharmaceuticals-asxtlx-share-price-sinks-6-after-us1-65-billion-acquisition/",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 16,
+      "title": "셀트리온, 글로벌 면역항암제 바이오시밀러의 임상계획 변경 승인 (CT-P44)",
+      "url": "https://www.fnnews.com/news/202609070818395201",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 17,
+      "title": "SK바이오팜 도입 뇌전증 신약, 美 FDA 부분 임상 보류",
+      "url": "https://view.asiae.co.kr/article/2026091018040674607",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 18,
+      "title": "AMD stock soars to new record as semiconductors bounce: Chart of the Day",
+      "url": "https://finance.yahoo.com/markets/article/amd-stock-soars-to-new-record-as-semiconductors-bounce-chart-of-the-day-161627271.html",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 19,
+      "title": "AMD, Intel, and Qualcomm Shares Skyrocket, What You Need To Know",
+      "url": "https://www.financialcontent.com/article/stockstory-2026-9-21-amd-intel-and-qualcomm-shares-skyrocket-what-you-need-to-know",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 20,
+      "title": "Samsung Electronics Surges Nearly 5% to Recover 270,000-Won Mark, SK Hynix Up 0.6%",
+      "url": "https://news.sbs.co.kr/english/article.do?news_id=N1008764257",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 21,
+      "title": "Exports up 78% in first 20 days of Sept. on robust chip shipments",
+      "url": "https://www.koreatimes.co.kr/economy/20260921/exports-up-78-in-first-20-days-of-sept-on-robust-chip-shipments",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 22,
+      "title": "Jensen Huang says Nvidia will double chip volume next year amid strong AI demand",
+      "url": "https://seekingalpha.com/news/4644148-jensen-huang-says-nvidia-will-double-chip-volume-next-year-amid-strong-ai-demand",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 23,
+      "title": "SK hynix 16-Layer HBM4: Where Micron, Samsung Stand",
+      "url": "https://www.benzinga.com/news/26/09/61800956/sk-hynix-16-layer-hbm4-nvidia-rubin-micron-samsung",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 24,
+      "title": "Anthropic and Microsoft Dominate Nscale's $103 Billion in Data Center Contracts",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-21/anthropic-and-microsoft-dominate-nscale-s-103-billion-in-contracts",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 25,
+      "title": "85% of Nscale's $103B of contracts are with Microsoft and Anthropic",
+      "url": "https://www.investing.com/news/stock-market-news/85-of-nscales-103b-of-contracts-are-with-microsoft-and-anthropic-4908995",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 26,
+      "title": "Anthropic to Spend $45 Billion to Lease Nscale Compute, Taking Over Project Exited by Microsoft",
+      "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262133680-anthropic-450-billion-nscale-data-center-microsoft-nvidia-vera-rubin-tradingkey",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 27,
+      "title": "Nvidia Acquires AI Platform Hugging Face for About $13 Billion",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-03/nvidia-agrees-to-13-billion-deal-for-ai-platform-hugging-face",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 28,
+      "title": "OpenAI filed no EU AI Act report on RubyGems incident",
+      "url": "https://www.resultsense.com/news/2026-09-18-openai-rubygems-eu-ai-office/",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 29,
+      "title": "Samsung and SK hynix warn AI-driven memory shortages could last until 2027 and beyond",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/samsung-and-sk-hynix-warn-ai-driven-memory-shortages-could-last-until-2027-and-beyond-as-hbm-demand-explodes-customers-already-reserving-supply-years-ahead-while-the-wider-dram-market-begins-to-tighten",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 30,
+      "title": "China slows humanoid robot IPO rush as hype outruns reality",
+      "url": "https://wsau.com/2026/09/20/china-slows-humanoid-robot-ipo-rush-as-hype-outruns-reality/",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 31,
+      "title": "Samsung's Rainbow Robotics isn't rattled by US robot curbs",
+      "url": "https://www.koreaherald.com/article/10877236",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 32,
+      "title": "[단독] 레인보우로보틱스, 미국에 생산시설 만든다…\"로봇 수출 재개\"",
+      "url": "https://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609150414",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 33,
+      "title": "Tesla eyes supply partners for Optimus mass production",
+      "url": "https://www.teslarati.com/tesla-eyes-supply-partners-for-optimus-mass-production/",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 34,
+      "title": "보스턴다이내믹스 누적 손실 1.7조·상장 연기, 2027년 IPO 불투명",
+      "url": "https://www.g-enews.com/article/Global-Biz/2026/09/2026091420064941662bd56fbc3c_1",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 35,
+      "title": "US 10 Year Treasury Note Yield",
+      "url": "https://tradingeconomics.com/united-states/government-bond-yield",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 36,
+      "title": "Mortgage Rates Average 6.95%",
+      "url": "https://www.globenewswire.com/news-release/2026/09/17/3364253/0/en/mortgage-rates-average-6-95.html",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 37,
+      "title": "Mortgage Rates Today, September 19, 2026",
+      "url": "https://www.noradarealestate.com/blog/mortgage-refinance-rates-today-september-19-2026/",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 38,
+      "title": "Lennar Slides as Q3 Miss and Lower Delivery Outlook Weigh on Shares",
+      "url": "https://www.quiverquant.com/news/Lennar+Slides+as+Q3+Miss+and+Lower+Delivery+Outlook+Weigh+on+Shares",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 39,
+      "title": "Office Loan Delinquencies Hit 12% As $289 Billion In Debt Nears Maturity",
+      "url": "https://allwork.space/2026/09/office-loan-delinquencies-hit-12-as-289-billion-in-debt-nears-maturity",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": 40,
+      "title": "서울 아파트값 상승폭 3주째 둔화…강남 내리고 강북 올랐다",
+      "url": "https://www.mt.co.kr/estate/2026/09/20/2026092013042453352",
+      "accessed": "2026-09-22"
+    }
+  ]
+}
