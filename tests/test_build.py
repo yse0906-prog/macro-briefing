@@ -226,6 +226,21 @@ class InstitutionImpactTest(SiteBuildCase):
             self.assertIn(label, html)
         self.assertNotIn("한국 은행권", html)
 
+    def test_briefing_breaks_institutions_into_asset_topics(self):
+        self.build_full()
+        html = self.read("briefings/2026-09-13.html")
+        self.assertIn("운용자산 관점", html)
+        for label in ("듀레이션 갭", "K-ICS 비율", "환헤지 · 외화유동성", "상품운용 · 채권 평가손익",
+                      "대체투자 · 딜 환경", "혼재"):
+            self.assertIn(label, html)
+
+    def test_briefing_has_fx_section(self):
+        self.build_full()
+        html = self.read("briefings/2026-09-13.html")
+        self.assertIn('id="fx"', html)
+        for text in ("외환 · 원/달러", "원화 약세", "원화 강세", "환헤지 비용", "한미 금리차"):
+            self.assertIn(text, html)
+
 
 class TooltipTest(SiteBuildCase):
     def test_indicator_names_carry_help_text(self):

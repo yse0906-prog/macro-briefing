@@ -92,6 +92,44 @@ LAST_MEETING = {"date": "2026-07-29", "decision": "hold", "range": [3.5, 3.75], 
                 "tone": 0.64, "statement_points": ["경제활동은 완만한 속도로 확장"], "press_conference": "기자회견 요지"}
 
 
+INSTITUTION_TOPICS = {
+    "securities": ["trading", "brokerage", "ib", "wm"],
+    "lp": ["duration_gap", "kics", "allocation", "fx_hedge"],
+    "gp": ["flows", "fees", "products", "alternatives"],
+}
+INSTITUTION_SUMMARY = {
+    "securities": "거래대금과 트레이딩 손익에 미치는 영향",
+    "lp": "보험사·연기금의 듀레이션과 환헤지 비용",
+    "gp": "자산운용사의 펀드 자금 흐름과 수수료",
+}
+
+
+def make_institution_impact() -> list:
+    return [
+        {"institution": inst, "text": INSTITUTION_SUMMARY[inst],
+         "points": [{"topic": t, "direction": "mixed", "text": f"{t} 항목 분석입니다."} for t in topics]}
+        for inst, topics in INSTITUTION_TOPICS.items()
+    ]
+
+
+def make_fx() -> dict:
+    return {
+        "headline": "한미 금리차 확대로 원/달러가 반등했다",
+        "numbers": [
+            {"text": "원/달러 1,383.3원, 주간 +2.8%", "source": 1},
+            {"text": "한미 기준금리 차 상단 기준 1.00%p", "source": 2},
+        ],
+        "drivers": [
+            {"factor": "한미 금리차", "effect": "krw_weak", "text": "금리차가 벌어져 달러 선호가 커졌다."},
+            {"factor": "반도체 수출", "effect": "krw_strong", "text": "수출 대금 유입이 원화를 받쳤다."},
+            {"factor": "유가", "effect": "krw_weak", "text": "원유 수입 대금으로 달러 수요가 늘었다."},
+        ],
+        "hedge": "환헤지 비용은 단기 금리차를 따라 움직인다.",
+        "flows": "외국인 주식 자금이 단기 방향을 정했다.",
+        "watch_next": ["10월 FOMC"],
+    }
+
+
 def make_briefing(**overrides) -> dict:
     b = {
         "date": "2026-09-13", "type": "weekly",
@@ -131,11 +169,8 @@ def make_briefing(**overrides) -> dict:
             {"asset": "usd", "direction": "up", "text": "달러 강세"},
             {"asset": "krw", "direction": "up", "text": "원/달러 상승"},
         ],
-        "institution_impact": [
-            {"institution": "securities", "text": "거래대금과 트레이딩 손익에 미치는 영향"},
-            {"institution": "lp", "text": "보험사·연기금의 듀레이션과 환헤지 비용"},
-            {"institution": "gp", "text": "자산운용사의 펀드 자금 흐름과 수수료"},
-        ],
+        "fx": make_fx(),
+        "institution_impact": make_institution_impact(),
         "scenarios": [
             {"name": "기본 · 매파적 동결", "probability": 60, "text": "기본 시나리오 설명"},
             {"name": "매파 충격", "probability": 25, "text": "매파 시나리오 설명"},

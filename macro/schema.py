@@ -113,6 +113,72 @@ def _check_weekly(b, err):
         err("interview_insights는 2개 이상")
 
 
+# 이 날짜부터 발행한 브리핑은 업권별 운용자산 항목과(주간이면) 외환 섹션을 모두 채운다.
+DEEP_SINCE = "2026-09-19"
+INSTITUTION_TOPICS = {
+    "securities": ["trading", "brokerage", "ib", "wm"],
+    "lp": ["duration_gap", "kics", "allocation", "fx_hedge"],
+    "gp": ["flows", "fees", "products", "alternatives"],
+}
+POINT_DIRECTIONS = {"positive", "negative", "neutral", "mixed"}
+FX_EFFECTS = {"krw_weak", "krw_strong", "neutral"}
+
+
+def _check_institutions(items, source_ids, deep, err):
+    names = [i.get("institution") for i in items]
+    for name in INSTITUTIONS:
+        if name not in names:
+            err(f"institution_impact에 {name}(증권사·LP·GP) 항목이 필요함")
+    for i, item in enumerate(items):
+        where = f"institution_impact[{i}] {item.get('institution')}"
+        if not item.get("text"):
+            err(f"{where}: text 없음")
+        topics = INSTITUTION_TOPICS.get(item.get("institution"), [])
+        points = item.get("points", [])
+        if deep:
+            have = {p.get("topic") for p in points}
+            for topic in topics:
+                if topic not in have:
+                    err(f"{where}: points에 {topic} 항목이 필요함")
+        for p in points:
+            if p.get("topic") not in topics:
+                err(f"{where}: 이 업권에 없는 항목 {p.get('topic')} (가능: {topics})")
+            if p.get("direction") not in POINT_DIRECTIONS:
+                err(f"{where}.{p.get('topic')}: direction은 {sorted(POINT_DIRECTIONS)} 중 하나")
+            if not p.get("text"):
+                err(f"{where}.{p.get('topic')}: text 없음")
+            cited = p.get("source")
+            for sid in (cited if isinstance(cited, list) else [cited] if cited is not None else []):
+                if sid not in source_ids:
+                    err(f"{where}.{p.get('topic')}: 출처 번호 {sid} 없음")
+
+
+def _check_fx(fx, source_ids, err):
+    if not fx.get("headline"):
+        err("fx: headline 없음")
+    numbers = fx.get("numbers", [])
+    if len(numbers) < 2:
+        err("fx: 숫자 근거를 2개 이상 적어야 함")
+    for n in numbers:
+        if not n.get("text"):
+            err("fx: 숫자 근거 text 없음")
+        if n.get("source") not in source_ids:
+            err(f"fx: 출처 번호 {n.get('source')} 없음")
+    drivers = fx.get("drivers", [])
+    if len(drivers) < 3:
+        err("fx: 환율 방향 요인(drivers)을 3개 이상 적어야 함")
+    for d in drivers:
+        if not d.get("factor") or not d.get("text"):
+            err("fx: drivers 항목에 factor와 text가 필요함")
+        if d.get("effect") not in FX_EFFECTS:
+            err(f"fx: drivers effect는 {sorted(FX_EFFECTS)} 중 하나")
+    for field, label in (("hedge", "hedge(환헤지 비용)"), ("flows", "flows(수급)")):
+        if not fx.get(field):
+            err(f"fx: {label} 없음")
+    if not fx.get("watch_next"):
+        err("fx: watch_next(관전 포인트)를 1개 이상 적어야 함")
+
+
 def validate_briefing(b: dict, filename: str) -> list[str]:
     errors = []
     err = lambda msg: errors.append(f"{filename}: {msg}")
@@ -138,13 +204,12 @@ def validate_briefing(b: dict, filename: str) -> list[str]:
     for i, m in enumerate(b["market_impact"]):
         if m.get("asset") not in ASSETS or m.get("direction") not in DIRECTIONS or not m.get("text"):
             err(f"market_impact[{i}]: asset/direction/text 오류")
-    institutions = [i.get("institution") for i in b.get("institution_impact", [])]
-    for name in INSTITUTIONS:
-        if name not in institutions:
-            err(f"institution_impact에 {name}(증권사·LP·GP) 항목이 필요함")
-    for i, item in enumerate(b.get("institution_impact", [])):
-        if not item.get("text"):
-            err(f"institution_impact[{i}]: text 없음")
+    deep = b["date"] >= DEEP_SINCE
+    _check_institutions(b.get("institution_impact", []), source_ids, deep, err)
+    if "fx" in b:
+        _check_fx(b["fx"], source_ids, err)
+    elif deep and b["type"] == "weekly":
+        err("weekly 브리핑에는 fx(외환) 섹션이 필요함")
     _check_releases(b.get("releases", []), source_ids, err)
     if "fomc" in b:
         _check_fomc(b["fomc"], err)

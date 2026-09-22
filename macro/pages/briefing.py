@@ -52,6 +52,17 @@ CSS = """
 .qa{padding:22px 24px;display:flex;flex-direction:column;gap:10px}
 .qa b{font-size:16px;line-height:1.55;color:#0B1A30}
 .qa p{font-size:14px;line-height:1.7;color:#2B3A50}
+.inst{padding:6px 24px 8px}
+.inst-top{display:flex;flex-direction:column;gap:6px;padding:18px 0 14px;border-bottom:2px solid #1D3A66}
+.inst-top b{font-size:17px;color:#0B1A30}
+.inst-top p{font-size:15px;line-height:1.7;color:#1F2E45}
+.inst-row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #EDF0F4;align-items:flex-start}
+.inst-row:last-child{border-bottom:0}
+.inst-k{width:150px;flex-shrink:0;font-size:14px;font-weight:700;color:#2B3A50;padding-top:3px}
+.inst-row .chip{width:48px;justify-content:center;flex-shrink:0}
+.inst-row p{flex:1;font-size:14px;line-height:1.75;color:#2B3A50}
+.cite{font-size:12px;color:#6B7A90}
+.fx-chip{width:auto!important;padding:0 10px;white-space:nowrap}
 .srcs{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;font-size:13px;line-height:1.6;color:#5B6B80}
 .toc{position:sticky;top:24px;width:312px;flex-shrink:0;display:flex;flex-direction:column;gap:16px}
 .toc .card{padding:20px 22px;display:flex;flex-direction:column;gap:2px}
@@ -67,6 +78,10 @@ CSS = """
   .line{flex-wrap:wrap;gap:8px}
   .sc-k{width:100%}
   .lines{padding:4px 16px}
+  .inst{padding:4px 16px 8px}
+  .inst-row{flex-wrap:wrap;gap:8px}
+  .inst-k{width:auto;flex:1}
+  .inst-row p{flex-basis:100%}
 }
 """
 
@@ -191,13 +206,84 @@ INSTITUTION_NOTE = {
 }
 
 
-def _institutions(b: dict) -> str:
-    rows = "".join(
-        f'<div class="line"><span class="line-k">{esc(INSTITUTION_LABEL.get(i["institution"], i["institution"]))}</span>'
-        f'<p>{esc(i["text"])}<br><small class="muted">{esc(INSTITUTION_NOTE.get(i["institution"], ""))}</small></p></div>'
-        for i in b["institution_impact"]
+TOPIC_LABEL = {
+    "trading": "상품운용 · 채권 평가손익",
+    "brokerage": "브로커리지",
+    "ib": "IB · 발행시장",
+    "wm": "WM · 자금흐름",
+    "duration_gap": "듀레이션 갭 (보험사)",
+    "kics": "K-ICS 비율 (보험사)",
+    "allocation": "운용자산 배분",
+    "fx_hedge": "환헤지 · 외화유동성",
+    "flows": "펀드 자금 유출입",
+    "fees": "AUM · 보수 수익",
+    "products": "상품 기회",
+    "alternatives": "대체투자 · 딜 환경",
+}
+POINT_CHIP = {
+    "positive": ("chip-pos", "우호"),
+    "negative": ("chip-neg", "부담"),
+    "neutral": ("chip-neu", "중립"),
+    "mixed": ("chip-neu", "혼재"),
+}
+FX_EFFECT = {
+    "krw_weak": "원화 약세 (환율↑)",
+    "krw_strong": "원화 강세 (환율↓)",
+    "neutral": "중립",
+}
+
+
+def _cite(source, sources: dict) -> str:
+    ids = source if isinstance(source, list) else [source]
+    return "".join(
+        f' <a class="cite" href="{esc(sources[sid])}" target="_blank" rel="noopener">[{sid}]</a>'
+        for sid in ids if sid in sources
     )
-    return f'<div class="card lines">{rows}</div>'
+
+
+def _institution_card(item: dict, sources: dict) -> str:
+    rows = "".join(
+        f'<div class="inst-row"><span class="inst-k">{TOPIC_LABEL.get(p["topic"], esc(p["topic"]))}</span>'
+        f'<span class="chip {POINT_CHIP[p["direction"]][0]}">{POINT_CHIP[p["direction"]][1]}</span>'
+        f'<p>{esc(p["text"])}{_cite(p.get("source"), sources)}</p></div>'
+        for p in item.get("points", [])
+    )
+    return (f'<div class="card inst"><div class="inst-top">'
+            f'<b>{esc(INSTITUTION_LABEL.get(item["institution"], item["institution"]))}</b>'
+            f'<p>{esc(item["text"])}</p></div>{rows}</div>')
+
+
+def _institutions(b: dict) -> str:
+    items = b["institution_impact"]
+    if not any(i.get("points") for i in items):
+        rows = "".join(
+            f'<div class="line"><span class="line-k">{esc(INSTITUTION_LABEL.get(i["institution"], i["institution"]))}</span>'
+            f'<p>{esc(i["text"])}<br><small class="muted">{esc(INSTITUTION_NOTE.get(i["institution"], ""))}</small></p></div>'
+            for i in items
+        )
+        return f'<div class="card lines">{rows}</div>'
+    sources = {s["id"]: s["url"] for s in b.get("sources", [])}
+    return '<div class="stack">' + "".join(_institution_card(i, sources) for i in items) + "</div>"
+
+
+def _fx(b: dict) -> str:
+    fx = b["fx"]
+    sources = {s["id"]: s["url"] for s in b.get("sources", [])}
+    numbers = "".join(f'<li>{esc(n["text"])}{_cite(n.get("source"), sources)}</li>' for n in fx["numbers"])
+    drivers = "".join(
+        f'<div class="line"><span class="line-k">{esc(d["factor"])}</span>'
+        f'<span class="chip fx-chip {"chip-dark" if d["effect"] == "krw_weak" else "chip-neu"}">{FX_EFFECT[d["effect"]]}</span>'
+        f'<p>{esc(d["text"])}</p></div>'
+        for d in fx["drivers"]
+    )
+    return f"""<div class="card pad stack"><span class="s-title">{esc(fx["headline"])}</span><ul class="list">{numbers}</ul></div>
+<span class="label">원/달러를 움직인 요인</span>
+<div class="card lines">{drivers}</div>
+<div class="grid-2">
+<div class="card pad stack"><span class="label">환헤지 비용</span><p class="s-text">{esc(fx["hedge"])}</p></div>
+<div class="card pad stack"><span class="label">수급</span><p class="s-text">{esc(fx["flows"])}</p></div>
+</div>
+<ul class="list">{"".join(f"<li>관전 포인트: {esc(w)}</li>" for w in fx.get("watch_next", []))}</ul>"""
 
 
 def _scenarios(b: dict) -> str:
@@ -238,8 +324,12 @@ def _sections(site, b: dict) -> list[tuple[str, str, str]]:
     if b.get("sectors"):
         sections.append(("sectors", "이슈 섹터", _sectors(b)))
     sections.append(("impact", "시장 영향", _impact(b)))
+    if b.get("fx"):
+        sections.append(("fx", "외환 · 원/달러", _fx(b)))
     if b.get("institution_impact"):
-        sections.append(("institutions", "업권별 시사점", _institutions(b)))
+        deep = any(i.get("points") for i in b["institution_impact"])
+        title = "업권별 시사점 · 운용자산 관점" if deep else "업권별 시사점"
+        sections.append(("institutions", title, _institutions(b)))
     if b.get("scenarios"):
         sections.append(("scenarios", "FOMC 이후 1개월 시나리오", _scenarios(b)))
     if b.get("interview_insights"):
