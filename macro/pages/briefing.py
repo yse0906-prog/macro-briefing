@@ -4,7 +4,7 @@ from datetime import date
 from macro import components as c
 from macro import visuals as vis
 from macro import data as d
-from macro.fmt import esc, md, rich, ymd_ko
+from macro.fmt import esc, md, plain, rich, ymd_ko
 from macro.fred import SERIES
 from macro.layout import page
 
@@ -348,7 +348,7 @@ def render_briefing(site, b: dict, today: date) -> str:
             f'<b data-dday="{meeting["date"]}">{d.dday(meeting["date"], today)}</b></div>') if meeting else ""
     body = (f'{_header(b)}<div class="wrap b-body"><article class="b-main">{body_sections}</article>'
             f'<aside class="toc"><nav class="card">{toc}</nav>{mini}</aside></div>')
-    return page(title=b["headline"], active="briefing", body=body, root="../",
+    return page(title=b["headline"], active="briefing", body=body, root="../", description=plain(b["summary"][0]),
                 css=c.CSS + c.TONE_CSS + c.CHAIN_CSS + CSS + vis.CSS)
 
 

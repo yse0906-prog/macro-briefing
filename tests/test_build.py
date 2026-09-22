@@ -229,6 +229,30 @@ class SectorPageTest(SiteBuildCase):
         self.assertIn(EMPTY_MESSAGE, self.read("sectors.html"))
 
 
+class LinkPreviewTest(SiteBuildCase):
+    OG_IMAGE = "https://yse0906-prog.github.io/macro-briefing/og.png"
+
+    def test_every_page_has_preview_tags(self):
+        self.build_full()
+        for name in ("index.html", "sectors.html", "fomc.html", "indicators.html", "archive.html",
+                     "issues.html", "briefings/2026-09-13.html"):
+            html = self.read(name)
+            for tag in ('property="og:title"', 'property="og:description"', 'name="description"',
+                        f'property="og:image" content="{self.OG_IMAGE}"', 'name="twitter:card"'):
+                self.assertIn(tag, html, f"{name}: {tag}")
+
+    def test_preview_image_is_copied(self):
+        self.build_full()
+        self.assertTrue((self.out / "og.png").exists())
+
+    def test_briefing_description_uses_summary_without_marks(self):
+        b = make_briefing(summary=["**연준 인상**으로 [[-금리 급등]].", "둘째.", "셋째."])
+        write_data(self.data, briefings=[b], indicators=make_indicators(), calendar=make_calendar())
+        build_site(self.data, self.out, ISSUES, today=TODAY)
+        html = self.read("briefings/2026-09-13.html")
+        self.assertIn('property="og:description" content="연준 인상으로 금리 급등."', html)
+
+
 class InstitutionImpactTest(SiteBuildCase):
     def test_briefing_shows_three_institutions(self):
         self.build_full()

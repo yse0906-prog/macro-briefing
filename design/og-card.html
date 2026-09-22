@@ -1,0 +1,54 @@
+<!-- 링크 미리보기 대표 이미지(1200×630) 원본. 헤드리스 브라우저로 캡처해 static/og.png로 저장한다. -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@700&display=swap">
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{width:1200px;height:630px;overflow:hidden}
+body{background:#0B1A30;color:#FFFFFF;font-family:'IBM Plex Sans KR','Malgun Gothic',sans-serif;position:relative}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#13284A 1px,transparent 1px),linear-gradient(90deg,#13284A 1px,transparent 1px);background-size:60px 60px;opacity:.55}
+.in{position:relative;height:100%;padding:64px 72px 56px;display:flex;flex-direction:column}
+.brand{display:flex;align-items:center;gap:18px}
+.brand h1{font-family:'Noto Serif KR',serif;font-size:66px;font-weight:700;letter-spacing:-0.01em}
+.sub{margin-top:18px;font-size:30px;font-weight:500;color:#B7C3D6}
+.tiles{margin-top:48px;display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+.tile{background:#13284A;border:1px solid #1F3A63;border-top:4px solid #5B8BD6;border-radius:8px;height:78px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;color:#FFFFFF}
+.flow{margin-top:34px;display:flex;align-items:center;gap:14px}
+.step{height:54px;padding:0 22px;border-radius:27px;border:2px solid #5B8BD6;display:flex;align-items:center;font-size:22px;font-weight:600;color:#DDE6F5}
+.step.last{background:#5B8BD6;color:#0B1A30;border-color:#5B8BD6}
+.arr{width:34px;height:14px}
+.foot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.chips{display:flex;gap:12px;flex-wrap:wrap}
+.chip{height:46px;padding:0 20px;border-radius:23px;background:#FFFFFF;color:#0B1A30;font-size:20px;font-weight:600;display:flex;align-items:center}
+.chip.dim{background:#1D3A66;color:#FFFFFF}
+.url{font-size:18px;color:#8FA0BA;white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="grid"></div>
+<div class="in">
+  <div class="brand">
+    <svg width="54" height="54" viewBox="0 0 22 22" aria-hidden="true"><rect x="1" y="12" width="4" height="9" fill="#FFFFFF"/><rect x="9" y="6" width="4" height="15" fill="#FFFFFF"/><rect x="17" y="1" width="4" height="20" fill="#8FA9D6"/></svg>
+    <h1>Macro Briefing</h1>
+  </div>
+  <p class="sub">미국 FOMC · 거시지표 · 7개 섹터 이슈를 매일 정리하는 브리핑</p>
+  <div class="tiles">
+    <div class="tile">금융</div><div class="tile">에너지</div><div class="tile">바이오</div><div class="tile">반도체</div>
+    <div class="tile">AI</div><div class="tile">로봇</div><div class="tile">부동산</div>
+  </div>
+  <div class="flow">
+    <span class="step">FOMC · 거시지표</span><svg class="arr" viewBox="0 0 34 14"><path d="M1 7h29M24 2l6 5-6 5" fill="none" stroke="#8FA9D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="step">금리 · 환율</span><svg class="arr" viewBox="0 0 34 14"><path d="M1 7h29M24 2l6 5-6 5" fill="none" stroke="#8FA9D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="step">7개 섹터</span><svg class="arr" viewBox="0 0 34 14"><path d="M1 7h29M24 2l6 5-6 5" fill="none" stroke="#8FA9D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="step last">증권사 · LP · GP 손익</span>
+  </div>
+  <div class="foot">
+    <div class="chips">
+      <span class="chip">섹터 이슈 평일 매일 갱신</span>
+      <span class="chip dim">FRED 지표 자동 수집</span>
+      <span class="chip dim">모든 수치에 출처 표기</span>
+    </div>
+    <span class="url">yse0906-prog.github.io/macro-briefing</span>
+  </div>
+</div>
+</body>
+</html>

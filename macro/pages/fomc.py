@@ -114,4 +114,4 @@ def _history(site) -> str:
 def render_fomc(site, today: date) -> str:
     grid = f'<section class="wrap grid-2">{c.fomc_card(d.next_meeting(site, today), today)}{_last_card(d.fomc_history(site))}</section>'
     body = _hero(site) + f'<main class="f-main">{grid}{_rate_chart(site)}{_history(site)}</main>'
-    return page(title="FOMC", active="fomc", body=body, css=c.CSS + c.TONE_CSS + CSS)
+    return page(title="FOMC", active="fomc", description="미국 FOMC 금리 결정 이력, 성명서 톤, 다음 회의 D-day와 CME FedWatch 확률을 한 화면에 정리합니다.", body=body, css=c.CSS + c.TONE_CSS + CSS)

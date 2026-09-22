@@ -118,6 +118,11 @@ def _body(site, current: dict, root: str = "") -> str:
     return (f'<main class="s-main"><div class="wrap">{board}{cards}</div>{past_block}</main>')
 
 
+def _describe(day: dict) -> str:
+    return (f"{ymd_ko(day['date'])} 금융·에너지·바이오·반도체·AI·로봇·부동산 7개 섹터 이슈. "
+            "촉발 요인, 숫자 근거, 파급 경로, 한국 연결, 면접 각도까지 평일마다 정리합니다.")
+
+
 def render_sectors(site, day: dict | None = None) -> str:
     current = day or site.latest_sectors
     if current is None:
@@ -129,7 +134,7 @@ def render_sectors(site, day: dict | None = None) -> str:
             f'<span class="muted">촉발 요인부터 한국 연결까지 같은 깊이로 정리합니다 · 평일 아침 갱신</span></div>'
             f'<span class="muted num">{kst_time(current["updated_at"])} KST 기준</span></div>'
             f'{_quick_menu(current.get("sectors", []))}</div></div>')
-    return page(title=f"섹터 이슈 {current['date']}", active="sectors",
+    return page(title=f"섹터 이슈 {current['date']}", active="sectors", description=_describe(current),
                 body=head + _body(site, current), css=c.CSS + CSS + v.CSS)
 
 
@@ -141,5 +146,5 @@ def render_sectors_day(site, day: dict) -> str:
             f'<span class="muted"><a href="../sectors.html">오늘 섹터 이슈 보기</a></span></div>'
             f'<span class="muted num">{kst_time(day["updated_at"])} KST 기준</span></div>'
             f'{_quick_menu(day.get("sectors", []))}</div></div>')
-    return page(title=f"섹터 이슈 {day['date']}", active="sectors",
+    return page(title=f"섹터 이슈 {day['date']}", active="sectors", description=_describe(day),
                 body=head + _body(site, day, root=""), root="../", css=c.CSS + CSS + v.CSS)

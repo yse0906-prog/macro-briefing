@@ -177,4 +177,4 @@ def render_indicators(site) -> str:
                      f'<div class="grid-4">{tiles}</div>'),
         ]
         main = f'<main class="i-main">{"".join(sections)}</main>'
-    return page(title="거시지표", active="indicators", body=head + main, css=c.CSS + c.CHAIN_CSS + CSS)
+    return page(title="거시지표", active="indicators", description="CPI·고용·GDP·소매판매 등 미국 거시지표 26개를 FRED에서 자동 수집해 실제치와 예상치, 추이를 보여줍니다.", body=head + main, css=c.CSS + c.CHAIN_CSS + CSS)

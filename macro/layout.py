@@ -2,6 +2,8 @@
 from macro.fmt import esc
 
 DISCLAIMER = "투자 권유가 아닙니다"
+SITE_URL = "https://yse0906-prog.github.io/macro-briefing/"
+DESCRIPTION = ("미국 FOMC·거시지표와 7개 섹터 이슈를 정리하고, 증권사·LP·GP 업권별 시사점까지 잇는 거시경제 브리핑. 섹터 이슈는 평일 매일, 주간 브리핑은 매주 토요일 갱신.")
 
 NAV = [
     ("home", "홈", "index.html"),
@@ -103,8 +105,10 @@ document.querySelectorAll("[data-dday]").forEach(function (el) {
 </script>"""
 
 
-def page(*, title: str, active: str, body: str, root: str = "", css: str = "") -> str:
-    """완성된 HTML 문서를 돌려준다. root는 하위 폴더 페이지에서 '../'."""
+def page(*, title: str, active: str, body: str, root: str = "", css: str = "", description: str = DESCRIPTION) -> str:
+    """완성된 HTML 문서를 돌려준다. root는 하위 폴더 페이지에서 '../'. description은 링크 미리보기에 쓴다."""
+    full_title = f"{title} · Macro Briefing"
+    desc = description if len(description) <= 160 else description[:157] + "…"
     nav = "".join(
         f'<a class="nav{" on" if key == active else ""}" href="{root}{href}">{label}</a>'
         for key, label, href in NAV
@@ -114,7 +118,16 @@ def page(*, title: str, active: str, body: str, root: str = "", css: str = "") -
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(title)} · Macro Briefing</title>
+<title>{esc(full_title)}</title>
+<meta name="description" content="{esc(desc)}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Macro Briefing">
+<meta property="og:title" content="{esc(full_title)}">
+<meta property="og:description" content="{esc(desc)}">
+<meta property="og:image" content="{SITE_URL}og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="{FONTS}">
 <style>{CSS}{css}</style>
 </head>

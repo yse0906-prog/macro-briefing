@@ -1,4 +1,5 @@
 """site/ 폴더에 모든 페이지를 쓴다. 페이지가 추가될 때마다 build_site에 등록한다."""
+import shutil
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -12,6 +13,7 @@ from macro.pages.issues import render_issues
 from macro.pages.sectors import render_sectors, render_sectors_day
 
 KST = timezone(timedelta(hours=9))
+STATIC = Path(__file__).resolve().parent.parent / "static"
 
 
 def write(path: Path, text: str) -> Path:
@@ -37,4 +39,6 @@ def build_site(data_dir: Path, out_dir: Path, issues: list, today=None) -> list[
         written.append(write(out_dir / "briefings" / f"{b['date']}.html", render_briefing(site, b, today)))
     latest = render_briefing(site, site.latest, today) if site.latest else render_briefing_empty()
     written.append(write(out_dir / "briefings" / "latest.html", latest))
+    if STATIC.exists():
+        shutil.copytree(STATIC, out_dir, dirs_exist_ok=True)
     return written
