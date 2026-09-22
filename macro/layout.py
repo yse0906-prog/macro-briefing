@@ -54,6 +54,10 @@ h1,h2,h3,p,ol,ul{margin:0}
 .chip-neg{background:#FBE9E7;color:#A8281F}
 .chip-neu{background:#EEF1F5;color:#44536A}
 .chip-dark{background:#0B1A30;color:#FFFFFF}
+strong{font-weight:700;color:#0B1A30}
+mark{padding:1px 2px;border-radius:3px;font-weight:700;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.hl-pos{background:#E4F2EA;color:#146C3E}
+.hl-neg{background:#FBE9E7;color:#A8281F}
 .up{fill:#1B8F52}.down{fill:#C9362E}.flat{fill:#6B7A90}
 .d-up{fill:#5BD49A}.d-down{fill:#FF8A80}
 .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}

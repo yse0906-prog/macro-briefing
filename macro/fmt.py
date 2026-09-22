@@ -1,5 +1,6 @@
 """표시용 포맷 헬퍼. 모든 페이지 렌더러가 공유한다."""
 import html
+import re
 from datetime import date, datetime
 
 MINUS = "−"
@@ -8,6 +9,36 @@ WEEKDAYS = "월화수목금토일"
 
 def esc(value) -> str:
     return html.escape("" if value is None else str(value))
+
+
+_BOLD = re.compile(r"\*\*(.+?)\*\*")
+_POS = re.compile(r"\[\[\+(.+?)\]\]")
+_NEG = re.compile(r"\[\[-(.+?)\]\]")
+
+
+def rich(value) -> str:
+    """본문 강조: **조건** 굵게, [[+결과]] 유리(초록), [[-결과]] 불리(빨강). HTML은 먼저 이스케이프한다."""
+    text = esc(value)
+    text = _POS.sub(r'<mark class="hl-pos">\1</mark>', text)
+    text = _NEG.sub(r'<mark class="hl-neg">\1</mark>', text)
+    return _BOLD.sub(r"<strong>\1</strong>", text)
+
+
+def plain(value) -> str:
+    text = "" if value is None else str(value)
+    text = _POS.sub(r"\1", _NEG.sub(r"\1", text))
+    return _BOLD.sub(r"\1", text)
+
+
+def markup_errors(text: str) -> list[str]:
+    """짝이 안 맞는 강조 표시를 찾는다."""
+    rest = _BOLD.sub("", _POS.sub("", _NEG.sub("", text)))
+    errors = []
+    if "**" in rest:
+        errors.append("** 짝이 맞지 않음")
+    if "[[" in rest or "]]" in rest:
+        errors.append("[[+ ]] 또는 [[- ]] 형식이 아님")
+    return errors
 
 
 def num(value, digits=1) -> str:

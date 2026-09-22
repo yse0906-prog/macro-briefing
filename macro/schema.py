@@ -3,6 +3,7 @@ import json
 from datetime import date, datetime
 from pathlib import Path
 
+from macro.fmt import markup_errors, plain
 from macro.fred import SERIES
 
 IMPACTS = {"positive", "negative", "neutral"}
@@ -32,6 +33,18 @@ def _is_kst(value) -> bool:
 
 def _https(value) -> bool:
     return isinstance(value, str) and value.startswith("https://")
+
+
+def _check_markup(obj, err, path=""):
+    if isinstance(obj, str):
+        for problem in markup_errors(obj):
+            err(f"{path or '본문'}: 강조 표시 오류 ({problem})")
+    elif isinstance(obj, dict):
+        for key, value in obj.items():
+            _check_markup(value, err, f"{path}.{key}" if path else key)
+    elif isinstance(obj, list):
+        for i, value in enumerate(obj):
+            _check_markup(value, err, f"{path}[{i}]")
 
 
 def _check_probabilities(items, where, err):
@@ -193,6 +206,9 @@ def validate_briefing(b: dict, filename: str) -> list[str]:
         err("type은 weekly 또는 event")
     if len(b["headline"]) > 60:
         err("headline은 60자 이내")
+    if plain(b["headline"]) != b["headline"]:
+        err("headline에는 강조 표시(**, [[+ ]], [[- ]])를 쓰지 않음")
+    _check_markup(b, err)
     if not (isinstance(b["summary"], list) and len(b["summary"]) == 3):
         err("summary는 정확히 3개")
     source_ids = {s.get("id") for s in b["sources"]}
@@ -238,6 +254,7 @@ def validate_sectors(data: dict, filename: str) -> list[str]:
     for s in data.get("sources", []):
         if not _https(s.get("url")):
             err(f"sources[{s.get('id')}]: url은 https://로 시작해야 함")
+    _check_markup(data, err)
 
     sectors = data.get("sectors", [])
     keys = [s.get("key") for s in sectors]

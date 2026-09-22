@@ -250,6 +250,18 @@ class InstitutionImpactTest(SiteBuildCase):
                        'class="stat-fig"'):
             self.assertIn(marker, html)
 
+    def test_briefing_renders_emphasis(self):
+        b = make_briefing()
+        b["institution_impact"][1]["points"][0]["text"] = "**갭이 음이면** [[+순자산 증가]], **양이면** [[-순자산 감소]]"
+        b["fx"]["hedge"] = "**부담은 절반 수준**이다"
+        write_data(self.data, briefings=[b], indicators=make_indicators(), calendar=make_calendar())
+        build_site(self.data, self.out, ISSUES, today=TODAY)
+        html = self.read("briefings/2026-09-13.html")
+        self.assertIn('<mark class="hl-pos">순자산 증가</mark>', html)
+        self.assertIn('<mark class="hl-neg">순자산 감소</mark>', html)
+        self.assertIn("<strong>부담은 절반 수준</strong>", html)
+        self.assertNotIn("[[", html)
+
     def test_briefing_has_fx_section(self):
         self.build_full()
         html = self.read("briefings/2026-09-13.html")

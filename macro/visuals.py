@@ -3,7 +3,7 @@ import re
 
 from macro import charts
 from macro import data as d
-from macro.fmt import esc, md
+from macro.fmt import esc, md, plain, rich
 
 # 단위가 붙은 수치: 부호 · 숫자 · (범위) · (만/억/조) · 단위
 _NUM = r"[+\-−]?\d[\d,]*(?:\.\d+)?"
@@ -31,11 +31,11 @@ def big_figure(text: str) -> str | None:
 def stat_cards(numbers: list, sources: dict) -> str:
     cards = []
     for n in numbers:
-        fig = big_figure(n["text"])
+        fig = big_figure(plain(n["text"]))
         link = sources.get(n.get("source"))
         cite = f'<a class="cite" href="{esc(link)}" target="_blank" rel="noopener">출처</a>' if link else ""
         top = f'<b class="stat-fig">{esc(fig)}</b>' if fig else ""
-        cards.append(f'<div class="stat">{top}<p>{esc(n["text"])} {cite}</p></div>')
+        cards.append(f'<div class="stat">{top}<p>{rich(n["text"])} {cite}</p></div>')
     return f'<div class="stats">{"".join(cards)}</div>'
 
 
@@ -144,7 +144,7 @@ def impact_tiles(items: list, asset_label: dict) -> str:
     tiles = "".join(
         f'<div class="card itile"><div class="itile-top"><span>{asset_label[i["asset"]]}</span>'
         f'<b class="itile-arrow">{IMPACT_ARROW[i["direction"]][0]}</b></div>'
-        f'<span class="itile-dir">{IMPACT_ARROW[i["direction"]][1]}</span><p>{esc(i["text"])}</p></div>'
+        f'<span class="itile-dir">{IMPACT_ARROW[i["direction"]][1]}</span><p>{rich(i["text"])}</p></div>'
         for i in items
     )
     return f'<div class="itiles">{tiles}</div>'

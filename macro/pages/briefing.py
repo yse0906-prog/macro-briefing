@@ -4,7 +4,7 @@ from datetime import date
 from macro import components as c
 from macro import visuals as vis
 from macro import data as d
-from macro.fmt import esc, md, ymd_ko
+from macro.fmt import esc, md, rich, ymd_ko
 from macro.fred import SERIES
 from macro.layout import page
 
@@ -96,7 +96,7 @@ def _header(b: dict) -> str:
     if b.get("period"):
         meta.append(f'<span class="num">대상 기간 {md(b["period"]["from"])}–{md(b["period"]["to"])}</span>')
     meta.append("<span>AI 작성 · 모든 수치에 출처 표기</span>")
-    points = "".join(f"<li><b>{i:02d}</b><span>{esc(s)}</span></li>" for i, s in enumerate(b["summary"], 1))
+    points = "".join(f"<li><b>{i:02d}</b><span>{rich(s)}</span></li>" for i, s in enumerate(b["summary"], 1))
     return f"""<div class="b-head"><div class="wrap">
 <div class="crumb"><a href="../archive.html">브리핑</a><span>/</span><span>{esc(c.briefing_label(b))}</span></div>
 <h1 class="serif">{esc(b["headline"])}</h1>
@@ -114,7 +114,7 @@ def _releases(site, b: dict) -> str:
             f'<td class="r">{v["consensus"]}</td><td class="r muted">{v["previous"]}</td><td class="r">{v["diff"]}</td>'
             f'<td>{c.impact_chip(v["impact"])}</td></tr>'
         )
-    notes = "".join(f"<li><b>{esc(r['name'])}</b> — {esc(r['interpretation'])}</li>" for r in b["releases"])
+    notes = "".join(f"<li><b>{esc(r['name'])}</b> — {rich(r['interpretation'])}</li>" for r in b["releases"])
     stale = [r["name"] for r in b["releases"] if r["series"] in SERIES and d.is_stale(site.indicators, r["series"])]
     warning = f'<p class="muted">수집 지연: {esc(", ".join(stale))}</p>' if stale else ""
     return (
@@ -178,7 +178,7 @@ def _sectors(b: dict) -> str:
         cards.append(f"""<div class="card s-card">
 <div class="s-top"><div><b>{esc(s["name"])}</b><small>{esc(s.get("gics", ""))}</small></div>{c.impact_chip(s["impact"])}</div>
 <span class="s-title">{esc(s["title"])}</span>
-<p class="s-text">{esc(s["analysis"])}</p>
+<p class="s-text">{rich(s["analysis"])}</p>
 <div class="ticks">{"".join(_ticker_chip(t) for t in s.get("tickers", []))}</div>
 <div class="news">{news}</div>
 </div>""")
@@ -240,12 +240,12 @@ def _institution_card(item: dict, sources: dict) -> str:
     rows = "".join(
         f'<div class="inst-row"><span class="inst-k">{TOPIC_LABEL.get(p["topic"], esc(p["topic"]))}</span>'
         f'<span class="chip {POINT_CHIP[p["direction"]][0]}">{POINT_CHIP[p["direction"]][1]}</span>'
-        f'<p>{esc(p["text"])}{_cite(p.get("source"), sources)}</p></div>'
+        f'<p>{rich(p["text"])}{_cite(p.get("source"), sources)}</p></div>'
         for p in item.get("points", [])
     )
     return (f'<div class="card inst"><div class="inst-top">'
             f'<b>{esc(INSTITUTION_LABEL.get(item["institution"], item["institution"]))}</b>'
-            f'<p>{esc(item["text"])}</p></div>{rows}</div>')
+            f'<p>{rich(item["text"])}</p></div>{rows}</div>')
 
 
 def _institutions(b: dict) -> str:
@@ -268,7 +268,7 @@ def _fx(site, b: dict) -> str:
     drivers = "".join(
         f'<div class="line"><span class="line-k">{esc(d["factor"])}</span>'
         f'<span class="chip fx-chip {"chip-dark" if d["effect"] == "krw_weak" else "chip-neu"}">{FX_EFFECT[d["effect"]]}</span>'
-        f'<p>{esc(d["text"])}</p></div>'
+        f'<p>{rich(d["text"])}</p></div>'
         for d in fx["drivers"]
     )
     stats = vis.stat_cards(fx["numbers"], sources)
@@ -278,8 +278,8 @@ def _fx(site, b: dict) -> str:
 {vis.fx_tug(fx["drivers"])}
 <div class="card lines">{drivers}</div>
 <div class="grid-2">
-<div class="card pad stack"><span class="label">환헤지 비용</span><p class="s-text">{esc(fx["hedge"])}</p></div>
-<div class="card pad stack"><span class="label">수급</span><p class="s-text">{esc(fx["flows"])}</p></div>
+<div class="card pad stack"><span class="label">환헤지 비용</span><p class="s-text">{rich(fx["hedge"])}</p></div>
+<div class="card pad stack"><span class="label">수급</span><p class="s-text">{rich(fx["flows"])}</p></div>
 </div>
 <ul class="list">{"".join(f"<li>관전 포인트: {esc(w)}</li>" for w in fx.get("watch_next", []))}</ul>"""
 
@@ -287,7 +287,7 @@ def _fx(site, b: dict) -> str:
 def _scenarios(b: dict) -> str:
     rows = "".join(
         f'<div class="line"><div class="sc-k"><div class="bar-l num"><b>{esc(s["name"])}</b><b>{s["probability"]}%</b></div>'
-        f'<div class="track"><div class="fill" style="width:{s["probability"]}%"></div></div></div><p>{esc(s["text"])}</p></div>'
+        f'<div class="track"><div class="fill" style="width:{s["probability"]}%"></div></div></div><p>{rich(s["text"])}</p></div>'
         for s in b["scenarios"]
     )
     return f'<div class="card lines">{rows}</div>'
@@ -295,7 +295,7 @@ def _scenarios(b: dict) -> str:
 
 def _insights(b: dict) -> str:
     return '<div class="stack">' + "".join(
-        f'<div class="card qa"><b>Q. {esc(q["question"])}</b><p>{esc(q["answer_points"])}</p></div>' for q in b["interview_insights"]
+        f'<div class="card qa"><b>Q. {esc(q["question"])}</b><p>{rich(q["answer_points"])}</p></div>' for q in b["interview_insights"]
     ) + "</div>"
 
 

@@ -1,7 +1,7 @@
 """섹터 이슈 페이지(sectors.html). 평일마다 갱신되고 날짜별로 쌓인다."""
 from macro import components as c
 from macro import visuals as v
-from macro.fmt import esc, kst_time, ymd_ko
+from macro.fmt import esc, kst_time, rich, ymd_ko
 from macro.layout import page
 
 STATUS = {
@@ -69,22 +69,22 @@ def _part(label: str, value: str) -> str:
 def _sector_card(sector: dict, sources: dict) -> str:
     cls, direction, label = STATUS.get(sector.get("status"), STATUS["neutral"])
     days = f'<span class="sec-days">이 이슈 {sector["days"]}일째</span>' if sector.get("days") else ""
-    watch_next = "".join(f"<li>{esc(w)}</li>" for w in sector.get("watch_next", []))
+    watch_next = "".join(f"<li>{rich(w)}</li>" for w in sector.get("watch_next", []))
     ticks = "".join(_ticker_chip(t) for t in sector.get("tickers", []))
     parts = [
-        _part("촉발 요인", esc(sector.get("trigger", ""))),
+        _part("촉발 요인", rich(sector.get("trigger", ""))),
         _part("숫자", v.stat_cards(sector.get("numbers", []), sources)),
         _part("파급 경로", v.flow(sector.get("chain", ""))),
-        _part("한국 연결", esc(sector.get("korea", ""))),
+        _part("한국 연결", rich(sector.get("korea", ""))),
         _part("관전 포인트", f"<ul>{watch_next}</ul>"),
-        _part("면접 각도", f'<div class="qa-box">{esc(sector.get("interview", ""))}</div>'),
+        _part("면접 각도", f'<div class="qa-box">{rich(sector.get("interview", ""))}</div>'),
     ]
     if ticks:
         parts.insert(2, _part("종목", f'<div class="ticks">{ticks}</div>'))
     watch = ""
     if sector.get("watch"):
         rows = "".join(
-            f'<div class="watch-row"><b>{esc(w["company"])}</b><span>{esc(w["text"])} '
+            f'<div class="watch-row"><b>{esc(w["company"])}</b><span>{rich(w["text"])} '
             f'<a href="{esc(sources.get(w.get("source"), "#"))}" target="_blank" rel="noopener">[출처]</a></span></div>'
             for w in sector["watch"]
         )
