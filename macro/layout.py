@@ -120,7 +120,7 @@ def page(*, title: str, active: str, body: str, root: str = "", css: str = "") -
 </head>
 <body>
 <header class="mast"><div class="wrap mast-in">
-<a class="brand" href="{root}index.html">{LOGO}<span class="serif">Macro Briefing</span><span class="tagline">미국 거시경제 · FOMC · 섹터 주간 브리핑</span></a>
+<a class="brand" href="{root}index.html">{LOGO}<span class="serif">Macro Briefing</span><span class="tagline">미국 거시경제 · FOMC · 섹터 이슈 브리핑</span></a>
 <nav class="navs">{nav}</nav>
 </div></header>
 {body}
@@ -128,7 +128,7 @@ def page(*, title: str, active: str, body: str, root: str = "", css: str = "") -
 <div class="foot-l"><strong>{DISCLAIMER}</strong>
 <span>이 사이트는 거시경제 학습과 금융권 취업 준비를 위한 참고 자료입니다. 분석과 전망은 AI가 공개 자료를 바탕으로 작성해 오류가 있을 수 있으며, 투자 판단의 근거로 쓸 수 없습니다.</span>
 <span>지표 수치: FRED(세인트루이스 연방준비은행) · 예상치·뉴스: 각 항목에 출처 표기</span></div>
-<div class="foot-r"><span class="serif">Macro Briefing</span><span>주 1회 + 주요 발표 시 갱신</span><span>© 2026 SangEunLAB</span></div>
+<div class="foot-r"><span class="serif">Macro Briefing</span><span>섹터 이슈 평일 매일 갱신</span><span>주간 브리핑 매주 토요일 · 주요 발표 다음 날 이벤트 브리핑</span><span>© 2026 SangEunLAB</span></div>
 </div></footer>
 {DDAY_SCRIPT}
 </body>

@@ -65,6 +65,8 @@ class HomeArchiveTest(SiteBuildCase):
                      "동결 <b>78%</b>", "이슈 섹터", "시장 영향", "FOMC 금리 결정·기자회견", DISCLAIMER):
             self.assertIn(text, html)
         self.assertIn('href="briefings/2026-09-17.html"', html)
+        self.assertIn("섹터 이슈 평일 매일 갱신", html)
+        self.assertNotIn("주 1회", html)
         for text in ("코스피", "코스닥", "VKOSPI", 'tk-g">한국'):
             self.assertNotIn(text, html)
 
