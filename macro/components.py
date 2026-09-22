@@ -133,15 +133,12 @@ def _ticker_item(item: dict) -> str:
             f'<span class="tk-c">{arrow(direction, dark=True)}{change_text}</span></div>')
 
 
-def ticker(us_rows: list, kr_rows: list, note: str) -> str:
-    rows = []
-    if us_rows:
-        items = "".join(_ticker_item(i) for i in us_rows)
-        rows.append(f'<div class="wrap tk-row"><span class="tk-g">미국</span>{items}<span class="tk-note hide-m">{esc(note)}</span></div>')
-    if kr_rows:
-        items = "".join(_ticker_item(i) for i in kr_rows)
-        rows.append(f'<div class="tk-sep"><div class="wrap tk-row"><span class="tk-g">한국</span>{items}</div></div>')
-    return f'<div class="ticker num">{"".join(rows)}</div>' if rows else ""
+def ticker(us_rows: list, note: str) -> str:
+    if not us_rows:
+        return ""
+    items = "".join(_ticker_item(i) for i in us_rows)
+    return (f'<div class="ticker num"><div class="wrap tk-row"><span class="tk-g">미국</span>{items}'
+            f'<span class="tk-note hide-m">{esc(note)}</span></div></div>')
 
 
 def prob_bar(probabilities: list) -> str:

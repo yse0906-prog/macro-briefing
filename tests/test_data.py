@@ -4,7 +4,7 @@ from datetime import date
 from pathlib import Path
 
 from macro import data as d
-from tests.factories import make_briefing, make_calendar, make_event_briefing, make_indicators, make_market, write_data
+from tests.factories import make_briefing, make_calendar, make_event_briefing, make_indicators, write_data
 
 
 class LoadTest(unittest.TestCase):
@@ -25,7 +25,7 @@ class LoadTest(unittest.TestCase):
 class ValuesTest(unittest.TestCase):
     def setUp(self):
         self.ind = make_indicators()
-        self.site = d.SiteData(self.ind, make_market(), make_calendar(), [make_event_briefing(), make_briefing()])
+        self.site = d.SiteData(self.ind, make_calendar(), [make_event_briefing(), make_briefing()])
 
     def release(self, series):
         return next(r for r in make_briefing()["releases"] if r["series"] == series)
@@ -45,10 +45,6 @@ class ValuesTest(unittest.TestCase):
         self.assertEqual((rows["us10y"]["change"], rows["us10y"]["unit"]), (6, "bp"))
         self.assertEqual((rows["vix"]["change"], rows["vix"]["unit"]), (1.2, "pt"))
         self.assertIsNone(d.weekly_change([("2026-09-11", 1.0)], "pct"))
-
-    def test_kr_ticker_order(self):
-        self.assertEqual([r["id"] for r in d.kr_ticker(make_market())], ["kospi", "kosdaq", "vkospi", "usdkrw"])
-        self.assertEqual(d.kr_ticker(None), [])
 
     def test_sampling(self):
         months = d.monthly_last(d.obs(self.ind, "DFEDTARU"), 3)

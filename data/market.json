@@ -1,9 +1,0 @@
-{
- "as_of": "2026-09-18",
- "items": [
-  {"id": "kospi", "label": "코스피", "value": 6894.23, "change": -0.2, "unit": "%", "source": "https://view.asiae.co.kr/article/2026091815340598248"},
-  {"id": "kosdaq", "label": "코스닥", "value": 827.12, "change": 0.8, "unit": "%", "source": "https://view.asiae.co.kr/article/2026091815343814649"},
-  {"id": "vkospi", "label": "VKOSPI", "value": 43.56, "change": -2.72, "unit": "pt", "source": "https://kr.investing.com/indices/kospi-volatility-historical-data"},
-  {"id": "usdkrw", "label": "원/달러", "value": 1383.3, "change": 2.8, "unit": "%", "source": "https://view.asiae.co.kr/article/2026091815323360319"}
- ]
-}

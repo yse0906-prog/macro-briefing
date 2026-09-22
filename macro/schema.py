@@ -11,8 +11,6 @@ DIRECTIONS = {"up", "down", None}
 ASSETS = {"us_equities", "us_rates", "usd", "krw"}
 INSTITUTIONS = ["securities", "lp", "gp"]
 OUTCOMES = {"hold", "cut25", "cut50", "hike25", "hike50"}
-MARKET_IDS = {"kospi", "kosdaq", "vkospi", "usdkrw"}
-MARKET_UNITS = {"%", "pt"}
 
 
 def _is_date(value) -> bool:
@@ -283,26 +281,6 @@ def validate_sectors(data: dict, filename: str) -> list[str]:
     return errors
 
 
-def validate_market(m: dict) -> list[str]:
-    errors = []
-    if not _is_date(m.get("as_of")):
-        errors.append("as_of 형식 오류")
-    seen = set()
-    for i, item in enumerate(m.get("items", [])):
-        if item.get("id") not in MARKET_IDS or item.get("id") in seen:
-            errors.append(f"items[{i}]: id는 {sorted(MARKET_IDS)} 중 하나이며 중복 불가")
-        seen.add(item.get("id"))
-        if not isinstance(item.get("value"), (int, float)):
-            errors.append(f"items[{i}]: value는 숫자")
-        if item.get("change") is not None and not isinstance(item.get("change"), (int, float)):
-            errors.append(f"items[{i}]: change는 숫자 또는 null")
-        if item.get("unit") not in MARKET_UNITS:
-            errors.append(f"items[{i}]: unit은 % 또는 pt")
-        if not _https(item.get("source")):
-            errors.append(f"items[{i}]: source는 https:// URL")
-    return errors
-
-
 def validate_calendar(c: dict) -> list[str]:
     errors = []
     for i, e in enumerate(c.get("events", [])):
@@ -333,7 +311,7 @@ def validate_data_dir(data_dir: Path) -> list[str]:
         s = _load(path, errors)
         if s is not None:
             errors += validate_sectors(s, path.name)
-    for name, check in (("market.json", validate_market), ("calendar.json", validate_calendar)):
+    for name, check in (("calendar.json", validate_calendar),):
         path = data_dir / name
         if path.exists():
             obj = _load(path, errors)

@@ -8,7 +8,7 @@ from config import ISSUES
 from macro.build import build_site
 from macro.components import EMPTY_MESSAGE
 from macro.layout import DISCLAIMER
-from tests.factories import (make_briefing, make_calendar, make_event_briefing, make_indicators, make_market,
+from tests.factories import (make_briefing, make_calendar, make_event_briefing, make_indicators,
                              make_sectors, write_data)
 
 
@@ -49,7 +49,7 @@ class SiteBuildCase(unittest.TestCase):
 
     def build_full(self):
         write_data(self.data, briefings=[make_briefing(), make_event_briefing()], indicators=make_indicators(),
-                   market=make_market(), calendar=make_calendar())
+                   calendar=make_calendar())
         build_site(self.data, self.out, ISSUES, today=TODAY)
 
     def read(self, name):
@@ -61,10 +61,12 @@ class HomeArchiveTest(SiteBuildCase):
         self.build_full()
         html = self.read("index.html")
         self.assertIn(make_event_briefing()["headline"], html)
-        for text in ("D-3", "6,412.3", "코스피", "4,118.6", "3.1%", "예상 상회 +0.1%p", "증시 악재",
+        for text in ("D-3", "6,412.3", "3.1%", "예상 상회 +0.1%p", "증시 악재",
                      "동결 <b>78%</b>", "이슈 섹터", "시장 영향", "FOMC 금리 결정·기자회견", DISCLAIMER):
             self.assertIn(text, html)
         self.assertIn('href="briefings/2026-09-17.html"', html)
+        for text in ("코스피", "코스닥", "VKOSPI", 'tk-g">한국'):
+            self.assertNotIn(text, html)
 
     def test_archive_lists_newest_first(self):
         self.build_full()
@@ -160,7 +162,7 @@ class EmploymentChainTest(SiteBuildCase):
             {"period": "2026-07-01", "from": -23000, "to": 21000}
         ]
         write_data(self.data, briefings=[briefing], indicators=indicators,
-                   market=make_market(), calendar=make_calendar())
+                   calendar=make_calendar())
         build_site(self.data, self.out, ISSUES, today=TODAY)
         html = self.read("briefings/2026-09-13.html")
         self.assertIn("7월", html)
@@ -171,7 +173,7 @@ class EmploymentChainTest(SiteBuildCase):
 class SectorPageTest(SiteBuildCase):
     def build_with_sectors(self):
         write_data(self.data, briefings=[make_briefing()], indicators=make_indicators(),
-                   market=make_market(), calendar=make_calendar())
+                   calendar=make_calendar())
         (self.data / "sectors").mkdir(parents=True, exist_ok=True)
         (self.data / "sectors" / "2026-09-16.json").write_text(
             json.dumps(make_sectors(), ensure_ascii=False), encoding="utf-8")

@@ -13,14 +13,12 @@ US_TICKER = [
     ("dxy", "달러인덱스", "DTWEXBGS", "pct"),
     ("vix", "VIX", "VIXCLS", "pt"),
 ]
-KR_ORDER = ["kospi", "kosdaq", "vkospi", "usdkrw"]
 UNIT_OF_KIND = {"pct": "%", "bp": "bp", "pt": "pt"}
 
 
 @dataclass
 class SiteData:
     indicators: dict = field(default_factory=lambda: {"series": {}})
-    market: dict | None = None
     calendar: dict | None = None
     briefings: list = field(default_factory=list)
     sectors: list = field(default_factory=list)
@@ -45,7 +43,6 @@ def load_site_data(data_dir: Path) -> SiteData:
     sectors.sort(key=lambda s: s["date"], reverse=True)
     return SiteData(
         indicators=_read(data_dir / "indicators.json") or {"series": {}},
-        market=_read(data_dir / "market.json"),
         calendar=_read(data_dir / "calendar.json"),
         briefings=briefings,
         sectors=sectors,
@@ -94,11 +91,6 @@ def us_ticker(indicators: dict) -> list[dict]:
         if result:
             rows.append({"id": key, "label": label, "value": result[0], "change": result[1], "unit": UNIT_OF_KIND[kind]})
     return rows
-
-
-def kr_ticker(market: dict | None) -> list[dict]:
-    items = {item["id"]: item for item in (market or {}).get("items", [])}
-    return [items[key] for key in KR_ORDER if key in items]
 
 
 def monthly_last(points, n: int):

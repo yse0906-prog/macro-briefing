@@ -64,11 +64,11 @@ def _latest_with(site, key):
 
 
 def _ticker(site) -> str:
-    us, kr = d.us_ticker(site.indicators), d.kr_ticker(site.market)
-    if not us and not kr:
+    us = d.us_ticker(site.indicators)
+    if not us:
         return ""
-    as_of = d.obs(site.indicators, "SP500")[-1][0] if us else site.market["as_of"]
-    return c.ticker(us, kr, f"{md(as_of)} 종가 · 주간 등락")
+    as_of = d.obs(site.indicators, "SP500")[-1][0]
+    return c.ticker(us, f"{md(as_of)} 종가 · 주간 등락")
 
 
 def _hero(site, today) -> str:

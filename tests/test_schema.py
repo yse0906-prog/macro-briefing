@@ -2,8 +2,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from macro.schema import validate_briefing, validate_calendar, validate_data_dir, validate_market
-from tests.factories import make_briefing, make_calendar, make_event_briefing, make_market, write_data
+from macro.schema import validate_briefing, validate_calendar, validate_data_dir
+from tests.factories import make_briefing, make_calendar, make_event_briefing, write_data
 
 
 def has(errors, text):
@@ -66,15 +66,9 @@ class BriefingSchemaTest(unittest.TestCase):
         self.assertTrue(has(validate_briefing(b, "2026-09-17.json"), "event"))
 
 
-class MarketCalendarSchemaTest(unittest.TestCase):
+class CalendarSchemaTest(unittest.TestCase):
     def test_valid(self):
-        self.assertEqual(validate_market(make_market()), [])
         self.assertEqual(validate_calendar(make_calendar()), [])
-
-    def test_market_unknown_id(self):
-        m = make_market()
-        m["items"][0]["id"] = "sp500"
-        self.assertTrue(has(validate_market(m), "id"))
 
     def test_calendar_importance_range(self):
         c = make_calendar()
@@ -87,7 +81,7 @@ class DataDirTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             data = Path(tmp)
             self.assertEqual(validate_data_dir(data), [])
-            write_data(data, briefings=[make_briefing()], market=make_market(), calendar=make_calendar())
+            write_data(data, briefings=[make_briefing()], calendar=make_calendar())
             self.assertEqual(validate_data_dir(data), [])
             (data / "briefings" / "2026-09-20.json").write_text("{broken", encoding="utf-8")
             self.assertTrue(has(validate_data_dir(data), "JSON"))

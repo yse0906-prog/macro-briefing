@@ -266,15 +266,6 @@ def make_sectors(**overrides) -> dict:
     return data
 
 
-def make_market() -> dict:
-    return {"as_of": "2026-09-11", "items": [
-        {"id": "kospi", "label": "코스피", "value": 4118.6, "change": -0.5, "unit": "%", "source": "https://example.com/kospi"},
-        {"id": "kosdaq", "label": "코스닥", "value": 912.4, "change": -0.9, "unit": "%", "source": "https://example.com/kosdaq"},
-        {"id": "vkospi", "label": "VKOSPI", "value": 24.7, "change": 1.6, "unit": "pt", "source": "https://example.com/vkospi"},
-        {"id": "usdkrw", "label": "원/달러", "value": 1478.0, "change": 0.6, "unit": "%", "source": "https://example.com/usdkrw"},
-    ]}
-
-
 def make_calendar() -> dict:
     return {"updated_at": "2026-09-13T07:00:00+09:00", "events": [
         {"kst": "2026-09-15T21:30:00+09:00", "name": "소매판매 (8월)", "importance": 2, "kind": "release"},
@@ -283,11 +274,11 @@ def make_calendar() -> dict:
     ]}
 
 
-def write_data(data_dir: Path, *, briefings=(), indicators=None, market=None, calendar=None) -> None:
+def write_data(data_dir: Path, *, briefings=(), indicators=None, calendar=None) -> None:
     (data_dir / "briefings").mkdir(parents=True, exist_ok=True)
     dump = lambda path, obj: path.write_text(json.dumps(obj, ensure_ascii=False), encoding="utf-8")
     for b in briefings:
         dump(data_dir / "briefings" / f"{b['date']}.json", b)
-    for name, obj in (("indicators.json", indicators), ("market.json", market), ("calendar.json", calendar)):
+    for name, obj in (("indicators.json", indicators), ("calendar.json", calendar)):
         if obj is not None:
             dump(data_dir / name, obj)
