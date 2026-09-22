@@ -1,5 +1,6 @@
 """섹터 이슈 페이지(sectors.html). 평일마다 갱신되고 날짜별로 쌓인다."""
 from macro import components as c
+from macro import visuals as v
 from macro.fmt import esc, kst_time, ymd_ko
 from macro.layout import page
 
@@ -7,7 +8,7 @@ STATUS = {
     "positive": ("chip-pos", "up", "호재"),
     "negative": ("chip-neg", "down", "악재"),
     "neutral": ("chip-neu", None, "중립"),
-    "mixed": ("chip-neu", None, "혼조"),
+    "mixed": ("chip-mix", None, "혼조"),
 }
 
 CSS = """
@@ -19,7 +20,7 @@ CSS = """
 .quick a{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 16px;border:1px solid #DDE2EA;border-radius:19px;font-size:14px;font-weight:600;color:#2B3A50;background:#FFFFFF}
 .quick a:hover{border-color:#1D3A66;text-decoration:none}
 .quick i{width:8px;height:8px;border-radius:2px}
-.q-pos{background:#1B8F52}.q-neg{background:#C9362E}.q-neu{background:#8A97AB}
+.q-pos{background:#1B8F52}.q-neg{background:#C9362E}.q-neu{background:#8A97AB}.q-mix{background:#D08A2E}
 .s-main{display:flex;flex-direction:column;gap:20px;padding-top:32px}
 .sec{padding:26px 28px;display:flex;flex-direction:column;gap:16px;scroll-margin-top:72px}
 .sec-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
@@ -51,7 +52,7 @@ CSS = """
 }
 """
 
-QUICK_DOT = {"positive": "q-pos", "negative": "q-neg", "neutral": "q-neu", "mixed": "q-neu"}
+QUICK_DOT = {"positive": "q-pos", "negative": "q-neg", "neutral": "q-neu", "mixed": "q-mix"}
 
 
 def _ticker_chip(t: dict) -> str:
@@ -68,17 +69,12 @@ def _part(label: str, value: str) -> str:
 def _sector_card(sector: dict, sources: dict) -> str:
     cls, direction, label = STATUS.get(sector.get("status"), STATUS["neutral"])
     days = f'<span class="sec-days">이 이슈 {sector["days"]}일째</span>' if sector.get("days") else ""
-    numbers = "".join(
-        f'<li>{esc(n["text"])} '
-        f'<a href="{esc(sources.get(n.get("source"), "#"))}" target="_blank" rel="noopener">[출처]</a></li>'
-        for n in sector.get("numbers", [])
-    )
     watch_next = "".join(f"<li>{esc(w)}</li>" for w in sector.get("watch_next", []))
     ticks = "".join(_ticker_chip(t) for t in sector.get("tickers", []))
     parts = [
         _part("촉발 요인", esc(sector.get("trigger", ""))),
-        _part("숫자", f"<ul>{numbers}</ul>"),
-        _part("파급 경로", f'<div class="chain-box">{esc(sector.get("chain", ""))}</div>'),
+        _part("숫자", v.stat_cards(sector.get("numbers", []), sources)),
+        _part("파급 경로", v.flow(sector.get("chain", ""))),
         _part("한국 연결", esc(sector.get("korea", ""))),
         _part("관전 포인트", f"<ul>{watch_next}</ul>"),
         _part("면접 각도", f'<div class="qa-box">{esc(sector.get("interview", ""))}</div>'),
@@ -118,7 +114,8 @@ def _body(site, current: dict, root: str = "") -> str:
     )
     past_block = (f'<section class="wrap stack"><h2 class="h2">지난 이슈</h2>'
                   f'<div class="past">{past}</div></section>') if past else ""
-    return (f'<main class="s-main"><div class="wrap">{cards}</div>{past_block}</main>')
+    board = v.status_board(current.get("sectors", []))
+    return (f'<main class="s-main"><div class="wrap">{board}{cards}</div>{past_block}</main>')
 
 
 def render_sectors(site, day: dict | None = None) -> str:
@@ -133,7 +130,7 @@ def render_sectors(site, day: dict | None = None) -> str:
             f'<span class="muted num">{kst_time(current["updated_at"])} KST 기준</span></div>'
             f'{_quick_menu(current.get("sectors", []))}</div></div>')
     return page(title=f"섹터 이슈 {current['date']}", active="sectors",
-                body=head + _body(site, current), css=c.CSS + CSS)
+                body=head + _body(site, current), css=c.CSS + CSS + v.CSS)
 
 
 def render_sectors_day(site, day: dict) -> str:
@@ -145,4 +142,4 @@ def render_sectors_day(site, day: dict) -> str:
             f'<span class="muted num">{kst_time(day["updated_at"])} KST 기준</span></div>'
             f'{_quick_menu(day.get("sectors", []))}</div></div>')
     return page(title=f"섹터 이슈 {day['date']}", active="sectors",
-                body=head + _body(site, day, root=""), root="../", css=c.CSS + CSS)
+                body=head + _body(site, day, root=""), root="../", css=c.CSS + CSS + v.CSS)

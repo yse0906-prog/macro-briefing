@@ -2,6 +2,7 @@
 from datetime import date
 
 from macro import components as c
+from macro import visuals as vis
 from macro import data as d
 from macro.fmt import esc, md, ymd_ko
 from macro.fred import SERIES
@@ -185,13 +186,7 @@ def _sectors(b: dict) -> str:
 
 
 def _impact(b: dict) -> str:
-    rows = "".join(
-        f'<div class="line"><span class="line-k">{c.ASSET_LABEL[i["asset"]]}</span>'
-        f'<span class="chip {"chip-dark" if i["direction"] is None else "chip-neu"}">{DIRECTION_LABEL[i["direction"]]}</span>'
-        f'<p>{esc(i["text"])}</p></div>'
-        for i in b["market_impact"]
-    )
-    return f'<div class="card lines">{rows}</div>'
+    return vis.impact_tiles(b["market_impact"], c.ASSET_LABEL)
 
 
 INSTITUTION_LABEL = {
@@ -263,21 +258,24 @@ def _institutions(b: dict) -> str:
         )
         return f'<div class="card lines">{rows}</div>'
     sources = {s["id"]: s["url"] for s in b.get("sources", [])}
-    return '<div class="stack">' + "".join(_institution_card(i, sources) for i in items) + "</div>"
+    return ('<div class="stack">' + vis.direction_grid(items)
+            + "".join(_institution_card(i, sources) for i in items) + "</div>")
 
 
-def _fx(b: dict) -> str:
+def _fx(site, b: dict) -> str:
     fx = b["fx"]
     sources = {s["id"]: s["url"] for s in b.get("sources", [])}
-    numbers = "".join(f'<li>{esc(n["text"])}{_cite(n.get("source"), sources)}</li>' for n in fx["numbers"])
     drivers = "".join(
         f'<div class="line"><span class="line-k">{esc(d["factor"])}</span>'
         f'<span class="chip fx-chip {"chip-dark" if d["effect"] == "krw_weak" else "chip-neu"}">{FX_EFFECT[d["effect"]]}</span>'
         f'<p>{esc(d["text"])}</p></div>'
         for d in fx["drivers"]
     )
-    return f"""<div class="card pad stack"><span class="s-title">{esc(fx["headline"])}</span><ul class="list">{numbers}</ul></div>
+    stats = vis.stat_cards(fx["numbers"], sources)
+    return f"""<div class="card pad stack"><span class="s-title">{esc(fx["headline"])}</span>{stats}</div>
+{vis.usdkrw_chart(site.indicators)}
 <span class="label">원/달러를 움직인 요인</span>
+{vis.fx_tug(fx["drivers"])}
 <div class="card lines">{drivers}</div>
 <div class="grid-2">
 <div class="card pad stack"><span class="label">환헤지 비용</span><p class="s-text">{esc(fx["hedge"])}</p></div>
@@ -325,7 +323,7 @@ def _sections(site, b: dict) -> list[tuple[str, str, str]]:
         sections.append(("sectors", "이슈 섹터", _sectors(b)))
     sections.append(("impact", "시장 영향", _impact(b)))
     if b.get("fx"):
-        sections.append(("fx", "외환 · 원/달러", _fx(b)))
+        sections.append(("fx", "외환 · 원/달러", _fx(site, b)))
     if b.get("institution_impact"):
         deep = any(i.get("points") for i in b["institution_impact"])
         title = "업권별 시사점 · 운용자산 관점" if deep else "업권별 시사점"
@@ -351,7 +349,7 @@ def render_briefing(site, b: dict, today: date) -> str:
     body = (f'{_header(b)}<div class="wrap b-body"><article class="b-main">{body_sections}</article>'
             f'<aside class="toc"><nav class="card">{toc}</nav>{mini}</aside></div>')
     return page(title=b["headline"], active="briefing", body=body, root="../",
-                css=c.CSS + c.TONE_CSS + c.CHAIN_CSS + CSS)
+                css=c.CSS + c.TONE_CSS + c.CHAIN_CSS + CSS + vis.CSS)
 
 
 def render_briefing_empty() -> str:

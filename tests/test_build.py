@@ -199,6 +199,13 @@ class SectorPageTest(SiteBuildCase):
         for label in ("촉발 요인", "숫자", "파급 경로", "한국 연결", "관전 포인트", "면접 각도"):
             self.assertEqual(html.count(f'<span class="part-k">{label}</span>'), 7, label)
 
+    def test_sector_page_has_visuals(self):
+        self.build_with_sectors()
+        html = self.read("sectors.html")
+        self.assertEqual(html.count('class="board-tile'), 7)
+        self.assertEqual(html.count('class="flow"'), 7)
+        self.assertIn('class="stat"', html)
+
     def test_semiconductor_shows_korean_chipmakers(self):
         self.build_with_sectors()
         html = self.read("sectors.html")
@@ -235,6 +242,13 @@ class InstitutionImpactTest(SiteBuildCase):
         for label in ("듀레이션 갭", "K-ICS 비율", "환헤지 · 외화유동성", "상품운용 · 채권 평가손익",
                       "대체투자 · 딜 환경", "혼재"):
             self.assertIn(label, html)
+
+    def test_briefing_has_visuals(self):
+        self.build_full()
+        html = self.read("briefings/2026-09-13.html")
+        for marker in ('class="itiles"', 'class="card dgrid"', 'class="card tug"', 'aria-label="원/달러 추이"',
+                       'class="stat-fig"'):
+            self.assertIn(marker, html)
 
     def test_briefing_has_fx_section(self):
         self.build_full()
