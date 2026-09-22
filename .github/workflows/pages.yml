@@ -5,10 +5,7 @@ name: Deploy site to GitHub Pages
 on:
   push:
     branches: [main]
-  # 루틴(07:00 KST)의 푸시가 배포를 깨우지 못한 날을 대비한 백업: 08:00, 12:00 KST
-  schedule:
-    - cron: "0 23 * * *"
-    - cron: "0 3 * * *"
+  # 백업 배포는 외부 cron(cron-job.org)이 08:00 KST에 API로 신호를 보낸다.
   workflow_dispatch:
 
 permissions:
