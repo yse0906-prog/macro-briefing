@@ -146,4 +146,4 @@ def render_home(site, today: date) -> str:
     else:
         sections = [_hero(site, today), _releases(site), _sectors_and_impact(site), _events(site, today)]
         main = f'<main class="home">{"".join(sections)}</main>'
-    return page(title="홈", active="home", body=_ticker(site) + main, css=c.CSS + c.CHAIN_CSS + CSS)
+    return page(title="미국 거시경제 · 섹터 이슈 브리핑", active="home", body=_ticker(site) + main, css=c.CSS + c.CHAIN_CSS + CSS)
