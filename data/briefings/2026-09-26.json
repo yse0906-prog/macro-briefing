@@ -1,0 +1,680 @@
+{
+ "date": "2026-09-26",
+ "type": "weekly",
+ "period": {
+  "from": "2026-09-21",
+  "to": "2026-09-25"
+ },
+ "published_at": "2026-09-26T07:45:00+09:00",
+ "headline": "국채금리 20년來 최고·10월 인상 베팅 급등에도 원화는 반도체 힘입어 강세",
+ "summary": [
+  "9월24일 미 10년물 국채금리가 5.10~5.18%로 2007년 이후, 30년물은 5.43%로 2004년 이후 최고치까지 올랐고, 바 이사의 매파 발언과 견조한 고용지표(9월19일 마감주 신규 실업수당 19.7만건)가 겹치며 10월 25bp 추가 인상 확률은 9월17일 51%에서 9월25일 70%로 급등했다.",
+  "국채금리 급등에 JP모건은 주간 -1.88%, 부동산 대표주 프로로지스는 -1.33%로 밀렸지만, HBM 경쟁구도 재편과 Akamai-앤스로픽의 116억달러 컴퓨트 계약 속에 마이크론은 주간 +6.5% 올랐다.",
+  "국내는 추석 연휴로 9월24·25일 이틀간 휴장한 가운데, 반도체 수출 호조와 외국인 순매수에 힘입어 마지막 거래일(9월23일) 기준 원/달러 환율은 1,381원에서 1,358원으로 주간 1.65% 내렸다."
+ ],
+ "releases": [
+  {
+   "series": "ICSA",
+   "name": "신규 실업수당 청구 (9월19일 마감주)",
+   "release_date": "2026-09-24",
+   "period": "2026-09-19",
+   "consensus": 201000,
+   "consensus_source": 8,
+   "impact": "negative",
+   "interpretation": "실제치(19.7만건)가 예상(20.1만건)보다 낮게 나오며 노동시장이 여전히 타이트하다는 신호를 줬고, 이미 매파로 기운 시장에서 10월 추가 인상 베팅을 강화하는 재료로 작용했다."
+  }
+ ],
+ "fomc": {
+  "next_meeting": {
+   "date": "2026-10-28",
+   "announce_kst": "2026-10-29T03:00:00+09:00",
+   "probabilities": [
+    {
+     "outcome": "hike25",
+     "pct": 70
+    },
+    {
+     "outcome": "hold",
+     "pct": 30
+    }
+   ],
+   "probabilities_week_ago": [
+    {
+     "outcome": "hike25",
+     "pct": 51
+    },
+    {
+     "outcome": "hold",
+     "pct": 49
+    }
+   ],
+   "view": "hike25",
+   "confidence": "medium",
+   "rationale": [
+    "바 이사가 9월23일 '인플레이션의 시의적절한 2% 복귀를 위해 추가 정책 조정이 필요할 것'이라며 매파적 스탠스를 재확인했다.",
+    "10월 인상 확률은 9월17일 51%에서 9월25일 70%로 한 주 새 크게 높아졌고, 같은 기간 10년물 금리는 2007년 이후 최고치까지 치솟았다.",
+    "9월19일 마감주 신규 실업수당 청구(19.7만건)가 예상(20.1만건)을 밑돌며 고용시장이 여전히 타이트하다는 신호를 보탰다."
+   ],
+   "watch_points": [
+    "9월30일 근원 PCE 물가지수와 10월2일 9월 고용보고서 결과",
+    "10월7일 공개될 9월 FOMC 의사록에서 위원들의 추가 인상 관련 논의 강도"
+   ]
+  },
+  "last_meeting": {
+   "date": "2026-09-16",
+   "decision": "hike25",
+   "range": [
+    3.75,
+    4.0
+   ],
+   "vote": {
+    "for": 12,
+    "against": 0
+   },
+   "tone": 0.75,
+   "statement_points": [
+    "경제활동은 견고한 속도로 확장 중이며 내수 지출도 회복력을 유지하고 있다",
+    "생산성이 강하게 늘고 기업의 자본투자도 견조하며 고용 증가는 노동력 증가 속도에 부합한다",
+    "인플레이션은 여전히 높은 수준이며, 오늘의 정책 조치는 2% 목표로의 더 빠른 복귀를 지지한다"
+   ],
+   "press_conference": "워시 의장은 물가가 너무 높고 그 상태가 너무 오래 지속되고 있다는 것이 분명한 사실이라고 말했고, 동시에 목표 달성을 위해 노동시장을 훼손할 필요는 없다고 본다며 균형을 강조했다. 점도표상 18명 위원 중 12명이 올해 말까지 추가 25bp 인상 1회를 전망했다."
+  }
+ },
+ "sectors": [
+  {
+   "name": "금융",
+   "gics": "Financials",
+   "impact": "negative",
+   "title": "10년물 2007년來·30년물 2004년來 최고치에 대형은행주 짓눌려, JPM 주간 -1.88%",
+   "analysis": "미 10년물 국채금리가 9월24일 5.10~5.18%로 2007년 이후, 30년물은 5.43%로 2004년 이후 최고 수준까지 치솟았다. 전날(9/23)에는 10년물이 2007년 이후 처음 5%를 넘어서며 JP모건이 3.42% 급락(340.51달러)했고, 24일에도 낙폭을 만회하지 못했다. 이런 흐름 속에 JP모건 주가는 9월18일 349.67달러에서 9월25일 343.06달러로 주간 1.88% 내렸다. 배경에는 바 이사의 9월23일 매파 발언과 견조한 고용지표가 겹치며 10월 25bp 추가 인상 확률이 70%까지 오른 시장 분위기가 있다. **금리 급등의 속도 자체가 은행주엔 밸류에이션 부담**으로 작용했다. 국내 4대 금융지주는 9월24·25일 추석 연휴로 거래소가 휴장해 이번 금리 급등에 대한 반응은 9월28일 개장 이후에나 확인할 수 있다.",
+   "tickers": [
+    {
+     "symbol": "JPM",
+     "change_pct": -1.88
+    }
+   ],
+   "news": [
+    {
+     "headline": "Market sees next Fed hike in October, following Barr comments and hot inflation reading",
+     "outlet": "CNBC",
+     "url": "https://www.cnbc.com/2026/09/23/market-sees-next-fed-hike-in-october-following-barr-comments-hot-inflation.html",
+     "date": "2026-09-23"
+    },
+    {
+     "headline": "JPM Stock Price History",
+     "outlet": "StockAnalysis.com",
+     "url": "https://stockanalysis.com/stocks/jpm/history/",
+     "date": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "name": "에너지",
+   "gics": "Energy",
+   "impact": "mixed",
+   "title": "WTI 90달러 안팎 등락 지속, 호르무즈 외교 신호와 이란 경고 교차",
+   "analysis": "WTI는 9월22일 2.31% 내린 89.85달러로 5거래일 연속 하락하며 약 보름 만에 다시 100달러 아래로 내려왔다. 트럼프 대통령의 이란과의 대화 가능성 시사와 사우디 송유관 복구 진전이 공급 차질 우려를 낮췄기 때문이다. 9월24일에는 미·이란 협상단이 호르무즈 해협 단계적 재개방과 미국의 경제 봉쇄 해제를 맞바꾸는 방안을 논의 중이라는 보도로 WTI가 약 90.80달러까지 밀렸지만, 같은 날 이란 페제시키안 대통령은 UN 총회 연설에서 제재가 계속되면 항행의 자유를 제한하겠다고 재차 경고했다. **협상 기대와 강경 발언이 같은 날 동시에 나오는** 엇갈린 신호 속에 엑슨모빌 주가는 9월18일 163.54달러에서 9월25일 160.59달러로 주간 1.80% 내렸다.",
+   "tickers": [
+    {
+     "symbol": "XOM",
+     "change_pct": -1.8
+    }
+   ],
+   "news": [
+    {
+     "headline": "WTI Crude Slips Below $91 as Iran Tension Eases",
+     "outlet": "Tradingpedia",
+     "url": "https://www.tradingpedia.com/2026/09/24/wti-crude-slips-below-91-as-iran-tension-eases/",
+     "date": "2026-09-24"
+    },
+    {
+     "headline": "WTI extends decline as Trump signals progress in talks with Iran",
+     "outlet": "FXStreet",
+     "url": "https://www.fxstreet.com/news/wti-extends-decline-as-trump-signals-progress-in-talks-with-iran-202609221825",
+     "date": "2026-09-22"
+    }
+   ]
+  },
+  {
+   "name": "반도체·AI",
+   "gics": "Information Technology",
+   "impact": "mixed",
+   "title": "HBM 경쟁구도 재편·Akamai-앤스로픽 116억달러 계약 속 마이크론 주간 +6.5%",
+   "analysis": "엔비디아는 9월18일 222.27달러에서 9월25일 225.07달러로 주간 1.26% 올랐고, 마이크론은 1,015.80달러에서 1,082.28달러로 6.54% 상승했다. 다만 마이크론은 9월24일 하루는 9월23일 실적 발표를 앞둔 급등에 대한 차익실현과 투기적 소매주 전반의 위험회피 심리가 겹치며 2.28% 조정받기도 했다. 같은 주 번스타인 리서치는 2분기 HBM 매출 점유율이 SK하이닉스 50%·삼성전자 33%·마이크론 18%이며, SK하이닉스와 삼성전자의 격차가 전분기 37%포인트에서 17%포인트로 좁혀졌다고 분석했다. AI 인프라 투자도 이어져, 아카마이는 앤스로픽과 7년간 총 116억달러 규모의 CPU 인프라 계약을 맺었고 이 중 약 17억달러는 2026년 장기 리드타임 부품 확보에 쓰인다. 구글·오픈AI·앤스로픽은 정부 개입 없는 자율 AI 안전기구(SAFA) 설립을 추진 중이며, 앤스로픽은 클로드 에이전트가 21시간 만에 신규 효소체계(ART)를 발견했다고 발표했다. **HBM 공급망 경쟁**은 삼성전자·SK하이닉스(005930.KS·000660.KS)의 엔비디아向 물량 배분과 직결되지만, 국내 증시는 9월24·25일 추석 연휴로 휴장해 두 종목의 반응은 9월28일 개장 후 확인할 수 있다.",
+   "tickers": [
+    {
+     "symbol": "NVDA",
+     "change_pct": 1.26
+    },
+    {
+     "symbol": "MU",
+     "change_pct": 6.54
+    },
+    {
+     "symbol": "005930.KS"
+    },
+    {
+     "symbol": "000660.KS"
+    }
+   ],
+   "news": [
+    {
+     "headline": "MU Stock Slips As Risk-Off Mood Hits WallStreetBets Favorites",
+     "outlet": "Timothy Sykes",
+     "url": "https://www.timothysykes.com/news/micron-technology-inc-mu-news-2026_09_24/",
+     "date": "2026-09-24"
+    },
+    {
+     "headline": "404K SEMI-AI Weekly (September 25, 2026): Hyperscalers Accelerate Compute Procurement",
+     "outlet": "404K Research",
+     "url": "https://404kresearch.substack.com/p/404k-semi-ai-weekly-september-25",
+     "date": "2026-09-25"
+    }
+   ]
+  },
+  {
+   "name": "부동산",
+   "gics": "Real Estate",
+   "impact": "negative",
+   "title": "美 모기지 7.03%로 20개월來 최고, 프로로지스 주간 -1.33%…서울 아파트값은 85주째 상승",
+   "analysis": "미 10년물 국채금리가 2007년 이후 최고치까지 오르면서 30년 고정 모기지금리도 7.03%로 1년 8개월 만에 최고치를 기록했다. 리츠 대표주 프로로지스는 9월18일 134.84달러에서 9월25일 133.05달러로 주간 1.33% 내렸다. 국내에서는 한국부동산원 기준 서울 아파트 매매가격지수가 9월 셋째 주(21일 기준) 전주비 0.13% 올라 85주 연속 상승, 역대 최장 상승 기록과 동률을 이뤘다. 다만 상승률 자체는 8월 다섯째 주 0.22%에서 4주 연속 둔화했고, 강남구(-0.42%)·서초구(-0.37%)는 낙폭이 오히려 커졌다. **미국은 고금리가 주택구매력을 계속 누르는 반면, 서울은 절대 상승세는 이어가되 속도만 둔화되는** 다른 국면이 나타나고 있다.",
+   "tickers": [
+    {
+     "symbol": "PLD",
+     "change_pct": -1.33
+    }
+   ],
+   "news": [
+    {
+     "headline": "서울 아파트값 85주째 상승…문재인 정부 최장 기록과 동률",
+     "outlet": "fnnews",
+     "url": "https://www.fnnews.com/news/202609240956262533",
+     "date": "2026-09-24"
+    },
+    {
+     "headline": "미 모기지 금리 7.03%…1년 8개월 만에 최고",
+     "outlet": "Tokenpost",
+     "url": "https://www.tokenpost.kr/news/economy/413748",
+     "date": "2026-09-24"
+    }
+   ]
+  },
+  {
+   "name": "헬스케어",
+   "gics": "Health Care",
+   "impact": "mixed",
+   "title": "임상 1차 지표 충족에도 주가 급락 반복…CUE -31%·CLDX -11.6%, GRAL은 FDA 훈풍에 +8%",
+   "analysis": "9월21일 큐바이오파마는 만성 특발성 두드러기(CSU) 치료제의 2상 1차 지표를 모두 충족했다고 발표했지만 주가는 오히려 31% 급락했다. 하루 뒤인 9월22일에는 같은 적응증을 다투는 셀덱스가 3상 1차·핵심 2차 지표를 모두 충족한 결과를 내놨는데도 주가가 11.6% 떨어져, 이틀 연속 같은 패턴이 반복됐다. 반면 그레일은 FDA 자문위원회의 다중암 조기검진 혈액검사 '갈레리' 지지 표결(9/23) 이후 훈풍이 이어지며 9월24일 8.03% 올라 52주 신고가에 근접했다. 텔릭스는 방사성의약품기업 ITM을 최대 23.5억달러에 인수한다고 밝혔지만 대규모 신주 발행 희석 우려로 주가가 6% 내렸다. **'통계적 성공'과 '시장이 원하는 데이터'가 다를 수 있다는 점**이 이번 주 임상 발표들에서 반복적으로 확인됐다.",
+   "tickers": [
+    {
+     "symbol": "CUE",
+     "change_pct": -31
+    },
+    {
+     "symbol": "CLDX",
+     "change_pct": -11.6
+    },
+    {
+     "symbol": "GRAL",
+     "change_pct": 8.03
+    }
+   ],
+   "news": [
+    {
+     "headline": "Cue Biopharma (CUE) Shares Drop 31% After Phase 2 Trial Results Despite Promising Efficacy",
+     "outlet": "GuruFocus",
+     "url": "https://www.gurufocus.com/news/9090219/cue-biopharma-cue-shares-drop-31-after-phase-2-trial-results-despite-promising-efficacy",
+     "date": "2026-09-21"
+    },
+    {
+     "headline": "GRAIL (GRAL) Stock Hits 52-Week High After FDA Panel Endorsement",
+     "outlet": "GuruFocus",
+     "url": "https://www.gurufocus.com/news/9095897/grail-gral-stock-hits-52week-high-after-fda-panel-endorsement-ps-ratio-signals-high-growth-expectations",
+     "date": "2026-09-24"
+    }
+   ]
+  }
+ ],
+ "market_impact": [
+  {
+   "asset": "us_equities",
+   "direction": "up",
+   "text": "S&P500은 9월18일 7650.5에서 9월24일 7704.1로 주간 0.7% 올랐다. 월요일 반도체 랠리로 7760선까지 올랐다가 목·금 국채금리 급등에 상승분을 일부 반납하는 롤러코스터 흐름이었다."
+  },
+  {
+   "asset": "us_rates",
+   "direction": "up",
+   "text": "10년물 국채금리가 9월18일 5.01%에서 9월24일 5.18%로 뛰어 2007년 이후 최고치를 기록했고, 30년물은 5.43~5.50%로 2004년 이후 최고 수준까지 치솟았다."
+  },
+  {
+   "asset": "usd",
+   "direction": "up",
+   "text": "달러인덱스(DXY)는 국채금리 급등과 10월 인상 베팅 강화에 힘입어 4거래일 연속 오르며 101선을 넘어, 5월 이후 최장 연속 상승 기록을 세웠다."
+  },
+  {
+   "asset": "krw",
+   "direction": "down",
+   "text": "원/달러 환율은 9월21일 1,381.0원에서 추석 연휴 전 마지막 거래일인 9월23일 1,358.2원으로 주간 1.65% 내려, 달러 강세 흐름과 반대로 원화가 강세를 보였다."
+  }
+ ],
+ "institution_impact": [
+  {
+   "institution": "securities",
+   "text": "국채금리 급등은 [[-채권 운용 손익에는 부담]]이지만, 반도체 랠리에 외국인까지 가세한 코스피는 [[+거래대금 우호적인 환경]]이다. 사업부별로 손익 방향이 갈리는 한 주였다.",
+   "points": [
+    {
+     "topic": "trading",
+     "direction": "negative",
+     "source": 14,
+     "text": "미 10년물이 5.10~5.18%로 2007년 이후 최고치까지 오르며 채권 평가손 압력이 커졌다. 국내는 한은 기준금리가 3.00%로 유지돼 단기 조달비용에는 큰 변화가 없었지만, **장기금리가 이만큼 급하게 오르면** 보유 채권의 평가손이 먼저 반응한다."
+    },
+    {
+     "topic": "brokerage",
+     "direction": "positive",
+     "source": 32,
+     "text": "코스피는 반도체 강세에 힘입어 9월23일까지 외국인이 4거래일 연속 순매수(9/23 +1,741억원)를 이어가며 거래대금이 활발했다. [[+거래대금에 연동되는 수수료 수익에는 우호적]]이다."
+    },
+    {
+     "topic": "ib",
+     "direction": "mixed",
+     "source": 2,
+     "text": "10월 인상 확률이 70%까지 오르며 회사채 발행금리 부담이 커져 DCM 인수 환경은 위축될 수 있다. 반면 코스피가 7000선 위에서 버티는 동안에는 ECM(IPO·유상증자) 환경은 상대적으로 우호적이다. [[-채권 발행은 위축]], [[+주식 발행 여건은 유지]]로 갈린다."
+    },
+    {
+     "topic": "wm",
+     "direction": "positive",
+     "source": 39,
+     "text": "KB국민·우리은행이 정기예금 금리를 3.5%까지 올려놓은 수신 경쟁이 이어지고 있다. 국채금리 변동성이 큰 구간에서는 이런 확정금리 상품으로 대기자금이 옮겨오기 쉬워 [[+WM 잔고를 늘릴 기회]]다."
+    }
+   ]
+  },
+  {
+   "institution": "lp",
+   "text": "금리 상승은 듀레이션 갭의 부호에 따라 보험사별로 방향이 갈리고, 이번 주는 새 K-ICS 발표가 없었다. 원화가 강세로 돌아서며 연기금의 환헤지 비용 부담은 소폭 완화됐다.",
+   "points": [
+    {
+     "topic": "duration_gap",
+     "direction": "mixed",
+     "source": 14,
+     "text": "10년물이 한 주 새 5.01%에서 5.18%로 더 올랐다. **듀레이션 갭이 음(-)인 보험사는** 부채 가치가 더 크게 줄어 [[+순자산이 늘어나고]], **갭이 양(+)인 보험사는** 반대로 [[-순자산이 줄어든다]]. 같은 금리 상승이라도 회사별 갭의 부호에 따라 방향이 다르다."
+    },
+    {
+     "topic": "kics",
+     "direction": "mixed",
+     "source": [
+      33,
+      34
+     ],
+     "text": "가장 최근 발표된 6월 말 K-ICS 비율은 215.2%(생보 206.8%·손보 230.9%)로, 이번 주 새 분기 발표는 없었다. 환율이 100원 오르면 K-ICS 비율이 평균 1%포인트 낮아진다는 분석을 참고하면, 이번 주 원/달러가 약 23원 내린 만큼 **환위험액 부담은 소폭 완화**됐을 것으로 추정되나, 코스피 상승은 반대로 주식위험액을 키우는 요인이라 순효과는 단정하기 어렵다."
+    },
+    {
+     "topic": "allocation",
+     "direction": "mixed",
+     "source": 1,
+     "text": "미 10년물이 5%대 초중반까지 올라 있어 헤지 전 명목수익률은 매력적이지만, 환헤지 비용을 뺀 실제 수익률이 관건이다. 10월 인상 확률이 70%까지 오르며 [[-한미 금리차 확대 우려]]가 남아 있어, 해외채권 비중 확대는 여전히 저울질하는 구간이다."
+    },
+    {
+     "topic": "fx_hedge",
+     "direction": "mixed",
+     "source": [
+      30,
+      31,
+      35
+     ],
+     "text": "원/달러가 이번 주 1,381원에서 1,358원으로 내리며, 헤지 없이 해외자산을 든 기관은 원화 환산가치가 소폭 늘었다. 국민연금은 한국은행과의 650억달러 외환스와프를 2026년 말까지 연장해 둔 상태라 해외투자용 달러 조달은 안정적이다. 다만 1년 이하 단기 헤지에 의존하는 중소형사는 **10월 인상 베팅이 강해질 때마다** [[-롤오버 시점의 헤지 비용 부담]]이 다시 커질 수 있다."
+    }
+   ]
+  },
+  {
+   "institution": "gp",
+   "text": "코스피 자금 유입은 [[+주식형에 우호적]]이고, 금리형 상품도 매력을 유지하고 있다. 대체투자는 [[-조달금리 추가 상승이 부담]]이다.",
+   "points": [
+    {
+     "topic": "flows",
+     "direction": "positive",
+     "source": 32,
+     "text": "외국인이 9월23일까지 4거래일 연속 코스피를 순매수하며 반도체 중심의 [[+주식형 자금 유입]]이 이어졌다. 동시에 정책금리가 높은 수준을 유지해 MMF·채권형의 기대수익률도 매력적이라, 이번 주는 주식형·금리형 자금이 함께 들어오기 좋은 환경이었다."
+    },
+    {
+     "topic": "fees",
+     "direction": "positive",
+     "source": 32,
+     "text": "코스피가 반도체 강세로 7000선 위에서 버티면서 [[+주식형 AUM 평가액이 우호적]]이었다. 채권형은 금리 상승으로 평가액에 부담이 있었지만, 이번 주는 주식형 쪽 효과가 더 컸다."
+    },
+    {
+     "topic": "products",
+     "direction": "positive",
+     "source": 1,
+     "text": "미국채 금리가 5%대 초중반, 국내 기준금리도 3.00%로 높은 수준을 유지하고 있어 만기까지 들고 가면 수익률이 확정되는 [[+만기매칭형 채권펀드를 내놓기 좋은 시점]]이 계속되고 있다."
+    },
+    {
+     "topic": "alternatives",
+     "direction": "negative",
+     "source": 25,
+     "text": "미 30년 모기지금리가 7.03%까지 오르는 등 장기금리 상승이 이어지면서, PE의 인수금융과 부동산 펀드의 변동금리 대출은 [[-이자비용이 계속 늘어나는]] 국면이다. 캡레이트 상승 압력도 여전해 신규 딜은 보수적으로 접근할 시점이다."
+    }
+   ]
+  }
+ ],
+ "scenarios": [
+  {
+   "name": "기본 · 10월 25bp 추가 인상",
+   "probability": 60,
+   "text": "바 이사 등 매파 발언과 타이트한 고용지표가 이어지는 가운데, 시장이 가격에 반영한 70% 확률대로 연준이 10월에도 한 차례 더 올릴 것이라는 시나리오다."
+  },
+  {
+   "name": "동결 유지",
+   "probability": 25,
+   "text": "9월30일 근원 PCE와 10월2일 고용보고서가 예상보다 둔화된 모습을 보이면, 연준이 국채금리 급등 자체가 이미 금융여건을 충분히 긴축시켰다고 판단해 10월엔 동결할 수 있다는 시나리오다."
+  },
+  {
+   "name": "매파 서프라이즈 · 추가 긴축 가속",
+   "probability": 15,
+   "text": "호르무즈발 유가 변동성이 물가로 전이되거나 근원 인플레이션 지표가 예상을 크게 웃돌 경우, 연준이 인상 속도를 오히려 높일 수 있다는 시나리오다."
+  }
+ ],
+ "interview_insights": [
+  {
+   "question": "국채금리가 2007년 이후 최고치인데 대형 은행주(JPM)는 왜 주간 기준 하락했나?",
+   "answer_points": "순이자마진 확대라는 이론적 효과와, 채권 평가손·밸류에이션 부담이라는 실제 주가 흐름을 분리해서 설명한다. 금리가 급등한 속도 자체가 신용·유동성 우려를 키운 한 주였다는 점을 JPM 사례(주간 -1.88%)로 짚는다."
+  },
+  {
+   "question": "연준의 10월 인상 확률이 오르는데 원/달러 환율은 왜 오히려 하락(원화 강세)했나?",
+   "answer_points": "금리차 확대 베팅이라는 거시 요인과, 반도체 수출 호조·외국인 순매수·추석 전 수출업체 네고 물량이라는 수급 요인이 서로 다른 방향으로 작용할 수 있다는 점을 설명한다."
+  },
+  {
+   "question": "임상 1차 지표를 충족한 신약 후보(셀덱스·큐바이오파마)의 주가가 잇달아 급락한 이유는?",
+   "answer_points": "'통계적 유의성 확보'와 '시장이 이미 반영한 기대치'가 다를 수 있다는 점, 그리고 발표를 계기로 한 차익실현 매물 출회 메커니즘을 짚는다."
+  }
+ ],
+ "sources": [
+  {
+   "id": 1,
+   "title": "US Dollar Index Price Forecast: Heads for second week of gain above 101.00",
+   "url": "https://www.fxstreet.com/news/us-dollar-index-price-forecast-heads-for-second-week-of-gain-above-10100-upside-bias-intact-202609250657",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 2,
+   "title": "Market sees next Fed hike in October, following Barr comments and hot inflation reading",
+   "url": "https://www.cnbc.com/2026/09/23/market-sees-next-fed-hike-in-october-following-barr-comments-hot-inflation.html",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 3,
+   "title": "Fed's Barr: Further rate hikes needed for timely return to 2% inflation",
+   "url": "https://www.fxstreet.com/news/feds-barr-further-rate-hikes-needed-for-timely-return-to-2-inflation-202609231443",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 4,
+   "title": "Fed October Rate Odds Swing as Traders Bet Warsh Holds After September Hike",
+   "url": "https://tech-insider.org/fed-october-2026-rate-hold-odds-polymarket-swing/",
+   "accessed": "2026-09-19"
+  },
+  {
+   "id": 5,
+   "title": "Next Fed Meeting: Oct 27-28 | 2026 FOMC Schedule",
+   "url": "https://fedratecalc.com/fomc-meeting-schedule/",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 6,
+   "title": "Federal Reserve issues FOMC statement, September 16, 2026",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+   "accessed": "2026-09-19"
+  },
+  {
+   "id": 7,
+   "title": "Fed rate decision September 2026: Rates rise to 3.75%-4%",
+   "url": "https://www.cnbc.com/2026/09/16/fed-rate-decision-september-2026.html",
+   "accessed": "2026-09-19"
+  },
+  {
+   "id": 8,
+   "title": "U.S. Initial Jobless Claims Edge Lower to 197,000, Below Expectations",
+   "url": "https://finance.yahoo.com/economy/articles/u-initial-jobless-claims-edge-133118625.html",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 9,
+   "title": "JPM Stock Price History",
+   "url": "https://stockanalysis.com/stocks/jpm/history/",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 10,
+   "title": "XOM Stock Price History",
+   "url": "https://stockanalysis.com/stocks/xom/history/",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 11,
+   "title": "NVDA Stock Price History",
+   "url": "https://stockanalysis.com/stocks/nvda/history/",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 12,
+   "title": "MU Stock Price History",
+   "url": "https://stockanalysis.com/stocks/mu/history/",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 13,
+   "title": "PLD Stock Price History",
+   "url": "https://stockanalysis.com/stocks/pld/history/",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 14,
+   "title": "Stock market today: Dow, S&P 500, Nasdaq trims losses as hopes of Hormuz deal offset rising bond yields",
+   "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-september-24-dow-sp-500-nasdaq-080352893.html",
+   "accessed": "2026-09-25"
+  },
+  {
+   "id": 15,
+   "title": "JPMorgan Chase (NYSE:JPM) Stock Falls 3.42% to $340.51 on September 23",
+   "url": "https://easternherald.com/2026/09/24/jpmorgan-chase-jpm-stock-treasury-yields-qia-september-23/",
+   "accessed": "2026-09-25"
+  },
+  {
+   "id": 16,
+   "title": "WTI Crude Slips Below $91 as Iran Tension Eases",
+   "url": "https://www.tradingpedia.com/2026/09/24/wti-crude-slips-below-91-as-iran-tension-eases/",
+   "accessed": "2026-09-25"
+  },
+  {
+   "id": 17,
+   "title": "WTI extends decline as Trump signals progress in talks with Iran",
+   "url": "https://www.fxstreet.com/news/wti-extends-decline-as-trump-signals-progress-in-talks-with-iran-202609221825",
+   "accessed": "2026-09-23"
+  },
+  {
+   "id": 18,
+   "title": "MU Stock Slips As Risk-Off Mood Hits WallStreetBets Favorites",
+   "url": "https://www.timothysykes.com/news/micron-technology-inc-mu-news-2026_09_24/",
+   "accessed": "2026-09-25"
+  },
+  {
+   "id": 19,
+   "title": "삼성 8월 HBM 성장세, SK하이닉스 추월... 번스타인 분석",
+   "url": "https://kr.investing.com/news/stock-market-news/article-93CH-2102114",
+   "accessed": "2026-09-25"
+  },
+  {
+   "id": 20,
+   "title": "404K SEMI-AI Weekly (September 25, 2026): Hyperscalers Accelerate Compute Procurement",
+   "url": "https://404kresearch.substack.com/p/404k-semi-ai-weekly-september-25",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 21,
+   "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+   "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+   "accessed": "2026-09-25"
+  },
+  {
+   "id": 22,
+   "title": "Google, OpenAI, Anthropic Court Sriram Krishnan for AI Safety Body",
+   "url": "https://aiweekly.co/alerts/google-openai-anthropic-court-sriram-krishnan-for-ai-safety-body",
+   "accessed": "2026-09-25"
+  },
+  {
+   "id": 23,
+   "title": "서울 아파트값 85주째 상승…문재인 정부 최장 기록과 동률",
+   "url": "https://www.fnnews.com/news/202609240956262533",
+   "accessed": "2026-09-25"
+  },
+  {
+   "id": 24,
+   "title": "서울 집값 상승폭 4주째 둔화…강남 -0.42%·서초-0.37% '낙폭 확대'",
+   "url": "https://www.fnnews.com/news/202609241401354062",
+   "accessed": "2026-09-25"
+  },
+  {
+   "id": 25,
+   "title": "미 모기지 금리 7.03%…1년 8개월 만에 최고",
+   "url": "https://www.tokenpost.kr/news/economy/413748",
+   "accessed": "2026-09-25"
+  },
+  {
+   "id": 26,
+   "title": "GRAIL (GRAL) Stock Hits 52-Week High After FDA Panel Endorsement",
+   "url": "https://www.gurufocus.com/news/9095897/grail-gral-stock-hits-52week-high-after-fda-panel-endorsement-ps-ratio-signals-high-growth-expectations",
+   "accessed": "2026-09-25"
+  },
+  {
+   "id": 27,
+   "title": "Cue Biopharma (CUE) Shares Drop 31% After Phase 2 Trial Results Despite Promising Efficacy",
+   "url": "https://www.gurufocus.com/news/9090219/cue-biopharma-cue-shares-drop-31-after-phase-2-trial-results-despite-promising-efficacy",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 28,
+   "title": "Celldex Therapeutics Shares Fall After Phase 3 Readout Despite Positive Trial Results",
+   "url": "https://www.quiverquant.com/news/Celldex+Therapeutics+Shares+Fall+After+Phase+3+Readout+Despite+Positive+Trial+Results",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 29,
+   "title": "Telix Pharmaceuticals (ASX:TLX) share price sinks 6% after US$1.65 billion acquisition",
+   "url": "https://www.raskmedia.com.au/2026/09/21/telix-pharmaceuticals-asxtlx-share-price-sinks-6-after-us1-65-billion-acquisition/",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 30,
+   "title": "원/달러 환율, 2.3원 내린 1381.0원",
+   "url": "https://www.mt.co.kr/economy/2026/09/21/2026092115384576477",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 31,
+   "title": "[환율 전망] 추석 앞둔 원화, 선물은 유가 하락?",
+   "url": "https://kbthink.com/investment/fx/daily/260923.html",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 32,
+   "title": "'역시 삼전닉스' 코스피, 반도체 강세에 7100선…외국인 나흘째 '사자'",
+   "url": "https://biz.heraldcorp.com/article/10883038",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 33,
+   "title": "6월 말 보험사 킥스비율 215.2%로 소폭 하락…손보는 상승",
+   "url": "https://view.asiae.co.kr/article/2026091611191368572",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 34,
+   "title": "\"환율 100원 상승하면 보험사 K-ICS 비율 평균 1%p↓\"",
+   "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1717125",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 35,
+   "title": "[아세안익스프레스] 한국은행-국민연금, 전략적 환헤지 1년 연장",
+   "url": "https://www.aseanexpress.co.kr/news/article.html?no=12414",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 36,
+   "title": "한은, 2026년 금통위 일정 발표…1월15일 첫 기준금리 결정",
+   "url": "https://www.newsis.com/view/NISX20251030_0003383692",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 37,
+   "title": "United States ISM Non-Manufacturing PMI - Economic Calendar",
+   "url": "https://www.investing.com/economic-calendar/ism-non-manufacturing-pmi-176",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 38,
+   "title": "The Fed - Meeting calendars and information",
+   "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+   "accessed": "2026-09-26"
+  },
+  {
+   "id": 39,
+   "title": "KB, Woori Raise Deposit Rates to 3.5% as Banks Compete for Funds",
+   "url": "https://en.sedaily.com/finance/2026/09/21/kb-woori-raise-deposit-rates-to-35-percent-as-banks-compete",
+   "accessed": "2026-09-22"
+  }
+ ],
+ "fx": {
+  "headline": "반도체 수출·외국인 매수에 원화 강세, 원/달러 주간 -1.65%(1,381원→1,358원)",
+  "numbers": [
+   {
+    "text": "원/달러 9월21일 1,381.0원 마감(전일 대비 -2.3원)",
+    "source": 30
+   },
+   {
+    "text": "원/달러 9월23일(추석 연휴 전 마지막 거래일) 1,358.2원 마감, 주간 기준 -22.8원(-1.65%)",
+    "source": 31
+   },
+   {
+    "text": "코스피, 외국인 9월23일까지 4거래일 연속 순매수(9/23 +1,741억원)",
+    "source": 32
+   },
+   {
+    "text": "한국은행 기준금리 3.00%(8월27일 2회 연속 인상 후 유지, 다음 금통위는 10월22일)",
+    "source": 36
+   },
+   {
+    "text": "연준 기준금리 3.75~4.00%, 10월 25bp 추가 인상 확률 9월25일 기준 70%(9월17일 51%에서 상승)",
+    "source": 1
+   }
+  ],
+  "drivers": [
+   {
+    "factor": "반도체 수출 호조·외국인 매수",
+    "effect": "krw_strong",
+    "text": "코스피가 반도체 강세에 힘입어 9월23일까지 4거래일 연속 외국인 순매수를 기록하며 원화 매수 수요를 뒷받침했다."
+   },
+   {
+    "factor": "추석 연휴 전 수출업체 네고 물량",
+    "effect": "krw_strong",
+    "text": "추석 연휴를 앞두고 수출업체들이 달러 매도(네고) 물량을 대거 내놓으며 환율 하락을 이끌었다."
+   },
+   {
+    "factor": "한미 금리차 확대 베팅",
+    "effect": "krw_weak",
+    "text": "10월 25bp 추가 인상 확률이 한 주 새 51%에서 70%로 높아지며 **한미 금리차가 더 벌어질 것이라는 베팅**은 여전히 원화 강세를 제한하는 요인으로 남아 있다."
+   },
+   {
+    "factor": "달러 전반의 강세",
+    "effect": "krw_weak",
+    "text": "달러인덱스는 국채금리 급등에 힘입어 이번 주 4거래일 연속 오르며 101선을 넘어섰다. 원화 대비로는 강세였지만 달러 자체가 다른 통화들 대비 강했던 측면도 있다."
+   }
+  ],
+  "hedge": "환헤지 비용은 한미 단기금리차로 정해지는데, 10월 추가 인상 베팅이 강해지며 금리차가 더 벌어질 수 있다는 우려는 여전히 남아 있다. 다만 이번 주 원화가 강세로 돌아서며 헤지 만기가 짧은 기관의 롤오버 비용 부담은 일부 완화됐다.",
+  "flows": "이번 주 원화 강세는 반도체 수출 호조와 외국인 순매수가 이끌었다. 코스피가 반도체 대형주를 중심으로 오르는 동안 외국인은 4거래일 연속 순매수를 이어갔고, 추석 연휴를 앞둔 수출업체의 달러 매도 물량도 환율 하락에 힘을 보탰다.",
+  "watch_next": [
+   "9월30일 근원 PCE와 10월2일 고용보고서 결과, 10월 인상 확률(현재 70%)의 추가 변화",
+   "10월22일 한국은행 금통위와 10월27~28일 FOMC의 한미 금리차 방향",
+   "9월28일 개장 후 국내 금융·반도체주의 미 국채금리 급등 반응"
+  ]
+ }
+}
