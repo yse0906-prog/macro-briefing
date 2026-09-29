@@ -1,0 +1,365 @@
+{
+  "date": "2026-09-30",
+  "updated_at": "2026-09-30T07:20:00+09:00",
+  "sectors": [
+    {
+      "key": "finance",
+      "name": "금융",
+      "status": "negative",
+      "days": 11,
+      "headline": "美 국채 30년물 2002년來 최고, 3대 지수 하락…금융주 이틀째 눌림",
+      "trigger": "9/29(화) 美 국채금리가 재차 뛰며(10년물 장중 5.29%, 30년물 5.6%대로 2002년來 최고) 3대 지수가 동반 하락했다. 다우존스는 -0.26%(-131.59p) 51,349.92, S&P500은 -0.16% 7,670.84, 나스닥종합은 -0.09% 26,797.54로 마감했다. JPMorgan·Morgan Stanley·Bank of America 등 은행주가 일제히 하락했다.",
+      "numbers": [
+        {
+          "text": "美 10년물 국채금리 9/29 장중 5.29%, 30년물 5.6%대로 2002년來 최고",
+          "source": 1
+        },
+        {
+          "text": "다우존스 9/29 -0.26%(-131.59p) 51,349.92·S&P500 -0.16% 7,670.84·나스닥 -0.09% 26,797.54 마감",
+          "source": 1
+        }
+      ],
+      "chain": "9/28 30년물이 2004년來 최고(5.56%)까지 오른 데 이어 9/29에는 2002년來 최고 수준(5.6%대)까지 재차 상승 → 3대 지수 동반 하락 속 JPMorgan·Morgan Stanley·BofA 등 은행주가 함께 눌림 → **장기금리가 연일 기록을 경신하는 구간에서는 은행주도 개별 호재와 무관하게 밸류에이션 압박을 받는다** → 9/30(수) 저녁(KST) 근원 PCE 발표를 앞두고 금리 방향성이 다시 시험대에 오를 전망",
+      "korea": "KB금융·신한지주 등 국내 금융지주도 美 10년물 5%대 후반, 30년물 5.6%대라는 21세기 들어 가장 높은 수준의 장기금리를 어떻게 소화할지가 관건이다. **순이자마진 기대와 채권평가손 우려가 동시에 걸린 구간**이 이어지고 있다.",
+      "watch_next": [
+        "9/30(수) 21:30(KST) 근원 PCE 물가지수(8월) 발표와 국채금리 반응",
+        "10/2(금) 9월 고용보고서 발표 전 국채금리 변동성"
+      ],
+      "interview": "장기금리가 20여 년來 최고치를 연일 경신하는데도 금융주가 개별 악재 없이 함께 눌리는 현상을, 순이자마진 기대와 채권평가손 우려가 동시에 작동하는 구조로 설명해보라는 질문이 나올 수 있다.",
+      "tickers": []
+    },
+    {
+      "key": "energy",
+      "name": "에너지",
+      "status": "mixed",
+      "days": 14,
+      "headline": "브렌트 -2.6%·WTI -3.5% 급락, 사우디 송유관 복구에 호르무즈 공급우려 완화",
+      "trigger": "9/29(화) 브렌트유는 배럴당 102.59달러(-2.6%), WTI는 89.38달러(-3.5%)로 동반 급락했다. 사우디아라비아가 얀부·무앗지즈 터미널의 송유관 피해를 복구해 하루 약 350만 배럴 수출을 재개한 것으로 확인됐고, 호르무즈 해협 통항량도 7일 평균 하루 1,320만 배럴로 전쟁 전 수준의 77%까지 회복됐다.",
+      "numbers": [
+        {
+          "text": "브렌트유 9/29 배럴당 102.59달러(-2.6%), WTI 89.38달러(-3.5%)로 마감",
+          "source": 2
+        },
+        {
+          "text": "사우디 얀부·무앗지즈 터미널 송유관 복구로 수출 하루 약 350만 배럴 재개, 호르무즈 통항량 7일 평균 하루 1,320만 배럴(전쟁 전 77%)",
+          "source": 2
+        }
+      ],
+      "chain": "9/28 트럼프 대통령이 이란의 호르무즈 재개방 제안을 거부하며 유가가 반등했으나 → 9/29 사우디의 대체 송유관(얀부·무앗지즈) 복구 소식이 확인되며 공급 공백 우려가 완화, 유가가 큰 폭으로 되밀림 → **협상 결렬 소식보다 사우디의 우회 공급 복구가 유가에 더 크게 반영**된 하루 → 트럼프는 11월 중간선거 이후 대이란 타격 재개를 시사해 지정학 리스크 자체는 해소되지 않은 상태",
+      "korea": "SK이노베이션·S-Oil 등 국내 정유주는 유가 급등락이 반복되는 국면에서, 원가(도입 유가) 변동성이 정제마진에 미치는 영향을 주시할 필요가 있다.",
+      "watch_next": [
+        "사우디 얀부·무앗지즈 송유관의 완전 복구 및 수출량 추가 확대 여부",
+        "11월 미 중간선거 이후 미·이란 군사 옵션 재부상 가능성"
+      ],
+      "interview": "이란과의 협상 결렬 소식에도 유가가 오히려 급락한 이번 사례를 통해, 지정학 리스크만큼이나 대체 공급로 복구가 원자재 가격에 즉각 반영되는 메커니즘을 설명해보라는 질문이 나올 수 있다.",
+      "tickers": []
+    },
+    {
+      "key": "bio",
+      "name": "바이오",
+      "status": "mixed",
+      "headline": "AZ, 서밋에 2조원 베팅해 주가 +17%…유니큐어는 4년차 데이터 실망에 -40%",
+      "trigger": "9/28(월) 아스트라제네카는 서밋 테라퓨틱스(SMMT)의 전환우선주에 20억 달러를 투자해 이보네시맙과 ADC 병용 전략을 공동 개발하기로 했다고 밝혔다. 이 소식에 서밋 주가는 시간외에서 17% 넘게 급등했다. 반대로 9/29(화) 유니큐어(QURE)는 헌팅턴병 유전자치료제 AMT-130의 4년차 데이터를 공개했는데, 고용량군의 질병 진행 둔화 효과가 3년차 75%에서 4년차 44%(통계적으로 유의하지 않음)로 줄어든 것으로 나타나 주가가 급락했다.",
+      "numbers": [
+        {
+          "text": "서밋 테라퓨틱스, AZ로부터 전환우선주 20억 달러 투자 유치 발표(9/28), 시간외 주가 +17%",
+          "source": 3
+        },
+        {
+          "text": "유니큐어 AMT-130 고용량군 cUHDRS 기준 질병 진행 둔화 3년차 75%→4년차 44%(비유의)로 둔화",
+          "source": 4
+        },
+        {
+          "text": "QURE 주가 9/29 장중 약 -40%",
+          "source": 5
+        },
+        {
+          "text": "AMT-130 4년차 총기능용량(TFC) 기준으로는 61% 둔화(명목 p=0.008)",
+          "source": 6
+        }
+      ],
+      "chain": "AZ의 20억 달러 투자로 서밋의 이보네시맙(PD-1×VEGF 이중항체)이 ADC 병용 전략의 핵심 자산으로 재확인되며 주가가 급등 → 같은 주 유니큐어는 3년차 대비 후퇴한 4년차 데이터를 공개하며 주가가 급락 → **동일한 '빅파마 검증' 국면에서도 데이터 방향에 따라 주가 반응이 정반대**로 갈린 하루 → 유니큐어는 이미 3년차 데이터로 품목허가(BLA)를 신청한 상태라 FDA 심사에 4년차 데이터가 어떤 영향을 줄지가 다음 변수",
+      "korea": "국내 바이오텍 중 PD-1×VEGF 이중항체나 헌팅턴병 유전자치료제를 직접 개발 중인 곳에 대한 새 소식은 확인되지 않았다. 다만 대형 제약사의 지분투자가 임상 후기 바이오텍 주가를 좌우하는 이번 사례는, 국내 바이오텍의 빅파마 파트너십 기대치를 가늠하는 참고가 될 수 있다.",
+      "watch_next": [
+        "유니큐어 AMT-130 BLA 심사에 4년차 데이터가 미칠 영향",
+        "서밋-AZ ADC 병용요법(Sone-Ve) 임상 진행 상황"
+      ],
+      "interview": "같은 주에 발표된 두 바이오텍의 임상·파트너십 소식이 주가를 정반대 방향으로 움직인 사례를 통해, 바이오 주가가 빅파마의 검증(투자·제휴)과 임상 데이터의 방향성에 동시에 좌우되는 이유를 설명해보라는 질문이 나올 수 있다.",
+      "tickers": [
+        {
+          "symbol": "SMMT",
+          "change_pct": 17.0
+        },
+        {
+          "symbol": "QURE",
+          "change_pct": -40.0
+        }
+      ]
+    },
+    {
+      "key": "semiconductor",
+      "name": "반도체",
+      "status": "mixed",
+      "days": 12,
+      "headline": "삼성전자 배당락에도 +0.93%, SK하이닉스 약보합…외국인 순매도 99% 반도체 집중",
+      "trigger": "9/29(화) 코스피는 미 국채금리 상승과 삼성전자 배당락이 겹치며 전일 대비 18.93포인트(-0.27%) 내린 6,870.81에 마감했다. 삼성전자는 배당락 기준가 대비 0.93% 오른 27만2500원(장중 26만6000원에서 반등), SK하이닉스는 0.17% 내린 176만5000원으로 약보합 마감했다. 외국인은 2조9046억원어치를 순매도했는데 이 중 99%가 반도체에 집중됐다.",
+      "numbers": [
+        {
+          "text": "코스피 9/29 -0.27%(-18.93p) 6,870.81 마감",
+          "source": 7
+        },
+        {
+          "text": "외국인 9/29 2조9046억원 순매도, 이 중 99%가 반도체 종목에 집중",
+          "source": 8
+        },
+        {
+          "text": "삼성전자 9/29 배당락 기준가 대비 +0.93% 27만2500원 마감(장중 26만6000원→27만6000원), SK하이닉스 -0.17% 176만5000원",
+          "source": 9
+        },
+        {
+          "text": "마이크론 2026회계연도 4분기 가이던스: 매출 500억 달러(±10억 달러), 매출총이익률 약 86%, 실적은 미 현지시각 9/30 장 마감 후 발표",
+          "source": 10
+        }
+      ],
+      "chain": "삼성전자 배당락(9/29)으로 기준가가 낮아진 가운데 개장 초 -1.48%까지 밀렸다가 반등해 +0.93%로 마감 → 반면 SK하이닉스는 약보합, 외국인은 반도체 위주로 2.9조원을 순매도 → **배당락일 착시를 걷어내면 외국인 자금은 여전히 반도체에서 빠져나가는 흐름**으로 볼 수 있음 → 9/30 저녁(현지시각, KST로는 10/1 새벽) 마이크론의 2026회계연도 4분기 실적이 이 흐름의 방향을 가를 다음 변수",
+      "korea": "삼성전자(005930.KS)·SK하이닉스(000660.KS)는 HBM 공급으로 마이크론·엔비디아 등 미국 메모리·AI 반도체 밸류체인과 직결된다. 마이크론이 매출 500억 달러(±10억 달러), 매출총이익률 약 86% 가이던스를 실제로 상회하는지가 두 국내 종목의 HBM 가격 전망 재평가 기준점이 될 전망이다.",
+      "watch_next": [
+        "9/30 마이크론 2026회계연도 4분기 실적(현지시각 장 마감 후 발표) 및 HBM·D램 가격 전망",
+        "외국인의 반도체 순매도 지속 여부"
+      ],
+      "interview": "삼성전자의 배당락일 주가 반등을 실제 주가 강세로 오인하지 않으려면 어떤 점을 확인해야 하는지, 배당락과 외국인 수급 데이터를 함께 보는 방법을 설명해보라는 질문이 나올 수 있다.",
+      "tickers": [
+        {
+          "symbol": "005930.KS",
+          "change_pct": 0.93
+        },
+        {
+          "symbol": "000660.KS",
+          "change_pct": -0.17
+        }
+      ]
+    },
+    {
+      "key": "ai",
+      "name": "AI",
+      "status": "mixed",
+      "headline": "앤스로픽 IPO 서류 유출, 순손실 420억달러…오픈AI는 데브데이서 20여개 발표",
+      "trigger": "9/28(월) 저녁 로이터가 입수한 앤스로픽의 IPO 예비서류에 따르면, 회사는 2025년 매출이 12배 늘어난 약 46억 달러를 기록했지만 순손실은 420억 달러(대부분 전환증권 회계평가 성격, 영업손실 기준으로는 약 80억 달러)에 달했다. 서류에는 자사 AI가 '인류에 실존적 위험'이 될 수 있다는 경고도 포함됐다. 목표 기업가치는 2조 달러 이상으로, 5월 9,650억 달러의 두 배 수준이다. 같은 시점(9/29) 오픈AI는 데브데이 2026에서 상시 실행형 에이전트 '닷츠(dots)' 등 20여 개 신규 기능을 공개했다.",
+      "numbers": [
+        {
+          "text": "앤스로픽 2025년 매출 약 46억 달러(전년比 12배 증가)",
+          "source": 11
+        },
+        {
+          "text": "앤스로픽 2025년 순손실(GAAP) 420억 달러, 이 중 약 340억 달러는 전환증권 관련 회계평가 손실",
+          "source": 12
+        },
+        {
+          "text": "앤스로픽 2025년 영업손실 기준으로는 약 80억 달러(회계평가 손실 제외)",
+          "source": 13
+        },
+        {
+          "text": "앤스로픽 목표 기업가치 2조 달러 이상(5월 9,650억 달러 대비 2배 이상), 향후 클라우드·컴퓨트 인프라 계약 5,180억 달러",
+          "source": 12
+        }
+      ],
+      "chain": "앤스로픽이 11월 IPO를 앞두고 로이터에 예비서류가 유출되며 급증하는 매출과 그보다 더 빠르게 불어나는 손실, '실존적 위험' 경고까지 한꺼번에 드러남 → **역대급 손실과 역대급 밸류에이션이 같은 서류 안에 공존**하는 상황 → 같은 시점 오픈AI는 데브데이에서 상시 실행형 에이전트·신모델 등 제품 공세를 강화하며 수익화 경쟁을 이어감 → 두 회사 모두 '안전 경고'와 '공격적 사업 확장'을 동시에 진행 중인 구도가 계속됨",
+      "korea": "국내 기업이 앤스로픽 IPO나 오픈AI 데브데이 발표에 직접 관련됐다는 소식은 확인되지 않았다. 다만 앤스로픽의 인프라 투자 계획(5,180억 달러)과 오픈AI의 신모델 가격 정책은, 이들 API를 쓰는 국내 기업의 컴퓨트 확보 전략과 비용 구조에 참고가 될 수 있다.",
+      "watch_next": [
+        "앤스로픽 IPO 공식 서류(S-1) 제출 시점과 최종 밸류에이션",
+        "오픈AI 데브데이 신기능(dots, GPT-6.1 Sol)의 실제 출시 및 요금 정책"
+      ],
+      "interview": "AI 기업이 자사 기술의 실존적 위험을 공식 서류에 명시하면서도 동시에 2조 달러대 밸류에이션과 공격적 제품 확장을 추구하는 모순적 상황을, 안전 담론과 자본시장 유인 구조의 괴리로 설명해보라는 질문이 나올 수 있다.",
+      "watch": [
+        {
+          "company": "OpenAI",
+          "text": "9/29 데브데이 2026에서 상시 실행형 에이전트 '닷츠', 신모델 GPT-6.1 Sol, 최상위 요금제 'Pro 500'과 프라이버시 강화 기능 'Private Intelligence' 등 20여 개 신규 기능을 발표했다.",
+          "source": 14
+        },
+        {
+          "company": "Anthropic",
+          "text": "9/28 저녁 로이터가 입수한 IPO 예비서류에서 2025년 매출 12배 증가(약 46억 달러)와 순손실 420억 달러, 목표 기업가치 2조 달러 이상이 확인됐다. 서류는 자사 AI의 '실존적 위험' 가능성도 명시했다.",
+          "source": 11
+        }
+      ],
+      "tickers": []
+    },
+    {
+      "key": "robotics",
+      "name": "로봇",
+      "status": "mixed",
+      "days": 10,
+      "headline": "테슬라 -1.3% 352.84달러, 로드스터 또 연기…세미 대량인도 개시는 위안",
+      "trigger": "9/29(화) 테슬라 주가는 전일 대비 -1.29% 내린 352.84달러로 마감했다. 같은 날 로드스터 2세대 공개 행사가 텍사스 지역의 기상 악화를 이유로 10/1에서 10/15로 재차 연기됐다. 다만 회사는 네바다 스파크스 공장에서 세미 전기트럭의 고속 양산과 초도 고객 인도를 시작했으며, MS·펩시코가 지원하는 합작사로부터 세미 2,500대 규모의 대형 주문을 받았다고 밝혔다.",
+      "numbers": [
+        {
+          "text": "테슬라(TSLA) 9/29 -1.29% 352.84달러 마감(9/28 357.45달러)",
+          "source": 15
+        },
+        {
+          "text": "테슬라 로드스터 2세대 공개 행사, 텍사스 지역 기상 악화로 10/1→10/15로 재연기",
+          "source": 16
+        },
+        {
+          "text": "테슬라, MS·펩시코 지원 합작사로부터 세미 트럭 2,500대 주문 확보, 네바다 스파크스 공장 연산 최대 5만대 설계",
+          "source": 17
+        }
+      ],
+      "chain": "9/28 JP모간·골드만삭스의 인도량 전망 하향으로 급락한 데 이어 9/29에도 테슬라 주가는 추가 하락 → 같은 날 로드스터 공개는 날씨를 이유로 또 한 번(10/1→10/15) 밀렸지만, 세미 트럭은 9년 만에 마침내 고객 인도를 시작하고 2,500대 대형 주문까지 확보 → **로드스터·옵티머스 같은 '미래 서사'는 계속 지연되는 반면 세미처럼 현재 매출로 이어지는 사업은 진전**되는 대비 → 10/2 3분기 실제 인도량 발표가 다음 검증대",
+      "korea": "레인보우로보틱스·두산로보틱스 등 국내 로봇 관련주에 대한 직접적인 새 소식은 확인되지 않았다. 다만 로드스터·옵티머스처럼 반복적으로 지연되는 '미래 서사'형 프로젝트와, 세미처럼 실제 매출로 잡히는 사업을 구분해서 보는 접근은 국내 로봇 테마주 밸류에이션 점검에도 참고할 만하다.",
+      "watch_next": [
+        "10/2 테슬라 3분기 실제 인도량 발표치",
+        "10/15로 재연기된 로드스터 2세대 공개 행사 실제 개최 여부"
+      ],
+      "interview": "로드스터·옵티머스 같은 장기 서사형 프로젝트는 계속 지연되는 반면 세미 트럭처럼 당장 매출로 잡히는 사업은 진전되는 테슬라의 사례를 통해, 투자자가 '서사'와 '실적'을 구분해서 봐야 하는 이유를 설명해보라는 질문이 나올 수 있다.",
+      "tickers": [
+        {
+          "symbol": "TSLA",
+          "change_pct": -1.29
+        }
+      ]
+    },
+    {
+      "key": "realestate",
+      "name": "부동산",
+      "status": "mixed",
+      "days": 11,
+      "headline": "서울 아파트 거래량 20.9%↓에도 10억 이하 비중 확대, 10월 분양 3.8만가구 대기",
+      "trigger": "9/29(화) 보도에 따르면 올해 들어 9/28까지 신고된 서울 아파트 매매는 5만1803건으로 지난해 같은 기간보다 20.9% 줄었다. 다만 그 안에서 10억원 이하 중저가 아파트 거래 비중은 오히려 소폭 늘었다. 한편 10월 전국 아파트 분양 예정 물량은 50개 단지 3만8032가구로 집계돼 지난해 같은 기간(2만3667가구)보다 61% 급증했으며, 이 중 65%(2만4618가구)가 수도권에 집중돼 있다.",
+      "numbers": [
+        {
+          "text": "올해 1/1~9/28 서울 아파트 매매 신고 5만1803건, 전년 동기比 -20.9%(10억원 이하 거래 비중은 소폭 확대)",
+          "source": 18
+        },
+        {
+          "text": "10월 전국 아파트 분양 예정 3만8032가구(50개 단지), 전년 동월比 +61%, 수도권 비중 65%(2만4618가구: 경기 1만6043·인천 6921·서울 1654)",
+          "source": 19
+        }
+      ],
+      "chain": "올해 서울 아파트 거래량 자체는 지난해보다 20.9% 줄었지만 → 그 안에서는 10억원 이하 중저가 거래 비중이 늘며 강북·외곽 위주로 신고가 거래가 이어짐 → **거래량 위축과 가격 순환매가 동시에 나타나는 국면**에서 → 10월에는 전년比 61% 급증한 3만8032가구(수도권 65%)가 분양시장에 쏟아지며 실수요의 선택지가 넓어질 전망",
+      "korea": "GS건설·현대건설·DL이앤씨 등 대형 건설사는 10월 수도권 분양 물량 확대(수도권 2만4618가구)를 실적으로 연결할 기회를 맞는 한편, 강남권 고가 아파트 하락과 강북·경기남부 순환매가 겹치며 지역별 분양 성적이 엇갈릴 가능성이 있다.",
+      "watch_next": [
+        "10월 수도권 분양 단지들의 실제 청약 경쟁률",
+        "10억원 이하 거래 비중 확대 추세의 지속 여부"
+      ],
+      "interview": "서울 아파트 거래량이 전년보다 20% 넘게 줄었는데도 중저가 거래 비중은 늘어난 현상을 놓고, 거래량 지표만으로는 보이지 않는 가격대별 수요 이동을 어떻게 해석해야 하는지 설명해보라는 질문이 나올 수 있다.",
+      "tickers": []
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "Stock market today: Dow, S&P 500, Nasdaq wobble as 30-year Treasury yield climbs to 24-year high",
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-september-29-dow-sp-500-nasdaq-080526442.html",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 2,
+      "title": "Oil prices fall as crude exports recover at Saudi Arabia's Red Sea ports",
+      "url": "https://www.cnbc.com/2026/09/29/oil-prices-today-brent-wti-hormuz.html",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 3,
+      "title": "Summit Therapeutics (SMMT) Secures $2B AstraZeneca Investment, Shares Jump 17%",
+      "url": "https://www.gurufocus.com/news/9100659/summit-therapeutics-smmt-secures-2b-astrazeneca-investment-shares-jump-17",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 4,
+      "title": "UniQure tumbles with latest data for Huntington's gene therapy",
+      "url": "https://www.biopharmadive.com/news/uniqure-huntingtons-four-year-data-gene-therapy-results/831611/",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 5,
+      "title": "UniQure crashes as Huntington's gene therapy shows less slowing of disease at 4 years",
+      "url": "https://www.biospace.com/drug-development/uniqure-crashes-as-huntingtons-gene-therapy-shows-less-slowing-of-disease-at-4-years",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 6,
+      "title": "uniQure Announces Additional Data from Ongoing Phase I/II Studies of ifezuntirgene inilparvovec (AMT-130) in Huntington's Disease",
+      "url": "https://www.globenewswire.com/news-release/2026/09/29/3370692/0/en/uniqure-announces-additional-data-from-ongoing-phase-i-ii-studies-of-ifezuntirgene-inilparvovec-amt-130-in-huntington-s-disease-showing-continued-slowing-of-disease-progression.html",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 7,
+      "title": "코스피, 18.93P 내린 6870.81 마감(0.27%↓)",
+      "url": "https://view.asiae.co.kr/article/2026092915373451633",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 8,
+      "title": "외국인 2.9조 '팔자'…코스피, 6870선 약보합 마감",
+      "url": "https://view.asiae.co.kr/article/2026092916072809042",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 9,
+      "title": "삼성전자, 배당락일 0.93% 상승 마감…27만2천500원",
+      "url": "https://www.specialtimes.co.kr/news/articleView.html?idxno=468494",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 10,
+      "title": "Micron Technology to Report Fiscal Fourth Quarter Results on September 30, 2026",
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-to-Report-Fiscal-Fourth-Quarter-Results-on-September-30-2026/default.aspx",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 11,
+      "title": "Anthropic's IPO prospectus shows sweeping AI vision, surging costs: Reuters",
+      "url": "https://www.cnbc.com/2026/09/28/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-reuters.html",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 12,
+      "title": "Anthropic IPO prospectus shows $42 billion 2025 loss and $518 billion spending plans",
+      "url": "https://investinglive.com/stock-market-update/anthropic-ipo-prospectus-shows-42-billion-2025-loss-and-518-billion-spending-plans/",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 13,
+      "title": "Anthropic IPO Prospectus Reveals $8 Billion Operating Loss",
+      "url": "https://dailycaller.com/2026/09/29/anthropic-ipo-prospectus-reveals-8-billion-operating-loss/",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 14,
+      "title": "OpenAI DevDay 2026: Live updates and announcements",
+      "url": "https://www.cnbc.com/2026/09/29/openai-devday-2026-live-updates.html",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 15,
+      "title": "Tesla Stock Falls 4% as Investors Weigh Semi Progress Against Near-Term Pressure",
+      "url": "https://www.fxleaders.com/news/2026/09/29/tesla-stock-falls-semi-deliveries-roadster-delay/",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 16,
+      "title": "Tesla delays Roadster 2 event again due to bad weather",
+      "url": "https://techcrunch.com/2026/09/28/tesla-delays-roadster-2-event-again-due-to-bad-weather/",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 17,
+      "title": "Tesla Scores Deal To Help Double The US Electric Semi-Truck Fleet",
+      "url": "https://autos.yahoo.com/ev-and-future-tech/articles/tesla-scores-deal-help-double-204500264.html",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 18,
+      "title": "서울 '10억 이하' 거래 활발…'10월 공급'에 실수요 숨통 트일까",
+      "url": "https://www.seoul.co.kr/news/economy/estate/2026/09/29/20260929030001",
+      "accessed": "2026-09-30"
+    },
+    {
+      "id": 19,
+      "title": "10월 분양 시장 '큰 장' 선다…전국 3만8000여 가구 쏟아져",
+      "url": "https://www.newspim.com/news/view/20260928000218",
+      "accessed": "2026-09-30"
+    }
+  ]
+}
