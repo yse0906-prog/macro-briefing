@@ -1,0 +1,734 @@
+{
+ "date": "2026-10-03",
+ "type": "weekly",
+ "period": {
+  "from": "2026-09-28",
+  "to": "2026-10-02"
+ },
+ "published_at": "2026-10-03T07:45:00+09:00",
+ "headline": "9월 고용 쇼크로 10월 인상 확률 급락, 반도체는 마이크론 훈풍에 반등",
+ "summary": [
+  "9월 비농업 고용이 2만9천명 증가에 그쳐 예상(8만4천명)을 크게 밑돌고 실업률도 4.2%로 오르자, CME 기준 10월 추가 인상 확률은 9월25일 70%에서 10월2일 17%까지 급락했다.",
+  "그 직전인 9월30일에는 핵심 PCE(3.0%)가 예상(3.3%)을 밑돌았는데도 개인소비 급증과 2분기 GDP 3차 추정치 상향(2.2%)이 겹쳐 10년물이 5.293%(2007년6월来 최고)까지 치솟는 엇갈린 흐름이 있었다.",
+  "국내는 추석 연휴 직후 반도체 투톱이 5%대 급락했다가 마이크론 실적 훈풍에 되돌림하며 코스피가 주간 1.09% 내렸고, 원/달러는 0.56% 내린 1,350.60원으로 마감했다."
+ ],
+ "releases": [
+  {
+   "series": "PCEPILFE",
+   "name": "근원 PCE 전년비 (8월)",
+   "release_date": "2026-09-30",
+   "period": "2026-08-01",
+   "consensus": 3.3,
+   "consensus_source": 6,
+   "impact": "negative",
+   "interpretation": "근원 PCE가 예상(3.3%)을 밑돈 3.0%로 나왔지만, 개인소비 +0.9% 급증과 2분기 GDP 3차 추정치 상향이 겹쳐 10년물이 2007년6월来 최고치(5.293%)까지 재상승하며 결과적으로 증시엔 부담으로 작용했다."
+  },
+  {
+   "series": "A191RL1Q225SBEA",
+   "name": "실질 GDP 3차 추정치 (2분기)",
+   "release_date": "2026-09-30",
+   "period": "2026-04-01",
+   "consensus": 1.6,
+   "consensus_source": 7,
+   "impact": "negative",
+   "interpretation": "2분기 GDP가 2차 추정치(1.5%)와 시장 예상(1.6%)을 모두 크게 웃돈 2.2%로 상향되며 경기 자체는 견조함을 확인했지만, 같은 날 장기금리를 끌어올린 요인 중 하나로 작용해 고밸류에이션 성장주엔 부담을 줬다."
+  },
+  {
+   "series": "ISM_MFG",
+   "name": "ISM 제조업 PMI (9월)",
+   "release_date": "2026-10-01",
+   "period": "2026-09-01",
+   "consensus": 55.0,
+   "consensus_source": 8,
+   "impact": "negative",
+   "interpretation": "PMI 자체는 54.5로 예상(55.0)과 전월(54.6)을 모두 소폭 밑돌았지만, 가격지수가 6.8포인트 뛴 77.9로 이란 전쟁 발발 이후 최고치를 기록해 관세·유가발 비용 압력이 다시 부각됐다.",
+   "actual": 54.5,
+   "previous": 54.6,
+   "actual_source": 8
+  },
+  {
+   "series": "ICSA",
+   "name": "신규 실업수당 청구 (9월26일 마감주)",
+   "release_date": "2026-10-01",
+   "period": "2026-09-26",
+   "consensus": 200000,
+   "consensus_source": 9,
+   "impact": "neutral",
+   "interpretation": "실제치(19.7만건)가 예상(20만건)을 소폭 밑돌며 노동시장이 아직 급격히 무너지지 않았다는 신호를 줬지만, 다음날 고용보고서 발표를 앞두고 시장은 이 지표에 큰 반응을 보이지 않았다."
+  },
+  {
+   "series": "PAYEMS",
+   "name": "비농업 고용 (9월)",
+   "release_date": "2026-10-02",
+   "period": "2026-09-01",
+   "consensus": 84000,
+   "consensus_source": 1,
+   "impact": "positive",
+   "interpretation": "비농업 고용이 2만9천명 증가에 그쳐 예상(8만4천명)을 크게 밑돌자, 10월 추가 인상 가능성이 낮아졌다는 해석에 S&P500은 오히려 +0.73%, 나스닥은 +1.14%로 장중 신고가를 새로 쓰며 반응했다."
+  },
+  {
+   "series": "UNRATE",
+   "name": "실업률 (9월)",
+   "release_date": "2026-10-02",
+   "period": "2026-09-01",
+   "consensus": 4.1,
+   "consensus_source": 1,
+   "impact": "positive",
+   "interpretation": "실업률이 4.2%로 전월(4.1%)과 예상(4.1%)을 모두 웃돌며 고용 둔화를 재확인했지만, 같은 날 고용 증가분 쇼크가 워낙 커 연준 인상 중단 기대를 강화하는 재료로 소화됐다."
+  }
+ ],
+ "fomc": {
+  "next_meeting": {
+   "date": "2026-10-28",
+   "announce_kst": "2026-10-29T03:00:00+09:00",
+   "probabilities": [
+    {
+     "outcome": "hike25",
+     "pct": 17
+    },
+    {
+     "outcome": "hold",
+     "pct": 83
+    }
+   ],
+   "probabilities_week_ago": [
+    {
+     "outcome": "hike25",
+     "pct": 70
+    },
+    {
+     "outcome": "hold",
+     "pct": 30
+    }
+   ],
+   "view": "hold",
+   "confidence": "high",
+   "rationale": [
+    "9월 비농업 고용이 2만9천명 증가에 그쳐 예상(8만4천명)을 절반도 못 채웠고, 실업률도 4.2%로 올라 노동시장 냉각이 뚜렷해졌다.",
+    "제퍼슨 부의장이 10월2일 '물가가 여전히 높지만 시간을 두고 둔화 여부를 지켜봐야 한다'며 비둘기적 발언을 내놨고, 백악관 수석 경제보좌관도 올해 추가 인상이 없을 것으로 본다고 언급했다.",
+    "CME FedWatch 기준 10월 인상 확률은 9월25일 70%에서 고용보고서 발표 직전인 10월1일 종가 기준 28%까지 낮아진 뒤, 발표 직후 17%까지 추가로 떨어졌다."
+   ],
+   "watch_points": [
+    "10월8일 공개될 9월 FOMC 의사록에서 위원들의 인상 지속 논의 강도",
+    "10월14일 9월 CPI와 10월15일 PPI·소매판매 결과"
+   ]
+  },
+  "last_meeting": {
+   "date": "2026-09-16",
+   "decision": "hike25",
+   "range": [
+    3.75,
+    4.0
+   ],
+   "vote": {
+    "for": 12,
+    "against": 0
+   },
+   "tone": 0.75,
+   "statement_points": [
+    "경제활동은 견고한 속도로 확장 중이며 내수 지출도 회복력을 유지하고 있다",
+    "생산성이 강하게 늘고 기업의 자본투자도 견조하며 고용 증가는 노동력 증가 속도에 부합한다",
+    "인플레이션은 여전히 높은 수준이며, 오늘의 정책 조치는 2% 목표로의 더 빠른 복귀를 지지한다"
+   ],
+   "press_conference": "워시 의장은 물가가 너무 높고 그 상태가 너무 오래 지속되고 있다는 것이 분명한 사실이라고 말했고, 동시에 목표 달성을 위해 노동시장을 훼손할 필요는 없다고 본다며 균형을 강조했다. 점도표상 18명 위원 중 12명이 올해 말까지 추가 25bp 인상 1회를 전망했다."
+  }
+ },
+ "sectors": [
+  {
+   "name": "금융",
+   "gics": "Financials",
+   "impact": "negative",
+   "title": "장기금리 2007년来 최고 재경신에 JPM 주간 -2.6%, 씨티·BofA도 동반 약세",
+   "analysis": "美 10년물 국채금리는 핵심 PCE·GDP 발표가 몰린 9월30일 5.293%(2007년6월来 최고), 30년물은 5.62%(2002년6월来 최고)까지 치솟았다. 이후 10월2일 9월 고용보고서 충격(비농업 고용 +2만9천명, 예상 +8만4천명)에 10월 추가 인상 확률이 9월25일 70%에서 17%까지 급락했지만, 장기금리는 5.27~5.28%대로 소폭 되돌리는 데 그쳤다. 이런 변동성 속에 JPM은 금요일 343달러로 주간 2.6% 내렸고, 씨티는 4%·BofA는 3% 떨어지며 대형 은행주 전반이 약세를 보였다. **장기금리 자체가 20년래 최고치 부근을 유지하는 동안에는** 인상 중단 기대가 커져도 채권 평가손 압력과 수익률곡선 평탄화 부담이 쉽게 풀리지 않는다. 국내 4대 금융지주는 이번 주 미국 금리 변동성에 직접 노출되기보다, 원/달러가 1,350원대로 소폭 내려앉은 환경에서 거래일을 마쳤다.",
+   "tickers": [
+    {
+     "symbol": "JPM",
+     "change_pct": -2.6
+    }
+   ],
+   "news": [
+    {
+     "headline": "Bank Stocks Slide as Money-Center Names Lead Financials Lower",
+     "outlet": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/bank-stocks-slide-money-center-155107514.html",
+     "date": "2026-10-01"
+    },
+    {
+     "headline": "Labor market faltered in September as jobs increased by just 29,000",
+     "outlet": "CNBC",
+     "url": "https://www.cnbc.com/2026/10/02/jobs-report-september-2026.html",
+     "date": "2026-10-02"
+    }
+   ]
+  },
+  {
+   "name": "에너지",
+   "gics": "Energy",
+   "impact": "mixed",
+   "title": "호르무즈 통항량은 늘었지만 유조선 피격 재발, WTI는 $92대서 등락·엑손모빌 +2.1%",
+   "analysis": "9월29일 호르무즈 해협 인근에서 유조선 3척이 다시 피격됐지만, 美 해군 호위 아래 9월 하순 통항량은 하루평균 28.25척까지 늘어 9월 한 달 누적 801척(하루평균 26.70척)을 기록했다. **통항량이 늘었다는 사실 자체가 이란의 해협 장악력이 흐트러지고 있다는 신호**로 해석된다. 트럼프 대통령은 이란이 제안한 '7일 신뢰구축안'(단계적 재개방과 경제봉쇄 해제 교환)을 거부했고, 이란 관료들은 11월 美 중간선거 전 타결 가능성을 낮게 보고 있다. 이런 가운데 WTI는 10월2일 배럴당 92.43달러로 9월 내내 이어진 $90선 안팎 등락을 벗어나지 못했다. 엑손모빌은 9월25일 160.59달러에서 10월2일 164.01달러로 주간 2.1% 올랐다.",
+   "tickers": [
+    {
+     "symbol": "XOM",
+     "change_pct": 2.1
+    }
+   ],
+   "news": [
+    {
+     "headline": "Three Vessels Struck in Strait of Hormuz as Iran's Grip Loosens",
+     "outlet": "Maritime Executive",
+     "url": "https://maritime-executive.com/article/three-vessels-struck-in-strait-of-hormuz-as-iran-s-grip-loosens",
+     "date": "2026-09-29"
+    },
+    {
+     "headline": "Trump says Iran decision coming 'very soon'",
+     "outlet": "Fox News",
+     "url": "https://www.foxnews.com/live-news/iran-war-news-trump-oil-september-30",
+     "date": "2026-09-30"
+    }
+   ]
+  },
+  {
+   "name": "반도체·AI",
+   "gics": "Information Technology",
+   "impact": "mixed",
+   "title": "삼전·닉스 월요일 5%대 급락 뒤 마이크론 훈풍에 반등, 오라클 데이터센터 지연은 경계감 남겨",
+   "analysis": "추석 연휴 직후인 9월28일 미 국채금리 재급등과 오라클의 데이터센터 공사 지연(9월24일 포스마주르 통지) 소식이 겹치며 글로벌 IT 수요 둔화 우려가 커졌고, 삼성전자는 5.43% 내린 27만원, SK하이닉스는 5.05% 내린 176만8천원으로 급락했다. SK하이닉스 손자회사 솔리다임의 美 IPO 추진설에 따른 중복상장 우려도 더해졌다. 분위기는 9월30일 장 마감 후 나온 마이크론의 2026회계연도 4분기 실적(매출 414.6억달러, 예상 356.9억달러 상회)으로 반전됐다. 10월1일 마이크론은 3.0% 오른 1,097.39달러로 마감했고, 국내에서는 삼성전자 +2.79%·SK하이닉스 +3.21%로 동반 상승하며 코스피가 1.95% 뛰었다. 엔비디아도 주중 기준 2.6% 오르며 금요일 장중 신고가를 새로 썼다. 다만 **오라클의 데이터센터 지연은 업계 전반에서 2026년 예정 용량의 상당 부분이 2028년 이후로 밀릴 수 있다는 경고**로 이어지고 있어, HBM 수요 자체보다 전력·변전 설비 같은 인프라 제약이 다음 변수로 떠올랐다. 삼성전자(005930.KS)·SK하이닉스(000660.KS)는 엔비디아向 HBM 공급을 고리로 이런 인프라 이슈에 함께 노출돼 있다.",
+   "tickers": [
+    {
+     "symbol": "NVDA",
+     "change_pct": 2.6
+    },
+    {
+     "symbol": "MU",
+     "change_pct": 1.4
+    },
+    {
+     "symbol": "005930.KS"
+    },
+    {
+     "symbol": "000660.KS"
+    }
+   ],
+   "news": [
+    {
+     "headline": "마감 시황: 마이크론 훈풍에 코스피 반도체 '투톱' 급등 힘입어 6,970선 전격 탈환",
+     "outlet": "Businesskorea",
+     "url": "https://www.businesskorea.co.kr/news/articleView.html?idxno=278085",
+     "date": "2026-10-01"
+    },
+    {
+     "headline": "삼전·닉스, 5%대 급락…외국인·기관, 동반 '팔자'",
+     "outlet": "세계일보",
+     "url": "https://www.segye.com/newsView/20260928513081",
+     "date": "2026-09-28"
+    }
+   ]
+  },
+  {
+   "name": "부동산",
+   "gics": "Real Estate",
+   "impact": "negative",
+   "title": "美 30년 모기지 7.37%로 2023년11月来 최고, 서울 아파트값은 86주 연속 상승 기록",
+   "analysis": "美 장기금리가 2002~2007년来 최고치권을 유지하면서 30년 고정 모기지금리는 10월2일 7.37%로, 전주(7.03%)보다 더 올라 2023년 11월 이후 최고 수준을 기록했다. 리츠 대표주 프로로지스는 주간 기준 3.0% 내렸다. 국내에서는 서울 아파트 매매가격지수가 86주 연속 상승하며 역대 최장 기록을 새로 썼고, 86주간 누적 상승률은 17.6%에 달한다. 다만 이번 주 상승률 자체는 0.09%로 둔화됐고, 강남3구·용산 등 일부 고가 지역은 하락 전환했다. **미국은 고금리가 매수 여력을 계속 짓누르는 반면, 서울은 절대 상승은 이어가되 속도만 떨어지는** 구도가 여러 주째 반복되고 있다.",
+   "tickers": [
+    {
+     "symbol": "PLD",
+     "change_pct": -3.0
+    }
+   ],
+   "news": [
+    {
+     "headline": "Mortgage Rates Today: 30-Year 7.37% — Oct 2, 2026",
+     "outlet": "MortgageDaily",
+     "url": "https://www.mortgagedaily.com/rates/mortgage-rates-today-2026-10-02/",
+     "date": "2026-10-02"
+    },
+    {
+     "headline": "서울 아파트값 역대 최장 상승 기록 갱신…상승폭 둔화되며 안정화 조짐",
+     "outlet": "Newspim",
+     "url": "https://www.newspim.com/news/view/20261001000829",
+     "date": "2026-10-01"
+    }
+   ]
+  },
+  {
+   "name": "헬스케어",
+   "gics": "Health Care",
+   "impact": "mixed",
+   "title": "서밋, 아스트라제네카 20억달러 투자에 주간 +17%…코디악은 3상 성공",
+   "analysis": "9월29일 아스트라제네카가 서밋 테라퓨틱스의 전환우선주에 20억달러를 투자하기로 하면서 서밋 주가는 17% 급등했다. 전환가(주당 18.36달러)는 전일 종가 대비 약 19% 프리미엄이 붙었다. 같은 주 코디악 사이언스는 습성 황반변성 치료제 젠쿠다의 3상(DAYBREAK)에서 1차 지표를 충족했다고 밝히며 52주 신고가 부근까지 올랐고, 커넥트 바이오파마는 급성 COPD 악화 2상에서 치료 실패율을 위약 대비 81% 낮췄다고 발표했다. 반면 DBV테크놀로지스는 땅콩 알레르기 치료제(비아스킨 피넛)의 품목허가(BLA)를 소아 적응증까지 확대 신청했다. **기업간 거래(계약·투자)가 임상 데이터 자체보다 주가를 더 크게 움직인 한 주**였다.",
+   "tickers": [
+    {
+     "symbol": "SMMT",
+     "change_pct": 17
+    }
+   ],
+   "news": [
+    {
+     "headline": "Summit Stock Jumps 17% on $2 Billion AstraZeneca Investment",
+     "outlet": "GuruFocus",
+     "url": "https://www.gurufocus.com/news/9101441/summit-stock-jumps-17-on-2-billion-astrazeneca-investment",
+     "date": "2026-09-29"
+    },
+    {
+     "headline": "Biotech Stocks At 52-Week Highs - KOD, MASS, OBIO, CDNA, PMVP",
+     "outlet": "RTTNews",
+     "url": "https://rttnews.com/amp/3696059/biotech-stocks-at-52-week-highs-kod-mass-obio-cdna-pmvp.aspx",
+     "date": "2026-10-01"
+    }
+   ]
+  }
+ ],
+ "market_impact": [
+  {
+   "asset": "us_equities",
+   "direction": "down",
+   "text": "S&P500은 9월25일 7743.41에서 10월2일 7722.72로 주간 0.27% 내렸다. 월~수 PCE·GDP발 금리 재급등에 밀렸다가, 9월 고용보고서가 예상을 크게 하회한 금요일 +0.73% 랠리로 손실 대부분을 만회했다."
+  },
+  {
+   "asset": "us_rates",
+   "direction": "up",
+   "text": "10년물은 9월25일 5.17%에서 9월30일 5.293%(2007년6월来 최고)까지 오른 뒤, 10월2일 약한 고용지표에도 5.27~5.28%대에 머물렀다. 30년물도 9월30일 5.62%(2002년6월来 최고)까지 치솟았다."
+  },
+  {
+   "asset": "usd",
+   "direction": "up",
+   "text": "달러인덱스(DXY)는 9월25일 100.97에서 10월2일 102.02로 주간 1.04% 올랐다. ISM 가격지수 급등 등 물가 재점화 신호가 고용 쇼크에도 달러 강세를 지지했다."
+  },
+  {
+   "asset": "krw",
+   "direction": "down",
+   "text": "원/달러는 9월23일 1,358.2원에서 10월2일 1,350.60원으로 주간 0.56% 내렸다(원화 강세). 월요일 반도체 투톱 급락과 대규모 외국인 매도에 1,365원까지 올랐다가 주후반 안정됐다."
+  }
+ ],
+ "fx": {
+  "headline": "반도체 투톱 급락 충격에도 원/달러 주간 -0.56%(1,358.2→1,350.6원), 코스피는 외국인 매도 속 -1.09%",
+  "numbers": [
+   {
+    "text": "원/달러 9월23일 1,358.2원 → 10월2일 1,350.60원, 주간 -7.6원(-0.56%)",
+    "source": 14
+   },
+   {
+    "text": "코스피 9월23일 7,080.92 → 10월2일 7,003.74, 주간 -1.09%",
+    "source": 20
+   },
+   {
+    "text": "한국은행 기준금리 3.00%(변동 없음, 다음 금통위 10월22일) vs 연준 3.75~4.00%(10월 인상 확률 9월25일 70%→10월2일 17%)",
+    "source": 3
+   }
+  ],
+  "drivers": [
+   {
+    "factor": "반도체 투톱 급락·대규모 외국인 매도",
+    "effect": "krw_weak",
+    "text": "9월28일 삼성전자·SK하이닉스가 5%대 급락하며 외국인·기관이 이날 하루 4조9천억원 넘게 순매도했고, 원/달러는 1,365.1원까지 올랐다."
+   },
+   {
+    "factor": "美 고용 쇼크로 Fed 긴축 기대 완화",
+    "effect": "krw_strong",
+    "text": "9월 고용보고서가 예상을 크게 밑돌며 10월 추가 인상 확률이 17%까지 낮아져, 한미 금리차 추가 확대 우려가 줄며 달러 매수 동기가 약해졌다."
+   },
+   {
+    "factor": "ISM 가격지수 급등 등 물가 재점화 신호",
+    "effect": "krw_weak",
+    "text": "9월 ISM 제조업 가격지수가 77.9로 이란전쟁 발발 이후 최고치를 기록해, 고용 쇼크와 반대로 물가 재점화 우려가 달러 강세를 뒷받침했다."
+   },
+   {
+    "factor": "마이크론 실적 훈풍 속 반도체 수출 기대 회복",
+    "effect": "krw_strong",
+    "text": "마이크론의 깜짝 실적 이후 10월1일 삼성전자·SK하이닉스가 동반 상승하며 코스피가 1.95% 뛰었고, 주 후반 외국인 매도 규모도 150억원대로 크게 줄었다."
+   }
+  ],
+  "hedge": "환헤지 비용(스왑포인트)은 한미 단기금리차로 정해지는데, 10월 추가 인상 확률이 70%에서 17%까지 낮아지며 금리차가 더 벌어질 위험은 한 주 새 크게 줄었다. 다만 장기금리 자체는 최고치권에 머물러 있어 비용 안정이 단기 구간에 국한된다는 점은 유의할 필요가 있다.",
+  "flows": "이번 주 코스피는 월요일 반도체 투톱 급락에 따른 대량 순매도(9/28 3.6조원)로 시작했으나, 마이크론 실적발 반등 이후에는 매도 규모가 크게 줄어 금요일에는 150억원대 순매도로 마무리됐다. 국민연금과 한국은행의 650억달러 외환스와프·전략적 환헤지 연장 체계는 이번 주 별다른 변경 없이 유지됐다.",
+  "watch_next": [
+   "10월14일 9월 CPI와 10월15일 PPI·소매판매 결과",
+   "10월22일 한국은행 금통위, 10월28~29일 FOMC 결정과 점도표",
+   "10월8일 공개될 9월 FOMC 의사록의 위원별 인상 논의 강도"
+  ]
+ },
+ "institution_impact": [
+  {
+   "institution": "securities",
+   "text": "장기금리가 주중 2007년来 최고치를 다시 썼다가 고용 쇼크에도 크게 되돌리지 못해 [[-채권 운용 손익 부담]]이 이어졌지만, 10월 인상 확률 급락은 향후 발행금리 부담을 낮출 여지를 준다.",
+   "points": [
+    {
+     "topic": "trading",
+     "direction": "negative",
+     "source": 6,
+     "text": "10월 인상 확률이 70%에서 17%까지 낮아졌음에도 **장기금리는 오히려 9월30일 2007년6월(10년물)·2002년6월(30년물) 이후 최고치**를 다시 썼다. 보유 채권의 평가손 압력이 단기 정책금리 기대와 반대로 움직인 한 주였다."
+    },
+    {
+     "topic": "brokerage",
+     "direction": "negative",
+     "source": 17,
+     "text": "코스피에서 외국인이 월요일(9/28) 하루 3.6조원을 포함해 주 초반 순매도를 이어갔다. [[-거래대금에 연동되는 수수료 수익엔 부정적]]인 흐름이지만, 목~금 반등 구간에는 매도 규모가 150억원대로 크게 줄었다."
+    },
+    {
+     "topic": "ib",
+     "direction": "mixed",
+     "source": 3,
+     "text": "10월 인상 확률이 70%대에서 17%까지 낮아진 점은 단기 발행금리 부담을 줄여줄 수 있지만, 장기채 발행 비용의 기준이 되는 30년물은 오히려 2002년来 최고치라 **장기채 발행 여건은 여전히 부담스럽다**. ECM은 코스피가 주간 하락한 가운데 특별한 호재가 제한적이었다."
+    },
+    {
+     "topic": "wm",
+     "direction": "positive",
+     "source": 12,
+     "text": "10년물·30년물이 20년래 최고 수준을 유지하고 있어 [[+확정금리 상품의 매력]]이 계속된다. 금리 변동성이 큰 구간일수록 대기자금이 이런 상품으로 옮겨오기 쉽다."
+    }
+   ]
+  },
+  {
+   "institution": "lp",
+   "text": "장기금리가 주중 다시 최고치를 썼다가 소폭 되돌려 듀레이션 갭의 부호에 따라 보험사별 순자산 방향이 갈렸다. K-ICS는 이번 주 새 발표가 없었다.",
+   "points": [
+    {
+     "topic": "duration_gap",
+     "direction": "mixed",
+     "source": 6,
+     "text": "10년물이 9월30일 5.293%까지 오른 뒤 10월2일 5.27~5.28%로 소폭 내렸다. **듀레이션 갭이 음(-)인 보험사는** 부채 가치가 더 크게 줄어 [[+순자산이 늘어나고]], **갭이 양(+)인 보험사는** 반대로 [[-순자산이 줄어든다]]."
+    },
+    {
+     "topic": "kics",
+     "direction": "mixed",
+     "source": 40,
+     "text": "가장 최근 발표된 6월 말 K-ICS 비율은 215.2%(생보 206.8%·손보 230.9%)로, 9월 말 기준 다음 분기 발표는 아직 나오지 않았다. 원화가 주간 기준 소폭 강세(1,350.60원)를 보인 점은 환위험액 부담을 약간 낮추지만, 코스피가 주간 하락한 점은 주식위험액 부담을 줄이는 방향이라 순효과는 제한적이다."
+    },
+    {
+     "topic": "allocation",
+     "direction": "mixed",
+     "source": 3,
+     "text": "美 10년물이 5.27~5.28%대로 여전히 높아 헤지 전 명목수익률은 매력적이지만, 10월 인상 확률이 17%까지 낮아진 만큼 한미 금리차가 추가로 벌어질 가능성은 줄었다. 환헤지 비용을 뺀 실제 수익률이 관건인 구간이 계속된다."
+    },
+    {
+     "topic": "fx_hedge",
+     "direction": "neutral",
+     "source": 14,
+     "text": "원/달러가 주간 기준 0.56% 내린 1,350.60원으로 마감하며 헤지 없이 해외자산을 든 기관의 원화 환산가치는 소폭 늘었다. 금리차 확대 우려가 줄어든 만큼 단기 롤오버 헤지 비용도 당장은 안정적인 편이다."
+    }
+   ]
+  },
+  {
+   "institution": "gp",
+   "text": "외국인이 주 초반 대규모로 코스피를 순매도해 [[-주식형 자금 유입은 주춤]]했지만, 장기 고금리는 금리형 상품 판매엔 계속 우호적이다.",
+   "points": [
+    {
+     "topic": "flows",
+     "direction": "negative",
+     "source": 17,
+     "text": "외국인이 월요일(9/28) 3.6조원을 포함해 주 초반 순매도를 이어가 [[-주식형 자금 유입은 주춤]]했다. 정책금리가 여전히 높아 금리형(MMF·채권형) 상품의 기대수익률은 유지된다."
+    },
+    {
+     "topic": "fees",
+     "direction": "negative",
+     "source": 20,
+     "text": "코스피가 9월23일 7,080.92에서 10월2일 7,003.74로 주간 1.09% 내려 [[-주식형 AUM 평가액엔 다소 부담]]이다. 채권형도 장기금리가 최고치권에 머물러 평가익을 기대하기 어려운 구간이다."
+    },
+    {
+     "topic": "products",
+     "direction": "positive",
+     "source": 12,
+     "text": "美 국채 10년물 5.27~5.28%, 30년물 5.6%대로 20년래 최고 수준을 유지해 만기까지 들고 가면 수익률이 확정되는 [[+만기매칭형 채권펀드를 내놓기 좋은 시점]]이 계속되고 있다."
+    },
+    {
+     "topic": "alternatives",
+     "direction": "negative",
+     "source": 34,
+     "text": "30년 모기지금리가 7.37%로 2023년11月来 최고치를 다시 쓰면서 PE의 인수금융과 부동산 펀드의 변동금리 대출은 [[-이자비용 부담이 이어지는]] 국면이다. 캡레이트 상승 압력도 여전해 신규 딜은 보수적으로 접근할 시점이다."
+    }
+   ]
+  }
+ ],
+ "scenarios": [
+  {
+   "name": "기본 · 10월 동결, 12월 추가 인상",
+   "probability": 55,
+   "text": "9월 고용 쇼크로 10월 인상 확률이 17%까지 낮아졌지만, ISM 가격지수 급등 등 물가 재점화 신호가 남아 있어 연준이 10월엔 쉬고 12월에 25bp를 추가로 올릴 수 있다는 시나리오다."
+  },
+  {
+   "name": "인상 종료 · 동결 지속",
+   "probability": 30,
+   "text": "노동시장 냉각이 9월 수치 한 번에 그치지 않고 이어지면, 연준이 10월 동결 이후 추가 인상 없이 현 수준(3.75~4.00%)에서 멈출 수 있다는 시나리오다."
+  },
+  {
+   "name": "매파 서프라이즈 · 10월에도 인상",
+   "probability": 15,
+   "text": "9월 고용 수치가 향후 수정되며 상향되거나 10월14일 CPI가 급등하면, 시장이 17%까지 낮춘 10월 인상 확률과 달리 연준이 전격 인상을 택할 수 있다는 시나리오다."
+  }
+ ],
+ "interview_insights": [
+  {
+   "question": "9월 비농업 고용이 예상(8.4만명)을 크게 밑돈(2.9만명) 날, 왜 S&P500은 오히려 올랐나?",
+   "answer_points": "고용 둔화라는 '나쁜 뉴스'가 금리 인상 중단 기대라는 '좋은 뉴스'로 읽히는 메커니즘을 설명한다. 10월 인상 확률이 70%에서 17%까지 급락한 점과 금리 민감 성장주(나스닥 +1.14%) 중심의 반등을 연결 짓는다."
+  },
+  {
+   "question": "핵심 PCE(3.0%)가 예상(3.3%)을 밑돌았는데, 왜 10년물은 오히려 2007년来 최고치를 썼나?",
+   "answer_points": "같은 날 발표된 2분기 GDP 3차 추정치 상향(2.2%)과 개인소비 +0.9% 급증이라는 강한 수요 신호가 물가 지표의 하향 서프라이즈를 압도했다는 점, 그리고 재정 우려 등 장기금리 고유의 변수를 설명한다."
+  },
+  {
+   "question": "코스피는 왜 반도체 투톱이 5% 급락한 월요일과 반등한 목요일 사이에서 결국 주간 하락했나?",
+   "answer_points": "미 국채금리·오라클 데이터센터 지연이라는 외부 충격과 마이크론 실적이라는 종목 고유 호재가 같은 주에 겹쳤을 때, 외부 충격이 먼저 더 크게 반영되고 종목 호재가 이를 부분적으로만 되돌리는 순서를 짚는다."
+  }
+ ],
+ "sources": [
+  {
+   "id": 1,
+   "title": "Labor market faltered in September as jobs increased by just 29,000, unemployment rate rose to 4.2%",
+   "url": "https://www.cnbc.com/2026/10/02/jobs-report-september-2026.html",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 2,
+   "title": "Stock market today: Dow, S&P 500, Nasdaq rally as Fed rate-hike expectations fade, tech gains",
+   "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-october-2-dow-sp-500-nasdaq-september-jobs-report-080623878.html",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 3,
+   "title": "Fed October Hike Odds Fall to 17% After Nonfarm Data",
+   "url": "https://phemex.com/news/article/fed-october-hike-probability-drops-to-17-after-nonfarm-payrolls-signal-cooling-labor-market-98610",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 4,
+   "title": "Traders now see little chance of a Fed rate hike in October after weak jobs report",
+   "url": "https://www.cnbc.com/2026/10/02/fed-rate-hike-odds-decline-after-september-jobs-report.html",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 5,
+   "title": "White House top economist doesn't expect any more rate hikes this year after September jobs report",
+   "url": "https://finance.yahoo.com/economy/article/white-house-top-economist-doesnt-expect-more-rate-hikes-this-year-after-september-jobs-miss-165916134.html",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 6,
+   "title": "Fed's preferred gauge showed core inflation at 3.0% in August, much lighter than expected",
+   "url": "https://www.cnbc.com/2026/09/30/feds-preferred-gauge-showed-core-inflation-at-3point0percent-in-august-much-lighter-than-expected.html",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 7,
+   "title": "U.S. Q2 2026 GDP revised up to 2.2%, beating estimates",
+   "url": "https://finance.yahoo.com/economy/articles/u-q2-2026-gdp-revised-123130729.html",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 8,
+   "title": "US ISM Manufacturing PMI fell to 54.5 in September",
+   "url": "https://www.fxstreet.com/news/us-ism-manufacturing-pmi-fell-to-545-in-september-202610011406",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 9,
+   "title": "US Jobless Claims Drop to 197K Below Expectations",
+   "url": "https://phemex.com/news/article/us-initial-jobless-claims-fall-to-197000-below-forecast-98486",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 10,
+   "title": "Stock Market Today (Oct. 2, 2026): S&P 500 rises after key jobs report",
+   "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-02-2026",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 11,
+   "title": "Nasdaq climbs to record after softer jobs data cools rate-hike expectations",
+   "url": "https://www.spokesman.com/stories/2026/oct/02/nasdaq-climbs-to-record-after-softer-jobs-data-coo/",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 12,
+   "title": "US 10 Year Treasury Note Yield - Historical Data",
+   "url": "https://tradingeconomics.com/united-states/government-bond-yield",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 13,
+   "title": "US Dollar Index (DXY) Today: 100.97 (Sep 25, 2026 Close)",
+   "url": "https://portfolio-terminal.com/markets/us-dollar-index",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 14,
+   "title": "10월 2일 원/달러 환율 1,350.60원...엔화·유로·위안화",
+   "url": "https://www.snmnews.com/news/articleView.html?idxno=575456",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 15,
+   "title": "원·달러 환율, 7.6원 오른 1365.1원 마감",
+   "url": "https://www.newsis.com/view/NISX20260928_0003805621",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 16,
+   "title": "美 긴축 장기화 전망에 달러·원 환율 반등…1358.4원 마감(종합)",
+   "url": "https://news1.kr/finance/market-exr/6307872",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 17,
+   "title": "코스피 2.70% 급락해 6,800선 후퇴…외국인·기관 4조원 넘게 팔았다",
+   "url": "https://www.seoul.co.kr/news/economy/securities/2026/09/28/20260928500195",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 18,
+   "title": "코스피, 하락 출발 뒤 낙폭 축소… 외국인 3243억 순매도",
+   "url": "https://www.seoul.co.kr/news/economy/securities/2026/09/29/20260929500032",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 19,
+   "title": "코스피, 숨 고르기 하락… 외국인 1500억 순매도",
+   "url": "https://www.seoul.co.kr/news/economy/securities/2026/10/02/20261002500029",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 20,
+   "title": "개미 던지고 외국인·기관 받고 '코스피 7100'…대형 변수 줄줄이",
+   "url": "https://www.mt.co.kr/stock/2026/09/23/2026092310090072468",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 21,
+   "title": "[마감 시황] 마이크론 훈풍에 장중 대반전…코스피, 반도체 '투톱' 급등 힘입어 6,970선 전격 탈환",
+   "url": "https://www.businesskorea.co.kr/news/articleView.html?idxno=278085",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 22,
+   "title": "삼전·닉스, 5%대 급락…외국인·기관, 동반 '팔자'",
+   "url": "https://www.segye.com/newsView/20260928513081",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 23,
+   "title": "Bank Stocks Slide as Money-Center Names Lead Financials Lower",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/bank-stocks-slide-money-center-155107514.html",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 24,
+   "title": "JPMorgan Chase & Co. Has Lowered Expectations for Citigroup (NYSE:C) Stock Price",
+   "url": "https://www.dailypolitical.com/2026/10/02/jpmorgan-chase-co-has-lowered-expectations-for-citigroup-nysec-stock-price.html",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 25,
+   "title": "Micron stock barely budged on chipmaker's latest earnings. Wall Street still thinks gains will come",
+   "url": "https://www.cnbc.com/2026/10/01/mu-barely-budged-on-earnings-wall-street-thinks-gains-will-come.html",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 26,
+   "title": "Micron Stock Slips After Earnings Beat; Nvidia-Co-Designed HBM4E to Use Foundry Process",
+   "url": "https://thecryptobasic.com/2026/10/01/micron-stock-slips-after-earnings-beat-nvidia-co-designed-hbm4e-to-use-foundry-process/",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 27,
+   "title": "Oracle delays some of its OpenAI data centers from 2027 to 2028 - report",
+   "url": "https://www.datacenterdynamics.com/en/news/oracle-delays-some-of-its-openai-data-centers-from-2027-to-2028-report/",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 28,
+   "title": "Oracle Wants Protection If Its AI Data Center Is Delayed. Here's What That Changes for Investors.",
+   "url": "https://www.fool.com/investing/2026/09/24/oracle-wants-protection-if-its-ai-data-center-is-delayed-heres-what-that-changes-for-investors/",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 29,
+   "title": "Three Vessels Struck in Strait of Hormuz as Iran's Grip Loosens",
+   "url": "https://maritime-executive.com/article/three-vessels-struck-in-strait-of-hormuz-as-iran-s-grip-loosens",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 30,
+   "title": "Trump says Iran decision coming 'very soon' as US probes possible Fairford terror links",
+   "url": "https://www.foxnews.com/live-news/iran-war-news-trump-oil-september-30",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 31,
+   "title": "Crude Oil WTI Futures Historical Prices",
+   "url": "https://www.investing.com/commodities/crude-oil-historical-data",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 32,
+   "title": "ExxonMobil (XOM) Stock Price & Overview",
+   "url": "https://stockanalysis.com/stocks/xom/",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 33,
+   "title": "United States 30-Year Mortgage Rate",
+   "url": "https://tradingeconomics.com/united-states/30-year-mortgage-rate",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 34,
+   "title": "Mortgage Rates Today: 30-Year 7.37% — Oct 2, 2026",
+   "url": "https://www.mortgagedaily.com/rates/mortgage-rates-today-2026-10-02/",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 35,
+   "title": "서울 아파트값 역대 최장 상승 기록 갱신…상승폭 둔화되며 안정화 조짐",
+   "url": "https://www.newspim.com/news/view/20261001000829",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 36,
+   "title": "서울 집값 86주간 17.6% 뛰었다…역대 최장 상승기록, 남은 변수는?",
+   "url": "https://www.mt.co.kr/estate/2026/10/01/2026100114210914342",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 37,
+   "title": "Summit Stock Jumps 17% on $2 Billion AstraZeneca Investment",
+   "url": "https://www.gurufocus.com/news/9101441/summit-stock-jumps-17-on-2-billion-astrazeneca-investment",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 38,
+   "title": "30/09/2026 Biotech Morning Brief: Connect Reports Phase 2 COPD Results as DBV Submits Peanut-Patch BLA",
+   "url": "https://kelinresearch.substack.com/p/30092026-biotech-morning-brief-connect",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 39,
+   "title": "Biotech Stocks At 52-Week Highs - KOD, MASS, OBIO, CDNA, PMVP",
+   "url": "https://rttnews.com/amp/3696059/biotech-stocks-at-52-week-highs-kod-mass-obio-cdna-pmvp.aspx",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 40,
+   "title": "6월 말 보험사 킥스비율 215.2%로 소폭 하락…손보는 상승",
+   "url": "https://view.asiae.co.kr/article/2026091611191368572",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 41,
+   "title": "\"환율 100원 상승하면 보험사 K-ICS 비율 평균 1%p↓\"",
+   "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1717125",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 42,
+   "title": "[아세안익스프레스] 한국은행-국민연금, 전략적 환헤지 1년 연장",
+   "url": "https://www.aseanexpress.co.kr/news/article.html?no=12414",
+   "accessed": "2026-10-03"
+  },
+  {
+   "id": 43,
+   "title": "한은, 2026년 금통위 일정 발표…1월15일 첫 기준금리 결정",
+   "url": "https://www.newsis.com/view/NISX20251030_0003383692",
+   "accessed": "2026-10-03"
+  }
+ ]
+}
