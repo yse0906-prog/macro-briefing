@@ -1,0 +1,62 @@
+# 매일 08:00 KST에 data/calendar.json만 읽어, 직전 24시간에 중요도 3 발표가 있었는지 본다.
+# 깃허브 안에서만 도는 검사라 Claude 토큰을 쓰지 않는다.
+# 발표가 있었던 날에만 event-briefing 라벨이 붙은 이슈를 만들어 Claude 루틴을 한 번 깨운다.
+name: Fire the routine after a major release
+
+on:
+  schedule:
+    - cron: "0 23 * * *"   # 08:00 KST
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Look for an importance-3 release in the last 24 hours
+        id: scan
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import datetime, json, zoneinfo
+
+          now = datetime.datetime.now(zoneinfo.ZoneInfo("Asia/Seoul"))
+          since = now - datetime.timedelta(hours=24)
+          try:
+              events = json.load(open("data/calendar.json", encoding="utf-8"))["events"]
+          except (OSError, ValueError, KeyError):
+              events = []
+          hits = [e["name"] for e in events
+                  if e.get("importance") == 3
+                  and since <= datetime.datetime.fromisoformat(e["kst"]) <= now]
+          print("names=" + " · ".join(hits))
+          print("today=" + now.date().isoformat())
+          PY
+
+      - name: Request one event briefing
+        if: steps.scan.outputs.names != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NAMES: ${{ steps.scan.outputs.names }}
+          TODAY: ${{ steps.scan.outputs.today }}
+        run: |
+          if [ -f "data/briefings/$TODAY.json" ]; then
+            echo "오늘 브리핑이 이미 있음 — 깨우지 않음"; exit 0
+          fi
+          TITLE="event-briefing $TODAY"
+          COUNT=$(gh issue list --state all --search "\"$TITLE\" in:title" --json number --jq 'length')
+          if [ "$COUNT" != "0" ]; then
+            echo "오늘은 이미 요청함"; exit 0
+          fi
+          URL=$(gh issue create --title "$TITLE" --body "직전 24시간 중요도 3 발표: $NAMES")
+          gh issue edit "$URL" --add-label event-briefing
+          gh issue close "$URL" --comment "루틴에 이벤트 브리핑을 요청했습니다."
+          echo "루틴 요청: $URL ($NAMES)"
+
+      - name: Nothing to do
+        if: steps.scan.outputs.names == ''
+        run: echo "직전 24시간에 중요도 3 발표 없음 — 루틴을 깨우지 않음"
