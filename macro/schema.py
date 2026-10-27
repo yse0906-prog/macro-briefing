@@ -104,13 +104,16 @@ def _check_releases(releases, source_ids, err):
 
 
 def _check_weekly(b, err):
-    for key in ("releases", "fomc", "sectors", "scenarios", "interview_insights"):
+    for key in ("releases", "fomc", "scenarios", "interview_insights"):
         if key not in b:
             err(f"weekly 필수 항목 없음: {key}")
-    sectors = b.get("sectors", [])
-    if not 3 <= len(sectors) <= 5:
+    # 섹터 분석은 같은 날짜 섹터 파일에 쓴다. 예전 브리핑에만 남아 있는 칸이라 있을 때만 검사한다.
+    sectors = b.get("sectors")
+    if sectors is None:
+        sectors = []
+    elif not 3 <= len(sectors) <= 5:
         err("sectors는 3~5개")
-    if not any(s.get("name") == "금융" for s in sectors):
+    elif not any(s.get("name") == "금융" for s in sectors):
         err("sectors에 금융 섹터가 있어야 함")
     for i, s in enumerate(sectors):
         if s.get("impact") not in SECTOR_IMPACTS:
@@ -240,7 +243,7 @@ AI_WATCH = {"OpenAI", "Anthropic"}
 
 
 def validate_sectors(data: dict, filename: str) -> list[str]:
-    """평일마다 쌓이는 섹터 이슈 파일을 검사한다."""
+    """토요일마다 쌓이는 섹터 이슈 파일을 검사한다."""
     errors = []
     err = lambda msg: errors.append(f"{filename}: {msg}")
     if not _is_date(data.get("date")):

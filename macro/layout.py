@@ -3,7 +3,8 @@ from macro.fmt import esc
 
 DISCLAIMER = "투자 권유가 아닙니다"
 SITE_URL = "https://yse0906-prog.github.io/macro-briefing/"
-DESCRIPTION = ("미국 FOMC·거시지표와 7개 섹터 이슈를 정리하고, 증권사·LP·GP 업권별 시사점까지 잇는 거시경제 브리핑. 섹터 이슈는 평일 매일, 주간 브리핑은 매주 토요일 갱신.")
+DESCRIPTION = ("미국 FOMC·거시지표와 7개 섹터 이슈를 정리하고, 증권사·LP·GP 업권별 시사점까지 잇는 거시경제 브리핑. 매주 토요일 갱신하고, 큰 지표 발표 다음 날에는 이벤트 브리핑을 더합니다.")
+CADENCE = "주간 브리핑·섹터 이슈 매주 토요일 · 주요 발표 다음 날 이벤트 브리핑"
 
 NAV = [
     ("home", "홈", "index.html"),
@@ -141,7 +142,7 @@ def page(*, title: str, active: str, body: str, root: str = "", css: str = "", d
 <div class="foot-l"><strong>{DISCLAIMER}</strong>
 <span>이 사이트는 거시경제 학습과 금융권 취업 준비를 위한 참고 자료입니다. 분석과 전망은 AI가 공개 자료를 바탕으로 작성해 오류가 있을 수 있으며, 투자 판단의 근거로 쓸 수 없습니다.</span>
 <span>지표 수치: FRED(세인트루이스 연방준비은행) · 예상치·뉴스: 각 항목에 출처 표기</span></div>
-<div class="foot-r"><span class="serif">Macro Briefing</span><span>섹터 이슈 평일 매일 갱신</span><span>주간 브리핑 매주 토요일 · 주요 발표 다음 날 이벤트 브리핑</span><span>© 2026 SangEunLAB</span></div>
+<div class="foot-r"><span class="serif">Macro Briefing</span><span>{CADENCE}</span><span>© 2026 SangEunLAB</span></div>
 </div></footer>
 {DDAY_SCRIPT}
 </body>

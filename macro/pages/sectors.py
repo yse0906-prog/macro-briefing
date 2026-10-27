@@ -1,4 +1,4 @@
-"""섹터 이슈 페이지(sectors.html). 평일마다 갱신되고 날짜별로 쌓인다."""
+"""섹터 이슈 페이지(sectors.html). 매주 토요일 갱신되고 날짜별로 쌓인다."""
 from macro import components as c
 from macro import visuals as v
 from macro.fmt import esc, kst_time, rich, ymd_ko
@@ -120,7 +120,7 @@ def _body(site, current: dict, root: str = "") -> str:
 
 def _describe(day: dict) -> str:
     return (f"{ymd_ko(day['date'])} 금융·에너지·바이오·반도체·AI·로봇·부동산 7개 섹터 이슈. "
-            "촉발 요인, 숫자 근거, 파급 경로, 한국 연결, 면접 각도까지 평일마다 정리합니다.")
+            "촉발 요인, 숫자 근거, 파급 경로, 한국 연결, 면접 각도까지 매주 정리합니다.")
 
 
 def render_sectors(site, day: dict | None = None) -> str:
@@ -130,8 +130,8 @@ def render_sectors(site, day: dict | None = None) -> str:
         return page(title="섹터 이슈", active="sectors", body=body, css=c.CSS + CSS)
     head = (f'<div class="s-head"><div class="wrap"><div class="s-top">'
             f'<div><span class="eyebrow">섹터 이슈</span>'
-            f'<h1 class="serif">오늘 7개 섹터에서 무슨 일이 있었나</h1>'
-            f'<span class="muted">촉발 요인부터 한국 연결까지 같은 깊이로 정리합니다 · 평일 아침 갱신</span></div>'
+            f'<h1 class="serif">이번 주 7개 섹터에서 무슨 일이 있었나</h1>'
+            f'<span class="muted">촉발 요인부터 한국 연결까지 같은 깊이로 정리합니다 · 매주 토요일 갱신</span></div>'
             f'<span class="muted num">{kst_time(current["updated_at"])} KST 기준</span></div>'
             f'{_quick_menu(current.get("sectors", []))}</div></div>')
     return page(title=f"섹터 이슈 {current['date']}", active="sectors", description=_describe(current),

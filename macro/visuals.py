@@ -69,12 +69,12 @@ STATUS_TILE = {
 }
 
 
-def status_board(sectors: list) -> str:
+def status_board(sectors: list, base: str = "") -> str:
     tiles = []
     for s in sectors:
         cls, label = STATUS_TILE.get(s.get("status"), STATUS_TILE["neutral"])
         days = f'<small>{s["days"]}일째</small>' if s.get("days") else ""
-        tiles.append(f'<a class="board-tile {cls}" href="#{esc(s["key"])}"><span class="bt-name">{esc(s["name"])}</span>'
+        tiles.append(f'<a class="board-tile {cls}" href="{base}#{esc(s["key"])}"><span class="bt-name">{esc(s["name"])}</span>'
                      f'<span class="bt-status">{label}{days}</span></a>')
     return f'<div class="board">{"".join(tiles)}</div>'
 

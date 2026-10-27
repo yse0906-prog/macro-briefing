@@ -7,7 +7,7 @@ from pathlib import Path
 from config import ISSUES
 from macro.build import build_site
 from macro.components import EMPTY_MESSAGE
-from macro.layout import DISCLAIMER
+from macro.layout import CADENCE, DISCLAIMER
 from tests.factories import (make_briefing, make_calendar, make_event_briefing, make_indicators,
                              make_sectors, write_data)
 
@@ -65,8 +65,8 @@ class HomeArchiveTest(SiteBuildCase):
                      "동결 <b>78%</b>", "이슈 섹터", "시장 영향", "FOMC 금리 결정·기자회견", DISCLAIMER):
             self.assertIn(text, html)
         self.assertIn('href="briefings/2026-09-17.html"', html)
-        self.assertIn("섹터 이슈 평일 매일 갱신", html)
-        self.assertNotIn("주 1회", html)
+        self.assertIn(CADENCE, html)
+        self.assertNotIn("평일 매일", html)
         for text in ("코스피", "코스닥", "VKOSPI", 'tk-g">한국'):
             self.assertNotIn(text, html)
 

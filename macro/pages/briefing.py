@@ -185,6 +185,16 @@ def _sectors(b: dict) -> str:
     return f'<div class="grid-2">{"".join(cards)}</div>'
 
 
+def _sector_link(site, b: dict) -> str:
+    """섹터 분석은 같은 날짜 섹터 파일에 있다. 브리핑에서는 그 페이지로 보낸다."""
+    day = next((s for s in site.sectors if s["date"] == b["date"]), None)
+    if day is None:
+        return ""
+    tiles = vis.status_board(day.get("sectors", []), base=f"../sectors/{day['date']}.html")
+    return (f'<div class="card pad stack">{tiles}'
+            f'<p><a href="../sectors/{esc(day["date"])}.html">7개 섹터 이슈 전체 보기 →</a></p></div>')
+
+
 def _impact(b: dict) -> str:
     return vis.impact_tiles(b["market_impact"], c.ASSET_LABEL)
 
@@ -321,6 +331,10 @@ def _sections(site, b: dict) -> list[tuple[str, str, str]]:
         sections.append(("next-fomc", f"FOMC 전망 · {md(fomc['next_meeting']['date'])} 회의", _next_meeting(fomc["next_meeting"])))
     if b.get("sectors"):
         sections.append(("sectors", "이슈 섹터", _sectors(b)))
+    else:
+        link = _sector_link(site, b)
+        if link:
+            sections.append(("sectors", "섹터 이슈", link))
     sections.append(("impact", "시장 영향", _impact(b)))
     if b.get("fx"):
         sections.append(("fx", "외환 · 원/달러", _fx(site, b)))
