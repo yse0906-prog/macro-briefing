@@ -60,6 +60,11 @@ class SectorSchemaTest(unittest.TestCase):
             s["numbers"] = s["numbers"][:2]
         self.assertEqual(validate_sectors(data, "2026-09-16.json"), [])
 
+    def test_chain_emphasis_must_close_within_one_step(self):
+        data = make_sectors()
+        sector(data, "finance")["chain"] = "**금리↑ → 평가손↑** → 주가↓"
+        self.assertTrue(has(validate_sectors(data, "2026-09-16.json"), "화살표"))
+
     def test_watch_next_needs_at_least_one(self):
         data = make_sectors()
         sector(data, "finance")["watch_next"] = []

@@ -288,6 +288,10 @@ def validate_sectors(data: dict, filename: str) -> list[str]:
                 err(f"{where}: 숫자 근거 text 없음")
             if number.get("source") not in source_ids:
                 err(f"{where}: 출처 번호 {number.get('source')} 없음")
+        for step in sector.get("chain", "").split("→"):
+            if markup_errors(step):
+                err(f"{where}: chain 강조 표시는 화살표를 건너뛸 수 없음. 한 단계 안에서 열고 닫을 것")
+                break
         if not sector.get("watch_next"):
             err(f"{where}: 다음 관전 포인트를 1개 이상 적어야 함")
         days = sector.get("days")

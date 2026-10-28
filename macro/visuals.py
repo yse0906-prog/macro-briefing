@@ -3,7 +3,7 @@ import re
 
 from macro import charts
 from macro import data as d
-from macro.fmt import esc, md, plain, rich
+from macro.fmt import esc, markup_errors, md, plain, rich, strip_markup
 
 # 단위가 붙은 수치: 부호 · 숫자 · (범위) · (만/억/조) · 단위
 _NUM = r"[+\-−]?\d[\d,]*(?:\.\d+)?"
@@ -42,7 +42,10 @@ def stat_cards(numbers: list, sources: dict) -> str:
 
 
 def _step(text: str) -> str:
+    """한 단계. 강조 표시가 이 단계 안에서 닫히지 않으면 기호만 지우고 글자는 살린다."""
     text = text.strip()
+    if markup_errors(text):
+        text = strip_markup(text)
     bare = plain(text)
     cls = "flow-up" if bare.endswith("↑") else "flow-down" if bare.endswith("↓") else ""
     return f'<span class="flow-step {cls}">{rich(text)}</span>'

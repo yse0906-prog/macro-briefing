@@ -65,6 +65,12 @@ class MarkupInVisualsTest(unittest.TestCase):
         self.assertNotIn("**", html)
         self.assertIn("<strong>고용보고서 결과에 따라 흔들릴 수 있어</strong>", html)
 
+    def test_flow_drops_markers_that_span_an_arrow(self):
+        # 루틴이 화살표를 건너뛰어 강조를 열고 닫으면 단계별로는 짝이 안 맞는다
+        html = v.flow("**국내 금융주는 → 금리 이벤트에 더 크게 흔들림**")
+        self.assertNotIn("**", html)
+        self.assertIn("국내 금융주는", html)
+
     def test_dollar_amounts_become_the_big_figure(self):
         self.assertEqual(v.big_figure("SPDR 바이오텍 ETF $156.13~$159.08 범위에서 등락"), "$156.13~$159.08")
         self.assertEqual(v.big_figure("브렌트유 배럴당 $96.76로 마감"), "$96.76")

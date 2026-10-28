@@ -30,6 +30,12 @@ def plain(value) -> str:
     return _BOLD.sub(r"\1", text)
 
 
+def strip_markup(value) -> str:
+    """plain() 뒤에도 남은 짝 없는 기호를 지운다. 글자는 살린다."""
+    text = plain(value)
+    return re.sub(r"\*\*|\[\[[+-]?|\]\]", "", text)
+
+
 def markup_errors(text: str) -> list[str]:
     """짝이 안 맞는 강조 표시를 찾는다."""
     rest = _BOLD.sub("", _POS.sub("", _NEG.sub("", text)))
