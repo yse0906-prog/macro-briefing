@@ -49,6 +49,17 @@ class SectorSchemaTest(unittest.TestCase):
         sector(data, "bio")["numbers"] = [{"text": "하나뿐", "source": 1}]
         self.assertTrue(has(validate_sectors(data, "2026-09-16.json"), "숫자"))
 
+    def test_recent_files_need_four_numbers(self):
+        data = make_sectors(date="2026-10-31")
+        sector(data, "bio")["numbers"] = sector(data, "bio")["numbers"][:3]
+        self.assertTrue(has(validate_sectors(data, "2026-10-31.json"), "숫자"))
+
+    def test_older_files_keep_the_two_number_floor(self):
+        data = make_sectors()
+        for s in data["sectors"]:
+            s["numbers"] = s["numbers"][:2]
+        self.assertEqual(validate_sectors(data, "2026-09-16.json"), [])
+
     def test_watch_next_needs_at_least_one(self):
         data = make_sectors()
         sector(data, "finance")["watch_next"] = []

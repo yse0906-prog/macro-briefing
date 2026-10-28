@@ -240,6 +240,9 @@ def validate_briefing(b: dict, filename: str) -> list[str]:
 SECTOR_KEYS = ["finance", "energy", "bio", "semiconductor", "ai", "robotics", "realestate"]
 SECTOR_STATUS = {"positive", "negative", "neutral", "mixed"}
 AI_WATCH = {"OpenAI", "Anthropic"}
+# 주 1회로 줄인 뒤로는 한 번에 깊게 쓴다. 이 날짜부터 섹터마다 숫자 근거 4개 이상.
+RICH_SINCE = "2026-10-28"
+NUMBERS_MIN, NUMBERS_MIN_OLD = 4, 2
 
 
 def validate_sectors(data: dict, filename: str) -> list[str]:
@@ -277,8 +280,9 @@ def validate_sectors(data: dict, filename: str) -> list[str]:
             if not sector.get(field):
                 err(f"{where}: {label} 없음")
         numbers = sector.get("numbers", [])
-        if len(numbers) < 2:
-            err(f"{where}: 숫자 근거를 2개 이상 적어야 함")
+        least = NUMBERS_MIN if data["date"] >= RICH_SINCE else NUMBERS_MIN_OLD
+        if len(numbers) < least:
+            err(f"{where}: 숫자 근거를 {least}개 이상 적어야 함 (지금 {len(numbers)}개)")
         for number in numbers:
             if not number.get("text"):
                 err(f"{where}: 숫자 근거 text 없음")

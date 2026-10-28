@@ -59,6 +59,20 @@ class FlowTest(unittest.TestCase):
         self.assertNotIn("flow-row", v.flow("화살표 없는 문장"))
 
 
+class MarkupInVisualsTest(unittest.TestCase):
+    def test_flow_renders_emphasis_instead_of_leaking_stars(self):
+        html = v.flow("금리↑ → **고용보고서 결과에 따라 흔들릴 수 있어** → 변동성↑")
+        self.assertNotIn("**", html)
+        self.assertIn("<strong>고용보고서 결과에 따라 흔들릴 수 있어</strong>", html)
+
+    def test_dollar_amounts_become_the_big_figure(self):
+        self.assertEqual(v.big_figure("SPDR 바이오텍 ETF $156.13~$159.08 범위에서 등락"), "$156.13~$159.08")
+        self.assertEqual(v.big_figure("브렌트유 배럴당 $96.76로 마감"), "$96.76")
+
+    def test_figure_ignores_markup(self):
+        self.assertEqual(v.big_figure(v.plain("**10년물 5.33%**로 재상승")), "5.33%")
+
+
 class DirectionGridTest(unittest.TestCase):
     def test_every_cell_has_a_text_label(self):
         items = [{"institution": "lp", "text": "요약",

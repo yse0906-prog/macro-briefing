@@ -222,8 +222,10 @@ def make_sectors(**overrides) -> dict:
             "headline": f"{name} 섹터 오늘의 한 줄 요약",
             "trigger": f"{name} 섹터를 움직인 촉발 요인입니다.",
             "numbers": [
-                {"text": f"{name} 숫자 근거 하나", "source": 1},
-                {"text": f"{name} 숫자 근거 둘", "source": 2},
+                {"text": f"{name} 숫자 근거 하나 12.3%", "source": 1},
+                {"text": f"{name} 숫자 근거 둘 4,500억 원", "source": 2},
+                {"text": f"{name} 숫자 근거 셋 -1.2%p", "source": 1},
+                {"text": f"{name} 숫자 근거 넷 $96.76", "source": 2},
             ],
             "chain": "원인↑ → 중간 경로↑ → 결과↑",
             "korea": f"{name} 관련 국내 업종에 미치는 영향입니다.",

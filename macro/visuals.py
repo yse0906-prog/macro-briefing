@@ -10,8 +10,10 @@ _NUM = r"[+\-−]?\d[\d,]*(?:\.\d+)?"
 _UNIT = r"(?:%p|%|bp|달러|원|배럴|MW|건|명|개(?!월)|단계|pt)"
 _SCALE = r"(?:\s?(?:조|억|만)(?:\s?\d[\d,]*(?:\s?(?:억|만))?)?)"
 _FIGURE = re.compile(
-    rf"(?<![\d.,]){_NUM}(?:~{_NUM})?"
-    rf"(?:{_SCALE}(?:\s?{_UNIT})?|\s?{_UNIT})"
+    rf"(?<![\d.,])(?:"
+    rf"\${_NUM}(?:\s?~\s?\${_NUM})?"                                  # $96.76 · $156.13~$159.08
+    rf"|{_NUM}(?:~{_NUM})?(?:{_SCALE}(?:\s?{_UNIT})?|\s?{_UNIT})"     # 2,000만 배럴 · 5.33% · 149.29달러
+    rf")"
 )
 _DATE = re.compile(r"\d+월 \d+일|\d{4}년(?: \d+월| 상반기| 하반기)?")
 
@@ -41,8 +43,9 @@ def stat_cards(numbers: list, sources: dict) -> str:
 
 def _step(text: str) -> str:
     text = text.strip()
-    cls = "flow-up" if text.endswith("↑") else "flow-down" if text.endswith("↓") else ""
-    return f'<span class="flow-step {cls}">{esc(text)}</span>'
+    bare = plain(text)
+    cls = "flow-up" if bare.endswith("↑") else "flow-down" if bare.endswith("↓") else ""
+    return f'<span class="flow-step {cls}">{rich(text)}</span>'
 
 
 ARROW = ('<span class="flow-arrow"><svg viewBox="0 0 20 12" width="20" height="12" aria-hidden="true">'
