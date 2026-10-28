@@ -1,0 +1,382 @@
+{
+ "date": "2026-10-28",
+ "type": "weekly",
+ "period": {
+  "from": "2026-10-26",
+  "to": "2026-10-27"
+ },
+ "published_at": "2026-10-28T18:00:00+09:00",
+ "headline": "FOMC 하루 앞두고 코스피 급락 후 반등, SK하이닉스 깜짝실적이 주도",
+ "summary": [
+  "10/26 FOMC를 하루 앞두고 코스피가 외국인 대량 매도 속에 1.46% 내린 5,469.47로 7개월래 최저치를 기록했으나, 10/27에는 미국 반도체 랠리(필라델피아반도체지수 +3.60%)에 힘입어 3.09% 반등했고 SK하이닉스는 10/28 3분기 영업이익 83조원으로 역대 최대 실적을 발표했다.",
+  "미국에서는 앤트로픽이 SEC에 IPO를 공개 신청하고 브로드컴이 630억달러 규모 AI 금융 거래를 공개하며 AI 인프라 투자 기대가 다시 부각됐고, CME 기준이 아닌 Kalshi·Polymarket 평균으로 본 10월 FOMC 동결 확률은 95~96%로 안정적으로 유지됐다.",
+  "중동에서는 사우디·파키스탄·튀르키예의 테헤란 고위급 회담에도 호르무즈 해협 공격이 10월 들어 2월 전쟁 발발 이후 최다 수준을 기록하며 WTI가 100달러선을 두고 등락했고, 한국은행은 기준금리를 3.00%로 7명 전원 찬성 동결했다."
+ ],
+ "releases": [],
+ "fomc": {
+  "next_meeting": {
+   "date": "2026-10-28",
+   "announce_kst": "2026-10-29T03:00:00+09:00",
+   "probabilities": [
+    {
+     "outcome": "hold",
+     "pct": 96
+    },
+    {
+     "outcome": "hike25",
+     "pct": 4
+    }
+   ],
+   "probabilities_week_ago": [
+    {
+     "outcome": "hold",
+     "pct": 95
+    },
+    {
+     "outcome": "hike25",
+     "pct": 5
+    }
+   ],
+   "view": "hold",
+   "confidence": "high",
+   "rationale": [
+    "Kalshi·Polymarket 평균 기준 동결 확률이 10/19 95%에서 10/28 새벽 96%로 거의 변화 없이 안정적으로 유지됐다.",
+    "9월 FOMC(9/16)에서 이미 3.75~4.00%로 한 차례 인상한 데 이어 추가 인상에 나설 만큼의 새로운 물가 서프라이즈가 이번 주 확인되지 않았다."
+   ],
+   "watch_points": [
+    "점도표상 연내·2027년 추가 인상 경로 전망",
+    "파월 의장 기자회견에서의 매파·비둘기 톤"
+   ]
+  },
+  "last_meeting": {
+   "date": "2026-09-16",
+   "decision": "hike25",
+   "range": [
+    3.75,
+    4.0
+   ],
+   "vote": {
+    "for": 12,
+    "against": 0
+   },
+   "tone": 0.75,
+   "statement_points": [
+    "경제활동은 견고한 속도로 확장 중이며 내수 지출도 회복력을 유지하고 있다",
+    "인플레이션은 여전히 높은 수준이며, 정책 조치는 2% 목표로의 더 빠른 복귀를 지지한다"
+   ],
+   "press_conference": "워시 의장은 물가가 너무 높고 그 상태가 너무 오래 지속되고 있다는 점을 분명히 하면서도, 목표 달성을 위해 노동시장을 훼손할 필요는 없다며 균형을 강조했다."
+  }
+ },
+ "market_impact": [
+  {
+   "asset": "us_equities",
+   "direction": "up",
+   "text": "S&P500은 10/23 7,623.68에서 10/27 7,722.60으로, 나스닥은 25,955.34에서 26,477.81로 올랐다. FOMC를 하루 앞두고 앤트로픽 IPO 신청·브로드컴 AI금융 소식에 반도체·AI 관련주가 랠리를 주도했다."
+  },
+  {
+   "asset": "us_rates",
+   "direction": "up",
+   "text": "10년물은 10/22 4.96%에서 10/23~26 5.00%로 소폭 올라 2002년来 고점권을 유지했다. 2년물도 4.65%에서 4.68~4.69%로 올랐다."
+  },
+  {
+   "asset": "usd",
+   "direction": "down",
+   "text": "달러인덱스(광의, DTWEXBGS)는 10/21 121.34에서 10/23 121.32로 거의 변화가 없었다. FOMC 결과 발표 전 대기 심리가 짙었다."
+  },
+  {
+   "asset": "krw",
+   "direction": "up",
+   "text": "원/달러는 10/26 1,325.93원에서 10/27 1,326.80원으로 소폭 올랐다(원화 약세). 10/26 코스피 급락·외국인 매도 영향이 10/27 수급 반전으로 상당 부분 되돌려졌다."
+  }
+ ],
+ "fx": {
+  "headline": "FOMC 하루 앞둔 숨고르기 속 원/달러는 거의 보합, 코스피는 반도체 랠리에 급반등",
+  "numbers": [
+   {
+    "text": "원/달러 10/26 1,325.93원 → 10/27 1,326.80원 (주간 +0.87원, +0.07%)",
+    "source": 8
+   },
+   {
+    "text": "코스피 10/26 5,469.47(-1.46%, 7개월래 최저) → 10/27 5,638.34(+3.09%)",
+    "source": 7
+   },
+   {
+    "text": "한미 기준금리: 한국 3.00%(10월 금통위 만장일치 동결) vs 미국 3.75~4.00%(상단 기준 금리차 0.75%p)",
+    "source": 4
+   }
+  ],
+  "drivers": [
+   {
+    "factor": "FOMC 경계감·AI 밸류에이션 우려·중동 유가 리스크",
+    "effect": "krw_weak",
+    "text": "10/26 코스피가 1.46% 급락하고 외국인이 7,429억원을 순매도하며 달러 수요가 커졌다."
+   },
+   {
+    "factor": "美 반도체 랠리·SK하이닉스 어닝서프라이즈",
+    "effect": "krw_strong",
+    "text": "10/27 외국인이 매수로 돌아서며 매수 사이드카가 발동, 코스피가 3.09% 반등했다."
+   },
+   {
+    "factor": "한국은행 기준금리 동결(3.00%, 7명 전원 찬성)",
+    "effect": "neutral",
+    "text": "FOMC 결과 발표(10/29) 전까지 한미 금리차 추가 확대 가능성은 제한적이다."
+   },
+   {
+    "factor": "국제유가(WTI 100달러 안팎, 호르무즈 리스크 격화)",
+    "effect": "krw_weak",
+    "text": "원유 수입대금 부담이 이어지는 가운데 호르무즈 해협 공격이 10월 들어 최다 수준을 기록했다."
+   }
+  ],
+  "hedge": "환헤지 비용(스왑포인트)은 한미 단기금리차(현재 0.75%p)에 좌우되는데, 10월 FOMC 동결 확률이 95~96%로 안정적인 만큼 발표 전까지 금리차가 추가로 벌어질 가능성은 크지 않다.",
+  "flows": "외국인은 10/26 코스피에서 7,429억원을 순매도했지만 10/27에는 매수로 전환해 매수 사이드카가 발동됐다. 개인은 10/27 1,659억원을 순매도했다.",
+  "watch_next": [
+   "10/29 03:00 KST FOMC 결정·점도표·파월 기자회견",
+   "10/29 D.R.호튼 회계연도 4분기 실적 발표"
+  ]
+ },
+ "institution_impact": [
+  {
+   "institution": "securities",
+   "text": "10월 FOMC 동결 확률이 95~96%로 안정적인 가운데, 美 3분기 실적은 JPM 미스·GS·BofA·씨티 호조로 엇갈렸다.",
+   "points": [
+    {
+     "topic": "trading",
+     "direction": "neutral",
+     "text": "美 국채 10년물이 10월 초 5.3%대(2002년来 최고) 이후 5.0%권으로 소폭 내려왔지만 여전히 높은 수준이라, 보유 채권 평가손 부담은 쉽게 풀리지 않는 구간이다.",
+     "source": 9
+    },
+    {
+     "topic": "brokerage",
+     "direction": "positive",
+     "text": "코스피가 10/26 급락(외국인 7,429억원 순매도) 뒤 10/27 매수 사이드카가 발동될 정도로 거래가 활발해져, [[+거래대금 연동 수수료엔 우호적]]인 흐름으로 바뀌었다.",
+     "source": 5
+    },
+    {
+     "topic": "ib",
+     "direction": "mixed",
+     "text": "JPM은 EPS 5.57달러로 컨센서스(5.90달러)를 밑돌았지만 GS(순이익 +29% YoY)·BofA·씨티는 양호해, IB 수수료 환경은 업체별로 엇갈린다. FOMC 동결 기대는 단기 발행금리 부담을 낮추는 방향이다.",
+     "source": 9
+    },
+    {
+     "topic": "wm",
+     "direction": "positive",
+     "text": "美 10년물이 여전히 5%권에 머물러 있어 [[+확정금리 상품의 매력]]이 이어진다.",
+     "source": 9
+    }
+   ]
+  },
+  {
+   "institution": "lp",
+   "text": "장기금리가 10월 초 고점에서 소폭 내려왔지만 여전히 높은 수준이라 듀레이션 갭 부호에 따라 보험사별 순자산 방향이 갈린다. K-ICS는 2분기 수치(215.2%)에서 정체된 채다.",
+   "points": [
+    {
+     "topic": "duration_gap",
+     "direction": "mixed",
+     "text": "10년물이 10월 초 5.3%대(2002년来 최고)에서 10/26 5.00%로 소폭 내려왔다. **듀레이션 갭이 음(-)인 보험사는** 부채 가치가 더 크게 줄어 [[+순자산이 늘고]], **갭이 양(+)인 보험사는** 반대로 [[-순자산이 줄어든다]].",
+     "source": 9
+    },
+    {
+     "topic": "kics",
+     "direction": "neutral",
+     "text": "가장 최근 발표된 6월 말(2분기) K-ICS 비율은 215.2%(생보 206.8%·손보 230.9%)로, 9월 말(3분기) 수치는 아직 발표되지 않았다.",
+     "source": 20
+    },
+    {
+     "topic": "allocation",
+     "direction": "mixed",
+     "text": "美 10년물이 5%권으로 여전히 높아 헤지 전 명목수익률은 매력적이지만, FOMC 동결 기대가 95~96%로 안정적인 만큼 한미 금리차가 추가로 벌어질 가능성은 크지 않다.",
+     "source": 1
+    },
+    {
+     "topic": "fx_hedge",
+     "direction": "neutral",
+     "text": "원/달러가 10/26 1,325.93원에서 10/27 1,326.80원으로 거의 변화가 없어, 단기 롤오버 헤지 비용도 안정적인 편이다.",
+     "source": 8
+    }
+   ]
+  },
+  {
+   "institution": "gp",
+   "text": "외국인이 10/26 대량 순매도 뒤 10/27 매수로 급반전해 [[+주식형 자금 유입 신호가 되살아났지만]], 美 홈빌더 실적 미스는 대안투자 쪽엔 부담이다.",
+   "points": [
+    {
+     "topic": "flows",
+     "direction": "positive",
+     "text": "외국인이 10/26 코스피에서 7,429억원을 순매도했지만 10/27에는 매수로 전환해 사이드카가 발동됐다. [[+주식형 자금 유입 신호가 되살아난]] 모습이다.",
+     "source": 5
+    },
+    {
+     "topic": "fees",
+     "direction": "positive",
+     "text": "코스피가 10/26 5,469.47(-1.46%)에서 10/27 5,638.34(+3.09%)로 급반등해 주식형 AUM 평가액은 주 후반 빠르게 회복됐다.",
+     "source": 7
+    },
+    {
+     "topic": "products",
+     "direction": "positive",
+     "text": "美 국채 10년물이 5.0%권을 유지해 만기까지 들고 가면 수익률이 확정되는 [[+만기매칭형 채권펀드를 내놓기 좋은 환경]]이 이어지고 있다.",
+     "source": 9
+    },
+    {
+     "topic": "alternatives",
+     "direction": "negative",
+     "text": "美 30년 모기지금리가 7.1~7.4%대에 머물며 PulteGroup 등 홈빌더 실적 미스(매출 -12%, 조정EPS -30%대)로 이어져, PE의 부동산 관련 딜과 인수금융은 [[-여전히 보수적으로 접근해야 하는]] 구간이다.",
+     "source": 19
+    }
+   ]
+  }
+ ],
+ "scenarios": [
+  {
+   "name": "기본 · 10월 동결 유지",
+   "probability": 80,
+   "text": "Kalshi·Polymarket 평균 기준 동결 확률이 95~96%로 안정적인 만큼, 10/29 발표에서 연준이 기준금리를 3.75~4.00%로 유지할 가능성이 가장 크다."
+  },
+  {
+   "name": "비둘기 신호·인하 시사",
+   "probability": 10,
+   "text": "예측시장상 인하 가능성 자체는 희박하지만, 점도표나 기자회견에서 노동시장 둔화를 근거로 연내·2027년 인하 가능성을 열어둘 수 있다는 시나리오다."
+  },
+  {
+   "name": "매파 서프라이즈·추가 인상",
+   "probability": 10,
+   "text": "예측시장의 낮은 인상 확률(4%)과 달리, 물가 재점화 신호가 뒤늦게 부각되며 0.25%p 추가 인상을 결정할 가능성도 완전히 배제할 수는 없다."
+  }
+ ],
+ "interview_insights": [
+  {
+   "question": "코스피가 하루 만에 -1.46%에서 +3.09%로 급반전한 이유는?",
+   "answer_points": "외국인 수급 변화(대량매도→매수 전환)와 개별 기업 실적(SK하이닉스 역대 최대 실적)이 매크로 경계감(FOMC)을 압도한 사례로, 거시 이벤트 경계감과 개별 기업 모멘텀이 충돌할 때 단기적으로 후자가 우세할 수 있음을 설명한다."
+  },
+  {
+   "question": "동결 확률이 95%를 넘는데도 시장이 FOMC를 경계하는 이유는?",
+   "answer_points": "실제 금리 결정보다 점도표·기자회견 톤(매파/비둘기)이 더 큰 변수가 될 수 있다는 점과, '매파적 동결' 같은 과거 사례를 들어 설명한다."
+  },
+  {
+   "question": "브로드컴의 630억달러 AI금융 거래 같은 벤더파이낸싱이 왜 리스크로 지적되는가?",
+   "answer_points": "특수목적법인(SPV)을 통한 순환형 자금조달 구조가 금융기관과 반도체 공급망으로 리스크를 전이시킬 수 있다는 점을 레버리지와 상호의존성 관점에서 설명한다."
+  }
+ ],
+ "sources": [
+  {
+   "id": 1,
+   "title": "Fed decision odds snapshot 2026-10-28T0016 (Kalshi/Polymarket avg)",
+   "url": "https://defirate.com/odds/fed-decision/snapshot/2026-10-28T0016/",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 2,
+   "title": "Fed decision odds snapshot 2026-10-19T1621 (Kalshi/Polymarket avg)",
+   "url": "https://defirate.com/odds/fed-decision/snapshot/2026-10-19T1621/",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 3,
+   "title": "FOMC Meeting - October 2026 (schedule, Oct 27-28)",
+   "url": "https://www.calendarx.com/events/fomc-meeting-october-2026",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 4,
+   "title": "'기준금리 3.00% 동결' 한은 금통위 10월 통화정책방향 [전문]",
+   "url": "https://inews24.com/view/2017755",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 5,
+   "title": "코스피, 눈치보기 장세 속 5460선 마감…외인, 오늘도 '팔자'",
+   "url": "https://www.etoday.co.kr/news/view/2640178",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 6,
+   "title": "[스팟]코스피 80.83포인트(1.46%) 내린 5469.47 마감",
+   "url": "https://www.mt.co.kr/stock/2026/10/26/2026102615270574977",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 7,
+   "title": "코스피, 3.09% 상승한 5638.34 마감…코스닥 2.29%↑(2보)",
+   "url": "https://www.news1.kr/finance/market-exr/6333557",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 8,
+   "title": "U.S. Dollar-South Korean Won History: 2026",
+   "url": "https://www.poundsterlinglive.com/history/USD-KRW-2026",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 9,
+   "title": "Bank Stocks Q3 2026 Earnings and the Fed Rate Hike",
+   "url": "https://www.heygotrade.com/en/market-outlook/bank-stocks-q3-2026-earnings/",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 10,
+   "title": "美 반도체 급등·하이닉스 실적 잭팟…코스피 6000선 탈환",
+   "url": "https://www.mstoday.co.kr/news/articleView.html?idxno=200298",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 11,
+   "title": "AI 반도체주 강세에 뉴욕증시 이틀째 상승…AMD 5.5%·브로드컴 4% 올라",
+   "url": "https://www.ddaily.co.kr/page/view/2026102805414335019",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 12,
+   "title": "미국 증시, 기술주·반도체 강세에 일제히 상승 마감…나스닥 1%대 올라",
+   "url": "https://www.seoul.co.kr/news/economy/securities/2026/10/28/20261028500008",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 13,
+   "title": "Anthropic IPO is officially coming after Claude AI creator files S-1 form with SEC",
+   "url": "https://www.shacknews.com/article/149384/anthropic-ipo-filing-official",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 14,
+   "title": "AI Giant Anthropic Files to Go Public, Nearing $1 Trillion Valuation",
+   "url": "https://decrypt.co/369641/ai-giant-anthropic-files-go-public-nearing-1-trillion-valuation",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 15,
+   "title": "중동 분쟁 외교적 해결 기대에 10월26일 국제유가 하락",
+   "url": "https://www.energy-news.co.kr/news/articleView.html?idxno=229260",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 16,
+   "title": "국제유가, 중동 휴전 기대에 2% 가까이 하락…WTI 100달러 아래로",
+   "url": "https://www.news1.kr/world/international-economy/6334044",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 17,
+   "title": "Iran reports tanker fire amid escalating Hormuz attacks",
+   "url": "https://shafaq.com/en/Middle-East/Iran-reports-tanker-fire-amid-escalating-Hormuz-attacks",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 18,
+   "title": "Mortgage Rates Track a 10-Year Yield Flat Since Our Last Report | Today, October 16, 2026",
+   "url": "https://themortgagereports.com/mortgage-rates-now/mortgage-rates-today-october-16-2026",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 19,
+   "title": "Homebuilder Earnings: D.R. Horton Beats Estimates as Pulte and NVR See Sales Plunge 12% Amid Housing Slump",
+   "url": "https://www.marketbeat.com/stock-ideas/homebuilder-earnings-dr-horton-sticks-out-as-pulte-and-nvr-sales-tank/",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 20,
+   "title": "6월 말 보험사 K-ICS 비율 215.2%",
+   "url": "https://eiec.kdi.re.kr/policy/materialView.do?num=286908",
+   "accessed": "2026-10-28"
+  }
+ ]
+}
