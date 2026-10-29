@@ -1,0 +1,346 @@
+{
+ "date": "2026-10-29",
+ "type": "weekly",
+ "period": {
+  "from": "2026-10-26",
+  "to": "2026-10-28"
+ },
+ "published_at": "2026-10-29T13:00:00+09:00",
+ "headline": "FOMC 10-2 매파적 동결, 12월 인상 확률 85%로 급등",
+ "summary": [
+  "10/28 FOMC는 기준금리를 3.75~4.00%로 동결했지만 표결은 10-2로 쪼개져 쿡 이사·해맥 총재가 0.25%p 인상을 주장했고, 워시 의장은 \"정치는 이번 결정에 역할이 없었다\"고 밝혔지만 11/3 중간선거를 6일 앞둔 시점이라 해석이 뒤따랐다.",
+  "같은 기간 KB부동산 10월 조사에서 서울 아파트값 상승률이 전월 1.13%에서 0.61%로 거의 반토막 났고 강남·서초까지 하락 전환했으며, 보험업권 K-ICS 비율은 6월말 215.2%에서 9월말(3분기) 수치가 이번 주에도 발표되지 않았다.",
+  "블룸버그 집계로 12월 9일 FOMC의 추가 인상 확률이 9월말 73%에서 85%로 뛰었고, 10월 호르무즈 해협 공격이 전쟁 발발 이후 최다를 기록한 가운데 앤트로픽은 브로드컴의 최대 420억달러 전환사채 지원을 받아 11월 9일 주 IPO 로드쇼에 들어갈 예정이다."
+ ],
+ "releases": [],
+ "fomc": {
+  "next_meeting": {
+   "date": "2026-12-09",
+   "announce_kst": "2026-12-10T04:00:00+09:00",
+   "probabilities": [
+    {
+     "outcome": "hike25",
+     "pct": 85
+    },
+    {
+     "outcome": "hold",
+     "pct": 13
+    },
+    {
+     "outcome": "cut25",
+     "pct": 2
+    }
+   ],
+   "probabilities_week_ago": [
+    {
+     "outcome": "hike25",
+     "pct": 73
+    },
+    {
+     "outcome": "hold",
+     "pct": 27
+    }
+   ],
+   "view": "hike25",
+   "confidence": "medium",
+   "rationale": [
+    "쿡·해맥 이사의 매파적 반대표 이후 블룸버그 집계 12월 인상 확률이 9월말 73%에서 10/28 기자회견 시점 85%로 뛰었다.",
+    "성명서는 경제활동을 '견고한 확장'(9월 '완만한'에서 상향)으로 고쳤지만 '인플레이션은 여전히 높다'는 문구를 유지해 추가 긴축 여지를 열어뒀다."
+   ],
+   "watch_points": [
+    "12월 점도표상 2027년 인상·인하 경로",
+    "워시 의장 기자회견에서의 매파·비둘기 톤 변화"
+   ]
+  },
+  "last_meeting": {
+   "date": "2026-10-28",
+   "decision": "hold",
+   "range": [
+    3.75,
+    4.0
+   ],
+   "vote": {
+    "for": 10,
+    "against": 2
+   },
+   "tone": 0.6,
+   "statement_points": [
+    "경제활동은 견고한 속도로 확장 중이다(9월 '완만한'에서 상향)",
+    "인플레이션은 여전히 높은 수준이며, 위원회는 가격 안정을 달성할 것이다"
+   ],
+   "press_conference": "워시 의장은 \"정치는 이번 결정에 어떤 역할도 하지 않았다\"며 트럼프 대통령 등의 인하 압박 질문에 선을 그었고, \"확고한 결론이 있었다면 크게 알렸을 것\"이라며 사전 forward guidance를 자제하는 기조를 재확인했다. AI 투자가 고금리 영향을 받지 않는다는 시각에는 \"금리는 틈새마다 영향을 준다\"며 반박했다."
+  }
+ },
+ "market_impact": [
+  {
+   "asset": "us_equities",
+   "direction": "up",
+   "text": "S&P500은 10/27 7,722.60에서 10/28 7,743.98로 0.28% 올랐다. 다만 동일가중 S&P500과 소형주는 내렸고 반도체주가 상승을 주도해, 지수 전체보다 종목 간 편차가 컸다."
+  },
+  {
+   "asset": "us_rates",
+   "direction": "up",
+   "text": "10년물은 발표 후 다시 5% 위로 올라섰고 30년물도 일중 고점에 근접했다. 12월 추가 인상 확률이 85%로 뛴 영향이다."
+  },
+  {
+   "asset": "usd",
+   "direction": "down",
+   "text": "달러는 기자회견이 진행되는 동안 유로 대비 소폭 밀렸다. 워시 의장이 명확한 포워드 가이던스를 자제하면서 단기적으로는 매도 우위가 나타났다."
+  },
+  {
+   "asset": "krw",
+   "direction": "up",
+   "text": "원/달러 자체의 이번 주 종가는 확인하지 못했지만, 12월 인상 확률 상승으로 한미 금리차 추가 확대 우려가 커진 만큼 원화는 약세 압력을 테스트받을 가능성이 있다."
+  }
+ ],
+ "fx": {
+  "headline": "12월 인상 확률 급등에 원화는 약세 압력 테스트, 호르무즈는 사상 최다 공격",
+  "numbers": [
+   {
+    "text": "한미 기준금리차 상단 기준 0.75%p 유지(한국 3.00%, 미국 3.75~4.00%)",
+    "source": 1
+   },
+   {
+    "text": "12월 FOMC 인상 확률 9월말 73%→10/28 85%(블룸버그·Kalshi/Polymarket 평균)",
+    "source": 7
+   }
+  ],
+  "drivers": [
+   {
+    "factor": "FOMC 매파적 소수의견(쿡·해맥 인상 주장)",
+    "effect": "krw_weak",
+    "text": "12월 인상 확률이 급등하며 한미 금리차 추가 확대 우려가 커졌다."
+   },
+   {
+    "factor": "호르무즈 해협 10월 사상 최다 공격",
+    "effect": "krw_weak",
+    "text": "원유 수입대금 부담과 공급망 리스크 프리미엄이 이어진다."
+   },
+   {
+    "factor": "SK하이닉스·삼성전자 메모리 슈퍼사이클",
+    "effect": "krw_strong",
+    "text": "반도체 수출 호조와 외국인 수급 개선 기대가 원화를 지지하는 요인이다."
+   },
+   {
+    "factor": "한국은행 기준금리 동결(3.00%)",
+    "effect": "neutral",
+    "text": "이번 주 자체적으로는 추가 변동 요인이 크지 않았다."
+   }
+  ],
+  "hedge": "환헤지 비용(스왑포인트)을 좌우하는 한미 단기금리차는 이번 주 0.75%p로 변화가 없었지만, 12월 인상 확률이 85%까지 오른 만큼 12월 결정 전까지 금리차 확대에 대한 경계가 필요하다.",
+  "flows": "이번 주 외국인 코스피 순매수·순매도의 확정 수치는 확인하지 못했다. 삼성전자 3분기 확정실적(오늘) 발표를 앞두고 대기성 관망이 있었을 것으로 추정되나, 수급 데이터로 검증하지는 못했다.",
+  "watch_next": [
+   "12월 9일 FOMC 점도표·기자회견",
+   "삼성전자 3분기 확정실적(오늘 16:00 KST)"
+  ]
+ },
+ "institution_impact": [
+  {
+   "institution": "securities",
+   "text": "FOMC가 매파적 소수의견과 함께 동결되며 美 장기금리가 다시 5%위로 올라섰고, 12월 인상 확률도 85%로 뛰어 국내 증권사의 트레이딩·조달 환경에 부담이 커졌다.",
+   "points": [
+    {
+     "topic": "trading",
+     "direction": "negative",
+     "text": "10년물이 FOMC 발표 후 다시 5%선을 넘어서(옐로우파이낸스 라이브 기준) 보유 채권 평가손 부담이 재차 커질 수 있는 구간이다.",
+     "source": 3
+    },
+    {
+     "topic": "brokerage",
+     "direction": "neutral",
+     "text": "SK하이닉스·삼성전자 실적 시즌이 지난주로 사실상 마무리돼, 이번 주는 거래대금을 견인할 만한 개별 이벤트가 상대적으로 적었다.",
+     "source": 10
+    },
+    {
+     "topic": "ib",
+     "direction": "mixed",
+     "text": "12월 추가 인상 기대가 커지며 단기 발행금리 부담이 높아질 수 있지만, 메모리 업황 호조는 반도체 관련 기업의 회사채 수요 기반을 지지한다.",
+     "source": 1
+    },
+    {
+     "topic": "wm",
+     "direction": "positive",
+     "text": "美 10년물이 5%권을 유지하는 한 [[+확정금리 상품의 매력]]은 이어진다.",
+     "source": 3
+    }
+   ]
+  },
+  {
+   "institution": "lp",
+   "text": "美 장기금리가 FOMC 이후 다시 5%위로 올라서면서 듀레이션 갭 부호에 따라 보험사별 순자산 방향이 갈리는 구간이 이어진다. K-ICS는 2분기 수치(215.2%)에서 정체된 채다.",
+   "points": [
+    {
+     "topic": "duration_gap",
+     "direction": "mixed",
+     "text": "10년물이 FOMC 발표 후 재차 5%선을 넘어섰다. **듀레이션 갭이 음(-)인 보험사는** 부채 가치가 더 크게 줄어 [[+순자산이 늘고]], **갭이 양(+)인 보험사는** 반대로 [[-순자산이 줄어든다]].",
+     "source": 3
+    },
+    {
+     "topic": "kics",
+     "direction": "neutral",
+     "text": "가장 최근 발표된 6월말(2분기) K-ICS 비율은 215.2%(생보 206.8%·손보 230.9%)로, 9월말(3분기) 수치는 이번 주에도 발표되지 않았다.",
+     "source": 9
+    },
+    {
+     "topic": "allocation",
+     "direction": "mixed",
+     "text": "한미 금리차는 0.75%p로 이번 주 변화가 없었지만, 12월 인상 확률이 85%까지 오른 만큼 해외채권 배분 매력도의 향방은 12월 결정에 더 달려있다.",
+     "source": 1
+    },
+    {
+     "topic": "fx_hedge",
+     "direction": "neutral",
+     "text": "금리차 자체는 이번 주 변화가 없어 단기 환헤지 비용도 안정적인 편이나, 12월 인상 기대가 커진 만큼 변동성 확대에 대비해야 하는 구간이다.",
+     "source": 7
+    }
+   ]
+  },
+  {
+   "institution": "gp",
+   "text": "삼성전자 확정실적 발표를 앞두고 관망세가 짙었던 한 주였다. 반도체 투톱의 양호한 실적 시즌은 주식형 AUM에 우호적이었지만, 美 홈빌더 업황 부진은 대안투자 쪽엔 여전히 부담이다.",
+   "points": [
+    {
+     "topic": "flows",
+     "direction": "neutral",
+     "text": "이번 주 외국인 코스피 순매수·순매도의 확정 수치는 확인하지 못했다. 삼성전자 3분기 확정실적(오늘) 발표를 앞둔 대기성 관망이 있었을 것으로 추정된다.",
+     "source": 10
+    },
+    {
+     "topic": "fees",
+     "direction": "positive",
+     "text": "SK하이닉스 역대 최대 실적(지난주)에 이어 삼성전자 3분기 잠정실적도 컨센서스를 소폭 상회해, 주식형 AUM 평가액에는 우호적인 환경이 이어졌다.",
+     "source": 10
+    },
+    {
+     "topic": "products",
+     "direction": "positive",
+     "text": "美 10년물이 5%권을 유지해 만기까지 들고 가면 수익률이 확정되는 [[+만기매칭형 채권펀드를 내놓기 좋은 환경]]이 이어지고 있다.",
+     "source": 3
+    },
+    {
+     "topic": "alternatives",
+     "direction": "negative",
+     "text": "美 30년 모기지금리가 7%대 고점권(10/22 7.32%)을 유지하고 D.R.호튼이 오늘 4분기 실적을 발표하는 가운데, PE의 부동산 관련 딜·인수금융은 [[-여전히 보수적으로 접근해야 하는]] 구간이다.",
+     "source": 12
+    }
+   ]
+  }
+ ],
+ "scenarios": [
+  {
+   "name": "기본 · 12월 0.25%p 추가 인상",
+   "probability": 55,
+   "text": "블룸버그 집계 기준 시장은 12월 인상 확률을 85%로 가격에 반영하고 있어, 쿡·해맥의 매파적 반대표가 다수 의견으로 이어질 가능성이 가장 크다."
+  },
+  {
+   "name": "매파 서프라이즈·인상 가속",
+   "probability": 15,
+   "text": "9월 CPI(3.7%)가 5월 고점에 다시 근접하는 등 물가 재가속이 뚜렷해지면, 점도표상 2027년 추가 인상 경로까지 열릴 수 있다."
+  },
+  {
+   "name": "비둘기 선회·12월 동결",
+   "probability": 30,
+   "text": "워시 의장이 포워드 가이던스를 자제한 만큼, 11월 고용·물가 지표가 둔화되면 시장 가격과 달리 12월에도 동결로 남을 가능성을 배제할 수 없다."
+  }
+ ],
+ "interview_insights": [
+  {
+   "question": "리사 쿡 이사의 인상 반대표가 왜 시장의 예상을 벗어난 일로 평가되는가?",
+   "answer_points": "평소 비둘기로 분류되던 인사가 매파적 소수의견에 합류한 사례로, 점도표·공개 발언만으로 개별 위원의 정책 성향을 고정적으로 예단하기 어렵다는 점을 설명한다."
+  },
+  {
+   "question": "중간선거 6일 전에 나온 FOMC 결정을 시장이 정치적으로 해석하는 이유는?",
+   "answer_points": "워시 의장의 '정치는 역할이 없었다'는 발언과 연준의 독립성 원칙을 짚고, 시점 자체가 해석을 낳는 이유를 선거 일정과 통화정책 커뮤니케이션 관점에서 설명한다."
+  },
+  {
+   "question": "호르무즈 공격이 사상 최다를 기록했는데도 유가가 100달러 안팎에서 비교적 안정적인 이유는?",
+   "answer_points": "외교 채널(사우디·파키스탄·튀르키예 중재)과 군사적 긴장이 동시에 진행되는 구도를 들어, 가격 리스크와 물량·보험료 리스크를 분리해 설명한다."
+  }
+ ],
+ "sources": [
+  {
+   "id": 1,
+   "title": "Federal Reserve issues FOMC statement (Oct 28, 2026)",
+   "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+   "accessed": "2026-10-29"
+  },
+  {
+   "id": 2,
+   "title": "Fed holds rates steady days before the midterms, even as inflation runs hot",
+   "url": "https://fortune.com/2026/10/28/fed-rates-steady-midterms-october-3-75-to-4-percent-cook-hammack-dissent/",
+   "accessed": "2026-10-29"
+  },
+  {
+   "id": 3,
+   "title": "Fed meeting live updates: Warsh press conference (Oct 28, 2026)",
+   "url": "https://finance.yahoo.com/economy/policy/live/fed-meeting-live-updates-federal-reserve-october-meeting-kevin-warsh-161129201.html",
+   "accessed": "2026-10-29"
+  },
+  {
+   "id": 4,
+   "title": "Federal Reserve December 2026 meeting schedule",
+   "url": "https://www.federalreserve.gov/newsevents/2026-december.htm",
+   "accessed": "2026-10-29"
+  },
+  {
+   "id": 5,
+   "title": "FRED: S&P 500 (SP500)",
+   "url": "https://fred.stlouisfed.org/series/SP500",
+   "accessed": "2026-10-29"
+  },
+  {
+   "id": 6,
+   "title": "Ship attacks in Strait of Hormuz hit record high in October (Reuters via Al-Monitor)",
+   "url": "https://www.al-monitor.com/originals/2026/10/ship-attacks-strait-hormuz-hit-record-high-october",
+   "accessed": "2026-10-29"
+  },
+  {
+   "id": 7,
+   "title": "Fed decision odds snapshot 2026-09-29T0822 (Kalshi/Polymarket avg, Dec meeting)",
+   "url": "https://defirate.com/prediction-markets/fed-decision-odds/snapshot/2026-09-29T0822/",
+   "accessed": "2026-10-29"
+  },
+  {
+   "id": 8,
+   "title": "서울 집값 상승폭, 전월 대비 반토막…강남·서초, 동반 하락",
+   "url": "https://newstomato.com/ReadNews.aspx?no=1317900",
+   "accessed": "2026-10-29"
+  },
+  {
+   "id": 9,
+   "title": "6월 말 보험사 K-ICS 비율 215.2%",
+   "url": "https://eiec.kdi.re.kr/policy/materialView.do?num=286908",
+   "accessed": "2026-10-28"
+  },
+  {
+   "id": 10,
+   "title": "삼성전자 3분기: 매출은 기대 하회, 영업이익은 소폭 상회",
+   "url": "https://www.stockhub.kr/insights/view_1791420339349_rirmz2bfh-samsung-electronics-005930-cy26-q3-preliminary-earnings-20261008",
+   "accessed": "2026-10-29"
+  },
+  {
+   "id": 11,
+   "title": "셀트리온, 3분기 역대 최대 실적…연매출 5조 유력",
+   "url": "https://news.mtn.co.kr/news-detail/2026101207552521921",
+   "accessed": "2026-10-29"
+  },
+  {
+   "id": 12,
+   "title": "Mortgage Rates Ease in Weekly Survey as Bond Comparisons Diverge | Today, October 23, 2026",
+   "url": "https://themortgagereports.com/mortgage-rates-now/mortgage-rates-today-october-23-2026",
+   "accessed": "2026-10-29"
+  },
+  {
+   "id": 13,
+   "title": "D.R. Horton to report Q4 FY26 results on October 29",
+   "url": "https://scanx.trade/stock-market-news/companies/d-r-horton-report-q4fy26-results-october-29/50616868",
+   "accessed": "2026-10-29"
+  },
+  {
+   "id": 14,
+   "title": "Anthropic Eyes November IPO, $42B Loan as Trump Says the US May Take a Stake",
+   "url": "https://marketcapof.com/news/anthropic-ipo-broadcom-loan-us-government-stake/",
+   "accessed": "2026-10-29"
+  }
+ ]
+}
