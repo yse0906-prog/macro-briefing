@@ -1,0 +1,370 @@
+{
+ "date": "2026-11-11",
+ "type": "weekly",
+ "period": {
+  "from": "2026-11-09",
+  "to": "2026-11-10"
+ },
+ "published_at": "2026-11-11T12:00:00+09:00",
+ "headline": "10월 CPI 서프라이즈에 12월 인상확률 86%로 급등",
+ "summary": [
+  "11/10 발표된 10월 CPI는 헤드라인 전월비 +0.4%(예상 +0.3%), 근원 +0.3%(예상 +0.2%)로 모두 예상을 웃돌았고, 2025년 정부 셧다운발 데이터 공백으로 전년동월대비 수치는 이번에도 공식 발표되지 않았다.",
+  "월러·로건 등 연은 인사들의 매파 발언이 이어지며 CME FedWatch 기준 12월 FOMC의 0.25%p 인상 확률은 86%까지, 0.50%p 인상 확률은 13.6%까지 올랐고, 2년물 금리는 17.6bp 급등해 4.74%를 기록했다.",
+  "그 여파로 美 모기지금리(MND 일일조사)는 7.18%에서 7.30%로 뛰었고, 국내에서는 11/2~6 외국인이 반도체 투톱에서만 7조6,162억원을 팔며 삼성전자·SK하이닉스 주가가 각각 16.1%, 20.2% 급락했다."
+ ],
+ "releases": [
+  {
+   "series": "CPI_MOM",
+   "name": "CPI 전월비 (10월)",
+   "release_date": "2026-11-10",
+   "period": "2026-10-01",
+   "consensus": 0.3,
+   "consensus_source": 1,
+   "impact": "negative",
+   "interpretation": "전월비 0.4%로 예상(0.3%)을 웃돌아, 인플레이션이 재가속하고 있다는 신호로 12월 인상 확률을 끌어올린 요인이다.",
+   "actual": 0.4,
+   "previous": 0.6,
+   "actual_source": 1
+  },
+  {
+   "series": "CORE_CPI_MOM",
+   "name": "근원 CPI 전월비 (10월)",
+   "release_date": "2026-11-10",
+   "period": "2026-10-01",
+   "consensus": 0.2,
+   "consensus_source": 1,
+   "impact": "negative",
+   "interpretation": "전월비 0.3%로 예상(0.2%)을 웃돌았다. 월러 이사가 밝힌 0.5%p 인상 검토 기준과 맞아떨어져 매파적으로 해석됐다.",
+   "actual": 0.3,
+   "previous": 0.3,
+   "actual_source": 1
+  },
+  {
+   "series": "CPIAUCSL",
+   "name": "CPI 전년비 (10월)",
+   "release_date": "2026-11-10",
+   "period": "2026-10-01",
+   "consensus": null,
+   "consensus_source": null,
+   "impact": "neutral",
+   "interpretation": "2025년 정부 셧다운으로 그해 10월 데이터가 충분히 수집되지 못해 BLS가 전년동월대비 수치를 공식 집계하지 못했다. FRED 반영 대기이며, 민간 추정치는 3.7~4.0% 범위다."
+  },
+  {
+   "series": "CPILFESL",
+   "name": "근원 CPI 전년비 (10월)",
+   "release_date": "2026-11-10",
+   "period": "2026-10-01",
+   "consensus": null,
+   "consensus_source": null,
+   "impact": "neutral",
+   "interpretation": "같은 이유로 근원 CPI 전년동월대비 수치도 이번에는 공식 집계되지 않았다. FRED 반영 대기다."
+  }
+ ],
+ "fomc": {
+  "next_meeting": {
+   "date": "2026-12-09",
+   "announce_kst": "2026-12-10T04:00:00+09:00",
+   "probabilities": [
+    {
+     "outcome": "hike25",
+     "pct": 86
+    },
+    {
+     "outcome": "hike50",
+     "pct": 14
+    }
+   ],
+   "probabilities_week_ago": [
+    {
+     "outcome": "hike25",
+     "pct": 77
+    },
+    {
+     "outcome": "hold",
+     "pct": 22
+    },
+    {
+     "outcome": "cut25",
+     "pct": 1
+    }
+   ],
+   "view": "hike25",
+   "confidence": "high",
+   "rationale": [
+    "10월 CPI가 헤드라인·근원 모두 예상을 웃돌았고, 월러·로건 등 연은 인사들이 잇따라 매파 발언을 내며 CME FedWatch 기준 25bp 인상 확률이 86%까지, 50bp 인상 확률도 13.6%까지 올랐다.",
+    "2년물 금리가 17.6bp 급등하는 등 시장이 매파적 경로를 빠르게 선반영하고 있다."
+   ],
+   "watch_points": [
+    "12월 9일 점도표상 2027년 인상 경로",
+    "11월 PPI(11/13)·소매판매(11/17) 결과"
+   ]
+  },
+  "last_meeting": {
+   "date": "2026-10-28",
+   "decision": "hold",
+   "range": [
+    3.75,
+    4.0
+   ],
+   "vote": {
+    "for": 10,
+    "against": 2
+   },
+   "tone": 0.6,
+   "statement_points": [
+    "경제활동은 견고한 속도로 확장 중이다(9월 '완만한'에서 상향)",
+    "인플레이션은 여전히 높은 수준이며, 위원회는 가격 안정을 달성할 것이다"
+   ],
+   "press_conference": "워시 의장은 \"정치는 이번 결정에 어떤 역할도 하지 않았다\"며 트럼프 대통령 등의 인하 압박 질문에 선을 그었고, \"확고한 결론이 있었다면 크게 알렸을 것\"이라며 사전 forward guidance를 자제하는 기조를 재확인했다."
+  }
+ },
+ "market_impact": [
+  {
+   "asset": "us_equities",
+   "direction": "down",
+   "text": "S&P500은 CPI 발표일(11/10) 7,549.94에서 7,520.93으로 0.38% 내렸다. 다만 11/6(7,376.86) 저점에서는 이미 2% 넘게 회복한 뒤였다."
+  },
+  {
+   "asset": "us_rates",
+   "direction": "up",
+   "text": "2년물 국채금리가 CPI 발표 후 17.6bp 급등해 4.74%를 기록했고 10년물도 5%에 근접했다. 30년 모기지금리(MND 일일조사)도 7.18%에서 7.30%로 뛰었다."
+  },
+  {
+   "asset": "usd",
+   "direction": "up",
+   "text": "달러인덱스가 CPI 발표 이후 0.60% 올랐다."
+  },
+  {
+   "asset": "krw",
+   "direction": "up",
+   "text": "원/달러는 CPI 발표 전날(11/10) 서울장 1,347.1원까지 내렸다가, 발표 다음날 밤 시간대(11/11)에는 1,344.5원대로, NDF는 1,342.10원까지 되돌아갔다."
+  }
+ ],
+ "fx": {
+  "headline": "뜨거운 10월 CPI에 2년물 17.6bp 급등, 원/달러 야간 1,344원대로 되돌림",
+  "numbers": [
+   {
+    "text": "원/달러 서울장 종가 11/10 1,347.1원→11/11 1,337.5원, 야간(NY) 11/11 1,344.5원(+4.5원)·NDF 1,342.10원",
+    "source": 3
+   },
+   {
+    "text": "CME FedWatch 12월 0.25%p 인상 확률 86%, 0.50%p 인상 확률 13.6%(종전 거의 0%)",
+    "source": 1
+   },
+   {
+    "text": "한미 기준금리차 상단 기준 1.00%p 유지(한국 3.00%, 미국 3.75~4.00%)",
+    "source": 4
+   }
+  ],
+  "drivers": [
+   {
+    "factor": "10월 CPI 서프라이즈(헤드라인·근원 모두 상회)",
+    "effect": "krw_weak",
+    "text": "인플레이션 재가속 신호로 12월 인상 확률이 86%까지 오르며 한미 금리차 확대 우려가 커졌다."
+   },
+   {
+    "factor": "Fed 인사 매파 발언(월러·로건)",
+    "effect": "krw_weak",
+    "text": "월러 이사의 0.5%p 인상 검토 발언과 로건 총재의 추가 2회 인상 주장이 달러 강세를 뒷받침했다."
+   },
+   {
+    "factor": "호르무즈 긴장 완화(WTI 급락)",
+    "effect": "krw_strong",
+    "text": "WTI가 11주 최저권으로 내려오며 원유 수입 대금 부담이 줄어 원화에는 우호적인 요인으로 작용했다."
+   },
+   {
+    "factor": "美 기술주 저가매수 반등",
+    "effect": "krw_strong",
+    "text": "11/9 미국 증시가 저가매수로 반등하며 위험선호가 일부 회복된 점이 달러 약세 요인으로 거론됐다."
+   }
+  ],
+  "hedge": "2년물 금리가 17.6bp 급등하며 한미 단기금리차가 다시 벌어져, 환헤지 비용(스왑포인트)도 이번 주 들어 높아졌을 것으로 추정된다.",
+  "flows": "11/2~6 외국인은 코스피에서 10조4,427억원을 순매도했고 그중 72.9%가 삼성전자·SK하이닉스였다. 11/6에는 반도체 투톱에서 외국인이 순매수로 돌아서는 등 수급이 출렁였으나, 11/9~10 확정 수급 수치는 확인하지 못했다.",
+  "watch_next": [
+   "12월 9일 FOMC 점도표·기자회견",
+   "11/13 PPI(10월)"
+  ]
+ },
+ "institution_impact": [
+  {
+   "institution": "securities",
+   "text": "CPI 서프라이즈로 2년물 금리가 급등하고 반도체 투톱 변동성이 커지며, 국내 증권사의 트레이딩·브로커리지 환경도 출렁인 한 주였다.",
+   "points": [
+    {
+     "topic": "trading",
+     "direction": "mixed",
+     "text": "2년물 금리가 17.6bp 급등해 단기 채권 평가손실 압력이 커졌지만, 반도체 투톱의 급격한 변동성은 트레이딩 부문에 거래 기회로도 작용했을 수 있다.",
+     "source": 3
+    },
+    {
+     "topic": "brokerage",
+     "direction": "positive",
+     "text": "외국인이 11/2~6 삼성전자·SK하이닉스에서만 7조6,162억원을 팔고 11/6에는 다시 순매수로 돌아서는 등 수급이 출렁이며 거래대금이 늘었을 것으로 추정되나, 확정 수치는 확인하지 못했다.",
+     "source": 7
+    },
+    {
+     "topic": "ib",
+     "direction": "mixed",
+     "text": "12월 인상 확률이 86%까지 오르며 단기 발행금리 부담이 다시 커졌다.",
+     "source": [
+      1,
+      2
+     ]
+    },
+    {
+     "topic": "wm",
+     "direction": "positive",
+     "text": "2년물이 4.74%까지 오르며 [[+확정금리 상품의 매력]]은 더 커졌다.",
+     "source": 3
+    }
+   ]
+  },
+  {
+   "institution": "lp",
+   "text": "2년물 금리가 급등하며 듀레이션 갭 부호에 따라 보험사별 순자산 영향이 갈렸고, K-ICS는 2분기 수치(215.2%)에서 여전히 정체된 채다.",
+   "points": [
+    {
+     "topic": "duration_gap",
+     "direction": "mixed",
+     "text": "2년물이 CPI 발표 후 17.6bp 급등해 4.74%를 기록했다. **듀레이션 갭이 음(-)인 보험사는** 이 구간에서 순자산이 늘고, **갭이 양(+)인 보험사는** 반대로 줄었을 것으로 추정된다.",
+     "source": 3
+    },
+    {
+     "topic": "kics",
+     "direction": "neutral",
+     "text": "가장 최근 발표된 6월말(2분기) K-ICS 비율은 215.2%(생보 206.8%·손보 230.9%)로, 9월말(3분기) 수치는 이번 주에도 발표되지 않았다. 삼성생명 등 보험사의 3분기 실적은 11/12 발표될 예정이다.",
+     "source": 5
+    },
+    {
+     "topic": "allocation",
+     "direction": "mixed",
+     "text": "한미 금리차는 1.00%p로 유지됐지만 12월 인상 확률이 86%까지 오른 만큼 해외채권 배분 매력도는 12월 결정에 더 민감해졌다.",
+     "source": 4
+    },
+    {
+     "topic": "fx_hedge",
+     "direction": "neutral",
+     "text": "국민연금의 전략적 환헤지·한국은행과의 외환스와프 체제는 이번 주에도 새로운 변동 없이 유지되고 있다.",
+     "source": 6
+    }
+   ]
+  },
+  {
+   "institution": "gp",
+   "text": "반도체 투톱을 중심으로 한 외국인 수급 변동성과 美 모기지금리 재상승은 주식형·대안투자 양쪽에 엇갈린 영향을 줬다.",
+   "points": [
+    {
+     "topic": "flows",
+     "direction": "mixed",
+     "text": "외국인은 11/2~6 코스피에서 10조4,427억원을 순매도했으나 11/6에는 반도체 투톱 순매수로 돌아서는 등 방향이 출렁였다.",
+     "source": 7
+    },
+    {
+     "topic": "fees",
+     "direction": "mixed",
+     "text": "삼성전자·SK하이닉스 주가가 같은 기간 16.1%, 20.2% 급락해 주식형 AUM 평가액에는 부담이었으나, 실적 자체는 바뀌지 않아 펀더멘털 훼손으로 보기는 어렵다.",
+     "source": 9
+    },
+    {
+     "topic": "products",
+     "direction": "positive",
+     "text": "2년물이 4%대 후반까지 오르며 만기까지 들고 가면 수익률이 확정되는 [[+만기매칭형 채권펀드를 내놓기 좋은 환경]]이 이어지고 있다.",
+     "source": 3
+    },
+    {
+     "topic": "alternatives",
+     "direction": "negative",
+     "text": "모기지뉴스데일리 30년 고정 모기지금리가 CPI 서프라이즈 하루 만에 7.18%에서 7.30%로 뛰어, PE의 부동산 관련 딜·인수금융은 [[-여전히 보수적으로 접근해야 하는]] 구간이다.",
+     "source": 8
+    }
+   ]
+  }
+ ],
+ "scenarios": [
+  {
+   "name": "기본 · 12월 매파 우위 지속, 25bp 인상",
+   "probability": 65,
+   "text": "CME FedWatch·Kalshi/Polymarket 평균 기준 25bp 인상 확률이 86%로 거의 완전히 반영돼, 11월 PPI·소매판매까지 견조하면 이 기조가 이어질 가능성이 가장 크다."
+  },
+  {
+   "name": "매파 서프라이즈·50bp 인상",
+   "probability": 15,
+   "text": "월러 이사가 시사한 0.5%p 인상 기준을 PPI·PCE 등 추가 지표가 재확인하면, 이미 13.6%까지 오른 50bp 인상 확률이 더 높아질 수 있다."
+  },
+  {
+   "name": "되돌림·25bp 인상 또는 동결",
+   "probability": 20,
+   "text": "11월 PPI·소매판매·PCE가 둔화되거나 반도체주 변동성이 실물로 번지면, CPI 서프라이즈 하루 만에 86%까지 오른 확률이 다시 낮아질 수 있다."
+  }
+ ],
+ "interview_insights": [
+  {
+   "question": "10월 CPI의 전년동월대비 수치가 발표되지 않은 이유는?",
+   "answer_points": "2025년 정부 셧다운으로 그해 10월 데이터가 충분히 수집되지 못해 BLS가 전년동월대비 비교 기준을 만들지 못했다는 점을 짚는다."
+  },
+  {
+   "question": "월간 지표 서프라이즈만으로 12월 인상 확률이 77%에서 86%까지 오른 이유는?",
+   "answer_points": "월러·로건 등 연은 인사들의 매파 발언이 CPI 서프라이즈와 동시에 나오며 시장이 매파적 경로를 빠르게 선반영했다는 점으로 설명한다."
+  },
+  {
+   "question": "삼성전자·SK하이닉스 실적이 바뀌지 않았는데 주가만 20% 가까이 급락한 이유는?",
+   "answer_points": "미국 중간선거발 AI규제 우려와 글로벌 금리 경로 변화가 밸류에이션에 미친 영향이, 실적(펀더멘털)과는 단기적으로 분리돼 움직인 사례로 설명한다."
+  }
+ ],
+ "sources": [
+  {
+   "id": 1,
+   "title": "CPI inflation report: October 2026",
+   "url": "https://www.cnbc.com/2026/11/10/cpi-inflation-report-october-2026.html",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": 2,
+   "title": "Fed decision odds snapshot (Kalshi/Polymarket, Dec meeting)",
+   "url": "https://defirate.com/odds/fed-decision/snapshot/latest/",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": 3,
+   "title": "KB국민은행 환율 전망 (2026-11-11)",
+   "url": "https://kbthink.com/investment/fx/daily/261111.html",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": 4,
+   "title": "기준금리 3.00% 동결 확정|연속 인상 멈춘 이유와 대출금리 영향, 11월 전망",
+   "url": "https://foxcg.com/base-rate-freeze-october/",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": 5,
+   "title": "6월 말 보험사 K-ICS 비율 215.2%",
+   "url": "https://eiec.kdi.re.kr/policy/materialView.do?num=286908",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": 6,
+   "title": "국민연금 '고환율 소방수' 등판 관련 보도(전략적 환헤지·외환스와프 연장)",
+   "url": "https://www.twig24.com/news/2025/12/15/20251215500230",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": 7,
+   "title": "외국인 닷새간 10조 던지자 코스피 급락 (서울신문, 2026-11-09)",
+   "url": "https://m.seoul.co.kr/news/newsView.php?id=20261109029002",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": 8,
+   "title": "Mortgage News Daily: 30 Year Fixed daily rate survey",
+   "url": "https://www.mortgagenewsdaily.com/mortgage-rates/30-year-fixed?id=36645",
+   "accessed": "2026-11-11"
+  },
+  {
+   "id": 9,
+   "title": "economist.co.kr 반도체 투톱 하락 보도 (2026-11-06)",
+   "url": "https://economist.co.kr/article/view/ecn202611060012",
+   "accessed": "2026-11-11"
+  }
+ ]
+}
