@@ -1,0 +1,404 @@
+{
+ "date": "2026-11-14",
+ "type": "weekly",
+ "period": {
+  "from": "2026-11-09",
+  "to": "2026-11-13"
+ },
+ "published_at": "2026-11-14T07:00:00+09:00",
+ "headline": "PPI 무난해도 매파 발언 겹쳐 12월 인상확률 89%, 엔비디아는 CEO 교체",
+ "summary": [
+  "11/13 발표된 10월 PPI는 헤드라인 전월비 +0.3%로 무난했지만 핵심(식품·에너지·무역서비스 제외)지수는 +0.5%로 더 뜨거웠고, 데일리·굴스비 등 연은 인사들의 매파 발언이 겹치며 CME FedWatch·Kalshi/Polymarket 평균 기준 12월 25bp 인상 확률은 11/11 86%에서 11/13 89%까지 올랐다.",
+  "美 10년물 국채금리는 5.15%까지 올라섰고 모기지뉴스데일리 30년 고정 모기지금리도 한 주 사이 7.17%에서 7.50%로 뛰었으며, 같은 주 엔비디아 이사회는 젠슨 황 CEO의 사임을 수용하고 콜렛 크레스 CFO를 임시 CEO로 선임해(11/12 공시) 주가가 장중 최대 13% 급락했다.",
+  "그런데도 11/1~10 한국 반도체 수출은 전년대비 331.2% 늘며 펀더멘털 우려를 덜어냈고, 원/달러는 수출업체 달러 매도 등에 힘입어 주간 기준 1,356원대에서 1,335원대로 강세 반전했으며, 앤트로픽은 목표 밸류에이션을 1.4조달러로 낮춘 채 나스닥 IPO 로드쇼를 개시했다(11/10)."
+ ],
+ "releases": [
+  {
+   "series": "PPIFIS",
+   "name": "PPI 전월비 (10월)",
+   "release_date": "2026-11-13",
+   "period": "2026-10-01",
+   "consensus": null,
+   "consensus_source": null,
+   "impact": "negative",
+   "interpretation": "최종수요 PPI는 전월비 +0.3%(전년비 6.5%)로 비교적 무난했지만, 식품·에너지·무역서비스를 제외한 핵심지수는 전월비 +0.5%(전년비 4.9%)로 더 뜨겁게 나와 12월 FOMC의 추가 인상 기대를 다시 밀어 올린 요인이다. 시장 컨센서스는 확인하지 못했다."
+  },
+  {
+   "series": "CORE_PPI_MOM",
+   "name": "핵심 PPI 전월비 (10월, 식품·에너지·무역서비스 제외)",
+   "release_date": "2026-11-13",
+   "period": "2026-10-01",
+   "consensus": null,
+   "consensus_source": null,
+   "impact": "negative",
+   "interpretation": "전월비 +0.5%(전년비 4.9%)로 헤드라인보다 더 매파적으로 해석됐다. 전월 수치는 확인하지 못해 null로 둔다.",
+   "actual": 0.5,
+   "previous": null,
+   "actual_source": 1
+  }
+ ],
+ "fomc": {
+  "next_meeting": {
+   "date": "2026-12-09",
+   "announce_kst": "2026-12-10T04:00:00+09:00",
+   "probabilities": [
+    {
+     "outcome": "hike25",
+     "pct": 89
+    },
+    {
+     "outcome": "hike50",
+     "pct": 9
+    },
+    {
+     "outcome": "hold",
+     "pct": 2
+    }
+   ],
+   "probabilities_week_ago": [
+    {
+     "outcome": "hike25",
+     "pct": 77
+    },
+    {
+     "outcome": "hold",
+     "pct": 22
+    },
+    {
+     "outcome": "cut25",
+     "pct": 1
+    }
+   ],
+   "view": "hike25",
+   "confidence": "high",
+   "rationale": [
+    "10월 PPI 핵심지수가 전월비 +0.5%로 예상보다 뜨겁게 나왔고, 데일리·굴스비 등 연은 인사들이 매파 발언을 이어가며 CME FedWatch·Kalshi/Polymarket 평균 기준 25bp 인상 확률이 11/11 86%에서 11/13 89%까지 올랐다.",
+    "美 10년물 국채금리가 5.15%까지 오르고 달러인덱스가 19개월 최고치를 기록하는 등 시장이 매파적 경로를 계속 선반영하고 있다."
+   ],
+   "watch_points": [
+    "12월 9일 점도표상 2027년 인상 경로",
+    "11/17 소매판매(10월)",
+    "11/25 PCE 물가지수(10월)"
+   ]
+  },
+  "last_meeting": {
+   "date": "2026-10-28",
+   "decision": "hold",
+   "range": [
+    3.75,
+    4.0
+   ],
+   "vote": {
+    "for": 10,
+    "against": 2
+   },
+   "tone": 0.6,
+   "statement_points": [
+    "경제활동은 견고한 속도로 확장 중이다(9월 '완만한'에서 상향)",
+    "인플레이션은 여전히 높은 수준이며, 위원회는 가격 안정을 달성할 것이다"
+   ],
+   "press_conference": "워시 의장은 \"정치는 이번 결정에 어떤 역할도 하지 않았다\"며 트럼프 대통령 등의 인하 압박 질문에 선을 그었고, \"확고한 결론이 있었다면 크게 알렸을 것\"이라며 사전 forward guidance를 자제하는 기조를 재확인했다."
+  }
+ },
+ "market_impact": [
+  {
+   "asset": "us_equities",
+   "direction": "down",
+   "text": "S&P500은 PPI 발표일(11/13) 전일 대비 0.40% 내린 7,540.62에 마감했지만, 주간 기준으로는 +1.4% 올랐다. 같은 주 엔비디아 CEO 교체 쇼크(11/12)로 개별 종목 변동성은 컸다."
+  },
+  {
+   "asset": "us_rates",
+   "direction": "up",
+   "text": "美 10년물 국채금리가 PPI·Fed 매파 발언 속에 5.15%까지 올라섰다. 모기지뉴스데일리 30년 고정 일일 지표도 한 주 사이 7.17%→7.50%로 33bp 뛰었다."
+  },
+  {
+   "asset": "usd",
+   "direction": "up",
+   "text": "달러인덱스가 19개월 만에 최고치를 기록했다. 12월 FOMC 인상 확률 상승과 Fed 인사들의 매파 발언이 배경이다."
+  },
+  {
+   "asset": "krw",
+   "direction": "down",
+   "text": "원/달러는 11/6 서울장 종가 1,356.6원(야간 1,363.0원)에서 출발해, 반도체 수출 호조에 따른 수출업체 달러 네고 물량 등으로 11/12 야간 1,335.5원(NDF 1,334.7원)까지 내려(원화 강세) 주간 기준 약 20원 넘게 하락했다."
+  }
+ ],
+ "fx": {
+  "headline": "매파 연준에도 반도체 수출 331% 급증에 원/달러는 주간 기준 강세 반전",
+  "numbers": [
+   {
+    "text": "원/달러 11/6 서울장 종가 1,356.6원(야간 1,363.0원)→11/12 야간 1,335.5원(NDF 1,334.7원)",
+    "source": 5
+   },
+   {
+    "text": "CME FedWatch·Kalshi/Polymarket 12월 25bp 인상 확률 11/11 86%→11/13 89%, 보류 2%",
+    "source": 2
+   },
+   {
+    "text": "11/1~10 반도체 수출 166.3억달러(전체 수출의 49.7%, 전년대비 +331.2%)",
+    "source": 4
+   },
+   {
+    "text": "한미 기준금리차 상단 기준 1.00%p 유지(한국 3.00%, 미국 3.75~4.00%)",
+    "source": 15
+   }
+  ],
+  "drivers": [
+   {
+    "factor": "Fed 인사 매파 발언 지속(데일리·굴스비)",
+    "effect": "krw_weak",
+    "text": "월러·로건에 이어 데일리·굴스비도 추가 긴축 가능성을 시사해 12월 인상 확률을 89%까지 끌어올렸다."
+   },
+   {
+    "factor": "반도체 수출 급증에 따른 수출업체 달러 매도(네고)",
+    "effect": "krw_strong",
+    "text": "11/1~10 반도체 수출이 전년대비 331.2% 늘며 역내 달러 공급 요인으로 평가됐다."
+   },
+   {
+    "factor": "외국인 코스피 저가매수 유입(11/10)",
+    "effect": "krw_strong",
+    "text": "반도체 투톱 중심으로 외국인 순매수가 일부 유입되며 환율 상단을 눌렀다."
+   },
+   {
+    "factor": "엔비디아 CEO 교체발 증시 변동성",
+    "effect": "neutral",
+    "text": "거버넌스 쇼크로 글로벌 위험선호가 출렁였지만, 원/달러에는 뚜렷한 한 방향 영향을 주지 않았다."
+   }
+  ],
+  "hedge": "美 10년물이 5.15%까지 오르며 한미 금리차 자체는 유지됐지만, 단기 금리 경로(12월 인상 확률 89%)에 대한 민감도가 커져 환헤지 비용(스왑포인트)도 주 후반 들어 높아졌을 것으로 추정된다.",
+  "flows": "외국인은 9월 한 달간 국내 상장주식을 19조1160억원 순매도(금감원 집계)해 7개월째 순매도 기조를 이어왔으나, 11/10에는 반도체 투톱 중심으로 저가매수가 유입되며 수급이 출렁였다. 11/9~13 확정 일별 수급 수치는 확인하지 못했다.",
+  "watch_next": [
+   "12월 9일 FOMC 점도표·기자회견",
+   "11/17 소매판매(10월)"
+  ]
+ },
+ "institution_impact": [
+  {
+   "institution": "securities",
+   "text": "10년물이 5.15%까지 오르고 엔비디아 CEO 교체발 변동성이 겹치며, 국내 증권사의 트레이딩·브로커리지 환경도 출렁인 한 주였다.",
+   "points": [
+    {
+     "topic": "trading",
+     "direction": "negative",
+     "text": "10년물이 5.15%까지 올라 보유 채권 평가손실 압력이 커졌다.",
+     "source": 9
+    },
+    {
+     "topic": "brokerage",
+     "direction": "positive",
+     "text": "11/10 반도체 투톱 저가매수 유입과 엔비디아 CEO 교체 뉴스가 겹치며 거래대금이 늘었을 것으로 추정되나, 확정 수치는 확인하지 못했다.",
+     "source": 8
+    },
+    {
+     "topic": "ib",
+     "direction": "negative",
+     "text": "12월 인상 확률이 89%까지 오르며 단기 발행금리 부담이 다시 커졌다.",
+     "source": 2
+    },
+    {
+     "topic": "wm",
+     "direction": "positive",
+     "text": "10년물이 5%대 중반까지 오르며 [[+확정금리 상품의 매력]]은 더 커졌다.",
+     "source": 9
+    }
+   ]
+  },
+  {
+   "institution": "lp",
+   "text": "美 장기금리 추가 상승 속에 주요 보험사의 3분기 투자손익이 전반적으로 둔화됐고, 9월 말 K-ICS는 회사별 편차가 큰 채 업권 전체 수치는 아직 발표되지 않았다.",
+   "points": [
+    {
+     "topic": "duration_gap",
+     "direction": "mixed",
+     "text": "10년물이 5.15%까지 올라, **듀레이션 갭이 음(-)인 보험사는** 이 구간에서 순자산이 늘고, **갭이 양(+)인 보험사는** 반대로 줄었을 것으로 추정된다.",
+     "source": 9
+    },
+    {
+     "topic": "kics",
+     "direction": "negative",
+     "text": "하나증권 추정 기준 삼성생명(-14.4%)·삼성화재(-21.5%)·DB손해보험(-30.7%)·현대해상(-82.7%)의 3분기 투자손익이 전년 동기보다 줄 것으로 전망됐고, 실제 발표된 KB손해보험(순이익 -11.2%)·신한라이프(-18.5%)·NH농협생명(-96.8%)도 이 흐름을 뒷받침한다. 9월 말 개별 K-ICS는 NH농협생명 368.8%·신한라이프 204.6%·KB손해보험 187.9%로 회사별 편차가 크고, 업권 전체 수치는 이번 주에도 발표되지 않았다.",
+     "source": [
+      11,
+      12
+     ]
+    },
+    {
+     "topic": "allocation",
+     "direction": "mixed",
+     "text": "한미 금리차는 1.00%p로 유지됐지만 12월 인상 확률이 89%까지 오른 만큼 해외채권 배분 매력도는 12월 결정에 더 민감해졌다.",
+     "source": 15
+    },
+    {
+     "topic": "fx_hedge",
+     "direction": "neutral",
+     "text": "국민연금의 전략적 환헤지·한국은행과의 외환스와프 체제는 이번 주에도 새로운 변동 없이 유지되고 있다.",
+     "source": 14
+    }
+   ]
+  },
+  {
+   "institution": "gp",
+   "text": "반도체 수출 호조와 엔비디아 리더십 교체가 교차하며, 주식형·대안투자 양쪽에 엇갈린 신호를 줬다.",
+   "points": [
+    {
+     "topic": "flows",
+     "direction": "mixed",
+     "text": "외국인은 9월 한 달간 국내 상장주식을 19조1160억원 순매도했지만, 11/10에는 반도체 투톱 중심으로 저가매수가 유입되는 등 수급이 출렁였다.",
+     "source": 17
+    },
+    {
+     "topic": "fees",
+     "direction": "positive",
+     "text": "11/1~10 반도체 수출이 전년대비 331.2% 늘어난 점은 관련 주식형 AUM 평가액에 우호적인 환경을 뒷받침한다.",
+     "source": 4
+    },
+    {
+     "topic": "products",
+     "direction": "positive",
+     "text": "10년물이 5%대 중반까지 오르며 만기까지 들고 가면 수익률이 확정되는 [[+만기매칭형 채권펀드를 내놓기 좋은 환경]]이 이어지고 있다.",
+     "source": 9
+    },
+    {
+     "topic": "alternatives",
+     "direction": "negative",
+     "text": "모기지뉴스데일리 30년 고정 모기지금리가 한 주 사이 7.17%에서 7.50%로 뛰어, PE의 부동산 관련 딜·인수금융은 [[-여전히 보수적으로 접근해야 하는]] 구간이 이어지고 있다.",
+     "source": 10
+    }
+   ]
+  }
+ ],
+ "scenarios": [
+  {
+   "name": "기본 · 12월 매파 우위 지속, 25bp 인상",
+   "probability": 60,
+   "text": "CME FedWatch·Kalshi/Polymarket 평균 기준 25bp 인상 확률이 89%로 거의 완전히 반영돼, 11월 소매판매·PCE까지 견조하면 이 기조가 이어질 가능성이 가장 크다."
+  },
+  {
+   "name": "매파 서프라이즈·50bp 인상",
+   "probability": 20,
+   "text": "데일리·굴스비에 이어 추가 연은 인사들이 50bp 인상을 공개 지지하고 11월 PCE까지 뜨겁게 나오면, 현재 한 자릿수인 50bp 인상 확률이 더 높아질 수 있다."
+  },
+  {
+   "name": "되돌림·25bp 인상 또는 동결",
+   "probability": 20,
+   "text": "11월 소매판매·PCE가 둔화되거나 엔비디아 리더십 공백이 AI 투자 사이클에 실제 영향을 주면, 이번 주 89%까지 오른 확률이 다시 낮아질 수 있다."
+  }
+ ],
+ "interview_insights": [
+  {
+   "question": "10월 PPI 헤드라인은 무난했는데 왜 12월 인상 확률이 더 올랐는가?",
+   "answer_points": "핵심(식품·에너지·무역서비스 제외) PPI가 헤드라인보다 더 뜨겁게 나왔고, 데일리·굴스비 등 연은 인사들의 매파 발언이 겹쳤다는 점으로 설명한다."
+  },
+  {
+   "question": "엔비디아 CEO 교체라는 거버넌스 쇼크가 한국 반도체 수출·수급과 분리되어 움직인 이유는?",
+   "answer_points": "11/1~10 반도체 수출이 331.2% 급증한 것은 HBM 등 펀더멘털 수요가 CEO 교체와 무관하게 유지되고 있음을 보여주는 사례로 설명한다."
+  },
+  {
+   "question": "매파적인 Fed 환경(12월 인상확률 89%)에도 원/달러가 오히려 약세(원화 강세)로 돌아선 이유는?",
+   "answer_points": "반도체 수출 급증에 따른 수출업체 달러 매도(네고)와 11/10 외국인 저가매수 유입이 금리 요인을 상쇄했다는 수급 측 설명을 짚는다."
+  }
+ ],
+ "sources": [
+  {
+   "id": 1,
+   "title": "PPI inflation report: October 2026 (BLS News Release)",
+   "url": "https://www.bls.gov/news.release/ppi.nr0.htm",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": 2,
+   "title": "Fed decision odds snapshot (Kalshi/Polymarket, Dec meeting)",
+   "url": "https://defirate.com/odds/fed-decision/snapshot/latest/",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": 3,
+   "title": "KB국민은행 환율 전망 (2026-11-13)",
+   "url": "https://kbthink.com/investment/fx/daily/261113.html",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": 4,
+   "title": "KB국민은행 환율 전망 (2026-11-12)",
+   "url": "https://kbthink.com/investment/fx/daily/261112.html",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": 5,
+   "title": "KB국민은행 환율 전망 (2026-11-09)",
+   "url": "https://kbthink.com/investment/fx/daily/261109.html",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": 6,
+   "title": "Crude Oil (WTI/Brent) - Trading Economics",
+   "url": "https://tradingeconomics.com/commodity/crude-oil",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": 7,
+   "title": "NVIDIA Announces CEO Transition (Form 8-K, Ex-99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": 8,
+   "title": "Nvidia CEO Jensen Huang resigns: Live updates (CNBC)",
+   "url": "https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-ceo-live-updates.html",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": 9,
+   "title": "stock market today: S&P 500 (Trading Economics)",
+   "url": "https://tradingeconomics.com/united-states/stock-market",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": 10,
+   "title": "Mortgage News Daily: 30 Year Fixed daily rate survey",
+   "url": "https://www.mortgagenewsdaily.com/mortgage-rates/30-year-fixed",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": 11,
+   "title": "보험손익 개선 불구 투자손익 악화…보험사 실적 발목 (뉴스토마토)",
+   "url": "https://newstomato.com/ReadNews.aspx?no=1319526",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": 12,
+   "title": "보험사 K-ICS 5개 분기 만에 하락…생보 내리고 손보 올랐다 (서울경제)",
+   "url": "https://biz.sbs.co.kr/amp/article/20000334973",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": 13,
+   "title": "6월 말 보험사 K-ICS 비율 215.2%",
+   "url": "https://eiec.kdi.re.kr/policy/materialView.do?num=286908",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": 14,
+   "title": "국민연금 '고환율 소방수' 등판 관련 보도(전략적 환헤지·외환스와프 연장)",
+   "url": "https://www.twig24.com/news/2025/12/15/20251215500230",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": 15,
+   "title": "기준금리 3.00% 동결 확정|연속 인상 멈춘 이유와 대출금리 영향, 11월 전망",
+   "url": "https://foxcg.com/base-rate-freeze-october/",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": 16,
+   "title": "Anthropic Sets IPO Price Range at $70-$78 Per Share, Launches Roadshow (RTTNews)",
+   "url": "https://www.rttnews.com/3712632/anthropic-sets-ipo-price-range-at-70-78-per-share-launches-roadshow.aspx",
+   "accessed": "2026-11-14"
+  },
+  {
+   "id": 17,
+   "title": "삼성전자·SK하이닉스 외국인 수급(2026년 9월 외국인 증권투자 동향, 금융감독원 집계 인용 보도)",
+   "url": "https://m.seoul.co.kr/news/newsView.php?id=20261109029002",
+   "accessed": "2026-11-14"
+  }
+ ]
+}
