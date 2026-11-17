@@ -95,7 +95,8 @@ def _check_releases(releases, source_ids, err):
             if "actual" in r or "previous" in r:
                 err(f"{where}: FRED 지표({r['series']})에는 actual/previous를 적지 않습니다")
         else:
-            for key in ("actual", "previous", "actual_source"):
+            # unit이 없으면 표시가 pt로 떨어져 물가 지표가 '0.4'처럼 보인다
+            for key in ("actual", "previous", "actual_source", "unit"):
                 if key not in r:
                     err(f"{where}: 웹 수집 지표에는 {key}가 필요합니다")
         for key in ("consensus_source", "actual_source"):

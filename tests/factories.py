@@ -145,7 +145,7 @@ def make_briefing(**overrides) -> dict:
             _release("PPIFIS", "PPI 전월비 (8월)", "2026-09-11", "2026-08-01", 0.2, "neutral"),
             _release("ICSA", "신규 실업수당 청구", "2026-09-11", "2026-09-05", 235000, "positive"),
             {**_release("ISM_MFG", "ISM 제조업 PMI (8월)", "2026-09-01", "2026-08-01", 49.5, "neutral"),
-             "actual": 49.9, "previous": 49.2, "actual_source": 2},
+             "actual": 49.9, "previous": 49.2, "actual_source": 2, "unit": "pt"},
         ],
         "fomc": {
             "next_meeting": {

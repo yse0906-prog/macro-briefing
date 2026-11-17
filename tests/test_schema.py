@@ -37,6 +37,12 @@ class BriefingSchemaTest(unittest.TestCase):
         del b["releases"][6]["actual"]
         self.assertTrue(has(validate_briefing(b, "2026-09-13.json"), "actual"))
 
+    def test_web_release_needs_a_unit(self):
+        b = make_briefing()
+        ism = next(r for r in b["releases"] if r["series"] == "ISM_MFG")
+        del ism["unit"]
+        self.assertTrue(any("unit" in e for e in validate_briefing(b, "2026-09-13.json")))
+
     def test_source_reference_must_exist(self):
         b = make_briefing()
         b["releases"][0]["consensus_source"] = 99

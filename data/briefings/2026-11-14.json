@@ -34,7 +34,8 @@
    "interpretation": "전월비 +0.5%(전년비 4.9%)로 헤드라인보다 더 매파적으로 해석됐다. 전월 수치는 확인하지 못해 null로 둔다.",
    "actual": 0.5,
    "previous": null,
-   "actual_source": 1
+   "actual_source": 1,
+   "unit": "%"
   }
  ],
  "fomc": {

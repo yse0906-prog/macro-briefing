@@ -46,6 +46,28 @@ class MessageTest(unittest.TestCase):
         self.assertIn("첫 문장이다.", text)
         self.assertNotIn("뒤에 붙는 긴 설명. 뒤에 붙는", text)
 
+    def test_each_release_carries_its_interpretation(self):
+        b = make_briefing()
+        b["releases"][0]["interpretation"] = "예상을 웃돌아 12월 인상 확률을 끌어올린 요인이다."
+        text = telegram_message(site_with(b))
+        self.assertIn("예상을 웃돌아 12월 인상 확률을 끌어올린 요인이다.", text)
+
+    def test_fomc_tone_and_press_gist(self):
+        text = telegram_message(site_with(make_briefing()))
+        self.assertIn("성명 톤", text)
+        self.assertIn("기자회견", text)
+
+    def test_most_likely_scenario_is_shown(self):
+        b = make_briefing()
+        b["scenarios"] = [
+            {"name": "기본 · 매파적 동결", "probability": 60, "text": "첫 문장. 뒤 설명."},
+            {"name": "비둘기 선회", "probability": 40, "text": "다른 설명."},
+        ]
+        text = telegram_message(site_with(b))
+        self.assertIn("기본 · 매파적 동결", text)
+        self.assertIn("60%", text)
+        self.assertNotIn("비둘기 선회", text)
+
     def test_market_impact_directions(self):
         text = telegram_message(site_with(make_briefing()))
         self.assertIn("미국 주식", text)

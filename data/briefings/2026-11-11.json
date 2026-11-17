@@ -24,7 +24,8 @@
    "interpretation": "전월비 0.4%로 예상(0.3%)을 웃돌아, 인플레이션이 재가속하고 있다는 신호로 12월 인상 확률을 끌어올린 요인이다.",
    "actual": 0.4,
    "previous": 0.6,
-   "actual_source": 1
+   "actual_source": 1,
+   "unit": "%"
   },
   {
    "series": "CORE_CPI_MOM",
@@ -37,7 +38,8 @@
    "interpretation": "전월비 0.3%로 예상(0.2%)을 웃돌았다. 월러 이사가 밝힌 0.5%p 인상 검토 기준과 맞아떨어져 매파적으로 해석됐다.",
    "actual": 0.3,
    "previous": 0.3,
-   "actual_source": 1
+   "actual_source": 1,
+   "unit": "%"
   },
   {
    "series": "CPIAUCSL",

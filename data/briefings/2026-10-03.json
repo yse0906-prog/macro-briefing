@@ -44,7 +44,8 @@
    "interpretation": "PMI 자체는 54.5로 예상(55.0)과 전월(54.6)을 모두 소폭 밑돌았지만, 가격지수가 6.8포인트 뛴 77.9로 이란 전쟁 발발 이후 최고치를 기록해 관세·유가발 비용 압력이 다시 부각됐다.",
    "actual": 54.5,
    "previous": 54.6,
-   "actual_source": 8
+   "actual_source": 8,
+   "unit": "pt"
   },
   {
    "series": "ICSA",

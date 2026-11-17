@@ -27,6 +27,8 @@ def _releases(site, b: dict) -> list[str]:
         surprise = f" {v['surprise']}" if v["surprise"] else ""
         guess = f" (예상 {esc(v['consensus'])})" if r.get("consensus") is not None else ""
         lines.append(f"· {esc(v['name'])}  <b>{esc(v['actual'])}</b>{guess}{esc(surprise)}")
+        if v["interpretation"]:
+            lines.append(f"  {esc(_lead(v['interpretation'], 160))}")
     return lines
 
 
@@ -37,6 +39,10 @@ def _fomc(b: dict) -> list[str]:
     if last:
         lines.append(f"· {md(last['date'])} 결정 <b>{c.OUTCOME_LABEL.get(last['decision'], last['decision'])}</b>"
                      f" · {c.range_text(*last['range'])}")
+        if last.get("tone") is not None:
+            lines.append(f"  성명 톤 {esc(c.tone_label(last['tone']))}")
+        if last.get("press_conference"):
+            lines.append(f"  기자회견 {esc(_lead(last['press_conference'], 160))}")
     nxt = fomc.get("next_meeting")
     if nxt:
         top = max(nxt.get("probabilities", []), key=lambda p: p["pct"], default=None)
@@ -55,6 +61,15 @@ def _lead(text: str, limit: int = 110) -> str:
 def _impact(b: dict) -> list[str]:
     return [f"· {c.ASSET_LABEL[i['asset']]} {ARROW[i['direction']]} {esc(_lead(i['text']))}"
             for i in b.get("market_impact", [])]
+
+
+def _scenario(b: dict) -> list[str]:
+    """다음 한 달을 어떻게 보는지. 확률이 가장 높은 시나리오 하나만."""
+    top = max(b.get("scenarios", []), key=lambda s: s.get("probability", 0), default=None)
+    if top is None:
+        return []
+    return [f"· {esc(top['name'])} <b>{top['probability']}%</b>",
+            f"  {esc(_lead(top.get('text', ''), 160))}"]
 
 
 def _sectors(site, b: dict) -> list[str]:
@@ -82,6 +97,7 @@ def telegram_message(site) -> str:
     parts += _block("지표", _releases(site, b))
     parts += _block("FOMC", _fomc(b))
     parts += _block("시장 영향", _impact(b))
+    parts += _block("앞으로 한 달", _scenario(b))
     parts += _sectors(site, b)
     parts += ["", f'<a href="{SITE_URL}briefings/{b["date"]}.html">전체 브리핑 보기</a>']
 
