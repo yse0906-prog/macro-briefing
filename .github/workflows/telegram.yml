@@ -1,0 +1,50 @@
+# 새 브리핑이 올라오면(토요일 주간 · 발표일 이벤트) 핵심만 추려 텔레그램으로 보낸다.
+# 깃허브 안에서만 돌아 Claude 토큰을 쓰지 않는다.
+# 비밀값 두 개가 필요하다: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID (Settings > Secrets > Actions)
+name: Send the briefing to Telegram
+
+on:
+  push:
+    branches: [main]
+    paths: ["data/briefings/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Build the message
+        run: python notify.py > message.txt && wc -c message.txt
+
+      - name: Send it
+        env:
+          TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ -z "$TOKEN" ] || [ -z "$CHAT" ]; then
+            echo "텔레그램 비밀값(TELEGRAM_BOT_TOKEN·TELEGRAM_CHAT_ID)이 없어 보내지 않습니다."
+            echo "저장소 Settings > Secrets and variables > Actions 에서 등록하세요."
+            exit 0
+          fi
+          curl -sS -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" \
+            --data-urlencode "chat_id=$CHAT" \
+            --data-urlencode "text@message.txt" \
+            -d parse_mode=HTML \
+            -d disable_web_page_preview=true \
+            -o response.json
+          python - <<'PY'
+          import json
+          r = json.load(open("response.json", encoding="utf-8"))
+          if r.get("ok"):
+              print("보냈습니다. message_id =", r["result"]["message_id"])
+          else:
+              raise SystemExit(f"텔레그램이 거절했습니다: {r.get('error_code')} {r.get('description')}")
+          PY
