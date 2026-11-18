@@ -1,0 +1,158 @@
+{
+ "date": "2026-11-18",
+ "type": "event",
+ "published_at": "2026-11-18T13:40:00+09:00",
+ "headline": "엔비디아 3분기 어닝서프라이즈, 주가 반응은 미미",
+ "summary": [
+  "엔비디아는 11/17(현지시간) 발표한 FY2027 3분기 실적에서 매출 1,158.4억달러(전년비 +103%)로 LSEG 집계 컨센서스 1,091.0억달러를 웃돌았고, 조정 EPS도 2.68달러로 예상(2.48달러)을 상회했다.",
+  "데이터센터 매출은 1,076억달러로 StreetAccount 추정치(1,018.7억달러)를 넘어섰고 4분기 매출 가이던스도 1,300억달러(±3%)로 컨센서스(1,252.5억달러)를 웃돌았지만, 4분기 매출이익률 가이던스는 71~72%로 메모리 원가 상승 부담을 반영해 낮아졌다.",
+  "그러나 콜렛 크레스 임시 CEO 체제에서 나온 이 실적에도 주가는 정규장 종가(155.46달러, -0.44%) 기준 10/6 사상 최고가(239.24달러) 대비 35% 낮은 수준에 머물렀고, 시간외 상승폭도 발표 직후 +4~5%에서 콘퍼런스콜 종료 시점 +1.29%로 줄어들며 이사회가 젠슨 황의 CEO 복귀 가능성을 배제한다고 밝힌 거버넌스 불확실성이 여전히 주가를 눌렀다."
+ ],
+ "releases": [
+  {
+   "series": "NVDA_REVENUE",
+   "name": "엔비디아 FY2027 3분기 매출",
+   "release_date": "2026-11-17",
+   "period": "2026-08-01",
+   "consensus": 109.1,
+   "consensus_source": 2,
+   "actual": 115.84,
+   "previous": 96.2,
+   "actual_source": 1,
+   "unit": "십억달러",
+   "impact": "neutral",
+   "interpretation": "매출·EPS·4분기 가이던스 모두 컨센서스를 웃돌았지만 **주가는 거버넌스 불확실성에 눌려 시간외 상승폭이 발표 직후보다 크게 줄었고**, 4분기 매출이익률 가이던스(71~72%)가 낮아진 점은 메모리 원가 상승이 수익성에 주는 부담을 보여준다."
+  }
+ ],
+ "market_impact": [
+  {
+   "asset": "us_equities",
+   "direction": "up",
+   "text": "엔비디아는 시간외 거래에서 발표 직후 최대 +4~5%까지 올랐으나 콘퍼런스콜이 끝난 03:05 UTC(KST 정오 무렵) 기준 상승폭이 +1.29%로 줄었다. 정규장 종가는 155.46달러(-0.44%)로 10/6 사상 최고가(239.24달러) 대비 35% 낮고, 최근 1주 -15%·1개월 -30%의 약세가 이어진 뒤였다. 반면 AI 인프라 관련주 코어위브·네비우스·IREN은 시간외에서 8~10% 뛰었다."
+  }
+ ],
+ "institution_impact": [
+  {
+   "institution": "securities",
+   "text": "엔비디아 실적이 컨센서스를 웃돌았지만 주가 반응은 미미해, 국내 증권사의 반도체 관련 트레이딩·거래대금에는 뚜렷한 방향성보다 변동성 확대가 먼저 반영될 가능성이 크다.",
+   "points": [
+    {
+     "topic": "trading",
+     "direction": "mixed",
+     "text": "엔비디아의 시간외 상승폭이 발표 직후 +4~5%에서 콘퍼런스콜 종료 시점 +1.29%로 줄어든 패턴은, 반도체 관련 ELS·구조화상품을 보유한 국내 증권사의 트레이딩 손익에도 **방향성보다 변동성 확대**로 먼저 들어올 수 있다.",
+     "source": [3, 4]
+    },
+    {
+     "topic": "brokerage",
+     "direction": "neutral",
+     "text": "국내 장은 이 글 작성 시점에 마감 전이라 오늘 삼성전자·SK하이닉스의 거래대금 변화는 확인하지 못했다. 다만 데이터센터 매출(1,076억달러)이 추정치를 웃돈 점은 통상 반도체 투톱의 거래대금을 늘리는 재료였다.",
+     "source": 2
+    },
+    {
+     "topic": "ib",
+     "direction": "positive",
+     "text": "엔비디아가 메모리 원가 상승분을 반영해 4분기 매출이익률 가이던스를 71~72%로 낮춘 것은, 뒤집어 보면 [[+메모리 공급사(삼성전자·SK하이닉스)의 가격 협상력이 강해졌다]]는 뜻으로 읽을 수 있어 관련 회사채 발행 여건에는 우호적인 신호다.",
+     "source": [1, 2]
+    },
+    {
+     "topic": "wm",
+     "direction": "neutral",
+     "text": "이번 발표는 금리보다 개별 기업·섹터 변수였던 만큼, 확정금리 상품으로의 대기자금 이동에 주는 직접적 영향은 제한적이다.",
+     "source": null
+    }
+   ]
+  },
+  {
+   "institution": "lp",
+   "text": "엔비디아 실적은 미국 장기금리를 직접 움직이는 변수가 아니어서, 보험사·연기금의 듀레이션 갭·환헤지 비용에 주는 영향은 제한적이다.",
+   "points": [
+    {
+     "topic": "duration_gap",
+     "direction": "neutral",
+     "text": "이번 발표는 반도체 수급 이슈였을 뿐 美 국채금리를 직접 움직이지 않아, 듀레이션 갭 부호에 따른 순자산 영향은 이번 주 다른 금리 변수(FOMC 의사록 등)에 더 좌우된다.",
+     "source": null
+    },
+    {
+     "topic": "kics",
+     "direction": "neutral",
+     "text": "가장 최근 발표된 K-ICS 비율에는 이번 엔비디아 실적과 직접 연결되는 변화가 없다.",
+     "source": null
+    },
+    {
+     "topic": "allocation",
+     "direction": "neutral",
+     "text": "해외채권 vs 국내 장기채 배분 매력도를 가르는 한미 금리차는 이번 실적 발표로 바뀌지 않았다.",
+     "source": null
+    },
+    {
+     "topic": "fx_hedge",
+     "direction": "neutral",
+     "text": "환헤지 비용을 좌우하는 한미 단기금리차도 이번 발표와 무관하게 유지되고 있다.",
+     "source": null
+    }
+   ]
+  },
+  {
+   "institution": "gp",
+   "text": "실적 자체는 호조였지만 크레스 임시 CEO가 콘퍼런스콜에서 데이터센터向 투자·보증 약정을 '엄격히 재평가'하겠다고 밝힌 점은, 주식형 펀드 자금 흐름보다는 대안투자(네오클라우드 관련 펀드·인수금융) 쪽에 더 민감한 신호다.",
+   "points": [
+    {
+     "topic": "flows",
+     "direction": "positive",
+     "text": "오늘 외국인 코스피 수급 확정치는 확인하지 못했지만, 데이터센터 매출이 추정치를 웃돈 점은 통상 반도체 주식형 펀드 자금 유입에 우호적으로 작용해온 재료다.",
+     "source": 2
+    },
+    {
+     "topic": "fees",
+     "direction": "mixed",
+     "text": "엔비디아 주가가 시간외에서 상승폭을 대부분 반납한 점은, 반도체 비중이 높은 주식형 펀드의 평가액에는 **호실적 대비 밋밋한** 효과만 줄 수 있다.",
+     "source": [3, 4]
+    },
+    {
+     "topic": "products",
+     "direction": "neutral",
+     "text": "이번 실적과 직접 연결되는 신규 상품 출시 소식은 확인하지 못했다.",
+     "source": null
+    },
+    {
+     "topic": "alternatives",
+     "direction": "negative",
+     "text": "크레스 CFO는 콘퍼런스콜에서 일부 네오클라우드 업체가 매출 성장 속도에 비해 재무구조가 받쳐주지 못하고 있다며, 엔비디아의 향후 투자·보증·약정을 '엄격히 재평가'하겠다고 밝혔다. 엔비디아의 데이터센터向 금융보증 총액은 1,180억달러이며 집행된 금액은 없다고도 밝혔다. 이는 [[-PE의 데이터센터·AI 인프라 펀드 조달과 인수금융 심사가 더 엄격해질 수 있다]]는 신호다.",
+     "source": [3, 4]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": 1,
+   "title": "NVIDIA CORP - Form 8-K Exhibit 99.1: Q3 FY2027 financial results press release",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000088/q3fy27pr.htm",
+   "accessed": "2026-11-18"
+  },
+  {
+   "id": 2,
+   "title": "Nvidia Earnings (Q3) Beat as Board Rules Out Huang Return",
+   "url": "https://financefeeds.com/nvidia-earnings-q3-kress-interim-ceo/",
+   "accessed": "2026-11-18"
+  },
+  {
+   "id": 3,
+   "title": "Nvidia stock earnings report live blog: Jensen Huang CEO return ruled out",
+   "url": "https://www.nbcnews.com/business/business-news/live-blog/nvidia-stock-earnings-report-jensen-huang-rcna609804",
+   "accessed": "2026-11-18"
+  },
+  {
+   "id": 4,
+   "title": "Nvidia earnings live: Nvidia posts Q3 beat as revenue rose 103% YOY to $115.8B, board says it will not reinstate Jensen Huang as CEO",
+   "url": "https://uk.finance.yahoo.com/news/live/nvidia-earnings-live-nvidia-posts-q3-beat-board-says-it-will-not-reinstate-jensen-huang-as-ceo-221428433.html",
+   "accessed": "2026-11-18"
+  },
+  {
+   "id": 5,
+   "title": "Nvidia earnings beat estimates; attention turns to call (Reuters)",
+   "url": "https://www.investing.com/news/stock-market-news/nvidia-earnings-beat-estimates-attention-turns-to-call-5034180",
+   "accessed": "2026-11-18"
+  }
+ ]
+}
