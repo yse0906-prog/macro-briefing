@@ -1,0 +1,444 @@
+{
+ "date": "2026-11-21",
+ "type": "weekly",
+ "period": {
+  "from": "2026-11-16",
+  "to": "2026-11-20"
+ },
+ "published_at": "2026-11-21T07:00:00+09:00",
+ "headline": "美 반도체 수출규제·매파 의사록에 코스피 출렁, 12월 인상확률 91%",
+ "summary": [
+  "11/18(현지시간) 공개된 10월 27~28일 FOMC 의사록에서 거의 모든 참석자가 추가 인상 필요성에 공감한 것으로 나타난 가운데, 미 상무부가 11/16 중국向 반도체 수출에 라이선스를 의무화하자 파이낸셜타임스는 11/19 삼성전자와 TSMC가 중국 고객사向 출하를 중단했다고 보도했고, 이 영향으로 코스피는 11/17 4,968.48(-2.59%)로 9개월 반 만에 5,000선을 내준 뒤 11/20에는 4,869.96(-5.21%)까지 재차 급락했다.",
+  "10월 소매판매는 전월비 +0.2%로 시장 예상(+0.2%)에 부합했지만 자동차 제외 소매판매(+0.6%)는 더 강하게 나왔고, 美 증시는 S&P500이 11/18 5거래일 연속 하락한 뒤 11/19에도 2% 넘게 추가로 밀렸으며 코인페이퍼는 일본 제외 아시아태평양 지수가 주간 기준 약 8.5% 내려 2020년 3월 이후 최악의 한 주를 기록했다고 평가했다.",
+  "원/달러는 11/17 1,338.2원에서 11/19 1,330.0원으로 주간 약세(원화 강세) 흐름을 보였고 외국인은 코스피에서 11/18~19 이틀 연속 순매도를 이어갔으며, 같은 주 이노비오는 FDA로부터 VOCERYQ 가속승인(10/30)을 SEC 공시로 확인받고 삼성바이오로직스는 3조원 유상증자를 96.8% 청약률로 마무리했다."
+ ],
+ "releases": [
+  {
+   "series": "RSAFS",
+   "name": "소매판매 전월비 (10월)",
+   "release_date": "2026-11-17",
+   "period": "2026-10-01",
+   "consensus": 0.2,
+   "consensus_source": 1,
+   "impact": "neutral",
+   "interpretation": "헤드라인은 전월비 +0.2%(예상 +0.2%, 전월 +0.8%)로 시장 예상에 부합했지만, 자동차를 제외한 소매판매는 +0.6%(예상 +0.4%)로 더 강하게 나와 **자동차를 제외한 근원 소비가 예상보다 견조하다**는 신호로 해석됐다."
+  },
+  {
+   "series": "ICSA",
+   "name": "신규 실업수당 청구 (11/14 종료주)",
+   "release_date": "2026-11-19",
+   "period": "2026-11-14",
+   "consensus": null,
+   "consensus_source": null,
+   "impact": "neutral",
+   "interpretation": "추수감사절을 앞둔 주간 신규 실업수당 청구로, 노동시장 둔화 신호가 뚜렷하지 않은 가운데 발표돼 FOMC의 매파적 기조를 뒤집을 요인은 되지 못했다."
+  }
+ ],
+ "fomc": {
+  "next_meeting": {
+   "date": "2026-12-09",
+   "announce_kst": "2026-12-10T04:00:00+09:00",
+   "probabilities": [
+    {
+     "outcome": "hike25",
+     "pct": 91
+    },
+    {
+     "outcome": "hike50",
+     "pct": 2
+    },
+    {
+     "outcome": "hold",
+     "pct": 7
+    }
+   ],
+   "probabilities_week_ago": [
+    {
+     "outcome": "hike25",
+     "pct": 89
+    },
+    {
+     "outcome": "hike50",
+     "pct": 9
+    },
+    {
+     "outcome": "hold",
+     "pct": 2
+    }
+   ],
+   "view": "hike25",
+   "confidence": "high",
+   "rationale": [
+    "10월 27~28일 FOMC 의사록(11/18 공개)에서 거의 모든 참석자가 추가 인상 필요성에 공감했고 일부는 25bp보다 큰 인상을 거론한 것으로 알려지며, CME FedWatch·Kalshi/Polymarket 평균 기준 12월 25bp 인상 확률이 11/13 89%에서 11/20 91%까지 올랐다.",
+    "10월 소매판매(전월비 +0.2%)가 예상에 부합했지만 자동차 제외 소매판매(+0.6%)가 더 강하게 나와 근원 소비 둔화 신호는 뚜렷하지 않았다."
+   ],
+   "watch_points": [
+    "12월 8~9일 점도표상 2027년 인상 경로",
+    "11/25 PCE 물가지수(10월)·GDP 3분기 2차 추정치",
+    "11/26 한국은행 금융통화위원회 기준금리 결정(국내 참고)"
+   ]
+  },
+  "last_meeting": {
+   "date": "2026-10-28",
+   "decision": "hold",
+   "range": [
+    3.75,
+    4.0
+   ],
+   "vote": {
+    "for": 10,
+    "against": 2
+   },
+   "tone": 0.6,
+   "statement_points": [
+    "경제활동은 견고한 속도로 확장 중이다(9월 '완만한'에서 상향)",
+    "인플레이션은 여전히 높은 수준이며, 위원회는 가격 안정을 달성할 것이다",
+    "11/18 공개된 의사록에 따르면 동결은 '아슬아슬한' 결정이었고 일부 위원은 25bp 인상을 지지했다"
+   ],
+   "press_conference": "워시 의장은 \"정치는 이번 결정에 어떤 역할도 하지 않았다\"며 트럼프 대통령 등의 인하 압박 질문에 선을 그었고, \"확고한 결론이 있었다면 크게 알렸을 것\"이라며 사전 forward guidance를 자제하는 기조를 재확인했다."
+  }
+ },
+ "market_impact": [
+  {
+   "asset": "us_equities",
+   "direction": "down",
+   "text": "S&P500은 11/18 전일대비 0.2% 내린 7,323.63으로 5거래일 연속 하락(6월 이후 최장 연속 하락)했고, 11/19(현지시간)에는 주요 지수가 2% 넘게 추가로 밀렸다. 11/20에는 코스피(-5.21%)·대만 TAIEX(-6.2%)·닛케이(-5.1%)가 동반 급락해, 일본 제외 아시아태평양 지수는 주간 기준 약 8.5% 내리며 2020년 3월 이후 최악의 한 주를 기록했다."
+  },
+  {
+   "asset": "us_rates",
+   "direction": "down",
+   "text": "소매판매 발표일(11/17)에는 10년물 국채금리가 한때 반응을 보였다가 5.107%로 되돌림, 美 증시 약세 속 안전자산 선호(flight to quality)가 반영됐다. 모기지뉴스데일리(MND) 30년 고정 모기지금리 일일 지표도 11/16 7.51%에서 11/20 7.33%로 한 주 사이 18bp 내렸다."
+  },
+  {
+   "asset": "usd",
+   "direction": "up",
+   "text": "달러인덱스는 11/17 기준 19~20개월 만의 최고치(약 103.4)를 기록했다. 12월 FOMC 인상 확률 상승과 매파적 의사록이 배경이다."
+  },
+  {
+   "asset": "krw",
+   "direction": "down",
+   "text": "원/달러는 11/17 서울장 종가 1,338.2원에서 11/19 1,330.0원으로 주간 기준 8.2원 내렸다(원화 강세). 美 반도체 수출규제·코스피 급락 속에서도 원화는 오히려 소폭 강세를 보였다."
+  }
+ ],
+ "fx": {
+  "headline": "美 반도체 수출규제·매파 의사록에도 원화는 주간 강세, 외국인 코스피는 사흘 연속 순매도",
+  "numbers": [
+   {
+    "text": "원/달러 11/17 서울장 종가 1,338.2원(전일대비 +2.5원)",
+    "source": 9
+   },
+   {
+    "text": "원/달러 11/19 서울장 종가 1,330.0원(전일대비 -3.0원), 주간 기준 11/17 대비 8.2원 하락(원화 강세)",
+    "source": 8
+   },
+   {
+    "text": "외국인 코스피 순매도 11/18 3,276억원(4거래일 연속, 누적 약 4.0조원)",
+    "source": 11
+   },
+   {
+    "text": "외국인 코스피 순매도 11/19 4,374억원",
+    "source": 10
+   },
+   {
+    "text": "한미 기준금리 상단 기준 1.00%p 유지(한국 3.00%, 미국 3.75~4.00%)",
+    "source": 22
+   }
+  ],
+  "drivers": [
+   {
+    "factor": "美 BIS 중국向 반도체 수출 라이선스 의무화·FT 삼성전자·TSMC 출하중단 보도",
+    "effect": "krw_weak",
+    "text": "반도체 수출 전망 불확실성이 커지며 원화 약세 요인으로 작용했다."
+   },
+   {
+    "factor": "FOMC 10월 의사록 매파 재확인",
+    "effect": "krw_weak",
+    "text": "12월 추가 인상 확률이 91%까지 오르며 단기적으로 달러 선호를 지지했다."
+   },
+   {
+    "factor": "코스피 급락에 따른 외국인 순매도 지속",
+    "effect": "krw_weak",
+    "text": "외국인 주식자금 유출은 통상 원화에 약세 요인으로 작용한다."
+   },
+   {
+    "factor": "한국은행 11/26 추가 인상 가능성",
+    "effect": "krw_strong",
+    "text": "11/26 금통위에서 추가 인상이 이뤄지면 한미 금리차가 좁혀질 수 있다는 기대가 원화를 지지했다."
+   }
+  ],
+  "hedge": "12월 인상 확률이 91%까지 오르며 단기 금리 경로에 대한 민감도가 커져, 환헤지 비용(스왑포인트)도 주 후반 들어 높아졌을 것으로 추정된다.",
+  "flows": "외국인은 11/18~19 이틀 연속 코스피 순매도(11/18 3,276억원, 11/19 4,374억원)를 이어갔고, 10월 이후 누적 순매도는 11/17 기준 약 31.42조원에 달한다. 국민연금과 한국은행 간 외환스와프(한도 650억달러, 2026년 말까지 연장)는 이번 주에도 변동 없이 유지됐다.",
+  "watch_next": [
+   "11/26 한국은행 금융통화위원회 기준금리 결정",
+   "12/8~9일 FOMC"
+  ]
+ },
+ "institution_impact": [
+  {
+   "institution": "securities",
+   "text": "美 반도체 수출규제와 매파적 FOMC 의사록이 겹치며 코스피가 한 주 동안 두 차례 5,000선을 오간 가운데, 국내 증권사의 트레이딩·거래대금 환경도 변동성이 커졌다.",
+   "points": [
+    {
+     "topic": "trading",
+     "direction": "mixed",
+     "text": "美 10년물은 소매판매 발표일(11/17) 5.107%로 안전자산 선호 속에 되돌림한 반면, 코스피·코스닥 동반 급락(11/20)으로 주식 관련 파생·ELS 포지션의 변동성 손익이 커졌을 것으로 추정된다.",
+     "source": 23
+    },
+    {
+     "topic": "brokerage",
+     "direction": "mixed",
+     "text": "11/17·11/20 두 차례 5%대 급락과 11/18~19 반등이 겹치며 거래대금 자체는 통상 늘었을 것으로 추정되나, 확정 수치는 확인하지 못했다.",
+     "source": 6
+    },
+    {
+     "topic": "ib",
+     "direction": "negative",
+     "text": "12월 인상 확률이 91%까지 오르며 단기 발행금리 부담이 다시 커졌다.",
+     "source": 4
+    },
+    {
+     "topic": "wm",
+     "direction": "positive",
+     "text": "美 10년물이 5%대를 유지하며 [[+확정금리 상품의 매력]]은 이어지고 있다.",
+     "source": 23
+    }
+   ]
+  },
+  {
+   "institution": "lp",
+   "text": "美 장기금리는 이번 주에도 5%대를 유지했고, 美 반도체 수출규제는 보험사·연기금의 듀레이션·K-ICS보다는 국내 반도체 관련 자산 평가에 더 직접적인 변수였다.",
+   "points": [
+    {
+     "topic": "duration_gap",
+     "direction": "mixed",
+     "text": "10년물이 5.107%대를 유지한 채 등락해, **듀레이션 갭이 음(-)인 보험사는** 순자산에 우호적이고 **갭이 양(+)인 보험사는** 반대 방향으로 영향을 받는 구간이 이어지고 있다.",
+     "source": 23
+    },
+    {
+     "topic": "kics",
+     "direction": "neutral",
+     "text": "6월 말 기준 K-ICS 비율(215.2%) 발표 이후 9월 말 기준 업권 전체 수치는 이번 주에도 공개되지 않았다.",
+     "source": 20
+    },
+    {
+     "topic": "allocation",
+     "direction": "mixed",
+     "text": "한미 기준금리차는 1.00%p로 유지됐지만 12월 인상 확률이 91%까지 오른 만큼 해외채권 배분 매력도는 12월 결정에 더 민감해졌다.",
+     "source": 22
+    },
+    {
+     "topic": "fx_hedge",
+     "direction": "neutral",
+     "text": "국민연금의 전략적 환헤지·한국은행과의 외환스와프 체제는 이번 주에도 새로운 변동 없이 유지되고 있다.",
+     "source": 21
+    }
+   ]
+  },
+  {
+   "institution": "gp",
+   "text": "코스피가 한 주 동안 두 차례 5,000선을 오가며 반도체 비중이 높은 주식형 펀드의 평가액 변동성이 커졌고, 유가 하락은 대안투자 쪽에는 엇갈린 신호를 줬다.",
+   "points": [
+    {
+     "topic": "flows",
+     "direction": "negative",
+     "text": "외국인은 11/18~19 이틀 연속 코스피에서 순매도(합산 약 7,650억원)를 기록했다.",
+     "source": [
+      11,
+      10
+     ]
+    },
+    {
+     "topic": "fees",
+     "direction": "negative",
+     "text": "코스피 반도체지수가 11/20 9%대 급락한 것은 반도체 비중이 높은 주식형 펀드의 AUM 평가액에 단기 부담으로 작용했을 것으로 추정된다.",
+     "source": 7
+    },
+    {
+     "topic": "products",
+     "direction": "neutral",
+     "text": "이번 주와 직접 연결되는 신규 상품 출시 소식은 확인하지 못했다."
+    },
+    {
+     "topic": "alternatives",
+     "direction": "mixed",
+     "text": "WTI·브렌트유가 11월 한 달 기준 약 20% 내린 것은 에너지 관련 PE 딜 밸류에이션에는 우호적일 수 있지만, 모기지금리가 여전히 7%대 중반을 유지해 부동산 관련 인수금융은 **여전히 보수적으로 접근해야 하는** 구간이 이어지고 있다.",
+     "source": [
+      17,
+      13
+     ]
+    }
+   ]
+  }
+ ],
+ "scenarios": [
+  {
+   "name": "기본 · 12월 매파 우위 지속, 25bp 인상",
+   "probability": 55,
+   "text": "CME FedWatch·Kalshi/Polymarket 평균 기준 25bp 인상 확률이 91%로 거의 완전히 반영돼, 11월 PCE·GDP까지 견조하면 이 기조가 이어질 가능성이 가장 크다."
+  },
+  {
+   "name": "증시 변동성發 완화 선회",
+   "probability": 30,
+   "text": "이번 주처럼 아시아·미국 증시가 동시에 급락하는 상황이 반복되면, 금융안정 우려가 커지며 Fed가 12월 인상을 보류할 가능성도 배제할 수 없다."
+  },
+  {
+   "name": "매파 서프라이즈·50bp 인상",
+   "probability": 15,
+   "text": "11월 PCE가 예상보다 뜨겁게 나오고 추가 연은 인사들이 더 큰 인상을 공개 지지하면, 현재 한 자릿수인 50bp 인상 확률이 더 높아질 수 있다."
+  }
+ ],
+ "interview_insights": [
+  {
+   "question": "10월 소매판매가 예상에 부합했는데도 12월 인상 확률이 더 오른 이유는?",
+   "answer_points": "FOMC 10월 의사록에서 거의 모든 참석자가 추가 인상에 공감했다는 점과, 자동차 제외 소매판매가 예상보다 강하게 나왔다는 점으로 설명한다."
+  },
+  {
+   "question": "美 반도체 수출규제로 코스피가 급락한 날과 매파적 연준이 같은 주에 겹친 것이, 환율에는 왜 약세(원화 강세) 방향으로 작동했는가?",
+   "answer_points": "한국은행의 11/26 추가 인상 기대가 외국인 순매도·수출규제 불확실성이라는 약세 요인을 상쇄했다는 수급·통화정책 기대 측 설명을 짚는다."
+  },
+  {
+   "question": "美 10년물이 5%대를 유지하는데도 보험사 듀레인갭의 방향성을 한 쪽으로 단정할 수 없는 이유는?",
+   "answer_points": "듀레이션 갭의 부호(음/양)에 따라 금리 변화가 순자산에 주는 영향이 반대 방향이라는 점과, 업권 전체 갭 부호를 확인할 자료가 없다는 점을 짚는다."
+  }
+ ],
+ "sources": [
+  {
+   "id": 1,
+   "title": "US Retail Sales (Oct MM) 0.2% vs. Exp. 0.2% (Prev. 0.8%) (Newsquawk)",
+   "url": "https://www.newsquawk.com/headlines/us-retail-sales-oct-mm-02-vs-exp-02-prev-08",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 2,
+   "title": "US Retail Sales Ex Autos (Oct MM) 0.6% vs. Exp. 0.4% (Prev. 1.1%) (Newsquawk)",
+   "url": "https://www.newsquawk.com/headlines/us-retail-sales-ex-autos-oct-mm-06-vs-exp-04-prev-11",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 3,
+   "title": "The Fed came close to an October rate hike, FOMC minutes show (InvestmentNews)",
+   "url": "https://www.investmentnews.com/equities/the-fed-came-close-to-an-october-rate-hike-fomc-minutes-show/269079",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 4,
+   "title": "Fed Decision Odds Snapshot (Kalshi/Polymarket, Dec meeting)",
+   "url": "https://defirate.com/odds/fed-decision/snapshot/latest/",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 5,
+   "title": "악재가 된 AI… '5000P'도 내줬다 (서울신문)",
+   "url": "https://www.seoul.co.kr/news/newsView.php?id=20261118029002",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 6,
+   "title": "Chip slump rattles Kospi below 5,000, but analysts say buy the dip (Korea JoongAng Daily)",
+   "url": "https://www.koreajoongangdaily.com/business/chip-slump-rattles-kospi-below-5000-but-analysts-say-buy-the-dip/12982994",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 7,
+   "title": "NVDA and ANT Fail to Save AI Stocks as Asia Faces Worst Market Week Since 2020 (Coinpaper)",
+   "url": "https://coinpaper.com/39137/nvidia-and-anthropic-fail-to-save-ai-stocks-as-asia-faces-worst-market-week-since-2020",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 8,
+   "title": "원/달러 환율 전망 (KB Think, 2026-11-20)",
+   "url": "https://kbthink.com/investment/fx/daily/261120.html",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 9,
+   "title": "원/달러 환율 전망 (KB Think, 2026-11-18)",
+   "url": "https://kbthink.com/investment/fx/daily/261118.html",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 10,
+   "title": "코스피 마감시황 11/19 (KB Think today-pick)",
+   "url": "https://kbthink.com/investment/today-pick/2611/261119-2.html",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 11,
+   "title": "코스피 반등하며 5,000선 재돌파 (KB Think today-pick, 11/18)",
+   "url": "https://kbthink.com/investment/today-pick/2611/261118-2.html",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 12,
+   "title": "US Dollar Index Price Forecast: DXY eases from 19-month peak (Mitrade)",
+   "url": "https://www.mitrade.com/insights/news/live-news/article-4-2259141-20261117",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 13,
+   "title": "Mortgage News Daily: 30 Year Fixed daily rate survey",
+   "url": "https://www.mortgagenewsdaily.com/mortgage-rates/30-year-fixed",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 14,
+   "title": "Mortgage Rates Ease in Freddie Mac's Weekly Survey (The Mortgage Reports)",
+   "url": "https://themortgagereports.com/mortgage-rates-now/mortgage-rates-today-november-6-2026",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 15,
+   "title": "INOVIO Pharmaceuticals Form 8-K Exhibit 99.1 (VOCERYQ accelerated approval, 2026-10-30)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001055726/000105572626000030/ino-93026x8kex991.htm",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 16,
+   "title": "삼성바이오로직스, 2조7000억원 유증 마무리 단계 (뉴스토마토)",
+   "url": "https://newstomato.com/ReadNews.aspx?no=1320047",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 17,
+   "title": "Oil down 1% as US oil stocks post larger-than-expected rise (Reuters via Khaleej Times)",
+   "url": "https://www.khaleejtimes.com/business/oil-down-1-as-us-oil-stocks-post-larger-than-expected-rise",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 18,
+   "title": "[마켓인사이트] 삼전·하이닉스, 메모리 이익 창출력과 기업가치 괴리 '역대 최대' (비즈워치)",
+   "url": "https://news.bizwatch.co.kr/article/market/2026/11/18/0003",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 19,
+   "title": "한은, 성장·물가 상향에 11월 추가 인상 저울질 (비즈워치)",
+   "url": "https://news.bizwatch.co.kr/article/finance/2026/11/06/0021",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 20,
+   "title": "6월말 보험사 지급여력비율 215.2% (SBS Biz)",
+   "url": "https://biz.sbs.co.kr/amp/article/20000334973",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 21,
+   "title": "국민연금 '고환율 소방수' 등판 관련 보도(전략적 환헤지·외환스와프 연장)",
+   "url": "https://www.twig24.com/news/2025/12/15/20251215500230",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 22,
+   "title": "기준금리 3.00% 동결 확정|연속 인상 멈춘 이유와 대출금리 영향, 11월 전망",
+   "url": "https://foxcg.com/base-rate-freeze-october/",
+   "accessed": "2026-11-21"
+  },
+  {
+   "id": 23,
+   "title": "Treasury yields slipped as stocks sank but the Fed loomed (Finimize)",
+   "url": "https://finimize.com/content/treasury-yields-slipped-as-stocks-sank-but-the-fed-loomed",
+   "accessed": "2026-11-21"
+  }
+ ]
+}
