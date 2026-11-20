@@ -1,0 +1,143 @@
+{
+ "date": "2026-11-20",
+ "type": "event",
+ "published_at": "2026-11-20T13:00:00+09:00",
+ "headline": "앤트로픽(ANT) 나스닥 데뷔 첫날 17% 급등, 지수 편입은 아직",
+ "summary": [
+  "앤트로픽(ANT)은 11/19(현지시간) 나스닥에 상장해 개장가 111.50달러로 출발한 뒤 종가 97.17달러로 마감했고, 이는 공모가 대비 17.07% 높은 수준이다[1][2].",
+  "완전희석 기준 시가총액은 약 1.76조달러로 집계됐으며, 구글·엔비디아(각 100억달러)를 포함한 7개 기업이 공모와 별도로 260억달러 규모 비상장 지분(클래스N)을 사들이기로 했다[3][7][8].",
+  "국내 투자자는 이번 공모 대상국에서 빠져 상장 이후에만 매수할 수 있고 국내 증권사도 인수단에 참여하지 않았으며, MSCI는 11/30 지수 편입을 검토 중이지만 S&P500 편입은 상장 후 12개월 시즈닝 요건 등으로 빨라도 2027년 하반기에나 가능하다[9][10][11]."
+ ],
+ "releases": [
+  {
+   "series": "ANT_IPO_CLOSE",
+   "name": "앤트로픽(ANT) 나스닥 상장 첫날 종가",
+   "release_date": "2026-11-19",
+   "period": "2026-11-19",
+   "impact": "neutral",
+   "interpretation": "공모가 대비 17% 오른 채 마감했지만 장중 고점(약 115달러)보다는 밀린 채 끝나 **수요가 강했던 것과 지수에 당장 반영되는 것은 별개**이며, S&P500 편입은 상장 후 12개월 시즈닝·4분기 연속 흑자 요건 때문에 빨라도 2027년 하반기로 미뤄져 있어 패시브 자금 유입 효과는 당장 크지 않다.",
+   "actual": 97.17,
+   "previous": 83.0,
+   "actual_source": 2,
+   "unit": "달러"
+  }
+ ],
+ "market_impact": [
+  {
+   "asset": "us_equities",
+   "direction": "up",
+   "text": "앤트로픽(ANT) 자체는 상장 첫날 공모가 대비 17% 오른 채 마감했지만 아직 S&P500에는 편입되지 않아(빨라도 2027년 하반기) 지수 전체에 주는 직접 효과는 제한적이다. MSCI는 11/30 편입을 검토하고 있어 그 시점부터 패시브 자금 유입이 시작될 가능성이 있다[2][10][11]."
+  },
+  {
+   "asset": "krw",
+   "direction": null,
+   "text": "국내 개인투자자는 이번 공모 대상국에서 빠져 상장 이후에만 주식을 살 수 있고, 국내 증권사도 인수단에 참여하지 않아 원/달러에 주는 직접 수급 경로는 확인되지 않는다[9]."
+  }
+ ],
+ "institution_impact": [
+  {
+   "institution": "securities",
+   "text": "국내 증권사는 이번 공모의 인수단과 리테일 청약 모두에서 빠졌지만, 상장 이후 해외주식 중개 거래대금과 관련 상품 수요에는 영향이 있을 수 있다.",
+   "points": [
+    {
+     "topic": "trading",
+     "direction": "neutral",
+     "text": "앤트로픽은 이날 상장한 신규 종목이라 이를 기초자산으로 한 ELS·구조화상품이 아직 없어, 국내 증권사 트레이딩 손익에 직접 연결되는 부분은 없다.",
+     "source": null
+    },
+    {
+     "topic": "brokerage",
+     "direction": "mixed",
+     "text": "국내 개인투자자는 공모가 아닌 상장 이후에만 앤트로픽 주식을 살 수 있어[9], 상장 첫날 개장가(111.50달러)·고점(약 115달러)·종가(97.17달러)를 오간 변동성 구간에서 해외주식 위탁거래 주문이 몰렸을 가능성이 있다. 다만 구체적인 국내 거래대금 수치는 확인하지 못했다.",
+     "source": [2, 9]
+    },
+    {
+     "topic": "ib",
+     "direction": "negative",
+     "text": "국내 증권사는 스페이스X 공모 당시 배정 물량을 받지 못한 경험 이후 해외 대형 IPO 중개에 신중해졌고, 이번 공모 인수단에도 참여하지 않아[9] 관련 수수료 기회를 얻지 못했다. 반면 골드만삭스·모건스탠리 등이 이끈 공모와 260억달러 규모 비상장 지분(구글·엔비디아 각 100억달러 등) 매각은 글로벌 ECM 환경이 여전히 활발하다는 신호다.",
+     "source": [6, 7, 8, 9]
+    },
+    {
+     "topic": "wm",
+     "direction": "negative",
+     "text": "앤트로픽은 이사회 승인 없는 주식 양도와 SPV를 통한 지분 인수를 인정하지 않는다고 공식적으로 밝혀[12], 국내 WM 채널에서 비상장주 간접투자 상품으로 앤트로픽 지분을 판매·중개했다면 해당 상품의 법적 효력에 유의해야 한다.",
+     "source": 12
+    }
+   ]
+  },
+  {
+   "institution": "lp",
+   "text": "이번 상장은 미국 장기금리나 환헤지 비용을 직접 움직이는 변수가 아니어서, 보험사·연기금의 듀레이션 갭과 K-ICS 비율에 주는 영향은 제한적이다.",
+   "points": [
+    {
+     "topic": "duration_gap",
+     "direction": "neutral",
+     "text": "앤트로픽 상장은 개별 종목·수급 이슈로 美 국채금리를 직접 움직이지 않아, 듀레이션 갭 부호에 따른 순자산 영향과는 무관하다.",
+     "source": null
+    },
+    {
+     "topic": "kics",
+     "direction": "neutral",
+     "text": "가장 최근 발표된 K-ICS 비율에는 이번 상장과 직접 연결되는 변화가 없다.",
+     "source": null
+    },
+    {
+     "topic": "allocation",
+     "direction": "neutral",
+     "text": "해외채권과 국내 장기채 배분 매력도를 가르는 한미 금리차는 이번 상장으로 바뀌지 않았다.",
+     "source": null
+    },
+    {
+     "topic": "fx_hedge",
+     "direction": "neutral",
+     "text": "환헤지 비용을 좌우하는 한미 단기금리차도 이번 상장과 무관하게 유지되고 있다.",
+     "source": null
+    }
+   ]
+  },
+  {
+   "institution": "gp",
+   "text": "앤트로픽은 아직 주요 지수에 편입되지 않아 패시브 자금 유입 효과는 제한적이지만, 대형 투자자에게는 상장이 곧 엑시트 기회라는 점에서 대안투자 쪽 영향이 더 크다.",
+   "points": [
+    {
+     "topic": "flows",
+     "direction": "neutral",
+     "text": "MSCI는 11/30 앤트로픽의 지수 편입 여부를 검토 중이지만[10], S&P500 편입은 상장 후 12개월 시즈닝·4분기 연속 흑자·플로트 요건 때문에 빨라도 2027년 하반기로 미뤄져[11] 국내 액티브 AI 테마펀드를 제외하면 당장 패시브 자금 유입 효과는 크지 않다.",
+     "source": [10, 11]
+    },
+    {
+     "topic": "fees",
+     "direction": "neutral",
+     "text": "앤트로픽 지분을 직접 보유한 국내 공모 펀드의 운용 내역은 확인하지 못해, 이번 상장이 국내 운용사 AUM·보수 수익에 주는 영향은 가늠하기 어렵다.",
+     "source": null
+    },
+    {
+     "topic": "products",
+     "direction": "neutral",
+     "text": "상장 직후에는 유동주식 비율이 낮고 주요 지수에도 아직 편입되지 않은 상태라, 앤트로픽을 유의미한 비중으로 담는 국내 ETF·펀드 신상품이 나오기는 이르다.",
+     "source": null
+    },
+    {
+     "topic": "alternatives",
+     "direction": "positive",
+     "text": "구글·엔비디아(각 100억달러)·AMD·브로드컴·마이크론·마이크로소프트·TSMC 등 7개 기업이 공모와 별도로 260억달러 규모 비상장 지분(클래스N)을 사들이기로 한 것은[7][8], 상장 전 투자자에게 [[+대형 엑시트 기회]]가 생겼다는 뜻이며 PE·VC LP 입장에서는 우호적이다.",
+     "source": [7, 8]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {"id": 1, "title": "Anthropic set to begin trading as a US$1.5-trillion company in the biggest IPO on record", "url": "https://www.bnnbloomberg.ca/business/company-news/2026/11/19/anthropic-set-to-begin-trading-as-a-us15-trillion-company-in-the-biggest-ipo-on-record/", "accessed": "2026-11-20"},
+  {"id": 2, "title": "Anthropic IPO Live: Stock Closes Day At $97—Up More Than 17%", "url": "https://www.forbes.com/sites/fionariley/2026/11/19/anthropic-ipo-live-stock-closes-day-at-97-up-more-than-17/", "accessed": "2026-11-20"},
+  {"id": 3, "title": "Anthropic valued at $1.76 trillion after historic first day of trading", "url": "https://www.cnn.com/2026/11/19/business/live-news/anthropic-ipo", "accessed": "2026-11-20"},
+  {"id": 4, "title": "Anthropic Shares End First Day Of Trading Up 17% In Volatile Session As AI Giant Goes Public", "url": "https://deadline.com/2026/11/anthropic-ai-volatile-ipo-shares-trading-nasdaq-market-1237229045/", "accessed": "2026-11-20"},
+  {"id": 5, "title": "Anthropic IPO Full Coverage: Shares Close First Trading Day Up 17%", "url": "https://www.bloomberg.com/news/live-blog/2026-11-19/anthropic-trading-debut-live-updates", "accessed": "2026-11-20"},
+  {"id": 6, "title": "Anthropic sets IPO price range at $70-78 per share, launches roadshow", "url": "https://www.rttnews.com/3712632/anthropic-sets-ipo-price-range-at-70-78-per-share-launches-roadshow.aspx", "accessed": "2026-11-20"},
+  {"id": 7, "title": "Google, Nvidia, AMD And Others To Invest $26B In Anthropic Alongside IPO", "url": "https://stocktwits.com/news-articles/markets/equity/google-nvidia-amd-to-invest-26-b-in-anthropic-alongside-ipo/cNGu0BtR97U", "accessed": "2026-11-20"},
+  {"id": 8, "title": "Nvidia, Google Buy $10B Each of Anthropic's $26B Placement", "url": "https://fourweekmba.com/ai-nvidia-google-buy-10b-each-of-anthropics-26b-placement/", "accessed": "2026-11-20"},
+  {"id": 9, "title": "나스닥 상장 앞둔 앤트로픽…공모 명단에 한국은 없다", "url": "https://www.koreadaily.com/article/20261116070234766", "accessed": "2026-11-20"},
+  {"id": 10, "title": "MSCI eyes November 30 index entry for Anthropic after expected IPO", "url": "https://cryptobriefing.com/msci-anthropic-ipo-index-inclusion/", "accessed": "2026-11-20"},
+  {"id": 11, "title": "Anthropic IPO coming: what it means for the S&P 500", "url": "https://www.fool.com/investing/2026/09/19/anthropic-ipo-coming-what-means-sp-500/", "accessed": "2026-11-20"},
+  {"id": 12, "title": "Unauthorized Anthropic Stock Sales and Investment Scams", "url": "https://support.claude.com/en/articles/13704655-unauthorized-anthropic-stock-sales-and-investment-scams", "accessed": "2026-11-20"}
+ ]
+}
